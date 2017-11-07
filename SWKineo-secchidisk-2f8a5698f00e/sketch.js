@@ -116,7 +116,7 @@ function setup() {
           // "Productive     Green background, high algae, readings lower than 3 meters\n" +
           // "Dystrophic     Distinct tea or rootbeer color, readings lower than  meters");
 
-      introStartClear = new Button(220, 333, 95, 40, "Clear",
+      introStartClear = new Button(290, 370, 95, 40, "Clear",
         function() {
           // Button Selected
             setLakeType(1);
@@ -128,7 +128,7 @@ function setup() {
       // introStartClear.color = [245, 245, 245];
       introStartClear.fontSize = 14;
 
-      introStartIntmdt = new Button(220, 393, 95, 40, "Intermediate",
+      introStartIntmdt = new Button(290, 430, 95, 40, "Intermediate",
         function() {
           // Button Selected
           setLakeType(2);
@@ -140,7 +140,7 @@ function setup() {
       introStartIntmdt.fontSize = 14;
       // introStartIntmdt.color = [245, 245, 245];
 
-      introStartProd = new Button(220, 453, 95, 40, "Productive",
+      introStartProd = new Button(290, 490, 95, 40, "Productive",
         function() {
           // Button Selected
             setLakeType(3);
@@ -152,7 +152,7 @@ function setup() {
       // introStartProd.color = [245, 245, 245];
       introStartProd.fontSize = 14;
 
-      introStartDys = new Button(220, 513, 95, 40, "Dystrophic",
+      introStartDys = new Button(290, 550, 95, 40, "Dystrophic",
         function() {
           // Button Selected
             setLakeType(4);
@@ -164,7 +164,7 @@ function setup() {
       // introStartDys.color = [245, 245, 245];
       introStartDys.fontSize = 14;
 
-      introStartDysProd = new Button(220, 570, 95, 60, "Dystrophic\nProductive",
+      introStartDysProd = new Button(290, 610, 95, 60, "Dystrophic\nProductive",
         function() {
           // Button Selected
             setLakeType(5);
