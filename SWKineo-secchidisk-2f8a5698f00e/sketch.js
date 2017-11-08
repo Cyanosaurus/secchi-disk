@@ -196,24 +196,24 @@ function setup() {
       // setup()
       D0 = new disk();
       attemptsLeft = 3;
-      // button1 = new Button(200, 800, 80, 50, "Button",
-      //   function() {
-      //     // Button Selected
-      //     drawEllipse = true;
-      //   },
-      //   function() {
-      //     // Button Deselected
-      //     drawEllipse = false;
-      //   }
-      // );
+       button1 = new Button(width - 170, 100, 110, 50, "Button",         // THIS WAS COMMENTED OUT 
+          function() {
+           // Button Selected 
+           drawEllipse = true;
+         },
+         function() {
+           // Button Deselected
+           drawEllipse = false;
+         }
+       );
       goBack = new Button(width - 170, 60, 110, 50, "Switch Types",
         function() {
           scenes.setScene(2);
           scenes.setup();
         }
       );
-      textBoard1 = new TextBoard(300, 800, 200, 200);
-      textBoard1.addText("Lorem ipsum dolor sit amet,")
+      textBoard1 = new TextBoard(300, 800, 200, 200);        // THIS USED TO BE COMMENTED I 
+      textBoard1.addText("Lorem ipsum dolor sit amet,")      // DONT KNOW WHAT IT DOES
       textBoard1.addParagraph();
       textBoard1.addText("consectetur adipiscing elit,");
       textBoard1.addParagraph();
@@ -418,12 +418,27 @@ function analyzeTrial() {
 
 function keyPressed() {
   if (keyCode == UP_ARROW){
-    D0.sendIt(1);
+    D0.sendIt(-1);
   }
 
   if (keyCode == DOWN_ARROW){
-    D0.sendIt(-1);
+    D0.sendIt(1);
   }
+  if (keyCode == 32 && scenes.sceneIndex() == 2) {
+    // Only check the trial if the depth isn't 0
+    if (D0.currentDepth != 0) {
+      measuredDepth = D0.currentDepth;
+      if ((analyzeTrial() || attemptsLeft == 0)) {
+        scenes.nextScene();
+        scenes.setup();
+      } else {
+        attemptsLeft--;
+        // Tell the user something, check try number
+      }
+    }
+  }
+
+  
 }
 
 function keyTyped(){
