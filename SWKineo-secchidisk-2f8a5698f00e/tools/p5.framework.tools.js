@@ -244,15 +244,15 @@ function Button(cornerX, cornerY, width, height,
   this.region = new MouseRegion(cornerX, cornerY, width, height);
 
   // Base background color
-  this.color = [255, 255, 255];
+  this.color = [100, 100, 100];
   // Accent bar adjustment
-  this.accent = [-50, -50, -50];
+  this.accent = [-80, -80, -80];
   // Accent bar adjsutment for selected state
   this.selectedColor = [-80, -80, -80];
   // Button adjustment for highlighted state
   this.highlightColor = [-20, -20, -20];
   // Color for text
-  this.fontColor = [100, 100, 100];
+  this.fontColor = [255, 255, 255];
 
   this.selected = false;
   this.highlght = false;

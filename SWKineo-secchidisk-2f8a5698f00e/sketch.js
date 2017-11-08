@@ -212,15 +212,15 @@ function setup() {
           scenes.setup();
         }
       );
-      // textBoard1 = new TextBoard(300, 800, 200, 200);
-      // textBoard1.addText("Lorem ipsum dolor sit amet,")
-      // textBoard1.addParagraph();
-      // textBoard1.addText("consectetur adipiscing elit,");
-      // textBoard1.addParagraph();
-      // textBoard1.addText("sed do eiusmod tempor\n" +
-      //                    "incididunt ut labore et dolore\n" +
-      //                    "magna aliqua. Ut enim ad minim\n" +
-      //                    "veniam");
+      textBoard1 = new TextBoard(300, 800, 200, 200);
+      textBoard1.addText("Lorem ipsum dolor sit amet,")
+      textBoard1.addParagraph();
+      textBoard1.addText("consectetur adipiscing elit,");
+      textBoard1.addParagraph();
+      textBoard1.addText("sed do eiusmod tempor\n" +
+                          "incididunt ut labore et dolore\n" +
+                          "magna aliqua. Ut enim ad minim\n" +
+                          "veniam");
     },
     function() {
       // draw()
