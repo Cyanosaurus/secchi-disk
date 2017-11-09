@@ -424,7 +424,8 @@ function keyPressed() {
   if (keyCode == DOWN_ARROW){
     D0.sendIt(1);
   }
-  if (keyCode == 32 && scenes.sceneIndex() == 2) {
+
+   if (keyCode == ENTER && scenes.sceneIndex() == 2) {
     // Only check the trial if the depth isn't 0
     if (D0.currentDepth != 0) {
       measuredDepth = D0.currentDepth;
@@ -437,24 +438,11 @@ function keyPressed() {
       }
     }
   }
-
-  
 }
 
 function keyTyped(){
-  if (keyCode == 32 && scenes.sceneIndex() == 2) {
-    // Only check the trial if the depth isn't 0
-    if (D0.currentDepth != 0) {
-      measuredDepth = D0.currentDepth;
-      if ((analyzeTrial() || attemptsLeft == 0)) {
-        scenes.nextScene();
-        scenes.setup();
-      } else {
-        attemptsLeft--;
-        // Tell the user something, check try number
-      }
-    }
-  }
+ 
+ return false; // temp
 }
 
 function disk(){ //THE BIG DISK CLASS
