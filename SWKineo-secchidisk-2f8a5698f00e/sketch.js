@@ -18,7 +18,8 @@ var introStartDysProd;
 
 /* Simulator Elements */
 var D0;
-var button1;
+var measureButton;
+var submitButton;
 var goBack;
 var measurements;     // the display panel 
 var drawMeasurements = true; 
@@ -32,7 +33,7 @@ var lakeTarget;               // Double
 /* Reading Results Elements */
 var resultsBoard;
 var resultsRestart;
-
+var failedMessage;   
 /* Results Variables */
 var attemptsLeft = 3;
 var measuredDepth;            // Double
@@ -196,11 +197,33 @@ function setup() {
       // setup()
       D0 = new disk();
       attemptsLeft = 3;
-       button1 = new Button(width - 170, 120, 110, 50, "Measure",   // THIS WAS COMMENTED OUT 
+       measureButton = new Button(width - 170, 120, 110, 50, "Measure",   // THIS WAS COMMENTED OUT; I repurposed it as the measure button
           function() {
            // Button Selected 
-           // display depth on screen
+           // Display measurement
+            
+       
+         },
+         function() {
+           // Button Deselected
 
+         }
+       );
+       submitButton = new Button(width - 170, 120, 110, 50, "Submit",   // THIS WAS COMMENTED OUT; I repurposed it as the measure button
+          function() {
+           // Button Selected 
+           // analyze trail and provide feedback 
+
+        	if (D0.currentDepth != 0) {
+      			measuredDepth = D0.currentDepth;
+      			if ((analyzeTrial() || attemptsLeft == 0)) {   // if correct or run out of chances, move to next scene
+        			scenes.nextScene();
+        			scenes.setup();
+      				} else {
+        				attemptsLeft--;
+        				// TODO: Tell the user something, check try number
+      				}
+            }
          },
          function() {
            // Button Deselected
@@ -214,18 +237,18 @@ function setup() {
         }
       );
     },
-    function() {                                    // THIS IS WHERE SOME STUFF IS ACTIAVTED 
+    function() {                                    // THIS IS WHERE THE STUFF FOR THE SIM IS DRAWN
       // draw()
       scenes.background(lakeColor);
 
-      push();
-      fill(0, 2.2);
+     // push();
+      //fill(0, 2.2);
       // noStroke();
-        for(var i = 0; i < 100; i++){
-          var j = map(i, 0, 99, width + 200, 0);
-          ellipse(windowWidth/2, windowHeight/2, j, j);
-        }
-      pop();
+        //for(var i = 0; i < 100; i++){
+        //  var j = map(i, 0, 99, width + 200, 0);
+        //  ellipse(windowWidth/2, windowHeight/2, j, j);           // I don't know what this is for so I commented it out
+        //}
+      //pop();
 
       D0.maxDepth = ceil(lakeDepth)-1;
       D0.run();
@@ -233,7 +256,7 @@ function setup() {
       button1.run();
       goBack.run();
       strokeWeight(0);
-       ellipse(200, 700, 20, 20);
+       //ellipse(200, 700, 20, 20);
        dropShadow(0, 0, 0, 0);
 
       push();
@@ -289,6 +312,13 @@ function setup() {
       resultsBoard.addText("\tWithin Tolerance?");
       resultsBoard.addTab();
       resultsBoard.addText(measuredTolerance);
+
+
+      if(measuredTolerance === "No")
+      {
+      	failedMessage = new TextBoard(500,500,100,100);          // this doesn't work yet
+      	failedMessage.addText("FAILED");
+      }
 
       resultsRestart = new Button(780, 630, 95, 50, "Test Again",
         function() {
@@ -411,11 +441,11 @@ function keyPressed() {
     D0.sendIt(1);
   }
 
-   if (keyCode == ENTER && scenes.sceneIndex() == 2) {
+ /*  if (keyCode == ENTER && scenes.sceneIndex() == 2) {
     // Only check the trial if the depth isn't 0
     if (D0.currentDepth != 0) {
       measuredDepth = D0.currentDepth;
-      if ((analyzeTrial() || attemptsLeft == 0)) {
+      if ((analyzeTrial() || attemptsLeft == 0)) {             // this got repurposed to the measure button
         scenes.nextScene();
         scenes.setup();
       } else {
@@ -423,15 +453,15 @@ function keyPressed() {
         // Tell the user something, check try number
       }
     }
-  }
+  }  */
 }
 
 function keyTyped(){
- 
+/* 
     if (keyCode == ENTER && scenes.sceneIndex() == 2) {
     // Only check the trial if the depth isn't 0
     if (D0.currentDepth != 0) {
-      measuredDepth = D0.currentDepth;
+      measuredDepth = D0.currentDepth;                            // read above ^^^^
       if ((analyzeTrial() || attemptsLeft == 0)) {
         scenes.nextScene();
         scenes.setup();
@@ -440,7 +470,7 @@ function keyTyped(){
         // Tell the user something, check try number
       }
     }
-  }
+  } */
 }
 
 function disk(){ //THE BIG DISK CLASS
