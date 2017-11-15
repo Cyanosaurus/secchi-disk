@@ -20,8 +20,8 @@ var introStartDysProd;
 var D0;
 var button1;
 var goBack;
-var textBoard1;
-var drawEllipse = false;
+var measurements;     // the display panel 
+var drawMeasurements = true; 
 
 /* Lake Variables */
 var lakeType;                 // String
@@ -196,14 +196,15 @@ function setup() {
       // setup()
       D0 = new disk();
       attemptsLeft = 3;
-       button1 = new Button(width - 170, 100, 110, 50, "Button",         // THIS WAS COMMENTED OUT 
+       button1 = new Button(width - 170, 120, 110, 50, "Measure",   // THIS WAS COMMENTED OUT 
           function() {
            // Button Selected 
-           drawEllipse = true;
+           // display depth on screen
+
          },
          function() {
            // Button Deselected
-           drawEllipse = false;
+
          }
        );
       goBack = new Button(width - 170, 60, 110, 50, "Switch Types",
@@ -212,23 +213,14 @@ function setup() {
           scenes.setup();
         }
       );
-      textBoard1 = new TextBoard(300, 800, 200, 200);        // THIS USED TO BE COMMENTED I 
-      textBoard1.addText("Lorem ipsum dolor sit amet,")      // DONT KNOW WHAT IT DOES
-      textBoard1.addParagraph();
-      textBoard1.addText("consectetur adipiscing elit,");
-      textBoard1.addParagraph();
-      textBoard1.addText("sed do eiusmod tempor\n" +
-                          "incididunt ut labore et dolore\n" +
-                          "magna aliqua. Ut enim ad minim\n" +
-                          "veniam");
     },
-    function() {
+    function() {                                    // THIS IS WHERE SOME STUFF IS ACTIAVTED 
       // draw()
       scenes.background(lakeColor);
 
       push();
       fill(0, 2.2);
-      //noStroke();
+      // noStroke();
         for(var i = 0; i < 100; i++){
           var j = map(i, 0, 99, width + 200, 0);
           ellipse(windowWidth/2, windowHeight/2, j, j);
@@ -238,17 +230,11 @@ function setup() {
       D0.maxDepth = ceil(lakeDepth)-1;
       D0.run();
 
-      // button1.run();
+      button1.run();
       goBack.run();
-      // textBoard1.draw();
-      // if (drawEllipse) {
-      //   dropShadow(3, 3, 4, "rgba(0, 0, 0, 0.3)");
-      // } else {
-      //   dropShadow(1, 1, 2, "rgba(0, 0, 0, 0.2)");
-      // }
       strokeWeight(0);
-      // ellipse(200, 700, 20, 20);
-      // dropShadow(0, 0, 0, 0);
+       ellipse(200, 700, 20, 20);
+       dropShadow(0, 0, 0, 0);
 
       push();
       fill(0, 0, 0, 0);
@@ -442,7 +428,19 @@ function keyPressed() {
 
 function keyTyped(){
  
- return false; // temp
+    if (keyCode == ENTER && scenes.sceneIndex() == 2) {
+    // Only check the trial if the depth isn't 0
+    if (D0.currentDepth != 0) {
+      measuredDepth = D0.currentDepth;
+      if ((analyzeTrial() || attemptsLeft == 0)) {
+        scenes.nextScene();
+        scenes.setup();
+      } else {
+        attemptsLeft--;
+        // Tell the user something, check try number
+      }
+    }
+  }
 }
 
 function disk(){ //THE BIG DISK CLASS
