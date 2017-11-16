@@ -201,7 +201,7 @@ function setup() {
           function() {
            // Button Selected 
            // Display measurement
-            
+
        
          },
          function() {
@@ -209,7 +209,7 @@ function setup() {
 
          }
        );
-       submitButton = new Button(width - 170, 120, 110, 50, "Submit",   // THIS WAS COMMENTED OUT; I repurposed it as the measure button
+       submitButton = new Button(width - 170, 120, 110, 50, "Submit",   
           function() {
            // Button Selected 
            // analyze trail and provide feedback 
@@ -253,8 +253,14 @@ function setup() {
       D0.maxDepth = ceil(lakeDepth)-1;
       D0.run();
 
-      button1.run();
+
+      // Make the buttons do
+      measureButton.run();
+      submitButton.run();
       goBack.run();
+
+
+
       strokeWeight(0);
        //ellipse(200, 700, 20, 20);
        dropShadow(0, 0, 0, 0);
