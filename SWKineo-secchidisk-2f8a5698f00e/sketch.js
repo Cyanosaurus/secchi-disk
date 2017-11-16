@@ -283,8 +283,7 @@ function setup() {
       resultsBoard.addParagraph();
       resultsBoard.addParagraph();
       resultsBoard.addParagraph();
-      resultsBoard.addText("\tLake Type",
-        100, 16, "Helvetica", BOLD);
+      resultsBoard.addText("\tLake Type", 100, 16, "Helvetica", BOLD);
       resultsBoard.addTab();
       resultsBoard.addText(lakeType);
       resultsBoard.addParagraph();
