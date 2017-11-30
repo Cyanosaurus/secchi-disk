@@ -18,7 +18,6 @@ var introStartDysProd;
 
 /* Simulator Elements */
 var D0;
-var measureButton;
 var submitButton;
 var goBack;
 var measurements;     // the display panel 
@@ -197,27 +196,16 @@ function setup() {
       // setup()
       D0 = new disk();
       attemptsLeft = 3;
-       measureButton = new Button(width - 170, 120, 110, 50, "Measure",   // THIS WAS COMMENTED OUT; I repurposed it as the measure button
-          function() {
-           // Button Selected 
-           // Display measurement
-
-       
-         },
-         function() {
-           // Button Deselected
-
-         }
-       );
        submitButton = new Button(width - 170, 120, 110, 50, "Submit",   
           function() {
            // Button Selected 
-           // analyze trail and provide feedback 
+           // Analyze trial and give feedback 
+           // NOTE: THESE SELECT AND DESELECT FUNCTIONS ARE THE SAME BECAUSE IT ALTERNATES PER PRESS
 
         	if (D0.currentDepth != 0) {
       			measuredDepth = D0.currentDepth;
-      			if ((analyzeTrial() || attemptsLeft == 0)) {   // if correct or run out of chances, move to next scene
-        			scenes.nextScene();
+      			if (analyzeTrial()) {                          // if correct move to next scene, otherwise the run section below
+        			scenes.nextScene();                        // will deal with the case of no chances left
         			scenes.setup();
       				} else {
         				attemptsLeft--;
@@ -227,7 +215,17 @@ function setup() {
          },
          function() {
            // Button Deselected
-
+           if (D0.currentDepth != 0) {
+      			measuredDepth = D0.currentDepth;
+      			if (analyzeTrial()) {   
+        			scenes.nextScene();
+        			scenes.setup();
+      				} else {
+      					console.log(attemptsLeft);
+        				attemptsLeft--;
+        				// TODO: Tell the user something, check try number
+      				}
+            }
          }
        );
       goBack = new Button(width - 170, 60, 110, 50, "Switch Types",
@@ -254,12 +252,16 @@ function setup() {
       D0.run();
 
 
-      // Make the buttons do
-      measureButton.run();
+      // Make the button do
       submitButton.run();
       goBack.run();
 
-
+      // If chances are zero, move to results
+      if(attemptsLeft == 0)
+      {
+      	scenes.nextScene();
+        scenes.setup();
+      }
 
       strokeWeight(0);
        //ellipse(200, 700, 20, 20);
