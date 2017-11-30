@@ -321,11 +321,6 @@ function setup() {
       resultsBoard.addText(measuredTolerance);
 
 
-      if(measuredTolerance === "No")
-      {
-      	failedMessage = new TextBoard(500,500,100,100);          // this doesn't work yet
-      	failedMessage.addText("FAILED");
-      }
 
       resultsRestart = new Button(780, 630, 95, 50, "Test Again",
         function() {
