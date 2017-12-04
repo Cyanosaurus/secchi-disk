@@ -498,9 +498,9 @@ function disk(){ //THE BIG DISK CLASS
  this.disp = function(){
    if(this.hide == false){ // WE DON'T WANT TO DRAW THE DISK IF IT'S HIDDEN
      //******* DRAW THE DISK
-     push();
-     var alpha = map(this.rad, 0, sqrt(width*width/4 + height*height/4), -30, 153);
-
+     push();   
+     var t = currentDepth; // a temp value for the lerp below                            // I think this is where the disk opacity is defined; old text below \/
+     var alpha = (1 - map(t,0,lakeTarget,0,1)) * 255 + map(t,0,lakeTarget,0,1) * 0;       //map(this.rad, 0, sqrt(width*width/4 + height*height/4), -30, 153); 
      stroke(255, alpha);
 
      var seedValue = noise(this.dx);
