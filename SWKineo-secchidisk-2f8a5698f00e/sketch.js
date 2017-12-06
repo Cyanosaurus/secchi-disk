@@ -392,19 +392,19 @@ function setLakeType (type) {
       case 3:
         lakeType = "Productive";
         lakeColor = "#6b8474";
-        lakeDepth = 6;
+        lakeDepth = 5;
         lakeTarget = random(2, 3);
         break;
       case 4:
         lakeType = "Dystrophic";
         lakeColor = "#82753a";
-        lakeDepth = 6;
+        lakeDepth = 5;
         lakeTarget = random(2, 3);
         break;
       case 5:
         lakeType = "Dystrophic Productive";
         lakeColor = "#8a9663";
-        lakeDepth = 6;
+        lakeDepth = 5;
         lakeTarget = random(1, 3);
         break;
    }
@@ -566,9 +566,10 @@ function disk(){ //THE BIG DISK CLASS
 
      var phi = map(this.currentDepth, 0, this.maxDepth + 1, 0, 2*PI);
 
+     strokeWeight(2);																
      stroke(255, 153, 153);
      line(this.meterPos.x, this.meterPos.y,
-          this.meterPos.x + 65*cos(phi - PI/2), this.meterPos.y + 65*sin(phi - PI/2));
+          this.meterPos.x + 65*cos(phi - PI/2), this.meterPos.y + 65*sin(phi - PI/2));   //draw needle
 
      pop();
    }
