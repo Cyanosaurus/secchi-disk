@@ -380,31 +380,31 @@ function setLakeType (type) {
       case 1:
         lakeType = "Clear";
         lakeColor = "#6fa5fc";
-        lakeDepth = random(10, 15);
+        lakeDepth = 11;
         lakeTarget = random(4, 10);
         break;
       case 2:
         lakeType = "Intermediate";
         lakeColor = "#bfc18b";
-        lakeDepth = random(10, 15);
+        lakeDepth = 11;
         lakeTarget = random(3.5, 7.5);
         break;
       case 3:
         lakeType = "Productive";
         lakeColor = "#6b8474";
-        lakeDepth = random(5, 10);
+        lakeDepth = 6;
         lakeTarget = random(2, 3);
         break;
       case 4:
         lakeType = "Dystrophic";
         lakeColor = "#82753a";
-        lakeDepth = random(5, 10);
+        lakeDepth = 6;
         lakeTarget = random(2, 3);
         break;
       case 5:
         lakeType = "Dystrophic Productive";
         lakeColor = "#8a9663";
-        lakeDepth = random(5, 10);
+        lakeDepth = 6;
         lakeTarget = random(1, 3);
         break;
    }
@@ -434,14 +434,14 @@ function analyzeTrial() {
   }
 }
 
-function keyPressed() {
+/* function keyPressed() {
   if (keyCode == UP_ARROW){
-    D0.sendIt(-1);
+    D0.sendIt(-1);                                           //Input is now handled in the update method of the disk
   }
 
   if (keyCode == DOWN_ARROW){
     D0.sendIt(1);
-  }
+  }  */
 
  /*  if (keyCode == ENTER && scenes.sceneIndex() == 2) {
     // Only check the trial if the depth isn't 0
@@ -455,8 +455,8 @@ function keyPressed() {
         // Tell the user something, check try number
       }
     }
-  }  */
-}
+  }  
+} */
 
 function keyTyped(){
 /* 
@@ -500,7 +500,7 @@ function disk(){ //THE BIG DISK CLASS
      //******* DRAW THE DISK
      push();   
      var t = this.currentDepth; // a temp value for the lerp below                            // I think this is where the disk opacity is defined; old text below \/
-     var alpha = (1 - map(t,0,lakeTarget,0,1)) * 255 + map(t,0,lakeTarget,0,1) * 0;       //map(this.rad, 0, sqrt(width*width/4 + height*height/4), -30, 153); 
+     var alpha = ((1 - map(t,0,lakeTarget,0,1)) * 255 + map(t,0,lakeTarget,0,1) * 0);       //map(this.rad, 0, sqrt(width*width/4 + height*height/4), -30, 153); 
      stroke(255, alpha);
 
      var seedValue = noise(this.dx);
@@ -593,6 +593,12 @@ function disk(){ //THE BIG DISK CLASS
      direction.normalize();
 
      this.deltaDelta = -.03*this.deltaDepth;
+
+     if(keyIsDown(UP_ARROW) && currentDepth < lakeDepth)
+     	this.deltaDepth += .0005
+     if(keyIsDown(DOWN_ARROW))
+     	this.deltaDepth += -.0005
+
      this.deltaDepth += this.deltaDelta;
      this.currentDepth += this.deltaDepth;
 
@@ -604,7 +610,7 @@ function disk(){ //THE BIG DISK CLASS
  }
 
  this.sendIt = function(dir){
-   this.deltaDepth += dir*.005;
+   // this.deltaDepth += dir*.005;        // Input is now handled in the update method
  }
 
 
