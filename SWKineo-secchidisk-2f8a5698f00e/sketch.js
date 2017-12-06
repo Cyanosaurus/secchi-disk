@@ -604,7 +604,7 @@ function disk(){ //THE BIG DISK CLASS
  }
 
  this.sendIt = function(dir){
-   this.deltaDepth += dir*.001;
+   this.deltaDepth += dir*.005;
  }
 
 
