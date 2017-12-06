@@ -380,14 +380,14 @@ function setLakeType (type) {
       case 1:
         lakeType = "Clear";
         lakeColor = "#6fa5fc";
-        lakeDepth = 11;
-        lakeTarget = random(4, 10);
+        lakeDepth = 7;
+        lakeTarget = random(4, 7);
         break;
       case 2:
         lakeType = "Intermediate";
         lakeColor = "#bfc18b";
-        lakeDepth = 11;
-        lakeTarget = random(3.5, 7.5);
+        lakeDepth = 7;
+        lakeTarget = random(3.5, 7);
         break;
       case 3:
         lakeType = "Productive";
@@ -478,8 +478,8 @@ function keyTyped(){
 function disk(){ //THE BIG DISK CLASS
  this.P0 = createVector(width/8, height/8); // BEGIN POINT
  this.P1 = createVector(width/2, height/2); // END POINT
-
- this.maxDepth = 10; // MAXIMUM DEPTH OF DISK
+ 
+ this.maxDepth = this.lakeDepth; //10; // MAXIMUM DEPTH OF DISK
  this.currentDepth = 0; //CURRENT DEPTH OF DISK
  this.deltaDepth = 0;
  this.deltaDelta = 0;
@@ -505,7 +505,8 @@ function disk(){ //THE BIG DISK CLASS
 
      var seedValue = noise(this.dx);
      var nois = map(seedValue, 0, 1, 0, .5);
-     var numberOfIterations = map(this.currentDepth, 0, this.maxDepth, 60, 60);
+     var numberOfIterations = 60;        //map(this.currentDepth, 0, this.maxDepth, 60, 60);
+     console.log(numberOfIterations);
 
      for(var i = 0; i < numberOfIterations ; i++){
        var j = map(i, 0, numberOfIterations , 0, this.rad)
@@ -540,8 +541,8 @@ function disk(){ //THE BIG DISK CLASS
      strokeWeight(3);
      ellipse(this.meterPos.x, this.meterPos.y, 200, 200);
 
-     for(var i = 0; i < this.maxDepth; i += 1){
-       var theta = map(i, 0, this.maxDepth, 0, 2*PI);
+     for(var i = 0; i < this.maxDepth + 1; i += 1){
+       var theta = map(i, 0, this.maxDepth + 1, 0, 2*PI);
 
        strokeWeight(3);
        line(this.meterPos.x + 75*cos(theta - PI/2), this.meterPos.y + 75*sin(theta - PI/2),
@@ -549,7 +550,7 @@ function disk(){ //THE BIG DISK CLASS
 
        for(var j = 0; j < 6; j++){
 
-       var iota = map(j, 0, 5, theta , theta + 8*PI/this.maxDepth );
+       var iota = map(j, 0, 5, theta , theta + 8*PI/this.maxDepth + 1 );
 
        strokeWeight(1);
        line(this.meterPos.x + 75*cos(iota - PI/2), this.meterPos.y + 75*sin(iota - PI/2),
@@ -563,7 +564,7 @@ function disk(){ //THE BIG DISK CLASS
        text(i, this.meterPos.x + 60*cos(theta - PI/2), this.meterPos.y + 60*sin(theta - PI/2));
      }
 
-     var phi = map(this.currentDepth, 0, this.maxDepth, 0, 2*PI);
+     var phi = map(this.currentDepth, 0, this.maxDepth + 1, 0, 2*PI);
 
      stroke(255, 153, 153);
      line(this.meterPos.x, this.meterPos.y,
@@ -594,11 +595,14 @@ function disk(){ //THE BIG DISK CLASS
 
      this.deltaDelta = -.03*this.deltaDepth;
 
-     if(keyIsDown(UP_ARROW) && currentDepth < lakeDepth)
+     console.log(this.currentDepth);
+     console.log(lakeDepth);
+     if(keyIsDown(UP_ARROW) && this.currentDepth < lakeDepth)            // gets input only if the disk is under the limit
      	this.deltaDepth += .0005
-     if(keyIsDown(DOWN_ARROW))
+     if(keyIsDown(DOWN_ARROW) && this.currentDepth >= 0)                // get input only when the disk is at or above 0                 
      	this.deltaDepth += -.0005
-
+     if((this.currentDepth >= lakeDepth && this.deltaDepth > 0)|| (this.currentDepth < 0 && this.deltaDepth < 0))     // if the disk is at the limit and is still going up, or below zero and going down, stop it
+     	this.deltaDepth = 0;
      this.deltaDepth += this.deltaDelta;
      this.currentDepth += this.deltaDepth;
 
