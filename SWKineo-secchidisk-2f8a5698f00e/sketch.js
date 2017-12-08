@@ -22,6 +22,7 @@ var submitButton;
 var goBack;
 var measurements;     // the display panel 
 var drawMeasurements = true; 
+var attemptsLeftBoard;
 
 /* Lake Variables */
 var lakeType;                 // String
@@ -195,7 +196,9 @@ function setup() {
     function() {
       // setup()
       D0 = new disk();
+
       attemptsLeft = 3;
+
        submitButton = new Button(width - 170, 120, 110, 50, "Submit",   
           function() {
            // Button Selected 
@@ -228,12 +231,16 @@ function setup() {
             }
          }
        );
+
       goBack = new Button(width - 170, 60, 110, 50, "Switch Types",
         function() {
           scenes.setScene(2);
           scenes.setup();
         }
       );
+
+      // resultsBoard = new TextBoard(4 * width/5, height / 6,300,100);
+
     },
     function() {                                    // THIS IS WHERE THE STUFF FOR THE SIM IS DRAWN
       // draw()
@@ -255,6 +262,9 @@ function setup() {
       // Make the button do
       submitButton.run();
       goBack.run();
+
+      // display the attempts left text
+      // resultsBoard.draw();
 
       // If chances are zero, move to results
       if(attemptsLeft == 0)
@@ -476,7 +486,7 @@ function keyTyped(){
 }
 
 function disk(){ //THE BIG DISK CLASS
- this.P0 = createVector(width/8, height/8); // BEGIN POINT
+ this.P0 = createVector(width/6, height/6); // BEGIN POINT    // changed from height/8
  this.P1 = createVector(width/2, height/2); // END POINT
  
  this.maxDepth = this.lakeDepth; //10; // MAXIMUM DEPTH OF DISK
