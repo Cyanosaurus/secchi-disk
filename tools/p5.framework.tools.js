@@ -230,13 +230,38 @@ function MouseRegion(cornerX, cornerY, width, height) {
   }
 }
 
+function infoBox(cornerX, cornerY, width, height)
+{
+  this.position = createVector(cornerX, cornerY);
+  this.width = width;
+  this.height = height;
+  this.label = label;
+  this.region = new MouseRegion(cornerX, cornerY, width, height);
+
+  // Base background color
+  this.color = [100, 100, 100];
+  // Accent bar adjustment
+  this.accent = [-80, -80, -80];
+  // Accent bar adjsutment for selected state
+  this.selectedColor = [-80, -80, -80];
+  // Button adjustment for highlighted state
+  this.highlightColor = [-20, -20, -20];
+  // Color for text
+  this.fontColor = [255, 255, 255];
+
+  this.selected = false;
+  this.highlght = false;
+
+  this.fontSize = 14;
+}
+
 /**
  * Button:
  * A simple callback driven button for program interaction
  *
  */
-function Button(cornerX, cornerY, width, height,
-                label, callbackSelected, callbackUnselected) {
+function Button(cornerX, cornerY, width, height, label, callbackSelected, callbackUnselected)
+{
   this.position = createVector(cornerX, cornerY);
   this.width = width;
   this.height = height;
@@ -384,12 +409,16 @@ function TextBoard(cornerX, cornerY, width, height) {
     this.text.push(newText);
   }
 
-  this.addParagraph = function() {
-    this.addText("\n");
+  this.addParagraph = function(amt) {
+    for (var i = 0; i < amt; i++) {
+      this.addText("\n");
+    }
   }
 
-  this.addTab = function() {
-    this.addText("\t");
+  this.addTab = function(amt) {
+    for (var i = 0; i < amt; i++) {
+      this.addText("\t");
+    }
   }
 
   this.empty = function() {
