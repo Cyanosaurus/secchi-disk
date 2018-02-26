@@ -508,8 +508,7 @@ function disk(){ //THE BIG DISK CLASS
 
      var seedValue = noise(this.dx);
      var nois = map(seedValue, 0, 1, 0, .5);
-     var numberOfIterations = 60;        //map(this.currentDepth, 0, this.maxDepth, 60, 60);
-     // console.log(numberOfIterations);
+     var numberOfIterations = 60;
 
      for(var i = 0; i < numberOfIterations ; i++){
        var j = map(i, 0, numberOfIterations , 0, this.rad)
@@ -528,34 +527,24 @@ function disk(){ //THE BIG DISK CLASS
 
     stroke(153, 153);
     strokeWeight(2);
-    // line(0, 0, this.x - this.rad/2, this.y);
     fill("yellow");
     
-    beginShape(QUADS);
+    //If the value hasn't reached the certain point yet, do nothing for them, otherwise, start to map from start point to end point (left to right)
+    var measureTape = beginShape(QUADS);
       var topLeft = vertex(-1, windowHeight/12);
       var topRight = vertex(this.x, this.y - this.rad/40);
       var bottomRight = vertex(this.x, this.y + this.rad/40);
-      //Put some sort of loop here to place vertexes among these points, and possibly an inner statement to draw the actual marks
+      // Put some sort of loop here to place vertexes among these points, and possibly an inner statement to draw the actual marks
       for(i = 0;i < floor(D0.currentDepth+1);i++)
       {
-        if (i > 0)
-        {
-          var tickTimeX = map(i, 0, floor(D0.currentDepth+1), -1, this.x);
-          var tickTimeY = map(i, 0, floor(D0.currentDepth+1), windowHeight/4, this.y + this.rad/40);
-          var tickTime = createVector(tickTimeX, tickTimeY);
+        var tickTimeX = map(i, 0, floor(D0.currentDepth+1), -1, this.x);
+        var tickTimeY = map(i, 0, floor(D0.currentDepth+1), windowHeight/4, this.y + this.rad/40);
+        var tickTime = createVector(tickTimeX, tickTimeY);
 
-          //Maybe if i find the ratio of height from one end to the other i will be able to draw the tick marks
-          heightRatio = ((this.y - this.rad/40) - (this.y + this.rad/40)) / (windowHeight/12 - windowHeight/4);
-          
-          vertex(tickTimeX, tickTimeY);
-          vertex(tickTimeX + (heightRatio * this.x/i), tickTimeY - (heightRatio * this.y/i));
-          // vertex(tickTimeX + (heightRatio * this.x/i), tickTimeY - (heightRatio * this.y/i));
-          vertex(tickTimeX, tickTimeY);
-        }
-        // print("Tick Time X = "+tickTimeX);
-        // print("Tick Time Y = "+tickTimeY);
-        // vertex();
-        // vertex();
+        vertex(tickTimeX, tickTimeY);
+        vertex(tickTimeX + 50, tickTimeY);
+        // vertex(tickTimeX + (heightRatio * this.x/i), tickTimeY - (heightRatio * this.y/i));
+        vertex(tickTimeX, tickTimeY);
       }
       var bottomLeft = vertex(-1, windowHeight/4);
     endShape(CLOSE);
