@@ -20,8 +20,8 @@ var introStartDysProd;
 var D0;
 var submitButton;
 var goBack;
-var measurements;     // the display panel 
-var drawMeasurements = true; 
+var measurements;     // the display panel
+var drawMeasurements = true;
 var attemptsLeftBoard;
 
 /* Lake Variables */
@@ -33,7 +33,7 @@ var lakeTarget;               // Double
 /* Reading Results Elements */
 var resultsBoard;
 var resultsRestart;
-var failedMessage;   
+var failedMessage;
 /* Results Variables */
 var attemptsLeft = 3;
 var measuredDepth;            // Double
@@ -72,16 +72,16 @@ function setup() {
       var left = width / 7;
       var right = width - left;
       var top = height / 4;
-      var bottom = height - top;
+      var bottom = height - top  / 6;
 
-      introBoard = new TextBoard(left, top, right - left, bottom - top);
+      introBoard = new TextBoard(left, top/2, right - left, bottom - top);
       introBoard.background = 240;
       introBoard.accent = 150;
       introBoard.addParagraph();
       introBoard.addText("Select Your Lake Type", 100, 20, "Helvetica", BOLD);
       introBoard.addParagraph();
       introBoard.addParagraph();
-      introBoard.addParagraph();
+      // introBoard.addParagraph();
       // introBoard.addText("Dys",
       //   "#000000", 16, "Helvetica", BOLD);
       introBoard.addParagraph();
@@ -116,8 +116,7 @@ function setup() {
           "Green-brown and murky, readings less than 3 meters");
           // "Productive     Green background, high algae, readings lower than 3 meters\n" +
           // "Dystrophic     Distinct tea or rootbeer color, readings lower than  meters");
-
-      introStartClear = new Button(290, 370, 95, 40, "Clear",
+      introStartClear = new Button(200, top*1.2, 95, 40, "Clear",
         function() {
           // Button Selected
             setLakeType(1);
@@ -129,7 +128,7 @@ function setup() {
       // introStartClear.color = [245, 245, 245];
       introStartClear.fontSize = 14;
 
-      introStartIntmdt = new Button(290, 430, 95, 40, "Intermediate",
+      introStartIntmdt = new Button(200, top*1.2+60, 95, 40, "Intermediate",
         function() {
           // Button Selected
           setLakeType(2);
@@ -141,7 +140,7 @@ function setup() {
       introStartIntmdt.fontSize = 14;
       // introStartIntmdt.color = [245, 245, 245];
 
-      introStartProd = new Button(290, 490, 95, 40, "Productive",
+      introStartProd = new Button(200, top*1.2+120, 95, 40, "Productive",
         function() {
           // Button Selected
             setLakeType(3);
@@ -153,7 +152,7 @@ function setup() {
       // introStartProd.color = [245, 245, 245];
       introStartProd.fontSize = 14;
 
-      introStartDys = new Button(290, 550, 95, 40, "Dystrophic",
+      introStartDys = new Button(200, top*1.2+180, 95, 40, "Dystrophic",
         function() {
           // Button Selected
             setLakeType(4);
@@ -165,7 +164,7 @@ function setup() {
       // introStartDys.color = [245, 245, 245];
       introStartDys.fontSize = 14;
 
-      introStartDysProd = new Button(290, 610, 95, 60, "Dystrophic\nProductive",
+      introStartDysProd = new Button(200, top*1.2+240, 95, 60, "Dystrophic\nProductive",
         function() {
           // Button Selected
             setLakeType(5);
@@ -199,10 +198,10 @@ function setup() {
 
       attemptsLeft = 3;
 
-       submitButton = new Button(width - 170, 120, 110, 50, "Submit",   
+       submitButton = new Button(width - 170, 120, 110, 50, "Submit",
           function() {
-           // Button Selected 
-           // Analyze trial and give feedback 
+           // Button Selected
+           // Analyze trial and give feedback
            // NOTE: THESE SELECT AND DESELECT FUNCTIONS ARE THE SAME BECAUSE IT ALTERNATES PER PRESS
 
         	if (D0.currentDepth != 0) {
@@ -220,7 +219,7 @@ function setup() {
            // Button Deselected
            if (D0.currentDepth != 0) {
       			measuredDepth = D0.currentDepth;
-      			if (analyzeTrial()) {   
+      			if (analyzeTrial()) {
         			scenes.nextScene();
         			scenes.setup();
       				} else {
@@ -292,7 +291,7 @@ function setup() {
     function() {
       // setup()
 
-      resultsBoard = new TextBoard(200, 200, 700, 500);
+      resultsBoard = new TextBoard(200, 50, 700, 500);
       resultsBoard.background = 240;
       resultsBoard.accent = 150;
       resultsBoard.addParagraph();
@@ -330,9 +329,7 @@ function setup() {
       resultsBoard.addTab();
       resultsBoard.addText(measuredTolerance);
 
-
-
-      resultsRestart = new Button(780, 630, 95, 50, "Test Again",
+      resultsRestart = new Button(780, 450, 95, 50, "Test Again",
         function() {
           // Button Selected
             setLakeType(5);
@@ -350,10 +347,10 @@ function setup() {
       scenes.background(60);
       resultsBoard.draw();
       push();
-      strokeWeight(4);
-      stroke(200);
-      line(210, 317, 890, 317);
-      line(385, 317, 385, 680);
+      // strokeWeight(4);                   // Dividing lines in results page
+      // stroke(200);
+      // line(210, 317, 890, 317);
+      // line(385, 317, 385, 680);
       pop();
       resultsRestart.run();
     })
@@ -465,11 +462,11 @@ function analyzeTrial() {
         // Tell the user something, check try number
       }
     }
-  }  
+  }
 } */
 
 function keyTyped(){
-/* 
+/*
     if (keyCode == ENTER && scenes.sceneIndex() == 2) {
     // Only check the trial if the depth isn't 0
     if (D0.currentDepth != 0) {
@@ -488,8 +485,8 @@ function keyTyped(){
 function disk(){ //THE BIG DISK CLASS
  this.P0 = createVector(width/6, height/6); // BEGIN POINT    // changed from height/8
  this.P1 = createVector(width/2, height/2); // END POINT
- 
- this.maxDepth = this.lakeDepth; //10; // MAXIMUM DEPTH OF DISK
+
+ this.maxDepth = lakeDepth; //10; // MAXIMUM DEPTH OF DISK
  this.currentDepth = 0; //CURRENT DEPTH OF DISK
  this.deltaDepth = 0;
  this.deltaDelta = 0;
@@ -508,10 +505,26 @@ function disk(){ //THE BIG DISK CLASS
  this.disp = function(){
    if(this.hide == false){ // WE DON'T WANT TO DRAW THE DISK IF IT'S HIDDEN
      //******* DRAW THE DISK
-     push();   
+     push();
      var t = this.currentDepth; // a temp value for the lerp below                            // I think this is where the disk opacity is defined; old text below \/
-     var alpha = ((1 - map(t,0,lakeTarget,0,1)) * 255 + map(t,0,lakeTarget,0,1) * 0);       //map(this.rad, 0, sqrt(width*width/4 + height*height/4), -30, 153); 
-     stroke(255, alpha);
+
+//New Opacity
+var alpha = ((1 - map(t,0,lakeTarget,0,1)) * 255 + map(t,0,lakeTarget,0,1) * 0);
+var delta = ((1 - map(t,0,lakeTarget,0,1)) * 255 + map(t,0,lakeTarget,0,1) * 0);
+
+stroke(255, alpha);
+// strokeWeight(delta);
+noFill();
+ellipse(this.x, this.y, this.rad + delta, this.rad + delta);
+
+noStroke();
+fill(0, alpha);
+arc(this.x, this.y, this.rad, this.rad, 0, PI/2);
+arc(this.x, this.y, this.rad, this.rad, PI, 3*PI/2);
+
+fill(255, alpha);
+arc(this.x, this.y, this.rad, this.rad, PI/2, PI);
+arc(this.x, this.y, this.rad, this.rad, 3*PI/2, 0);
 
      var seedValue = noise(this.dx);
      var nois = map(seedValue, 0, 1, 0, .5);
@@ -523,14 +536,14 @@ function disk(){ //THE BIG DISK CLASS
        var k = map(i, 0, numberOfIterations -1, 0, 0);//map(i, 0, numberOfIterations -1, map(this.currentDepth, 0, this.maxDepth, 0, PI/8), 0);
        var l = map(i, 0, numberOfIterations -1, this.rad/30, 0);
 
-       noStroke();
-       fill(0, alpha);
-       arc(this.x + l*cos(PI/4 + nois), this.y + l*sin(PI/4 + nois), j, j, nois + k, PI/2 + nois - k);
-       arc(this.x + l*cos(5*PI/4 + nois), this.y + l*sin(5*PI/4 + nois), j, j, PI + nois + k, 3*PI/2 + nois - k);
-
-       fill(255, alpha);
-       arc(this.x + l*cos(3*PI/4 + nois), this.y + l*sin(3*PI/4 + nois), j, j, PI/2 + nois + k, PI + nois - k);
-       arc(this.x + l*cos(7*PI/4 + nois), this.y + l*sin(7*PI/4 + nois), j, j, 3*PI/2 + nois + k, nois - k);
+       // noStroke();
+       // fill(0, alpha);
+       // arc(this.x + l*cos(PI/4 + nois), this.y + l*sin(PI/4 + nois), j, j, nois + k, PI/2 + nois - k);
+       // arc(this.x + l*cos(5*PI/4 + nois), this.y + l*sin(5*PI/4 + nois), j, j, PI + nois + k, 3*PI/2 + nois - k);
+       //
+       // fill(255, alpha);
+       // arc(this.x + l*cos(3*PI/4 + nois), this.y + l*sin(3*PI/4 + nois), j, j, PI/2 + nois + k, PI + nois - k);
+       // arc(this.x + l*cos(7*PI/4 + nois), this.y + l*sin(7*PI/4 + nois), j, j, 3*PI/2 + nois + k, nois - k);
      }
 
      stroke(153, 153);
@@ -576,7 +589,7 @@ function disk(){ //THE BIG DISK CLASS
 
      var phi = map(this.currentDepth, 0, this.maxDepth + 1, 0, 2*PI);
 
-     strokeWeight(2);																
+     strokeWeight(2);
      stroke(255, 153, 153);
      line(this.meterPos.x, this.meterPos.y,
           this.meterPos.x + 65*cos(phi - PI/2), this.meterPos.y + 65*sin(phi - PI/2));   //draw needle
@@ -610,17 +623,17 @@ function disk(){ //THE BIG DISK CLASS
      console.log(lakeDepth);
      if(keyIsDown(UP_ARROW) && this.currentDepth < lakeDepth)            // gets input only if the disk is under the limit
      	this.deltaDepth += .0005
-     if(keyIsDown(DOWN_ARROW) && this.currentDepth >= 0)                // get input only when the disk is at or above 0                 
+     if(keyIsDown(DOWN_ARROW) && this.currentDepth >= 0)                // get input only when the disk is at or above 0
      	this.deltaDepth += -.0005
      if((this.currentDepth >= lakeDepth && this.deltaDepth > 0)|| (this.currentDepth < 0 && this.deltaDepth < 0))     // if the disk is at the limit and is still going up, or below zero and going down, stop it
      	this.deltaDepth = 0;
      this.deltaDepth += this.deltaDelta;
      this.currentDepth += this.deltaDepth;
 
-     this.x = this.P0.x + (direction.x*(this.currentDepth * 100 + dTheta))%(d0*cos(tan(direction.y/direction.x)));
-     this.y = this.P0.y + (direction.y*(this.currentDepth * 100 + dTheta))%(d0/direction.y);
+     this.x = this.P0.x + (direction.x*(this.currentDepth * 60 + dTheta))%(d0*cos(atan(direction.y/direction.x)));
+     this.y = this.P0.y + (direction.y*(this.currentDepth * 60 + dTheta))%(d0/direction.y);
 
-     this.rad = dist(this.x, this.y, this.P1.x, this.P1.y);// decrease size of disk as it gets closer to the center
+     this.rad = dist(this.x, this.y, this.P1.x-10, this.P1.y-10);// decrease size of disk as it gets closer to the center
    }
  }
 
