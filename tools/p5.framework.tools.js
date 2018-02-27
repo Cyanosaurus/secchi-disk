@@ -410,15 +410,15 @@ function TextBoard(cornerX, cornerY, width, height) {
   }
 
   this.addParagraph = function(amt) {
-    for (var i = 0; i < amt; i++) {
+    // for (var i = 0; i < amt; i++) {
       this.addText("\n");
-    }
+    // }
   }
 
   this.addTab = function(amt) {
-    for (var i = 0; i < amt; i++) {
+    // for (var i = 0; i < amt; i++) {
       this.addText("\t");
-    }
+    // }
   }
 
   this.empty = function() {
