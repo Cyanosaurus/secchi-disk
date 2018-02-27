@@ -530,24 +530,17 @@ function disk(){ //THE BIG DISK CLASS
     fill("yellow");
     
     //If the value hasn't reached the certain point yet, do nothing for them, otherwise, start to map from start point to end point (left to right)
-    var measureTape = beginShape(QUADS);
-      var topLeft = vertex(-1, windowHeight/12);
-      var topRight = vertex(this.x, this.y - this.rad/40);
-      var bottomRight = vertex(this.x, this.y + this.rad/40);
-      // Put some sort of loop here to place vertexes among these points, and possibly an inner statement to draw the actual marks
-      for(i = 0;i < floor(D0.currentDepth+1);i++)
-      {
-        var tickTimeX = map(i, 0, floor(D0.currentDepth+1), -1, this.x);
-        var tickTimeY = map(i, 0, floor(D0.currentDepth+1), windowHeight/4, this.y + this.rad/40);
-        var tickTime = createVector(tickTimeX, tickTimeY);
-
-        vertex(tickTimeX, tickTimeY);
-        vertex(tickTimeX + 50, tickTimeY);
-        // vertex(tickTimeX + (heightRatio * this.x/i), tickTimeY - (heightRatio * this.y/i));
-        vertex(tickTimeX, tickTimeY);
-      }
-      var bottomLeft = vertex(-1, windowHeight/4);
-    endShape(CLOSE);
+    // measureTape = beginShape(QUADS);
+    //   var topLeft = vertex(-1, windowHeight/12);
+    //   var topRight = vertex(this.x, this.y - this.rad/40);
+    //   var bottomRight = vertex(this.x, this.y + this.rad/40);
+    //   // Put some sort of loop here to place vertexes among these points, and possibly an inner statement to draw the actual marks
+    //   for(i = 0; i < lakeDepth; i++)
+    //   {
+    //     vertex()
+    //   }
+    //   var bottomLeft = vertex(-1, windowHeight/4);
+    // endShape(CLOSE);
     pop();
 
     push();
@@ -644,6 +637,24 @@ function disk(){ //THE BIG DISK CLASS
   this.disp();
  }
 
+}
+
+function measureTape(cornerTopLeft, cornerTopRight, cornerBottomLeft, cornerBottomRight, depthOfLake)
+{
+  beginShape(QUADS);
+  vertex(cornerTopLeft[0], cornerTopLeft[1]);
+  vertex(cornerTopRight[0], cornerTopRight[1]);
+  vertex(cornerBottomRight[0], cornerBottomRight[1]);
+  for(i = 0; i < depthOfLake; i++)
+  {
+    tickTimeX = map(i, 0, depthOfLake, cornerBottomLeft[0], cornerBottomRight[0]);
+    tickTimeY = map(i, 0, depthOfLake, cornerBottomLeft[1], cornerBottomRight[1]);
+    tickTimeYTop = map(i, 0, depthOfLake, cornerTopLeft[1], cornerTopRight[1]);
+
+    line(tickTimeX, tickTimeY, tickTimeX, tickTimeYTop);
+  }
+  vertex(cornerBottomLeft[0], cornerBottomLeft[1]);
+  endShape(CLOSE);
 }
 
 function RoundedBox(cornerX, cornerY, width, height)
