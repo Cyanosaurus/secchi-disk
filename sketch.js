@@ -545,10 +545,18 @@ this.disp = function(){
     pop();
 
     push();
-    //Trying to put a measuring tape on the secchi disk
+    //Put a measuring tape on the secchi disk
     stroke(153, 153);
     strokeWeight(2);
     fill("white");
+
+    //need to have opacity gradually come up the measuring tape to about 1/3 height?
+    //a lot of lines causes the program to lag severely, but it looks the cleanest
+
+    if(this.currentDepth > lakeDepth/10)
+    {
+
+    }
 
     beginShape(QUADS);
       vertex(-25, -25);
@@ -557,13 +565,31 @@ this.disp = function(){
       vertex(-25, 75);
     endShape(CLOSE);
 
+    //For the depth of the lake, put a major tick mark on the measuring tape
     for(i = 1; i <= lakeDepth; i++)
     {
+      //Finds where on the x and y axis to put the lines
       tickTimeX = map(i, 0, this.currentDepth+1, this.x, -25);
       tickTimeYBottom = map(i, 0, this.currentDepth+1, this.y + this.rad/40, 75);
       tickTimeYTop = map(i, 0, this.currentDepth+1, this.y - this.rad/40, -25);
 
+      stroke("black");
+      strokeWeight(3);
       line(tickTimeX, tickTimeYBottom, tickTimeX, tickTimeYTop);
+      strokeWeight(1);
+      //The 1 comes in weird, this is how I "fixed" it
+      if(this.currentDepth > .68)
+      {
+        textSize(50*i/this.currentDepth);
+        fill("black");
+        text(i, tickTimeX, tickTimeYBottom);
+      }
+      else
+      {
+        textSize(50*i/this.currentDepth);
+        fill("black");
+        text(i, tickTimeX, tickTimeYTop);
+      }
     }
 
     pop();
@@ -658,11 +684,6 @@ this.disp = function(){
   this.disp();
  }
 
-}
-
-function measureTape(cornerTopLeft, cornerTopRight, cornerBottomLeft, cornerBottomRight, depthOfLake)
-{
-  
 }
 
 function RoundedBox(cornerX, cornerY, width, height)
