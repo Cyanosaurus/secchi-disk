@@ -518,66 +518,54 @@ function disk(){ //THE BIG DISK CLASS
 
  this.meterPos = createVector(width - width/4.8, height/10); // POSITION OF THE DEPTH METER
 
- this.disp = function(){
-   if(this.hide == false){ // WE DON'T WANT TO DRAW THE DISK IF IT'S HIDDEN
+this.disp = function(){
+  if(this.hide == false){ // WE DON'T WANT TO DRAW THE DISK IF IT'S HIDDEN
      //******* DRAW THE DISK
-     push();
-     var t = this.currentDepth; // a temp value for the lerp below                            // I think this is where the disk opacity is defined; old text below \/
+    push();
 
-//New Opacity
-var alpha = ((1 - map(t,0,lakeTarget,0,1)) * 255 + map(t,0,lakeTarget,0,1) * 0);
-var delta = ((1 - map(t,0,lakeTarget,0,1)) * 255 + map(t,0,lakeTarget,0,1) * 0);
+    var t = this.currentDepth; // a temp value for the lerp below                            // I think this is where the disk opacity is defined; old text below \/
 
-stroke(255, alpha);
-// strokeWeight(delta);
-noFill();
-ellipse(this.x, this.y, this.rad + delta, this.rad + delta);
+    //New Opacity
+    var alpha = ((1 - map(t,0,lakeTarget,0,1)) * 255 + map(t,0,lakeTarget,0,1) * 0);
+    var delta = ((1 - map(t,0,lakeTarget,0,1)) * 255 + map(t,0,lakeTarget,0,1) * 0);
 
-noStroke();
-fill(0, alpha);
-arc(this.x, this.y, this.rad, this.rad, 0, PI/2);
-arc(this.x, this.y, this.rad, this.rad, PI, 3*PI/2);
+    stroke(255, alpha);
+    noFill();
+    ellipse(this.x, this.y, this.rad + delta, this.rad + delta);
 
-fill(255, alpha);
-arc(this.x, this.y, this.rad, this.rad, PI/2, PI);
-arc(this.x, this.y, this.rad, this.rad, 3*PI/2, 0);
+    noStroke();
+    fill(0, alpha);
+    arc(this.x, this.y, this.rad, this.rad, 0, PI/2);
+    arc(this.x, this.y, this.rad, this.rad, PI, 3*PI/2);
 
+    fill(255, alpha);
+    arc(this.x, this.y, this.rad, this.rad, PI/2, PI);
+    arc(this.x, this.y, this.rad, this.rad, 3*PI/2, 0);
 
-     var seedValue = noise(this.dx);
-     var nois = map(seedValue, 0, 1, 0, .5);
-     var numberOfIterations = 60;
+    pop();
 
-     for(var i = 0; i < numberOfIterations ; i++){
-       var j = map(i, 0, numberOfIterations , 0, this.rad)
-       var k = map(i, 0, numberOfIterations -1, 0, 0);//map(i, 0, numberOfIterations -1, map(this.currentDepth, 0, this.maxDepth, 0, PI/8), 0);
-       var l = map(i, 0, numberOfIterations -1, this.rad/30, 0);
-
-       // noStroke();
-       // fill(0, alpha);
-       // arc(this.x + l*cos(PI/4 + nois), this.y + l*sin(PI/4 + nois), j, j, nois + k, PI/2 + nois - k);
-       // arc(this.x + l*cos(5*PI/4 + nois), this.y + l*sin(5*PI/4 + nois), j, j, PI + nois + k, 3*PI/2 + nois - k);
-       //
-       // fill(255, alpha);
-       // arc(this.x + l*cos(3*PI/4 + nois), this.y + l*sin(3*PI/4 + nois), j, j, PI/2 + nois + k, PI + nois - k);
-       // arc(this.x + l*cos(7*PI/4 + nois), this.y + l*sin(7*PI/4 + nois), j, j, 3*PI/2 + nois + k, nois - k);
-     }
-
+    push();
+    //Trying to put a measuring tape on the secchi disk
     stroke(153, 153);
     strokeWeight(2);
-    fill("yellow");
-    
-    //If the value hasn't reached the certain point yet, do nothing for them, otherwise, start to map from start point to end point (left to right)
-    // measureTape = beginShape(QUADS);
-    //   var topLeft = vertex(-1, windowHeight/12);
-    //   var topRight = vertex(this.x, this.y - this.rad/40);
-    //   var bottomRight = vertex(this.x, this.y + this.rad/40);
-    //   // Put some sort of loop here to place vertexes among these points, and possibly an inner statement to draw the actual marks
-    //   for(i = 0; i < lakeDepth; i++)
-    //   {
-    //     vertex()
-    //   }
-    //   var bottomLeft = vertex(-1, windowHeight/4);
-    // endShape(CLOSE);
+    fill("white");
+
+    beginShape(QUADS);
+      vertex(-25, -25);
+      vertex(this.x, this.y - this.rad/40);
+      vertex(this.x, this.y + this.rad/40);
+      vertex(-25, 75);
+    endShape(CLOSE);
+
+    for(i = 1; i <= lakeDepth; i++)
+    {
+      tickTimeX = map(i, 0, this.currentDepth+1, this.x, -25);
+      tickTimeYBottom = map(i, 0, this.currentDepth+1, this.y + this.rad/40, 75);
+      tickTimeYTop = map(i, 0, this.currentDepth+1, this.y - this.rad/40, -25);
+
+      line(tickTimeX, tickTimeYBottom, tickTimeX, tickTimeYTop);
+    }
+
     pop();
 
     push();
@@ -613,12 +601,8 @@ arc(this.x, this.y, this.rad, this.rad, 3*PI/2, 0);
     }
 
     //This bit draws the moving triangle along the side of the rectangle, t is the current depth of the secchi disk
-    var tip = map(t, 0, lakeDepth, this.meterPos.y, this.meterPos.y+height/1.25);
-
-    //prints to console where the triangle tip is
-    // print("tip ="+tip);
-
     fill("red");
+    var tip = map(t, 0, lakeDepth, this.meterPos.y, this.meterPos.y+height/1.25);
     var depthTriangle = triangle(this.meterPos.x-15, tip+8, this.meterPos.x+15, tip, this.meterPos.x-15, tip-8);
 
     pop();
@@ -678,20 +662,7 @@ arc(this.x, this.y, this.rad, this.rad, 3*PI/2, 0);
 
 function measureTape(cornerTopLeft, cornerTopRight, cornerBottomLeft, cornerBottomRight, depthOfLake)
 {
-  beginShape(QUADS);
-  vertex(cornerTopLeft[0], cornerTopLeft[1]);
-  vertex(cornerTopRight[0], cornerTopRight[1]);
-  vertex(cornerBottomRight[0], cornerBottomRight[1]);
-  for(i = 0; i < depthOfLake; i++)
-  {
-    tickTimeX = map(i, 0, depthOfLake, cornerBottomLeft[0], cornerBottomRight[0]);
-    tickTimeY = map(i, 0, depthOfLake, cornerBottomLeft[1], cornerBottomRight[1]);
-    tickTimeYTop = map(i, 0, depthOfLake, cornerTopLeft[1], cornerTopRight[1]);
-
-    line(tickTimeX, tickTimeY, tickTimeX, tickTimeYTop);
-  }
-  vertex(cornerBottomLeft[0], cornerBottomLeft[1]);
-  endShape(CLOSE);
+  
 }
 
 function RoundedBox(cornerX, cornerY, width, height)
