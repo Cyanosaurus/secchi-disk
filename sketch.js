@@ -23,12 +23,21 @@ var goBack;
 var measurements;     // the display panel
 var drawMeasurements = true;
 var attemptsLeftBoard;
+var passOrFail;
+var clearPass = 0;
+var intermediatePass = 0;
+var productivePass = 0;
+var dystrophicPass = 0;
+var dystrophicProductivePass = 0;
 
 /* Lake Variables */
 var lakeType;                 // String
 var lakeColor;                // Color
 var lakeDepth;                // Double
 var lakeTarget;               // Double
+var img1;
+
+var message = "Please begin.";
 
 /* Reading Results Elements */
 var resultsBoard;
@@ -41,13 +50,19 @@ var measuredError;            // Double
 var measuredErrorRel;         // Double
 var measuredTolerance;        // String
 
-function setup() {
+function preload() {
+// img1 = loadImage("https://imgur.com/YenZkQx");
+}
 
+function setup() {
   /* --- Compatibility Check Scene --- */
+      windowWidth = 1200;     //Static Window Width and Height
+      windowHeight = 600;
+
   scenes.addScene(new Scene(windowWidth, windowHeight,
     function() {
       // setup
-
+      background(0);
       compatBoard = new TextBoard(width / 6, height / 4, width * 2 / 3, height / 2);
     },
     function() {
@@ -59,7 +74,7 @@ function setup() {
         scenes.setup();
       }
 
-      scenes.background(60);
+      scenes.background(0);
       compatBoard.draw();
     }
   ));
@@ -74,19 +89,23 @@ function setup() {
       var bottom = height - top  / 6;
 
       introBoard = new TextBoard(left, top/2, right - left, bottom - top);
-      introBoard.background = 240;
-      introBoard.accent = 150;
-      introBoard.addParagraph();
-      introBoard.addText("Select Your Lake Type", 100, 20, "Helvetica", BOLD);
+      introBoard.background = 60;
+      introBoard.accent = 200;
+      // introBoard.addTab();
+      introBoard.addText("Select Your Lake Type", 240, 40, "Helvetica", BOLD);
       introBoard.addParagraph();
       introBoard.addParagraph();
       // introBoard.addParagraph();
       // introBoard.addText("Dys",
       //   "#000000", 16, "Helvetica", BOLD);
       introBoard.addParagraph();
+      introBoard.addParagraph();
       introBoard.addText("                            " +
         "Bluish color, with readings above 4 meters",
-        100, 16, "Helvetica", BOLD);
+        240, 18, "Helvetica", BOLD);
+        if (clearPass == 1) {
+          introBoard.addText("          Complete");
+        }
       introBoard.addParagraph();
       introBoard.addParagraph();
       introBoard.addParagraph();
@@ -95,24 +114,36 @@ function setup() {
       // introBoard.addParagraph();
       introBoard.addText("                            " +
         "Blue or green-brown, with readings of 4 to 7 meters");
+        if (intermediatePass == 1) {
+          introBoard.addText("          Complete");
+        }
         introBoard.addParagraph();
         introBoard.addParagraph();
         introBoard.addParagraph();
         introBoard.addParagraph();
         introBoard.addText("                            " +
           "Green Background, high algae, readings less than 3 meters");
+        if (productivePass == 1) {
+          introBoard.addText("          Complete");
+        }
         introBoard.addParagraph();
         introBoard.addParagraph();
         introBoard.addParagraph();
         introBoard.addParagraph();
         introBoard.addText("                            " +
           "Distinct tea or rootbeer color, readings less than 3 meters");
+        if (dystrophicPass == 1) {
+          introBoard.addText("          Complete");
+        }
         introBoard.addParagraph();
         introBoard.addParagraph();
         introBoard.addParagraph();
         introBoard.addParagraph();
         introBoard.addText("                            " +
           "Green-brown and murky, readings less than 3 meters");
+          if (dystrophicProductivePass == 1) {
+            introBoard.addText("          Complete");
+          }
           // "Productive     Green background, high algae, readings lower than 3 meters\n" +
           // "Dystrophic     Distinct tea or rootbeer color, readings lower than  meters");
       introStartClear = new Button(200, top*1.2, 95, 40, "Clear",
@@ -167,7 +198,6 @@ function setup() {
       introStartDys.fontSize = 14;
 
       introStartDysProd = new Button(200, top*1.2+240, 95, 60, "Dystrophic\nProductive",
-
         function() {
           // Button Selected
             setLakeType(5);
@@ -179,16 +209,32 @@ function setup() {
       // introStartDysProd.color = [245, 245, 245];
       introStartDysProd.fontSize = 14;
 
+      // introStartDys.color = [245, 245, 245];
+      introStartDys.fontSize = 14;
+
+      introStartTestTaker = new Button(900, top*1.2+240, 95, 60, "Take Test",
+        function() {
+          // Button Selected --> To be changed to a test
+            scenes.setScene(6);
+            scenes.setup();
+        },
+        function() {}
+      );
+      // introStartDysProd.color = [245, 245, 245];
+      introStartDysProd.fontSize = 14;
+
+
     },
     function() {
       // draw()
-      scenes.background(60);
+      scenes.background(0);
       introBoard.draw();
       introStartClear.run();
       introStartIntmdt.run();
       introStartProd.run();
       introStartDys.run();
       introStartDysProd.run();
+      introStartTestTaker.run();
     })
   );
   /* --- End Intro Menu Scene --- */
@@ -203,30 +249,47 @@ function setup() {
       var bottom = windowHeight - top;
 
       descBoard = new TextBoard(left, top, right - left, bottom - top);
-      descBoard.background = 240;
-      descBoard.accent = 150;
-      descBoard.addText("Instructions On How To Lower The Secchi Disk", 0, 20, "Helvetica", BOLD);
+      descBoard.background = 60;
+      // descBoard.accent = 150;
+      descBoard.addText("How to Use the Secchi Disk Simulator", 240, 40, "Helvetica", BOLD);
       descBoard.addParagraph(5);
-      descBoard.addTab(1);
-      descBoard.addText("The up and down arrows on your keyboard control the movement of the secchi disk. \nThe up arrow moves the disk further into the water, and the down arrow retrieves it.", 0, 16, "Helvetica", BOLD);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+      // descBoard.addTab(1);
+      descBoard.addText("The up and down arrows on your keyboard control the movement of the secchi disk. \nThe up arrow moves the disk further into the water, and the down arrow retrieves it.", 240, 18, "Helvetica", BOLD);
       descUpArrow = new RoundedBox(right-(windowWidth/9), top+(windowHeight/5), 80, 60);
       descDownArrow = new RoundedBox(right-(windowWidth/9), top+1.5*(windowHeight/5), 80, 60);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+
+      // descBoard.addTab(1);
+      descBoard.addText("Holding down the arrow keys will build up momentum, if you want to move it with\nprecision, try just tapping the arrow keys.");
 
       descBoard.addParagraph(5);
-      descBoard.addTab(1);
-      descBoard.addText("Holding down the arrow keys will build up momentum, if you want to move it with\n precision, try just tapping the arrow keys.");
-
       descBoard.addParagraph(5);
-      descBoard.addTab(1);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+      // descBoard.addTab(1);
       descBoard.addText("Measure the depth at which the disk has just disappeared out of view. Click \nsubmit when you think the reading is accurate.");
 
       descBoard.addParagraph(5);
-      descBoard.addTab(1);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+      // descBoard.addTab(1);
       descBoard.addText("You will have three attempts to find where the secchi disk will disappear from sight.");
 
       descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+
       descBoard.addTab(1);
-      descBoard.addText("Click Okay when you are ready to start.");
+      descBoard.addText("Click Okay when you are ready to start.", 240, 24, "Helvetica", BOLD);
 
       descBoardClear = new Button(right-110, bottom-65, 95, 50, "Okay",
         function() {
@@ -239,7 +302,7 @@ function setup() {
       introStartDysProd.fontSize = 14;
     },
     function() {
-      scenes.background(60);
+      scenes.background(0);
       descBoard.draw();
       descBoardClear.run();
       descUpArrow.run();
@@ -250,69 +313,107 @@ function setup() {
 
   /* --- Simulator Scene --- */
   scenes.addScene(new Scene(windowWidth, windowHeight,
+
     function() {
       // setup()
       D0 = new disk();
-
       attemptsLeft = 3;
 
-      submitButton = new Button(width - 170, 120, 110, 50, "Submit",
+       submitButton = new Button2(width - 300, height - 340, 110, 50, "Submit",
 
           function() {
+           // Button Selected
+           // Analyze trial and give feedback
+           // NOTE: THESE SELECT AND DESELECT FUNCTIONS ARE THE SAME BECAUSE IT ALTERNATES PER PRESS
 
         	if (D0.currentDepth != -0.1) {
       			measuredDepth = D0.currentDepth;
       			if (analyzeTrial()) {                          // if correct move to next scene, otherwise the run section below
         			scenes.nextScene();                        // will deal with the case of no chances left
         			scenes.setup();
+              if (lakeType == "Clear") {
+                clearPass = 1;
+              }
+              if (lakeType == "Intermediate") {
+                intermediatePass = 1;
+              }
+              if (lakeType == "Productive"){
+                productivePass = 1;
+              }
+              if (lakeType == "Dystrophic") {
+                dystrophicPass = 1;
+              }
+              if (lakeType == "Dystrophic Productive") {
+                dystrophicProductivePass = 1;
+              }
       				} else {
         				attemptsLeft--;
-        				// TODO: Tell the user something, check try number
-
       				}
             }
          },
          function() {
            // Button Deselected
-           if (D0.currentDepth != 0) {
-      			measuredDepth = D0.currentDepth;
-      			if (analyzeTrial()) {
-        			scenes.nextScene();
-        			scenes.setup();
-      				} else {
-      					// console.log(attemptsLeft);
-        				attemptsLeft--;
-        				// TODO: Tell the user something, check try number
-      				}
-            }
+           // if (D0.currentDepth != 0) {
+      			// measuredDepth = D0.currentDepth;
+      			// if (analyzeTrial()) {
+        		// 	scenes.nextScene();
+        		// 	scenes.setup();
+      			// 	} else {
+      			// 		// console.log(attemptsLeft);
+           //      message = "You're too far off. Try again!";
+        		// 		attemptsLeft--;
+      			// 	}
+           //  }
          }
       );
 
-      goBack = new Button(width - 170, 60, 110, 50, "Switch Types",
+      goBack = new Button(width - 170, height - 340, 110, 50, "Switch Types",
         function() {
           scenes.setScene(2);
           scenes.setup();
         }
       );
 
+      // hideMeter = new Button(width - 170, 240, 110, 50, "Hide Depth Meter",
+      //   function()
+      //   {
+      //     depthMeter.hide = !depthMeter.hide;
+      //     depthTriangle.hide = !depthTriangle.hide;
+      //   }
+      // );
+
     },
     function() {                                    // THIS IS WHERE THE STUFF FOR THE SIM IS DRAWN
-      scenes.background(lakeColor);
+      scenes.background(0);
 
+      fill(lakeColor);
+      strokeWeight(5);
+      ellipse(width/3+30,height/2,width*.55, height*1.1);
+
+      strokeWeight(0);
       fill("black");
-      rect(width - width/4.5, 0, windowWidth, windowHeight);
-
-      measureDepth = new Button(width - 170, height - 170, 110, 50, "Current Depth: \n" + floor(D0.currentDepth*100)/100 + " Meters", function(){});
-
-      visualAttempts = new Button(width - 170, height - 110, 110, 50, "Attempts Left: " + attemptsLeft, function(){});
+      rect(width - width/4.5, 0, width, height);
 
       D0.maxDepth = ceil(lakeDepth)-1;
       D0.run();
       // Make the button do
       submitButton.run();
       goBack.run();
+      // hideMeter.run();
+
+      measureDepth = new TextBox(width - 300, height - 170, 240, 50, "Current Depth: " + floor(D0.currentDepth*100)/100 + " Meters", function(){});
       measureDepth.run();
+      visualAttempts = new TextBox(width - 300, height - 110, 240, 50, "Attempts Left: " + attemptsLeft, function(){});
       visualAttempts.run();
+
+      messageDisplay = new TextBox(width - 300, height - 280, 240, 100, message, function(){});
+      messageDisplay.run();
+
+      simBackground = new TextBoxBackground(width - 300, height - 540, 240, 190, "", function(){});
+      simBackground.run();
+
+      simInfo = new TextBox(width - 290, height - 530, 220, 170, "Secchi Disk Simulator", function(){});
+      simInfo.run();
 
       // If chances are zero, move to results
       if(attemptsLeft == 0)
@@ -326,9 +427,9 @@ function setup() {
 
       push();
       fill(0, 0, 0, 0);
-      strokeWeight(100);
+      strokeWeight(50);
       stroke(50);
-      rect(0, 0, windowWidth, windowHeight);
+      rect(0, 0, 1200, 600);
       pop();
     })
   );
@@ -338,69 +439,43 @@ function setup() {
   scenes.addScene(new Scene(windowWidth, windowHeight,
     function() {
       // setup()
-     resultsBoard =  new TextBoard(200, 50, windowWidth/2, windowHeight/2);
+      resultsBoard = new TextBoard(200, 50, 700, 500);
 
-      resultsBoard.background = 0;
-      resultsBoard.accent = 50;
-      resultsBoard.addParagraph(5);
-      resultsBoard.addParagraph(5);
-      resultsBoard.addTab(1);
-      resultsBoard.addTab(1);
-      resultsBoard.addTab(1);
-      resultsBoard.addText("Reading Results", 200, 30, "Helvetica", BOLD);
-      resultsBoard.addParagraph(5);
-      resultsBoard.addParagraph(5);
-      resultsBoard.addParagraph(5);
+      resultsBoard.background = 240;
+      resultsBoard.accent = 150;
+      resultsBoard.addText("Reading Results", 0, 20, "Helvetica", BOLD);
       resultsBoard.addParagraph(5);
       resultsBoard.addTab(1);
+      resultsBoard.addText("Lake Type", 0, 16, "Helvetica", BOLD);
       resultsBoard.addTab(1);
-     // resultsBoard.addText("Lake Type", 0, 16, "Helvetica", BOLD);
-     //("Words", color, size, font, type);
-      resultsBoard.addText("Lake Type", 200, 20, "Helvetica", BOLD);
-      resultsBoard.addTab(1);
-      resultsBoard.addTab(1);
-      resultsBoard.addText(lakeType, 255, 20, "Helvetica", BOLD);
-      resultsBoard.addParagraph(3);
+      resultsBoard.addText(lakeType);
       resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
+      resultsBoard.addText("Target Depth");
       resultsBoard.addTab(1);
-      resultsBoard.addText("Target Depth", 200, 20, "Helvetica", BOLD);
-      resultsBoard.addTab(1);
-      resultsBoard.addTab(1);
-      resultsBoard.addText(lakeTarget.toFixed(2) + " meters", 255, 20, "Helvetica", BOLD);
-      resultsBoard.addParagraph(3);
+      resultsBoard.addText(lakeTarget.toFixed(2) + " meters");
       resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
+      resultsBoard.addText("Measured Depth");
       resultsBoard.addTab(1);
-      resultsBoard.addText("Measured Depth", 200, 20, "Helvetica", BOLD);
-      resultsBoard.addTab(1);
-      resultsBoard.addTab(1);
-      resultsBoard.addText(measuredDepth.toFixed(2) + " meters", 255, 20, "Helvetica", BOLD);
-      resultsBoard.addParagraph(3);
+      resultsBoard.addText(measuredDepth.toFixed(2) + " meters");
       resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
+      resultsBoard.addText("Error (absolute)");
       resultsBoard.addTab(1);
-      resultsBoard.addText("Error (absolute)", 200, 20, "Helvetica", BOLD);
-      resultsBoard.addTab(1);
-      resultsBoard.addTab(1);
-      resultsBoard.addText(measuredError.toFixed(2) + " meters", 255, 20, "Helvetica", BOLD);
-      resultsBoard.addParagraph(3);
+      resultsBoard.addText(measuredError.toFixed(2) + " meters");
       resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
+      resultsBoard.addText("Error (relative)");
       resultsBoard.addTab(1);
-      resultsBoard.addText("Error (relative)", 200, 20, "Helvetica", BOLD);
-      resultsBoard.addTab(1);
-      resultsBoard.addTab(1);
-      resultsBoard.addText(measuredErrorRel.toFixed(2) + "%", 255, 20, "Helvetica", BOLD);
-      resultsBoard.addParagraph(3);
+      resultsBoard.addText(measuredErrorRel.toFixed(2) + "%");
       resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
+      resultsBoard.addText("Within Tolerance?");
       resultsBoard.addTab(1);
-      resultsBoard.addText("Within Tolerance?", 200, 20, "Helvetica", BOLD);
-      resultsBoard.addTab(1);
-      resultsBoard.addText(measuredTolerance, 255, 20, "Helvetica", BOLD);
+      resultsBoard.addText(measuredTolerance);
 
-      resultsRestart = new Button(windowWidth/2, windowHeight/2 - 50, 95, 50, "Test Again",
+      resultsRestart = new Button(780, 450, 95, 50, "Test Again",
 
         function() {
           // Button Selected
@@ -416,7 +491,7 @@ function setup() {
     },
     function() {
       // draw()
-      scenes.background(60);
+      scenes.background(0);
       resultsBoard.draw();
       push();
       // strokeWeight(4);                   // Dividing lines in results page
@@ -428,6 +503,188 @@ function setup() {
     })
   );
   /* --- End Reading Results Scene --- */
+
+  //Test Pre-Screen
+  scenes.addScene(new Scene(windowWidth, windowHeight,
+    function() {
+
+      var left = windowWidth / 12;
+      var right = windowWidth - left;
+      var top = windowHeight / 12;
+      var bottom = windowHeight - top;
+
+      preTestBoard = new TextBoard(left, top, right - left, bottom - top);
+      preTestBoard.background = 60;
+      // descBoard.accent = 150;
+      preTestBoard.addText("Secchi Disk Test",240, 20, "Helvetica", BOLD);
+      preTestBoard.addParagraph(3);
+      preTestBoard.addTab(1);
+      preTestBoard.addText("\nYou will now begin a multiple choice test.\n\n Please press 'Okay' to begin.");
+
+
+      testStart = new Button(right-110, bottom-65, 95, 50, "Okay",
+        function() {
+          // Button Selected
+            scenes.setScene(7);
+            scenes.setup();
+        },
+        function() {}
+      );
+      introStartDysProd.fontSize = 14;
+    },
+    function() {
+      scenes.background(0);
+      preTestBoard.draw();
+      testStart.run();
+    })
+  );
+
+
+      //Question Screens
+  scenes.addScene(new Scene(windowWidth, windowHeight,
+    function() {
+
+      var left = windowWidth / 6;
+      var right = windowWidth - left;
+      var top = windowHeight / 6;
+      var bottom = windowHeight - top;
+
+      testBoard = new TextBoard(left, top, right - left/2, bottom - top);
+      testBoard.background = 60;
+      // descBoard.accent = 150;
+      testBoard.addText("Secchi Disk Test",240, 40, "Helvetica", BOLD);
+      testBoard.addParagraph(1);
+      testBoard.addText("\nQuestion 1: Why is a Secchi disk a good tool to measure water quality?\n", 240, 24, "Helvetica", BOLD);
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addText("\n A.")
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addText("\n B.")
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addText("\n C.")
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addText("\n D.")
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+
+      finishButton = new Button(right-20, bottom-65, 95, 50, "Next",
+        function() {
+          // Button Selected
+            scenes.setScene(8);
+            scenes.setup();
+        },
+        function() {}
+      );
+      introStartDysProd.fontSize = 14;
+    },
+    function() {
+      scenes.background(0);
+      testBoard.draw();
+      finishButton.run();
+    })
+  );
+
+  scenes.addScene(new Scene(windowWidth, windowHeight,
+    function() {
+
+      var left = windowWidth / 6;
+      var right = windowWidth - left;
+      var top = windowHeight / 6;
+      var bottom = windowHeight - top;
+
+      testBoard = new TextBoard(left, top, right - left/2, bottom - top);
+      testBoard.background = 60;
+      // descBoard.accent = 150;
+      testBoard.addText("Secchi Disk Test",240, 40, "Helvetica", BOLD);
+      testBoard.addParagraph(1);
+      testBoard.addText("\nQuestion 2: Why is a Secchi disk a good tool to measure water quality?\n", 240, 24, "Helvetica", BOLD);
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addText("\n A.")
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addText("\n B.")
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addText("\n C.")
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addText("\n D.")
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+      testBoard.addParagraph(1);
+
+      finishButton = new Button(right-20, bottom-65, 95, 50, "Next",
+        function() {
+          // Button Selected
+            scenes.nextScene();
+            scenes.setup();
+        },
+        function() {}
+      );
+      introStartDysProd.fontSize = 14;
+    },
+    function() {
+      scenes.background(0);
+      testBoard.draw();
+      finishButton.run();
+    })
+
+  );
+
+//Test Finished Screen
+
+  scenes.addScene(new Scene(windowWidth, windowHeight,
+    function() {
+
+      var left = windowWidth / 12;
+      var right = windowWidth - left;
+      var top = windowHeight / 12;
+      var bottom = windowHeight - top;
+
+      TestResultsBoard = new TextBoard(left, top, right - left, bottom - top);
+      TestResultsBoard.background = 60;
+      // descBoard.accent = 150;
+      TestResultsBoard.addText("You're finished!",240, 20, "Helvetica", BOLD);
+      TestResultsBoard.addParagraph(3);
+      TestResultsBoard.addTab(1);
+      TestResultsBoard.addText("\nCongrats!");
+
+
+      startOver = new Button(right-110, bottom-65, 95, 50, "Return",
+        function() {
+          // Button Selected
+            scenes.setScene(1);
+            scenes.setup();
+        },
+        function() {}
+      );
+      introStartDysProd.fontSize = 14;
+    },
+    function() {
+      scenes.background(0);
+      TestResultsBoard.draw();
+      startOver.run();
+    })
+  );
+
+  /* --- End Test Scene --- */
 
   scenes.setup();
 
@@ -456,7 +713,7 @@ function setLakeType (type) {
    switch (type) {
       case 1:
         lakeType = "Clear";
-        lakeColor = "#6fa5fc";
+        lakeColor = "lightblue";
         lakeDepth = 7;
         lakeTarget = random(4, 7);
         break;
@@ -501,6 +758,12 @@ function setLakeType (type) {
 function analyzeTrial() {
   measuredError = abs(measuredDepth - lakeTarget);
   measuredErrorRel = measuredError / lakeTarget * 100;
+  if (measuredDepth < lakeTarget) {
+    message = "You're too shallow! Try again.";
+  }
+  if (measuredDepth > lakeTarget) {
+    message = "You're too deep! Try again.";
+  }
 
   if (measuredErrorRel < 2.0) {
     measuredTolerance = "Yes";
@@ -512,8 +775,9 @@ function analyzeTrial() {
 }
 
 function disk(){ //THE BIG DISK CLASS
+
  this.P0 = createVector(width/6, height/6); // BEGIN POINT    // changed from height/8
- this.P1 = createVector(width/2, height/2); // END POINT
+ this.P1 = createVector(width*.48, height*.48); // END POINT
 
  this.maxDepth = lakeDepth; //10; // MAXIMUM DEPTH OF DISK
 
@@ -530,88 +794,86 @@ function disk(){ //THE BIG DISK CLASS
  this.dx = 0; // USE THIS FOR PERLIN NOISE
  this.detheta = 0; // VARIATION OF POSITION
 
- this.meterPos = createVector(width - width/4.8, height/10); // POSITION OF THE DEPTH METER
+ this.meterPos = createVector(width - width/3-10, height/10); // POSITION OF THE DEPTH METER
 
-this.disp = function(){
-  if(this.hide == false){ // WE DON'T WANT TO DRAW THE DISK IF IT'S HIDDEN
+ this.disp = function(){
+   if(this.hide == false){ // WE DON'T WANT TO DRAW THE DISK IF IT'S HIDDEN
      //******* DRAW THE DISK
-    push();
 
-    var t = this.currentDepth; // a temp value for the lerp below                            // I think this is where the disk opacity is defined; old text below \/
+     push();
+     var t = this.currentDepth; // a temp value for the lerp below                            // I think this is where the disk opacity is defined; old text below \/
 
-    //New Opacity
-    var alpha = ((1 - map(t,0,lakeTarget,0,1)) * 255 + map(t,0,lakeTarget,0,1) * 0);
-    var delta = ((1 - map(t,0,lakeTarget,0,1)) * 255 + map(t,0,lakeTarget,0,1) * 0);
-
-    stroke(255, alpha);
-    noFill();
-    ellipse(this.x, this.y, this.rad + delta, this.rad + delta);
-
-    noStroke();
-    fill(0, alpha);
-    arc(this.x, this.y, this.rad, this.rad, 0, PI/2);
-    arc(this.x, this.y, this.rad, this.rad, PI, 3*PI/2);
-
-    fill(255, alpha);
-    arc(this.x, this.y, this.rad, this.rad, PI/2, PI);
-    arc(this.x, this.y, this.rad, this.rad, 3*PI/2, 0);
-
-    pop();
-
-    push();
-    //Put a measuring tape on the secchi disk
-
-    function gradientRect(x1, y1, x2, y2, x3, y3, x4, y4, color1, color2)
-    {
-      var xO = (x1+x2)/2;
-      var xT = (x4+x3)/2;
-      var yO = (y1+y2)/2;
-      var yT = (y4+y3)/2;
-
-      var grad = this.drawingContext.createLinearGradient(xO, yO, xT, yT);
-      grad.addColorStop(0, color1);
-      grad.addColorStop(1, color2);
-
-      this.drawingContext.fillStyle = grad;
-
-      beginShape();
-        vertex(x1, y1);
-        vertex(x2, y2);
-        vertex(x3, y3);
-        vertex(x4, y4);
-      endShape();
-    }
-
-    gradientRect(-25, -25, -25, 75, this.x, this.y+this.rad/40, this.x, this.y-this.rad/40, color(255, 255, 255, 255), color(255, 255, 255, alpha));
+//New Opacity
+var alpha = ((1 - map(t,0,lakeTarget,0,1)) * 255 + map(t,0,lakeTarget,0,1) * 0);
+var delta = ((1 - map(t,0,lakeTarget,0,1)) * 255 + map(t,0,lakeTarget,0,1) * 0);
 
 
-    //For the depth of the lake, put a major tick mark on the measuring tape
-    for(i = 1; i <= lakeDepth; i++)
-    {
-      //Finds where on the x and y axis to put the lines
-      tickTimeX = map(i, 0, this.currentDepth+1, this.x, -25);
-      tickTimeYBottom = map(i, 0, this.currentDepth+1, this.y + this.rad/40, 75);
-      tickTimeYTop = map(i, 0, this.currentDepth+1, this.y - this.rad/40, -25);
+stroke(255, alpha);
+// strokeWeight(delta);
+noFill();
+ellipse(this.x, this.y, this.rad + delta, this.rad + delta);
 
-      stroke("black");
-      strokeWeight(3);
-      line(tickTimeX, tickTimeYBottom, tickTimeX, tickTimeYTop);
-      strokeWeight(1);
-      //The 1 comes in weird, this is how I "fixed" it
-      if(this.currentDepth > .68)
-      {
-        textSize(50*i/this.currentDepth);
-        fill("black");
-        text(i, tickTimeX, tickTimeYBottom);
-      }
-      else
-      {
-        textSize(50*i/this.currentDepth);
-        fill("black");
-        text(i, tickTimeX, tickTimeYTop);
-      }
-    }
+noStroke();
+fill(0, alpha);
+arc(this.x, this.y, this.rad, this.rad, 0, PI/2);
+arc(this.x, this.y, this.rad, this.rad, PI, 3*PI/2);
 
+fill(255, alpha);
+arc(this.x, this.y, this.rad, this.rad, PI/2, PI);
+arc(this.x, this.y, this.rad, this.rad, 3*PI/2, 0);
+
+
+noFill();
+stroke(0);
+strokeWeight(174);
+ellipse(width/3+30,height/2,width*.7, height*1.4);
+strokeWeight(0);
+noStroke();
+
+noFill();
+stroke(40, 40, 40);
+strokeWeight(10);
+ellipse(width/3+30,height/2,width*.55, height*1.1);
+strokeWeight(0);
+noStroke();
+
+
+
+     var seedValue = noise(this.dx);
+     var nois = map(seedValue, 0, 1, 0, .5);
+     var numberOfIterations = 60;
+
+     for(var i = 0; i < numberOfIterations ; i++){
+       var j = map(i, 0, numberOfIterations , 0, this.rad)
+       var k = map(i, 0, numberOfIterations -1, 0, 0);//map(i, 0, numberOfIterations -1, map(this.currentDepth, 0, this.maxDepth, 0, PI/8), 0);
+       var l = map(i, 0, numberOfIterations -1, this.rad/30, 0);
+
+       // noStroke();
+       // fill(0, alpha);
+       // arc(this.x + l*cos(PI/4 + nois), this.y + l*sin(PI/4 + nois), j, j, nois + k, PI/2 + nois - k);
+       // arc(this.x + l*cos(5*PI/4 + nois), this.y + l*sin(5*PI/4 + nois), j, j, PI + nois + k, 3*PI/2 + nois - k);
+       //
+       // fill(255, alpha);
+       // arc(this.x + l*cos(3*PI/4 + nois), this.y + l*sin(3*PI/4 + nois), j, j, PI/2 + nois + k, PI + nois - k);
+       // arc(this.x + l*cos(7*PI/4 + nois), this.y + l*sin(7*PI/4 + nois), j, j, 3*PI/2 + nois + k, nois - k);
+     }
+
+    stroke(153, 153);
+    strokeWeight(2);
+    fill("yellow");
+
+    //If the value hasn't reached the certain point yet, do nothing for them, otherwise, start to map from start point to end point (left to right)
+    // measureTape = beginShape(QUADS);
+    //   var topLeft = vertex(-1, windowHeight/12);
+    //   var topRight = vertex(this.x, this.y - this.rad/40);
+    //   var bottomRight = vertex(this.x, this.y + this.rad/40);
+    //   // Put some sort of loop here to place vertexes among these points, and possibly an inner statement to draw the actual marks
+    //   for(i = 0; i < lakeDepth; i++)
+    //   {
+    //     vertex()
+    //   }
+    //   var bottomLeft = vertex(-1, windowHeight/4);
+    // endShape(CLOSE);
     pop();
 
     push();
@@ -647,8 +909,12 @@ this.disp = function(){
     }
 
     //This bit draws the moving triangle along the side of the rectangle, t is the current depth of the secchi disk
-    fill("red");
     var tip = map(t, 0, lakeDepth, this.meterPos.y, this.meterPos.y+height/1.25);
+
+    //prints to console where the triangle tip is
+    // print("tip ="+tip);
+
+    fill("red");
     var depthTriangle = triangle(this.meterPos.x-15, tip+8, this.meterPos.x+15, tip, this.meterPos.x-15, tip-8);
 
     pop();
@@ -656,6 +922,7 @@ this.disp = function(){
  }
 
  this.update = function(){
+
    if(this.hide == false){ // WE DON'T WANT TO DRAW THE DISK IF IT'S HIDDEN
 
      this.dx += .005;
@@ -676,6 +943,8 @@ this.disp = function(){
 
      this.deltaDelta = -.03*this.deltaDepth;
 
+     // console.log(this.currentDepth);
+     // console.log(lakeDepth);
      if(keyIsDown(UP_ARROW) && this.currentDepth < lakeDepth)            // gets input only if the disk is under the limit
      	this.deltaDepth += .0005
      if(keyIsDown(DOWN_ARROW) && this.currentDepth >= 0)                // get input only when the disk is at or above 0
@@ -685,12 +954,13 @@ this.disp = function(){
      this.deltaDepth += this.deltaDelta;
      this.currentDepth += this.deltaDepth;
 
-     this.x = this.P0.x + (direction.x*(this.currentDepth * 60 + dTheta))%(d0*cos(atan(direction.y/direction.x)));
-     this.y = this.P0.y + (direction.y*(this.currentDepth * 60 + dTheta))%(d0/direction.y);
+     this.x = this.P0.x + ((direction.x*(this.currentDepth * 60 + dTheta))%(d0*cos(atan(direction.y/direction.x))) - 10);
+     this.y = this.P0.y + ((direction.y*(this.currentDepth * 60 + dTheta))%(d0/direction.y) + 30);
 
-     this.rad = dist(this.x, this.y, this.P1.x-10, this.P1.y-10);// decrease size of disk as it gets closer to the center
+     this.rad = dist(this.x, this.y, this.P1.x-5, this.P1.y-5);// decrease size of disk as it gets closer to the center
    }
  }
+
 
  this.sendIt = function(dir){
    // this.deltaDepth += dir*.005;        // Input is now handled in the update method
@@ -702,6 +972,24 @@ this.disp = function(){
   this.disp();
  }
 
+}
+
+function measureTape(cornerTopLeft, cornerTopRight, cornerBottomLeft, cornerBottomRight, depthOfLake)
+{
+  beginShape(QUADS);
+  vertex(cornerTopLeft[0], cornerTopLeft[1]);
+  vertex(cornerTopRight[0], cornerTopRight[1]);
+  vertex(cornerBottomRight[0], cornerBottomRight[1]);
+  for(i = 0; i < depthOfLake; i++)
+  {
+    tickTimeX = map(i, 0, depthOfLake, cornerBottomLeft[0], cornerBottomRight[0]);
+    tickTimeY = map(i, 0, depthOfLake, cornerBottomLeft[1], cornerBottomRight[1]);
+    tickTimeYTop = map(i, 0, depthOfLake, cornerTopLeft[1], cornerTopRight[1]);
+
+    line(tickTimeX, tickTimeY, tickTimeX, tickTimeYTop);
+  }
+  vertex(cornerBottomLeft[0], cornerBottomLeft[1]);
+  endShape(CLOSE);
 }
 
 function RoundedBox(cornerX, cornerY, width, height)
