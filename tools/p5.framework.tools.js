@@ -101,7 +101,7 @@ function SceneManager() {
     this.xmax = this.xzero + this.width;
     this.yzero = this.currentScene.yzero;
     this.ymax = this.yzero + this.height;
-    createCanvas(this.currentScene.cWidth, this.currentScene.cHeight);
+    createCanvas(this.currentScene.cWidth, this.currentScene.cHeight, "WEBGL");
     this.currentScene.setup();
     for (var i = 0; i < this.currentScene.children.length; i++) {
       this.width = this.currentScene.children[i].width;

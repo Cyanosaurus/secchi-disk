@@ -256,12 +256,9 @@ function setup() {
 
       attemptsLeft = 3;
 
-       submitButton = new Button(width - 170, 120, 110, 50, "Submit",
+      submitButton = new Button(width - 170, 120, 110, 50, "Submit",
 
           function() {
-           // Button Selected
-           // Analyze trial and give feedback
-           // NOTE: THESE SELECT AND DESELECT FUNCTIONS ARE THE SAME BECAUSE IT ALTERNATES PER PRESS
 
         	if (D0.currentDepth != -0.1) {
       			measuredDepth = D0.currentDepth;
@@ -298,14 +295,6 @@ function setup() {
         }
       );
 
-      // hideMeter = new Button(width - 170, 240, 110, 50, "Hide Depth Meter",
-      //   function()
-      //   {
-      //     depthMeter.hide = !depthMeter.hide;
-      //     depthTriangle.hide = !depthTriangle.hide;
-      //   }
-      // );
-
     },
     function() {                                    // THIS IS WHERE THE STUFF FOR THE SIM IS DRAWN
       scenes.background(lakeColor);
@@ -313,15 +302,16 @@ function setup() {
       fill("black");
       rect(width - width/4.5, 0, windowWidth, windowHeight);
 
+      measureDepth = new Button(width - 170, height - 170, 110, 50, "Current Depth: \n" + floor(D0.currentDepth*100)/100 + " Meters", function(){});
+
+      visualAttempts = new Button(width - 170, height - 110, 110, 50, "Attempts Left: " + attemptsLeft, function(){});
+
       D0.maxDepth = ceil(lakeDepth)-1;
       D0.run();
       // Make the button do
       submitButton.run();
       goBack.run();
-      // hideMeter.run();
-      measureDepth = new Button(width - 170, height - 170, 110, 50, "Current Depth: \n" + floor(D0.currentDepth*100)/100 + " Meters", function(){});
       measureDepth.run();
-      visualAttempts = new Button(width - 170, height - 110, 110, 50, "Attempts Left: " + attemptsLeft, function(){});
       visualAttempts.run();
 
       // If chances are zero, move to results
@@ -419,8 +409,6 @@ function setup() {
   sliderRange(0, 90, 1);
 
 }
-
-
 
 function draw() {
   scenes.draw();
@@ -546,24 +534,54 @@ this.disp = function(){
 
     push();
     //Put a measuring tape on the secchi disk
-    stroke(153, 153);
-    strokeWeight(2);
-    fill("white");
-
-    //need to have opacity gradually come up the measuring tape to about 1/3 height?
-    //a lot of lines causes the program to lag severely, but it looks the cleanest
-
-    if(this.currentDepth > lakeDepth/10)
-    {
-
-    }
-
     beginShape(QUADS);
+      fill("rgba(100%,100%,100%,1)");
       vertex(-25, -25);
-      vertex(this.x, this.y - this.rad/40);
-      vertex(this.x, this.y + this.rad/40);
       vertex(-25, 75);
+      // fill("rgba(100%,100%,100%,0)");
+      vertex(this.x, this.y + this.rad/40);
+      vertex(this.x, this.y - this.rad/40);
     endShape(CLOSE);
+
+    // function gradientRect(x1, y1, x2, y2, x3, y3, x4, y4)
+    // {
+    //   var xO = (x1+x2)/2;
+    //   var xT = (x4+x3)/2;
+    //   var yO = (y1+y2)/2;
+    //   var yT = (y4+y3)/2;
+
+    //   var grad = this.drawingContext.createLinearGradient(xO, yO, xT, yT);
+    //   grad.addColorStop(0, color(255, 255, 255, 255));
+    //   grad.addColorStop(1, color(255, 255, 255, 0));
+
+    //   this.drawingContext.strokeStyle = grad;
+
+    //   beginShape(QUADS);
+    //     vertex(x1, y1);
+    //     vertex(x2, y2);
+    //     vertex(x3, y3);
+    //     vertex(x4, y4);
+    //   endShape(CLOSE);
+    // }
+
+    // gradientRect(-25, -25, -25, 75, this.x, this.y+this.rad/40, this.x, this.y-this.rad/40);
+
+    // function gradientRect(x1, y1, x2, y2, x3, y3, x4, y4)
+    // {
+    //   stroke(153, 153);
+    //   beginShape(QUADS);
+    //     strokeWeight(2);
+    //     fill("rgba(100%,100%,100%,0.5)");
+    //     vertex(x1, y1);
+    //     vertex(x4, y4);
+    //     strokeWeight(1);
+    //     fill("rgba(100%,100%,100%,0)");
+    //     vertex(x3, y3);
+    //     vertex(x2, y2);
+    //   endShape(CLOSE);
+    // }
+
+    // gradientRect(-25, -25, this.x, this.y-this.rad/40, this.x, this.y+this.rad/40, -25, 75);
 
     //For the depth of the lake, put a major tick mark on the measuring tape
     for(i = 1; i <= lakeDepth; i++)
@@ -656,8 +674,6 @@ this.disp = function(){
 
      this.deltaDelta = -.03*this.deltaDepth;
 
-     // console.log(this.currentDepth);
-     // console.log(lakeDepth);
      if(keyIsDown(UP_ARROW) && this.currentDepth < lakeDepth)            // gets input only if the disk is under the limit
      	this.deltaDepth += .0005
      if(keyIsDown(DOWN_ARROW) && this.currentDepth >= 0)                // get input only when the disk is at or above 0
