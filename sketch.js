@@ -560,54 +560,30 @@ this.disp = function(){
 
     push();
     //Put a measuring tape on the secchi disk
-    beginShape(QUADS);
-      fill("rgba(100%,100%,100%,1)");
-      vertex(-25, -25);
-      vertex(-25, 75);
-      // fill("rgba(100%,100%,100%,0)");
-      vertex(this.x, this.y + this.rad/40);
-      vertex(this.x, this.y - this.rad/40);
-    endShape(CLOSE);
 
-    // function gradientRect(x1, y1, x2, y2, x3, y3, x4, y4)
-    // {
-    //   var xO = (x1+x2)/2;
-    //   var xT = (x4+x3)/2;
-    //   var yO = (y1+y2)/2;
-    //   var yT = (y4+y3)/2;
+    function gradientRect(x1, y1, x2, y2, x3, y3, x4, y4, color1, color2)
+    {
+      var xO = (x1+x2)/2;
+      var xT = (x4+x3)/2;
+      var yO = (y1+y2)/2;
+      var yT = (y4+y3)/2;
 
-    //   var grad = this.drawingContext.createLinearGradient(xO, yO, xT, yT);
-    //   grad.addColorStop(0, color(255, 255, 255, 255));
-    //   grad.addColorStop(1, color(255, 255, 255, 0));
+      var grad = this.drawingContext.createLinearGradient(xO, yO, xT, yT);
+      grad.addColorStop(0, color1);
+      grad.addColorStop(1, color2);
 
-    //   this.drawingContext.strokeStyle = grad;
+      this.drawingContext.fillStyle = grad;
 
-    //   beginShape(QUADS);
-    //     vertex(x1, y1);
-    //     vertex(x2, y2);
-    //     vertex(x3, y3);
-    //     vertex(x4, y4);
-    //   endShape(CLOSE);
-    // }
+      beginShape();
+        vertex(x1, y1);
+        vertex(x2, y2);
+        vertex(x3, y3);
+        vertex(x4, y4);
+      endShape();
+    }
 
-    // gradientRect(-25, -25, -25, 75, this.x, this.y+this.rad/40, this.x, this.y-this.rad/40);
+    gradientRect(-25, -25, -25, 75, this.x, this.y+this.rad/40, this.x, this.y-this.rad/40, color(255, 255, 255, 255), color(255, 255, 255, alpha));
 
-    // function gradientRect(x1, y1, x2, y2, x3, y3, x4, y4)
-    // {
-    //   stroke(153, 153);
-    //   beginShape(QUADS);
-    //     strokeWeight(2);
-    //     fill("rgba(100%,100%,100%,0.5)");
-    //     vertex(x1, y1);
-    //     vertex(x4, y4);
-    //     strokeWeight(1);
-    //     fill("rgba(100%,100%,100%,0)");
-    //     vertex(x3, y3);
-    //     vertex(x2, y2);
-    //   endShape(CLOSE);
-    // }
-
-    // gradientRect(-25, -25, this.x, this.y-this.rad/40, this.x, this.y+this.rad/40, -25, 75);
 
     //For the depth of the lake, put a major tick mark on the measuring tape
     for(i = 1; i <= lakeDepth; i++)
