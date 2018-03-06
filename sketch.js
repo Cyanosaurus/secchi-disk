@@ -338,43 +338,69 @@ function setup() {
   scenes.addScene(new Scene(windowWidth, windowHeight,
     function() {
       // setup()
-      resultsBoard = new TextBoard(200, 50, 700, 500);
+     resultsBoard =  new TextBoard(200, 50, windowWidth/2, windowHeight/2);
 
-      resultsBoard.background = 240;
-      resultsBoard.accent = 150;
-      resultsBoard.addText("Reading Results", 0, 20, "Helvetica", BOLD);
+      resultsBoard.background = 0;
+      resultsBoard.accent = 50;
+      resultsBoard.addParagraph(5);
       resultsBoard.addParagraph(5);
       resultsBoard.addTab(1);
-      resultsBoard.addText("Lake Type", 0, 16, "Helvetica", BOLD);
       resultsBoard.addTab(1);
-      resultsBoard.addText(lakeType);
+      resultsBoard.addTab(1);
+      resultsBoard.addText("Reading Results", 200, 30, "Helvetica", BOLD);
+      resultsBoard.addParagraph(5);
+      resultsBoard.addParagraph(5);
+      resultsBoard.addParagraph(5);
+      resultsBoard.addParagraph(5);
+      resultsBoard.addTab(1);
+      resultsBoard.addTab(1);
+     // resultsBoard.addText("Lake Type", 0, 16, "Helvetica", BOLD);
+     //("Words", color, size, font, type);
+      resultsBoard.addText("Lake Type", 200, 20, "Helvetica", BOLD);
+      resultsBoard.addTab(1);
+      resultsBoard.addTab(1);
+      resultsBoard.addText(lakeType, 255, 20, "Helvetica", BOLD);
+      resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
-      resultsBoard.addText("Target Depth");
       resultsBoard.addTab(1);
-      resultsBoard.addText(lakeTarget.toFixed(2) + " meters");
+      resultsBoard.addText("Target Depth", 200, 20, "Helvetica", BOLD);
+      resultsBoard.addTab(1);
+      resultsBoard.addTab(1);
+      resultsBoard.addText(lakeTarget.toFixed(2) + " meters", 255, 20, "Helvetica", BOLD);
+      resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
-      resultsBoard.addText("Measured Depth");
       resultsBoard.addTab(1);
-      resultsBoard.addText(measuredDepth.toFixed(2) + " meters");
+      resultsBoard.addText("Measured Depth", 200, 20, "Helvetica", BOLD);
+      resultsBoard.addTab(1);
+      resultsBoard.addTab(1);
+      resultsBoard.addText(measuredDepth.toFixed(2) + " meters", 255, 20, "Helvetica", BOLD);
+      resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
-      resultsBoard.addText("Error (absolute)");
       resultsBoard.addTab(1);
-      resultsBoard.addText(measuredError.toFixed(2) + " meters");
+      resultsBoard.addText("Error (absolute)", 200, 20, "Helvetica", BOLD);
+      resultsBoard.addTab(1);
+      resultsBoard.addTab(1);
+      resultsBoard.addText(measuredError.toFixed(2) + " meters", 255, 20, "Helvetica", BOLD);
+      resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
-      resultsBoard.addText("Error (relative)");
       resultsBoard.addTab(1);
-      resultsBoard.addText(measuredErrorRel.toFixed(2) + "%");
+      resultsBoard.addText("Error (relative)", 200, 20, "Helvetica", BOLD);
+      resultsBoard.addTab(1);
+      resultsBoard.addTab(1);
+      resultsBoard.addText(measuredErrorRel.toFixed(2) + "%", 255, 20, "Helvetica", BOLD);
+      resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
-      resultsBoard.addText("Within Tolerance?");
       resultsBoard.addTab(1);
-      resultsBoard.addText(measuredTolerance);
+      resultsBoard.addText("Within Tolerance?", 200, 20, "Helvetica", BOLD);
+      resultsBoard.addTab(1);
+      resultsBoard.addText(measuredTolerance, 255, 20, "Helvetica", BOLD);
 
-      resultsRestart = new Button(780, 450, 95, 50, "Test Again",
+      resultsRestart = new Button(windowWidth/2, windowHeight/2 - 50, 95, 50, "Test Again",
 
         function() {
           // Button Selected
