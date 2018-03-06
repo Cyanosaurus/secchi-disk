@@ -799,6 +799,109 @@ function disk(){ //THE BIG DISK CLASS
  this.disp = function(){
    if(this.hide == false){ // WE DON'T WANT TO DRAW THE DISK IF IT'S HIDDEN
      //******* DRAW THE DISK
+<<<<<<< HEAD
+=======
+    push();
+
+    var t = this.currentDepth; // a temp value for the lerp below                            // I think this is where the disk opacity is defined; old text below \/
+
+    //New Opacity
+    var alpha = ((1 - map(t,0,lakeTarget,0,1)) * 255 + map(t,0,lakeTarget,0,1) * 0);
+    var delta = ((1 - map(t,0,lakeTarget,0,1)) * 255 + map(t,0,lakeTarget,0,1) * 0);
+
+    stroke(255, alpha);
+    noFill();
+    ellipse(this.x, this.y, this.rad + delta, this.rad + delta);
+
+    noStroke();
+    fill(0, alpha);
+    arc(this.x, this.y, this.rad, this.rad, 0, PI/2);
+    arc(this.x, this.y, this.rad, this.rad, PI, 3*PI/2);
+
+    fill(255, alpha);
+    arc(this.x, this.y, this.rad, this.rad, PI/2, PI);
+    arc(this.x, this.y, this.rad, this.rad, 3*PI/2, 0);
+
+    pop();
+
+    push();
+    //Put a measuring tape on the secchi disk
+    beginShape(QUADS);
+      fill("rgba(100%,100%,100%,1)");
+      vertex(-25, -25);
+      vertex(-25, 75);
+      // fill("rgba(100%,100%,100%,0)");
+      vertex(this.x, this.y + this.rad/40);
+      vertex(this.x, this.y - this.rad/40);
+    endShape(CLOSE);
+
+    // function gradientRect(x1, y1, x2, y2, x3, y3, x4, y4)
+    // {
+    //   var xO = (x1+x2)/2;
+    //   var xT = (x4+x3)/2;
+    //   var yO = (y1+y2)/2;
+    //   var yT = (y4+y3)/2;
+
+    //   var grad = this.drawingContext.createLinearGradient(xO, yO, xT, yT);
+    //   grad.addColorStop(0, color(255, 255, 255, 255));
+    //   grad.addColorStop(1, color(255, 255, 255, 0));
+
+    //   this.drawingContext.strokeStyle = grad;
+
+    //   beginShape(QUADS);
+    //     vertex(x1, y1);
+    //     vertex(x2, y2);
+    //     vertex(x3, y3);
+    //     vertex(x4, y4);
+    //   endShape(CLOSE);
+    // }
+
+    // gradientRect(-25, -25, -25, 75, this.x, this.y+this.rad/40, this.x, this.y-this.rad/40);
+
+    // function gradientRect(x1, y1, x2, y2, x3, y3, x4, y4)
+    // {
+    //   stroke(153, 153);
+    //   beginShape(QUADS);
+    //     strokeWeight(2);
+    //     fill("rgba(100%,100%,100%,0.5)");
+    //     vertex(x1, y1);
+    //     vertex(x4, y4);
+    //     strokeWeight(1);
+    //     fill("rgba(100%,100%,100%,0)");
+    //     vertex(x3, y3);
+    //     vertex(x2, y2);
+    //   endShape(CLOSE);
+    // }
+
+    // gradientRect(-25, -25, this.x, this.y-this.rad/40, this.x, this.y+this.rad/40, -25, 75);
+
+    //For the depth of the lake, put a major tick mark on the measuring tape
+    for(i = 1; i <= lakeDepth; i++)
+    {
+      //Finds where on the x and y axis to put the lines
+      tickTimeX = map(i, 0, this.currentDepth+1, this.x, -25);
+      tickTimeYBottom = map(i, 0, this.currentDepth+1, this.y + this.rad/40, 75);
+      tickTimeYTop = map(i, 0, this.currentDepth+1, this.y - this.rad/40, -25);
+
+      stroke("black");
+      strokeWeight(3);
+      line(tickTimeX, tickTimeYBottom, tickTimeX, tickTimeYTop);
+      strokeWeight(1);
+      //The 1 comes in weird, this is how I "fixed" it
+      if(this.currentDepth > .68)
+      {
+        textSize(50*i/this.currentDepth);
+        fill("black");
+        text(i, tickTimeX, tickTimeYBottom);
+      }
+      else
+      {
+        textSize(50*i/this.currentDepth);
+        fill("black");
+        text(i, tickTimeX, tickTimeYTop);
+      }
+    }
+>>>>>>> parent of a29ff0d... Added Transparency
 
      push();
      var t = this.currentDepth; // a temp value for the lerp below                            // I think this is where the disk opacity is defined; old text below \/
