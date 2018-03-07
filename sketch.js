@@ -490,14 +490,52 @@ function setup() {
 
     },
     function() {
-      // draw()
+      var animationY = 0;
+      var percentMeasuredY = measuredDepth/lakeDepth;
+      var measuredY = windowHeight/12 + ((windowHeight*5/6) * percentMeasuredY);
+
+      var percentY = lakeTarget/lakeDepth;
+      var targetY = windowHeight/12 + ((windowHeight*5/6) * percentY);
+      //tolerance is +-0.10 meters
+      var percentToleranceY = .1/lakeDepth;
+      var upperToleranceY = targetY - ((windowHeight*5/6) * percentToleranceY);
+      var lowerToleranceY = targetY + ((windowHeight*5/6) * percentToleranceY);
+
+      var greenZone = lowerToleranceY - upperToleranceY;
+
       scenes.background(0);
       resultsBoard.draw();
       push();
-      // strokeWeight(4);                   // Dividing lines in results page
-      // stroke(200);
-      // line(210, 317, 890, 317);
-      // line(385, 317, 385, 680);
+
+      //lake background
+      fill(lakeColor);
+      noStroke();
+      rect(windowWidth*7/12, windowHeight/12, windowWidth/6, windowHeight*5/6);
+
+      //green area
+      fill(100,255,100,200);
+      rect(windowWidth*7/12, upperToleranceY, windowWidth/6, greenZone);
+      if (greenZone > windowHeight/12 + windowHeight*5/6) {
+        greenZone = windowHeight/ 12 + windowHeight*5/6;
+      }
+
+      //lines
+      strokeWeight(2);
+      stroke(255, 0, 0, 255);
+      //target line
+      line(windowWidth*7/12, targetY, windowWidth*9/12, targetY);
+      //upper bound
+      line(windowWidth*7/12, upperToleranceY, windowWidth*9/12, upperToleranceY);
+      //lower bound
+      line(windowWidth*7/12, lowerToleranceY, windowWidth*9/12, lowerToleranceY);
+
+      //tape
+      fill(255,255,255,255);
+      stroke(0);
+      rect(windowWidth*2/3 - windowWidth/180, windowHeight/12, windowWidth/90, measuredY - windowHeight/12);
+      //disk
+      rect(windowWidth*2/3 - windowWidth/14, measuredY - windowHeight/120, windowWidth/7, windowHeight/60);
+
       pop();
       resultsRestart.run();
     })
@@ -976,24 +1014,6 @@ function disk(){ //THE BIG DISK CLASS
   this.disp();
  }
 
-}
-
-function measureTape(cornerTopLeft, cornerTopRight, cornerBottomLeft, cornerBottomRight, depthOfLake)
-{
-  beginShape(QUADS);
-  vertex(cornerTopLeft[0], cornerTopLeft[1]);
-  vertex(cornerTopRight[0], cornerTopRight[1]);
-  vertex(cornerBottomRight[0], cornerBottomRight[1]);
-  for(i = 0; i < depthOfLake; i++)
-  {
-    tickTimeX = map(i, 0, depthOfLake, cornerBottomLeft[0], cornerBottomRight[0]);
-    tickTimeY = map(i, 0, depthOfLake, cornerBottomLeft[1], cornerBottomRight[1]);
-    tickTimeYTop = map(i, 0, depthOfLake, cornerTopLeft[1], cornerTopRight[1]);
-
-    line(tickTimeX, tickTimeY, tickTimeX, tickTimeYTop);
-  }
-  vertex(cornerBottomLeft[0], cornerBottomLeft[1]);
-  endShape(CLOSE);
 }
 
 function RoundedBox(cornerX, cornerY, width, height)
