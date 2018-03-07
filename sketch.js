@@ -40,6 +40,8 @@ var measuredDepth;            // Double
 var measuredError;            // Double
 var measuredErrorRel;         // Double
 var measuredTolerance;        // String
+/* Animation Variable on Results Page*/
+var animationY;
 
 function setup() {
 
@@ -338,7 +340,8 @@ function setup() {
   scenes.addScene(new Scene(windowWidth, windowHeight,
     function() {
       // setup()
-     resultsBoard =  new TextBoard(200, 50, windowWidth/2, windowHeight/2);
+      
+      resultsBoard =  new TextBoard(windowWidth/12, windowHeight/12, windowWidth/2, windowHeight*5/6);
 
       resultsBoard.background = 0;
       resultsBoard.accent = 50;
@@ -416,13 +419,56 @@ function setup() {
     },
     function() {
       // draw()
+      var animationY = 0;
+      var percentMeasuredY = measuredDepth/lakeDepth;
+      var measuredY = windowHeight/12 + ((windowHeight*5/6) * percentMeasuredY);
+
+      var percentY = lakeTarget/lakeDepth;
+      var targetY = windowHeight/12 + ((windowHeight*5/6) * percentY);
+      //tolerance is +-0.10 meters
+      var percentToleranceY = .1/lakeDepth;
+      var upperToleranceY = targetY - ((windowHeight*5/6) * percentToleranceY);
+      var lowerToleranceY = targetY + ((windowHeight*5/6) * percentToleranceY);
+
+      var greenZone = lowerToleranceY - upperToleranceY;
+
       scenes.background(60);
       resultsBoard.draw();
       push();
-      // strokeWeight(4);                   // Dividing lines in results page
-      // stroke(200);
-      // line(210, 317, 890, 317);
-      // line(385, 317, 385, 680);
+
+      //lake background
+      fill(lakeColor);
+      noStroke();
+      rect(windowWidth*7/12, windowHeight/12, windowWidth/6, windowHeight*5/6);
+
+      //green area
+      fill(100,255,100,200);
+      rect(windowWidth*7/12, upperToleranceY, windowWidth/6, greenZone);
+      if (greenZone > windowHeight/12 + windowHeight*5/6) {
+        greenZone = windowHeight/ 12 + windowHeight*5/6;
+      }
+
+      //lines
+      strokeWeight(2);
+      stroke(255, 0, 0, 255);
+      //target line
+      line(windowWidth*7/12, targetY, windowWidth*9/12, targetY);
+      //upper bound
+      line(windowWidth*7/12, upperToleranceY, windowWidth*9/12, upperToleranceY);
+      //lower bound
+      line(windowWidth*7/12, lowerToleranceY, windowWidth*9/12, lowerToleranceY);
+
+      //tape
+      fill(255,255,255,255);
+      stroke(0);
+      rect(windowWidth*2/3 - windowWidth/180, windowHeight/12, windowWidth/90, measuredY - windowHeight/12);
+      //disk
+      rect(windowWidth*2/3 - windowWidth/14, measuredY - windowHeight/120, windowWidth/7, windowHeight/60);
+     // animationY = animationY + 1;
+     // if (animationY => measuredY){// - measuredDepth) {
+       // animationY = measuredY;//- measuredDepth;
+      //};
+
       pop();
       resultsRestart.run();
     })
