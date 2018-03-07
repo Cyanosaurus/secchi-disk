@@ -333,20 +333,61 @@ function setup() {
         			scenes.setup();
               if (lakeType == "Clear") {
                 clearPass = 1;
+                var depthClear = createDiv().hide().id('depthClear').value(
+                  [
+                    floor(D0.currentDepth*100)/100,
+                    lakeDepth,
+                    lakeType,
+                    3-attemptsLeft
+                  ]
+                  );
               }
               if (lakeType == "Intermediate") {
                 intermediatePass = 1;
+                var depthIntermediate = createDiv().hide().id('depthIntermediate').value(
+                  [
+                    floor(D0.currentDepth*100)/100,
+                    lakeDepth,
+                    lakeType,
+                    3-attemptsLeft
+                  ]
+                  );
               }
               if (lakeType == "Productive"){
                 productivePass = 1;
+                var depthProductive = createDiv().hide().id('depthProductive').value(
+                  [
+                    floor(D0.currentDepth*100)/100,
+                    lakeDepth,
+                    lakeType,
+                    3-attemptsLeft
+                  ]
+                  );
               }
               if (lakeType == "Dystrophic") {
                 dystrophicPass = 1;
+                var depthDystrophic = createDiv().hide().id('depthDystrophic').value(
+                  [
+                    floor(D0.currentDepth*100)/100,
+                    lakeDepth,
+                    lakeType,
+                    3-attemptsLeft
+                  ]
+                  );
               }
               if (lakeType == "Dystrophic Productive") {
                 dystrophicProductivePass = 1;
+                var depthDystrophicProductive = createDiv().hide().id('depthDystrophicProductive').value(
+                  [
+                    floor(D0.currentDepth*100)/100,
+                    lakeDepth,
+                    lakeType,
+                    3-attemptsLeft
+                  ]
+                  );
               }
-      				} else {
+      			}
+            else {
         				attemptsLeft--;
       				}
             }
