@@ -50,10 +50,6 @@ var measuredError;            // Double
 var measuredErrorRel;         // Double
 var measuredTolerance;        // String
 
-function preload() {
-// img1 = loadImage("https://imgur.com/YenZkQx");
-}
-
 function setup() {
   /* --- Compatibility Check Scene --- */
       windowWidth = 1200;     //Static Window Width and Height
