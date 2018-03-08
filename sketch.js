@@ -52,6 +52,10 @@ var measuredError;            // Double
 var measuredErrorRel;         // Double
 var measuredTolerance;        // String
 
+function preload() {
+// img1 = loadImage("https://imgur.com/YenZkQx");
+}
+
 function setup() {
   /* --- Compatibility Check Scene --- */
       windowWidth = 1200;     //Static Window Width and Height
@@ -331,61 +335,20 @@ function setup() {
         			scenes.setup();
               if (lakeType == "Clear") {
                 clearPass = 1;
-                var depthClear = createDiv().hide().id('depthClear').value(
-                  [
-                    floor(D0.currentDepth*100)/100,
-                    lakeDepth,
-                    lakeType,
-                    3-attemptsLeft
-                  ]
-                  );
               }
               if (lakeType == "Intermediate") {
                 intermediatePass = 1;
-                var depthIntermediate = createDiv().hide().id('depthIntermediate').value(
-                  [
-                    floor(D0.currentDepth*100)/100,
-                    lakeDepth,
-                    lakeType,
-                    3-attemptsLeft
-                  ]
-                  );
               }
               if (lakeType == "Productive"){
                 productivePass = 1;
-                var depthProductive = createDiv().hide().id('depthProductive').value(
-                  [
-                    floor(D0.currentDepth*100)/100,
-                    lakeDepth,
-                    lakeType,
-                    3-attemptsLeft
-                  ]
-                  );
               }
               if (lakeType == "Dystrophic") {
                 dystrophicPass = 1;
-                var depthDystrophic = createDiv().hide().id('depthDystrophic').value(
-                  [
-                    floor(D0.currentDepth*100)/100,
-                    lakeDepth,
-                    lakeType,
-                    3-attemptsLeft
-                  ]
-                  );
               }
               if (lakeType == "Dystrophic Productive") {
                 dystrophicProductivePass = 1;
-                var depthDystrophicProductive = createDiv().hide().id('depthDystrophicProductive').value(
-                  [
-                    floor(D0.currentDepth*100)/100,
-                    lakeDepth,
-                    lakeType,
-                    3-attemptsLeft
-                  ]
-                  );
               }
-      			}
-            else {
+      				} else {
         				attemptsLeft--;
       				}
             }
@@ -529,52 +492,14 @@ function setup() {
 
     },
     function() {
-      var animationY = 0;
-      var percentMeasuredY = measuredDepth/lakeDepth;
-      var measuredY = windowHeight/12 + ((windowHeight*5/6) * percentMeasuredY);
-
-      var percentY = lakeTarget/lakeDepth;
-      var targetY = windowHeight/12 + ((windowHeight*5/6) * percentY);
-      //tolerance is +-0.10 meters
-      var percentToleranceY = .1/lakeDepth;
-      var upperToleranceY = targetY - ((windowHeight*5/6) * percentToleranceY);
-      var lowerToleranceY = targetY + ((windowHeight*5/6) * percentToleranceY);
-
-      var greenZone = lowerToleranceY - upperToleranceY;
-
+      // draw()
       scenes.background(0);
       resultsBoard.draw();
       push();
-
-      //lake background
-      fill(lakeColor);
-      noStroke();
-      rect(windowWidth*7/12, windowHeight/12, windowWidth/6, windowHeight*5/6);
-
-      //green area
-      fill(100,255,100,200);
-      rect(windowWidth*7/12, upperToleranceY, windowWidth/6, greenZone);
-      if (greenZone > windowHeight/12 + windowHeight*5/6) {
-        greenZone = windowHeight/ 12 + windowHeight*5/6;
-      }
-
-      //lines
-      strokeWeight(2);
-      stroke(255, 0, 0, 255);
-      //target line
-      line(windowWidth*7/12, targetY, windowWidth*9/12, targetY);
-      //upper bound
-      line(windowWidth*7/12, upperToleranceY, windowWidth*9/12, upperToleranceY);
-      //lower bound
-      line(windowWidth*7/12, lowerToleranceY, windowWidth*9/12, lowerToleranceY);
-
-      //tape
-      fill(255,255,255,255);
-      stroke(0);
-      rect(windowWidth*2/3 - windowWidth/180, windowHeight/12, windowWidth/90, measuredY - windowHeight/12);
-      //disk
-      rect(windowWidth*2/3 - windowWidth/14, measuredY - windowHeight/120, windowWidth/7, windowHeight/60);
-
+      // strokeWeight(4);                   // Dividing lines in results page
+      // stroke(200);
+      // line(210, 317, 890, 317);
+      // line(385, 317, 385, 680);
       pop();
       resultsRestart.run();
     })
@@ -616,6 +541,7 @@ function setup() {
     })
   );
 
+
       //Question Screens
   scenes.addScene(new Scene(windowWidth, windowHeight,
     function() {
@@ -625,7 +551,7 @@ function setup() {
       var top = windowHeight / 6;
       var bottom = windowHeight - top;
 
-      testBoard = new TextBoard(left, top, right - left/2, bottom - top);
+      testBoard = new TextBoard(left, top, right - left/2, bottom - top/2);
       testBoard.background = 60;
       // descBoard.accent = 150;
       testBoard.addText("Secchi Disk Test",240, 40, "Helvetica", BOLD);
