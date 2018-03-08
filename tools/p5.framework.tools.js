@@ -256,6 +256,37 @@ function infoBox(cornerX, cornerY, width, height)
   this.fontSize = 14;
 }
 
+function serverConnect()
+{
+  var valuesClear = document.getElementById("depthClear");
+  var valuesIntermediate = document.getElementById("depthIntermediate");
+  var valuesProductive = document.getElementById("depthProductive");
+  var valuesDystrophic = document.getElementById("depthDystrophic");
+  var valuesDystrophicProductive = document.getElementById("depthDystrophicProductive");
+
+  var mysql = require('mysql');
+
+  var connection = mysql.createConnection({
+    host: "localhost",
+    user: "secchi",
+    password: "AsAp4U8u",
+    database: "mainevlm_secchi2"
+  });
+
+  connection.connect(function(err) {
+    if (err) throw err;
+
+    console.log("Connected!");
+
+    var sql = "INSERT INTO customers (name, address) VALUES ('Company Inc', 'Highway 37')";
+
+    connection.query(sql, function (err, result) {
+      if (err) throw err;
+      console.log("1 record inserted");
+    });
+  });
+}
+
 /**
  * Button:
  * A simple callback driven button for program interaction
@@ -285,6 +316,12 @@ function Button(cornerX, cornerY, width, height, label, callbackSelected, callba
 
   this.callbackSelected = callbackSelected;
   this.callbackUnselected = callbackUnselected;
+
+  if(select('#'+this.label) == null)
+    createElement('div').id(this.label).position(cornerX, cornerY).size(width, height).mousePressed(function(){
+      // alert(this.label);
+      return true;
+    });
 
   // Calculate font size
   // var fontSize = 10;
@@ -401,22 +438,12 @@ function Button2(cornerX, cornerY, width, height, label, callbackSelected, callb
   this.callbackSelected = callbackSelected;
   this.callbackUnselected = callbackUnselected;
 
-  // Calculate font size
-  // var fontSize = 10;
-  // var errorPerc = 10.0;
-  // push();
-  // while (abs(errorPerc) > 0.05) {
-  //   textSize(fontSize);
-  //   errorPerc = (textWidth(label) - this.width * 0.6) / (this.width * 0.6);
-  //   console.log(errorPerc);
-  //   if (errorPerc > 0) {
-  //     fontSize--;
-  //   } else {
-  //     fontSize++;
-  //   }
-  //   console.log(fontSize);
-  // }
-  // pop();
+  if(select('#'+this.label) == null)
+    createElement('div').id(this.label).position(cornerX, cornerY).size(width, height).mousePressed(function(){
+      //Submit data to database if the button at the end of the test is pushed, select for that button
+      return true;
+    });
+  
   this.fontSize = 14;
 
   this.run = function() {
