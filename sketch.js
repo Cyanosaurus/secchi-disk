@@ -341,7 +341,7 @@ function setup() {
     function() {
       // setup()
       
-      resultsBoard =  new TextBoard(windowWidth/12, windowHeight/12, windowWidth/2, windowHeight*5/6);
+      resultsBoard =  new TextBoard(windowWidth/12, windowHeight/12, windowWidth*9/12 - windowWidth/12, windowHeight*5/6);
 
       resultsBoard.background = 0;
       resultsBoard.accent = 50;
@@ -419,16 +419,26 @@ function setup() {
     },
     function() {
       // draw()
-      var animationY = 0;
+      var animationWindowX = windowWidth*9/12;
+      var animationWindowY = windowHeight/12;
+      var animationWindowW = windowWidth/6;
+      var animationWindowH = windowHeight*5/6;
+      var diskH = animationWindowH/50;
+      var diskW = animationWindowW*2/3;
+      var tapeW = animationWindowW/25;
+
+      var animationY = animationWindowY;
+
       var percentMeasuredY = measuredDepth/lakeDepth;
-      var measuredY = windowHeight/12 + ((windowHeight*5/6) * percentMeasuredY);
+      var measuredY = animationWindowY + (animationWindowH * percentMeasuredY);
 
       var percentY = lakeTarget/lakeDepth;
-      var targetY = windowHeight/12 + ((windowHeight*5/6) * percentY);
+      var targetY = animationWindowY + (animationWindowH * percentY);
+
       //tolerance is +-0.10 meters
       var percentToleranceY = .1/lakeDepth;
-      var upperToleranceY = targetY - ((windowHeight*5/6) * percentToleranceY);
-      var lowerToleranceY = targetY + ((windowHeight*5/6) * percentToleranceY);
+      var upperToleranceY = targetY - (animationWindowH * percentToleranceY);
+      var lowerToleranceY = targetY + (animationWindowH * percentToleranceY);
 
       var greenZone = lowerToleranceY - upperToleranceY;
 
@@ -438,39 +448,79 @@ function setup() {
 
       //lake background
       fill(lakeColor);
+      strokeWeight(2);
+      stroke(255);
+      rect(animationWindowX, animationWindowY, animationWindowW, animationWindowH);
+      fill(255,255,255,100);
       noStroke();
-      rect(windowWidth*7/12, windowHeight/12, windowWidth/6, windowHeight*5/6);
+      rect(animationWindowX, animationWindowY, animationWindowW, animationWindowH/12);
 
       //green area
       fill(100,255,100,200);
-      rect(windowWidth*7/12, upperToleranceY, windowWidth/6, greenZone);
-      if (greenZone > windowHeight/12 + windowHeight*5/6) {
-        greenZone = windowHeight/ 12 + windowHeight*5/6;
+      rect(animationWindowX, upperToleranceY, animationWindowW, greenZone);
+      if (greenZone > animationWindowX + animationWindowH) {
+        greenZone = animationWindowX + animationWindowH;
       }
 
       //lines
       strokeWeight(2);
       stroke(255, 0, 0, 255);
       //target line
-      line(windowWidth*7/12, targetY, windowWidth*9/12, targetY);
+      line(animationWindowX, targetY, animationWindowX + animationWindowW, targetY);
       //upper bound
-      line(windowWidth*7/12, upperToleranceY, windowWidth*9/12, upperToleranceY);
+      line(animationWindowX, upperToleranceY, animationWindowX + (animationWindowW*1/29), upperToleranceY);
+      line(animationWindowX + (animationWindowW*2/29), upperToleranceY, animationWindowX + (animationWindowW*3/29), upperToleranceY);
+      line(animationWindowX + (animationWindowW*4/29), upperToleranceY, animationWindowX + (animationWindowW*5/29), upperToleranceY);
+      line(animationWindowX + (animationWindowW*6/29), upperToleranceY, animationWindowX + (animationWindowW*7/29), upperToleranceY);
+      line(animationWindowX + (animationWindowW*8/29), upperToleranceY, animationWindowX + (animationWindowW*9/29), upperToleranceY);
+      line(animationWindowX + (animationWindowW*10/29), upperToleranceY, animationWindowX + (animationWindowW*11/29), upperToleranceY);
+      line(animationWindowX + (animationWindowW*12/29), upperToleranceY, animationWindowX + (animationWindowW*13/29), upperToleranceY);
+      line(animationWindowX + (animationWindowW*14/29), upperToleranceY, animationWindowX + (animationWindowW*15/29), upperToleranceY);
+      line(animationWindowX + (animationWindowW*16/29), upperToleranceY, animationWindowX + (animationWindowW*17/29), upperToleranceY);
+      line(animationWindowX + (animationWindowW*18/29), upperToleranceY, animationWindowX + (animationWindowW*19/29), upperToleranceY);
+      line(animationWindowX + (animationWindowW*20/29), upperToleranceY, animationWindowX + (animationWindowW*21/29), upperToleranceY);
+      line(animationWindowX + (animationWindowW*22/29), upperToleranceY, animationWindowX + (animationWindowW*23/29), upperToleranceY);
+      line(animationWindowX + (animationWindowW*24/29), upperToleranceY, animationWindowX + (animationWindowW*25/29), upperToleranceY);
+      line(animationWindowX + (animationWindowW*26/29), upperToleranceY, animationWindowX + (animationWindowW*27/29), upperToleranceY);
+      line(animationWindowX + (animationWindowW*28/29), upperToleranceY, animationWindowX + animationWindowW, upperToleranceY);
       //lower bound
-      line(windowWidth*7/12, lowerToleranceY, windowWidth*9/12, lowerToleranceY);
+      line(animationWindowX, lowerToleranceY, animationWindowX + (animationWindowW*1/29), lowerToleranceY);
+      line(animationWindowX + (animationWindowW*2/29), lowerToleranceY, animationWindowX + (animationWindowW*3/29), lowerToleranceY);
+      line(animationWindowX + (animationWindowW*4/29), lowerToleranceY, animationWindowX + (animationWindowW*5/29), lowerToleranceY);
+      line(animationWindowX + (animationWindowW*6/29), lowerToleranceY, animationWindowX + (animationWindowW*7/29), lowerToleranceY);
+      line(animationWindowX + (animationWindowW*8/29), lowerToleranceY, animationWindowX + (animationWindowW*9/29), lowerToleranceY);
+      line(animationWindowX + (animationWindowW*10/29), lowerToleranceY, animationWindowX + (animationWindowW*11/29), lowerToleranceY);
+      line(animationWindowX + (animationWindowW*12/29), lowerToleranceY, animationWindowX + (animationWindowW*13/29), lowerToleranceY);
+      line(animationWindowX + (animationWindowW*14/29), lowerToleranceY, animationWindowX + (animationWindowW*15/29), lowerToleranceY);
+      line(animationWindowX + (animationWindowW*16/29), lowerToleranceY, animationWindowX + (animationWindowW*17/29), lowerToleranceY);
+      line(animationWindowX + (animationWindowW*18/29), lowerToleranceY, animationWindowX + (animationWindowW*19/29), lowerToleranceY);
+      line(animationWindowX + (animationWindowW*20/29), lowerToleranceY, animationWindowX + (animationWindowW*21/29), lowerToleranceY);
+      line(animationWindowX + (animationWindowW*22/29), lowerToleranceY, animationWindowX + (animationWindowW*23/29), lowerToleranceY);
+      line(animationWindowX + (animationWindowW*24/29), lowerToleranceY, animationWindowX + (animationWindowW*25/29), lowerToleranceY);
+      line(animationWindowX + (animationWindowW*26/29), lowerToleranceY, animationWindowX + (animationWindowW*27/29), lowerToleranceY);
+      line(animationWindowX + (animationWindowW*28/29), lowerToleranceY, animationWindowX + animationWindowW, lowerToleranceY);
 
       //tape
-      fill(255,255,255,255);
-      stroke(0);
-      rect(windowWidth*2/3 - windowWidth/180, windowHeight/12, windowWidth/90, measuredY - windowHeight/12);
+      fill(255,255,255,150);
+      noStroke();
+      rect((animationWindowX + (animationWindowW/2)) - (tapeW/2), animationWindowY, tapeW, measuredY - animationWindowY);
       //disk
-      rect(windowWidth*2/3 - windowWidth/14, measuredY - windowHeight/120, windowWidth/7, windowHeight/60);
-     // animationY = animationY + 1;
-     // if (animationY => measuredY){// - measuredDepth) {
-       // animationY = measuredY;//- measuredDepth;
-      //};
+      fill(255,255,255,255);
+      rect((animationWindowX   + (animationWindowW/2)) - (diskW/2), measuredY - (diskH/2), diskW, diskH);
+
+      stroke(0);
+      strokeWeight(2);
+      textSize(14);
+      text("TOLERANCE RANGE", animationWindowX + (animationWindowW*1/29), upperToleranceY - 8, BOLD);
+      textSize(25);
+      strokeWeight(3);
+      text("TARGET DEPTH", ((animationWindowX + (animationWindowW)/2)) - 105, targetY + 11, BOLD);
+     
 
       pop();
+
       resultsRestart.run();
+
     })
   );
   /* --- End Reading Results Scene --- */
