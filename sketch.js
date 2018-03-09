@@ -884,135 +884,75 @@ pop();
 
 push();
 
-//Put a measuring tape on the secchi disk
- beginShape(QUADS);
-   fill("rgba(100%,100%,100%,1)");
-   vertex(-25, -25);
-   vertex(-25, 75);
-   // fill("rgba(100%,100%,100%,0)");
-   vertex(this.x, this.y + this.rad/40);
-   vertex(this.x, this.y - this.rad/40);
- endShape(CLOSE);
+  function gradientRect(x1, y1, x2, y2, x3, y3, x4, y4, color1, color2)
+    {
+      var xO = (x1+x2)/2;
+      var xT = (x4+x3)/2;
+      var yO = (y1+y2)/2;
+      var yT = (y4+y3)/2;
 
- // function gradientRect(x1, y1, x2, y2, x3, y3, x4, y4)
- // {
- //   var xO = (x1+x2)/2;
- //   var xT = (x4+x3)/2;
- //   var yO = (y1+y2)/2;
- //   var yT = (y4+y3)/2;
- //
- //   var grad = this.drawingContext.createLinearGradient(xO, yO, xT, yT);
- //   grad.addColorStop(0, color(255, 255, 255, 255));
- //   grad.addColorStop(1, color(255, 255, 255, 0));
- //
- //   this.drawingContext.strokeStyle = grad;
- //
- //   beginShape(QUADS);
- //     vertex(x1, y1);
- //     vertex(x2, y2);
- //     vertex(x3, y3);
- //     vertex(x4, y4);
- //   endShape(CLOSE);
- // }
- //
- // gradientRect(-25, -25, -25, 75, this.x, this.y+this.rad/40, this.x, this.y-this.rad/40);
- //
- // function gradientRect(x1, y1, x2, y2, x3, y3, x4, y4)
- // {
- //   stroke(153, 153);
- //   beginShape(QUADS);
- //     strokeWeight(2);
- //     fill("rgba(100%,100%,100%,0.5)");
- //     vertex(x1, y1);
- //     vertex(x4, y4);
- //     strokeWeight(1);
- //     fill("rgba(100%,100%,100%,0)");
- //     vertex(x3, y3);
- //     vertex(x2, y2);
- //   endShape(CLOSE);
- // }
- //
- //  gradientRect(-25, -25, this.x, this.y-this.rad/40, this.x, this.y+this.rad/40, -25, 75);
+      var grad = this.drawingContext.createLinearGradient(xO, yO, xT, yT);
+      grad.addColorStop(0, color1);
+      grad.addColorStop(1, color2);
+
+      this.drawingContext.fillStyle = grad;
+
+      beginShape();
+        vertex(x1, y1);
+        vertex(x2, y2);
+        vertex(x3, y3);
+        vertex(x4, y4);
+      endShape();
+    }
 
 
- for(i = 1; i <= lakeDepth; i++)
-{
-  //Finds where on the x and y axis to put the lines
-  tickTimeX = map(i, 0, this.currentDepth+1, this.x, -25);
-  tickTimeYBottom = map(i, 0, this.currentDepth+1, this.y + this.rad/40, 75);
-  tickTimeYTop = map(i, 0, this.currentDepth+1, this.y - this.rad/40, -25);
-
-  stroke("black");
-  strokeWeight(3);
-  line(tickTimeX, tickTimeYBottom, tickTimeX, tickTimeYTop);
-  strokeWeight(1);
-  //The 1 comes in weird, this is how I "fixed" it
-  if(this.currentDepth > .68)
-  {
-    textSize(50*i/this.currentDepth);
-    fill("black");
-    text(i, tickTimeX, tickTimeYBottom);
-  }
-  else
-  {
-    textSize(50*i/this.currentDepth);
-    fill("black");
-    text(i, tickTimeX, tickTimeYTop);
-  }
-}
-
-
-noFill();
-stroke(0);
-strokeWeight(174);
-ellipse(width/3+30,height/2,width*.7, height*1.4);
-strokeWeight(0);
-noStroke();
-
-noFill();
-stroke(40, 40, 40);
-strokeWeight(10);
-ellipse(width/3+30,height/2,width*.55, height*1.1);
-strokeWeight(0);
-noStroke();
+    gradientRect(-25, -25, -25, 75, this.x, this.y+this.rad/40, this.x, this.y-this.rad/40, color(255, 255, 255, 255), color(255, 255, 255, alpha));
 
 
 
-     var seedValue = noise(this.dx);
-     var nois = map(seedValue, 0, 1, 0, .5);
-     var numberOfIterations = 60;
 
-     for(var i = 0; i < numberOfIterations ; i++){
-       var j = map(i, 0, numberOfIterations , 0, this.rad)
-       var k = map(i, 0, numberOfIterations -1, 0, 0);//map(i, 0, numberOfIterations -1, map(this.currentDepth, 0, this.maxDepth, 0, PI/8), 0);
-       var l = map(i, 0, numberOfIterations -1, this.rad/30, 0);
+    //For the depth of the lake, put a major tick mark on the measuring tape
+    for(i = 1; i <= lakeDepth; i++)
+    {
+      //Finds where on the x and y axis to put the lines
+      tickTimeX = map(i, 0, this.currentDepth+1, this.x, -25);
+      tickTimeYBottom = map(i, 0, this.currentDepth+1, this.y + this.rad/40, 75);
+      tickTimeYTop = map(i, 0, this.currentDepth+1, this.y - this.rad/40, -25);
 
-       // noStroke();
-       // fill(0, alpha);
-       // arc(this.x + l*cos(PI/4 + nois), this.y + l*sin(PI/4 + nois), j, j, nois + k, PI/2 + nois - k);
-       // arc(this.x + l*cos(5*PI/4 + nois), this.y + l*sin(5*PI/4 + nois), j, j, PI + nois + k, 3*PI/2 + nois - k);
-       //
-       // fill(255, alpha);
-       // arc(this.x + l*cos(3*PI/4 + nois), this.y + l*sin(3*PI/4 + nois), j, j, PI/2 + nois + k, PI + nois - k);
-       // arc(this.x + l*cos(7*PI/4 + nois), this.y + l*sin(7*PI/4 + nois), j, j, 3*PI/2 + nois + k, nois - k);
-     }
+      stroke("black");
+      strokeWeight(3);
+      line(tickTimeX, tickTimeYBottom, tickTimeX, tickTimeYTop);
+      strokeWeight(1);
+      //The 1 comes in weird, this is how I "fixed" it
+      if(this.currentDepth > .68)
+      {
+        textSize(50*i/this.currentDepth);
+        fill("black");
+        text(i, tickTimeX, tickTimeYBottom);
+      }
+      else
+      {
+        textSize(50*i/this.currentDepth);
+        fill("black");
+        text(i, tickTimeX, tickTimeYTop);
+      }
+    }
 
-    stroke(153, 153);
-    strokeWeight(2);
-    fill("yellow");
+    noFill();
+    stroke(0);
+    strokeWeight(174);
+    ellipse(width/3+30,height/2,width*.7, height*1.4);
+    strokeWeight(0);
+    noStroke();
 
-    //If the value hasn't reached the certain point yet, do nothing for them, otherwise, start to map from start point to end point (left to right)
-    // measureTape = beginShape(QUADS);
-    //   var topLeft = vertex(-1, windowHeight/12);
-    //   var topRight = vertex(this.x, this.y - this.rad/40);
-    //   var bottomRight = vertex(this.x, this.y + this.rad/40);
-    //   // Put some sort of loop here to place vertexes among these points, and possibly an inner statement to draw the actual marks
-    //   for(i = 0; i < lakeDepth; i++)
-    //   {
-    //     vertex()
-    //   }
-    //   var bottomLeft = vertex(-1, windowHeight/4);
-    // endShape(CLOSE);
+    noFill();
+    stroke(40, 40, 40);
+    strokeWeight(10);
+    ellipse(width/3+30,height/2,width*.55, height*1.1);
+    strokeWeight(0);
+    noStroke();
+
+
     pop();
 
     push();
@@ -1048,12 +988,8 @@ noStroke();
     }
 
     //This bit draws the moving triangle along the side of the rectangle, t is the current depth of the secchi disk
-    var tip = map(t, 0, lakeDepth, this.meterPos.y, this.meterPos.y+height/1.25);
-
-    //prints to console where the triangle tip is
-    // print("tip ="+tip);
-
     fill("red");
+    var tip = map(t, 0, lakeDepth, this.meterPos.y, this.meterPos.y+height/1.25);
     var depthTriangle = triangle(this.meterPos.x-15, tip+8, this.meterPos.x+15, tip, this.meterPos.x-15, tip-8);
 
     pop();
