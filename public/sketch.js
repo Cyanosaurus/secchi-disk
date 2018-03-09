@@ -30,6 +30,8 @@ var lakeColor;                // Color
 var lakeDepth;                // Double
 var lakeTarget;               // Double
 
+var message = "Please begin.";
+
 /* Reading Results Elements */
 var resultsBoard;
 var resultsRestart;
@@ -45,11 +47,14 @@ var animationY;
 
 function setup() {
 
+  windowWidth = 1200;     //Static Window Width and Height
+  windowHeight = 600;
+
   /* --- Compatibility Check Scene --- */
   scenes.addScene(new Scene(windowWidth, windowHeight,
     function() {
       // setup
-
+      background(0);
       compatBoard = new TextBoard(width / 6, height / 4, width * 2 / 3, height / 2);
     },
     function() {
@@ -76,19 +81,19 @@ function setup() {
       var bottom = height - top  / 6;
 
       introBoard = new TextBoard(left, top/2, right - left, bottom - top);
-      introBoard.background = 240;
-      introBoard.accent = 150;
-      introBoard.addParagraph();
-      introBoard.addText("Select Your Lake Type", 100, 20, "Helvetica", BOLD);
+      introBoard.background = 60;
+      introBoard.accent = 200;
+      introBoard.addText("Select Your Lake Type", 240, 40, "Helvetica", BOLD);
       introBoard.addParagraph();
       introBoard.addParagraph();
       // introBoard.addParagraph();
       // introBoard.addText("Dys",
       //   "#000000", 16, "Helvetica", BOLD);
       introBoard.addParagraph();
+      introBoard.addParagraph();
       introBoard.addText("                            " +
         "Bluish color, with readings above 4 meters",
-        100, 16, "Helvetica", BOLD);
+        240, 18, "Helvetica", BOLD);
       introBoard.addParagraph();
       introBoard.addParagraph();
       introBoard.addParagraph();
@@ -184,7 +189,7 @@ function setup() {
     },
     function() {
       // draw()
-      scenes.background(60);
+      scenes.background(0);
       introBoard.draw();
       introStartClear.run();
       introStartIntmdt.run();
@@ -205,30 +210,47 @@ function setup() {
       var bottom = windowHeight - top;
 
       descBoard = new TextBoard(left, top, right - left, bottom - top);
-      descBoard.background = 240;
-      descBoard.accent = 150;
-      descBoard.addText("Instructions On How To Lower The Secchi Disk", 0, 20, "Helvetica", BOLD);
+      descBoard.background = 60;
+      // descBoard.accent = 150;
+      descBoard.addText("How to Use the Secchi Disk Simulator", 240, 40, "Helvetica", BOLD);
       descBoard.addParagraph(5);
-      descBoard.addTab(1);
-      descBoard.addText("The up and down arrows on your keyboard control the movement of the secchi disk. \nThe up arrow moves the disk further into the water, and the down arrow retrieves it.", 0, 16, "Helvetica", BOLD);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+      // descBoard.addTab(1);
+      descBoard.addText("The up and down arrows on your keyboard control the movement of the secchi disk. \nThe up arrow moves the disk further into the water, and the down arrow retrieves it.", 240, 18, "Helvetica", BOLD);
       descUpArrow = new RoundedBox(right-(windowWidth/9), top+(windowHeight/5), 80, 60);
       descDownArrow = new RoundedBox(right-(windowWidth/9), top+1.5*(windowHeight/5), 80, 60);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+
+      // descBoard.addTab(1);
+      descBoard.addText("Holding down the arrow keys will build up momentum, if you want to move it with\nprecision, try just tapping the arrow keys.");
 
       descBoard.addParagraph(5);
-      descBoard.addTab(1);
-      descBoard.addText("Holding down the arrow keys will build up momentum, if you want to move it with\n precision, try just tapping the arrow keys.");
-
       descBoard.addParagraph(5);
-      descBoard.addTab(1);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+      // descBoard.addTab(1);
       descBoard.addText("Measure the depth at which the disk has just disappeared out of view. Click \nsubmit when you think the reading is accurate.");
 
       descBoard.addParagraph(5);
-      descBoard.addTab(1);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+      // descBoard.addTab(1);
       descBoard.addText("You will have three attempts to find where the secchi disk will disappear from sight.");
 
       descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+      descBoard.addParagraph(5);
+
       descBoard.addTab(1);
-      descBoard.addText("Click Okay when you are ready to start.");
+      descBoard.addText("Click Okay when you are ready to start.", 240, 24, "Helvetica", BOLD);
 
       descBoardClear = new Button(right-110, bottom-65, 95, 50, "Okay",
         function() {
@@ -241,7 +263,7 @@ function setup() {
       introStartDysProd.fontSize = 14;
     },
     function() {
-      scenes.background(60);
+      scenes.background(0);
       descBoard.draw();
       descBoardClear.run();
       descUpArrow.run();
@@ -258,39 +280,55 @@ function setup() {
 
       attemptsLeft = 3;
 
-      submitButton = new Button(width - 170, 120, 110, 50, "Submit",
+      submitButton = new Button2(width - 300, height - 340, 110, 50, "Submit",
 
-          function() {
+      function() {
+       // Button Selected
+       // Analyze trial and give feedback
+       // NOTE: THESE SELECT AND DESELECT FUNCTIONS ARE THE SAME BECAUSE IT ALTERNATES PER PRESS
 
-        	if (D0.currentDepth != -0.1) {
-      			measuredDepth = D0.currentDepth;
-      			if (analyzeTrial()) {                          // if correct move to next scene, otherwise the run section below
-        			scenes.nextScene();                        // will deal with the case of no chances left
-        			scenes.setup();
-      				} else {
-        				attemptsLeft--;
-        				// TODO: Tell the user something, check try number
+      if (D0.currentDepth != -0.1) {
+        measuredDepth = D0.currentDepth;
+        if (analyzeTrial()) {                          // if correct move to next scene, otherwise the run section below
+          scenes.nextScene();                        // will deal with the case of no chances left
+          scenes.setup();
+          if (lakeType == "Clear") {
+            clearPass = 1;
+          }
+          if (lakeType == "Intermediate") {
+            intermediatePass = 1;
+          }
+          if (lakeType == "Productive"){
+            productivePass = 1;
+          }
+          if (lakeType == "Dystrophic") {
+            dystrophicPass = 1;
+          }
+          if (lakeType == "Dystrophic Productive") {
+            dystrophicProductivePass = 1;
+          }
+          } else {
+            attemptsLeft--;
+          }
+        }
+     },
+     function() {
+       // Button Deselected
+       // if (D0.currentDepth != 0) {
+        // measuredDepth = D0.currentDepth;
+        // if (analyzeTrial()) {
+        // 	scenes.nextScene();
+        // 	scenes.setup();
+        // 	} else {
+        // 		// console.log(attemptsLeft);
+       //      message = "You're too far off. Try again!";
+        // 		attemptsLeft--;
+        // 	}
+       //  }
+     }
+  );
 
-      				}
-            }
-         },
-         function() {
-           // Button Deselected
-           if (D0.currentDepth != 0) {
-      			measuredDepth = D0.currentDepth;
-      			if (analyzeTrial()) {
-        			scenes.nextScene();
-        			scenes.setup();
-      				} else {
-      					// console.log(attemptsLeft);
-        				attemptsLeft--;
-        				// TODO: Tell the user something, check try number
-      				}
-            }
-         }
-      );
-
-      goBack = new Button(width - 170, 60, 110, 50, "Switch Types",
+      goBack = new Button(width - 170, height - 340, 110, 50, "Switch Types",
         function() {
           scenes.setScene(2);
           scenes.setup();
@@ -299,22 +337,37 @@ function setup() {
 
     },
     function() {                                    // THIS IS WHERE THE STUFF FOR THE SIM IS DRAWN
-      scenes.background(lakeColor);
+      scenes.background(0);
 
-      fill("black");
-      rect(width - width/4.5, 0, windowWidth, windowHeight);
+      fill(lakeColor);
+        strokeWeight(5);
+        ellipse(width/3+30,height/2,width*.55, height*1.1);
 
-      measureDepth = new Button(width - 170, height - 170, 110, 50, "Current Depth: \n" + floor(D0.currentDepth*100)/100 + " Meters", function(){});
+        strokeWeight(0);
+        fill("black");
+        rect(width - width/4.5, 0, width, height);
 
-      visualAttempts = new Button(width - 170, height - 110, 110, 50, "Attempts Left: " + attemptsLeft, function(){});
+        D0.maxDepth = ceil(lakeDepth)-1;
+        D0.run();
+        // Make the button do
+        submitButton.run();
+        goBack.run();
 
-      D0.maxDepth = ceil(lakeDepth)-1;
-      D0.run();
-      // Make the button do
-      submitButton.run();
-      goBack.run();
+
+      measureDepth = new TextBox(width - 300, height - 170, 240, 50, "Current Depth: \n" + floor(D0.currentDepth*100)/100 + " Meters", function(){});
       measureDepth.run();
+      visualAttempts = new TextBox(width - 300, height - 110, 240, 50, "Attempts Left: " + attemptsLeft, function(){});
       visualAttempts.run();
+
+      messageDisplay = new TextBox(width - 300, height - 280, 240, 100, message, function(){});
+      messageDisplay.run();
+
+      simBackground = new TextBoxBackground(width - 300, height - 540, 240, 190, "", function(){});
+      simBackground.run();
+
+      simInfo = new TextBox(width - 290, height - 530, 220, 170, "Secchi Disk Simulator", function(){});
+      simInfo.run();
+
 
       // If chances are zero, move to results
       if(attemptsLeft == 0)
@@ -328,9 +381,9 @@ function setup() {
 
       push();
       fill(0, 0, 0, 0);
-      strokeWeight(100);
+      strokeWeight(50);
       stroke(50);
-      rect(0, 0, windowWidth, windowHeight);
+      rect(0, 0, 1200, 600);
       pop();
     })
   );
@@ -340,7 +393,7 @@ function setup() {
   scenes.addScene(new Scene(windowWidth, windowHeight,
     function() {
       // setup()
-      
+
       resultsBoard =  new TextBoard(windowWidth/12, windowHeight/12, windowWidth*9/12 - windowWidth/12, windowHeight*5/6);
 
       resultsBoard.background = 0;
@@ -515,7 +568,7 @@ function setup() {
       textSize(25);
       strokeWeight(3);
       text("TARGET DEPTH", ((animationWindowX + (animationWindowW)/2)) - 105, targetY + 11, BOLD);
-     
+
 
       pop();
 
@@ -524,6 +577,151 @@ function setup() {
     })
   );
   /* --- End Reading Results Scene --- */
+
+  //Test Pre-Screen
+scenes.addScene(new Scene(windowWidth, windowHeight,
+  function() {
+
+    var left = windowWidth / 12;
+    var right = windowWidth - left;
+    var top = windowHeight / 12;
+    var bottom = windowHeight - top;
+
+    preTestBoard = new TextBoard(left, top, right - left, bottom - top);
+    preTestBoard.background = 60;
+    // descBoard.accent = 150;
+    preTestBoard.addText("Secchi Disk Test",240, 20, "Helvetica", BOLD);
+    preTestBoard.addParagraph(3);
+    preTestBoard.addTab(1);
+    preTestBoard.addText("\nYou will now begin a multiple choice test.\n\n Please press 'Okay' to begin.");
+
+
+    testStart = new Button(right-110, bottom-65, 95, 50, "Okay",
+      function() {
+        // Button Selected
+          scenes.setScene(7);
+          scenes.setup();
+      },
+      function() {}
+    );
+    introStartDysProd.fontSize = 14;
+  },
+  function() {
+    scenes.background(0);
+    preTestBoard.draw();
+    testStart.run();
+  })
+);
+
+//Question Screens
+scenes.addScene(new Scene(windowWidth, windowHeight,
+function() {
+
+var left = windowWidth / 6;
+var right = windowWidth - left;
+var top = windowHeight / 6;
+var bottom = windowHeight - top;
+
+testBoard = new TextBoard(left, top, right - left/2, bottom - top);
+testBoard.background = 60;
+// descBoard.accent = 150;
+testBoard.addText("Secchi Disk Test",240, 40, "Helvetica", BOLD);
+testBoard.addParagraph(1);
+testBoard.addText("\nQuestion 1: Why is a Secchi disk a good tool to measure water quality?\n", 240, 24, "Helvetica", BOLD);
+testBoard.addParagraph(1);
+testBoard.addParagraph(1);
+testBoard.addParagraph(1);
+testBoard.addParagraph(1);
+testBoard.addParagraph(1);
+testBoard.addText("\n A.")
+testBoard.addParagraph(1);
+testBoard.addParagraph(1);
+testBoard.addParagraph(1);
+testBoard.addText("\n B.")
+testBoard.addParagraph(1);
+testBoard.addParagraph(1);
+testBoard.addParagraph(1);
+testBoard.addText("\n C.")
+testBoard.addParagraph(1);
+testBoard.addParagraph(1);
+testBoard.addParagraph(1);
+testBoard.addText("\n D.")
+testBoard.addParagraph(1);
+testBoard.addParagraph(1);
+testBoard.addParagraph(1);
+
+finishButton = new Button(right-20, bottom-65, 95, 50, "Next",
+  function() {
+    // Button Selected
+      scenes.setScene(8);
+      scenes.setup();
+  },
+  function() {}
+);
+introStartDysProd.fontSize = 14;
+},
+function() {
+scenes.background(0);
+testBoard.draw();
+finishButton.run();
+})
+);
+
+scenes.addScene(new Scene(windowWidth, windowHeight,
+  function() {
+
+    var left = windowWidth / 6;
+    var right = windowWidth - left;
+    var top = windowHeight / 6;
+    var bottom = windowHeight - top;
+
+    testBoard = new TextBoard(left, top, right - left/2, bottom - top);
+    testBoard.background = 60;
+    // descBoard.accent = 150;
+    testBoard.addText("Secchi Disk Test",240, 40, "Helvetica", BOLD);
+    testBoard.addParagraph(1);
+    testBoard.addText("\nQuestion 2: Why is a Secchi disk a good tool to measure water quality?\n", 240, 24, "Helvetica", BOLD);
+    testBoard.addParagraph(1);
+    testBoard.addParagraph(1);
+    testBoard.addParagraph(1);
+    testBoard.addParagraph(1);
+    testBoard.addParagraph(1);
+    testBoard.addText("\n A.")
+    testBoard.addParagraph(1);
+    testBoard.addParagraph(1);
+    testBoard.addParagraph(1);
+    testBoard.addText("\n B.")
+    testBoard.addParagraph(1);
+    testBoard.addParagraph(1);
+    testBoard.addParagraph(1);
+    testBoard.addText("\n C.")
+    testBoard.addParagraph(1);
+    testBoard.addParagraph(1);
+    testBoard.addParagraph(1);
+    testBoard.addText("\n D.")
+    testBoard.addParagraph(1);
+    testBoard.addParagraph(1);
+    testBoard.addParagraph(1);
+
+    finishButton = new Button(right-20, bottom-65, 95, 50, "Next",
+      function() {
+        // Button Selected
+          scenes.nextScene();
+          scenes.setup();
+      },
+      function() {}
+    );
+    introStartDysProd.fontSize = 14;
+  },
+  function() {
+    scenes.background(0);
+    testBoard.draw();
+    finishButton.run();
+  })
+
+);
+
+//Test Finished Screen
 
   scenes.setup();
 
@@ -594,18 +792,24 @@ function setLakeType (type) {
  * measuredTolerance: "Yes"/"No"
  *
  */
-function analyzeTrial() {
-  measuredError = abs(measuredDepth - lakeTarget);
-  measuredErrorRel = measuredError / lakeTarget * 100;
+ function analyzeTrial() {
+   measuredError = abs(measuredDepth - lakeTarget);
+   measuredErrorRel = measuredError / lakeTarget * 100;
+   if (measuredDepth < lakeTarget) {
+     message = "You're too shallow! Try again.";
+   }
+   if (measuredDepth > lakeTarget) {
+     message = "You're too deep! Try again.";
+   }
 
-  if (measuredErrorRel < 2.0) {
-    measuredTolerance = "Yes";
-    return true;
-  } else {
-    measuredTolerance = "No";
-    return false;
-  }
-}
+   if (measuredErrorRel < 2.0) {
+     measuredTolerance = "Yes";
+     return true;
+   } else {
+     measuredTolerance = "No";
+     return false;
+   }
+ }
 
 function disk(){ //THE BIG DISK CLASS
  this.P0 = createVector(width/6, height/6); // BEGIN POINT    // changed from height/8
@@ -626,7 +830,7 @@ function disk(){ //THE BIG DISK CLASS
  this.dx = 0; // USE THIS FOR PERLIN NOISE
  this.detheta = 0; // VARIATION OF POSITION
 
- this.meterPos = createVector(width - width/4.8, height/10); // POSITION OF THE DEPTH METER
+ this.meterPos = createVector(width - width/3-10, height/10); // POSITION OF THE DEPTH METER
 
 this.disp = function(){
   if(this.hide == false){ // WE DON'T WANT TO DRAW THE DISK IF IT'S HIDDEN
@@ -651,6 +855,8 @@ this.disp = function(){
     fill(255, alpha);
     arc(this.x, this.y, this.rad, this.rad, PI/2, PI);
     arc(this.x, this.y, this.rad, this.rad, 3*PI/2, 0);
+
+
 
     pop();
 
@@ -678,7 +884,10 @@ this.disp = function(){
       endShape();
     }
 
+
     gradientRect(-25, -25, -25, 75, this.x, this.y+this.rad/40, this.x, this.y-this.rad/40, color(255, 255, 255, 255), color(255, 255, 255, alpha));
+
+
 
 
     //For the depth of the lake, put a major tick mark on the measuring tape
@@ -707,6 +916,21 @@ this.disp = function(){
         text(i, tickTimeX, tickTimeYTop);
       }
     }
+
+    noFill();
+    stroke(0);
+    strokeWeight(174);
+    ellipse(width/3+30,height/2,width*.7, height*1.4);
+    strokeWeight(0);
+    noStroke();
+
+    noFill();
+    stroke(40, 40, 40);
+    strokeWeight(10);
+    ellipse(width/3+30,height/2,width*.55, height*1.1);
+    strokeWeight(0);
+    noStroke();
+
 
     pop();
 

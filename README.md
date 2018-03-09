@@ -16,6 +16,10 @@ This README would normally document whatever steps are necessary to get your app
 * Database configuration
 * How to run tests
 * Deployment instructions
+* Install node.js
+* `npm install` inside the main Secchi folder
+* `node server` to start it
+* Serverport set to 8080 (localhost:8080 in browser)
 
 ### Contribution guidelines ###
 
