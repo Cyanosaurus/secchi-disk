@@ -393,8 +393,9 @@ function setup() {
   scenes.addScene(new Scene(windowWidth, windowHeight,
     function() {
       // setup()
+      animationY = windowHeight/12;
 
-      resultsBoard =  new TextBoard(windowWidth/12, windowHeight/12, windowWidth*9/12 - windowWidth/12, windowHeight*5/6);
+      resultsBoard =  new TextBoard(windowWidth/12, windowHeight/12, windowWidth*8/12, windowHeight*5/6);
 
       resultsBoard.background = 0;
       resultsBoard.accent = 50;
@@ -402,20 +403,19 @@ function setup() {
       resultsBoard.addParagraph(5);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
-      resultsBoard.addTab(1);
-      resultsBoard.addText("Reading Results", 200, 30, "Helvetica", BOLD);
+      resultsBoard.addText("Reading Results", color(255, 0, 0) , 40, "Helvetica", BOLD);
       resultsBoard.addParagraph(5);
       resultsBoard.addParagraph(5);
       resultsBoard.addParagraph(5);
       resultsBoard.addParagraph(5);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
-     // resultsBoard.addText("Lake Type", 0, 16, "Helvetica", BOLD);
      //("Words", color, size, font, type);
       resultsBoard.addText("Lake Type", 200, 20, "Helvetica", BOLD);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
       resultsBoard.addText(lakeType, 255, 20, "Helvetica", BOLD);
+      resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
@@ -426,12 +426,14 @@ function setup() {
       resultsBoard.addText(lakeTarget.toFixed(2) + " meters", 255, 20, "Helvetica", BOLD);
       resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
+      resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
       resultsBoard.addText("Measured Depth", 200, 20, "Helvetica", BOLD);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
       resultsBoard.addText(measuredDepth.toFixed(2) + " meters", 255, 20, "Helvetica", BOLD);
+      resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
@@ -442,6 +444,7 @@ function setup() {
       resultsBoard.addText(measuredError.toFixed(2) + " meters", 255, 20, "Helvetica", BOLD);
       resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
+      resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
       resultsBoard.addText("Error (relative)", 200, 20, "Helvetica", BOLD);
@@ -450,13 +453,14 @@ function setup() {
       resultsBoard.addText(measuredErrorRel.toFixed(2) + "%", 255, 20, "Helvetica", BOLD);
       resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
+      resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
       resultsBoard.addText("Within Tolerance?", 200, 20, "Helvetica", BOLD);
       resultsBoard.addTab(1);
       resultsBoard.addText(measuredTolerance, 255, 20, "Helvetica", BOLD);
 
-      resultsRestart = new Button(windowWidth/2, windowHeight/2 - 50, 95, 50, "Test Again",
+      resultsRestart = new Button(windowWidth*5/12, windowHeight*4/5, 95, 50, "Test Again",
 
         function() {
           // Button Selected
@@ -472,6 +476,10 @@ function setup() {
     },
     function() {
       // draw()
+      scenes.background(60);
+      resultsBoard.draw();
+
+      push();
       var animationWindowX = windowWidth*9/12;
       var animationWindowY = windowHeight/12;
       var animationWindowW = windowWidth/6;
@@ -480,24 +488,17 @@ function setup() {
       var diskW = animationWindowW*2/3;
       var tapeW = animationWindowW/25;
 
-      var animationY = animationWindowY;
-
       var percentMeasuredY = measuredDepth/lakeDepth;
       var measuredY = animationWindowY + (animationWindowH * percentMeasuredY);
 
       var percentY = lakeTarget/lakeDepth;
       var targetY = animationWindowY + (animationWindowH * percentY);
-
       //tolerance is +-0.10 meters
       var percentToleranceY = .1/lakeDepth;
       var upperToleranceY = targetY - (animationWindowH * percentToleranceY);
       var lowerToleranceY = targetY + (animationWindowH * percentToleranceY);
-
       var greenZone = lowerToleranceY - upperToleranceY;
 
-      scenes.background(60);
-      resultsBoard.draw();
-      push();
 
       //lake background
       fill(lakeColor);
@@ -507,21 +508,19 @@ function setup() {
       fill(255,255,255,100);
       noStroke();
       rect(animationWindowX, animationWindowY, animationWindowW, animationWindowH/12);
-
       //green area
       fill(100,255,100,200);
       rect(animationWindowX, upperToleranceY, animationWindowW, greenZone);
       if (greenZone > animationWindowX + animationWindowH) {
         greenZone = animationWindowX + animationWindowH;
       }
-
       //lines
-      strokeWeight(2);
+      strokeWeight(1);
       stroke(255, 0, 0, 255);
       //target line
-      line(animationWindowX, targetY, animationWindowX + animationWindowW, targetY);
+      line(animationWindowX + 1, targetY, animationWindowX + animationWindowW - 1, targetY);
       //upper bound
-      line(animationWindowX, upperToleranceY, animationWindowX + (animationWindowW*1/29), upperToleranceY);
+      line(animationWindowX + 1, upperToleranceY, animationWindowX + (animationWindowW*1/29) - 1, upperToleranceY);
       line(animationWindowX + (animationWindowW*2/29), upperToleranceY, animationWindowX + (animationWindowW*3/29), upperToleranceY);
       line(animationWindowX + (animationWindowW*4/29), upperToleranceY, animationWindowX + (animationWindowW*5/29), upperToleranceY);
       line(animationWindowX + (animationWindowW*6/29), upperToleranceY, animationWindowX + (animationWindowW*7/29), upperToleranceY);
@@ -535,9 +534,9 @@ function setup() {
       line(animationWindowX + (animationWindowW*22/29), upperToleranceY, animationWindowX + (animationWindowW*23/29), upperToleranceY);
       line(animationWindowX + (animationWindowW*24/29), upperToleranceY, animationWindowX + (animationWindowW*25/29), upperToleranceY);
       line(animationWindowX + (animationWindowW*26/29), upperToleranceY, animationWindowX + (animationWindowW*27/29), upperToleranceY);
-      line(animationWindowX + (animationWindowW*28/29), upperToleranceY, animationWindowX + animationWindowW, upperToleranceY);
+      line(animationWindowX + (animationWindowW*28/29), upperToleranceY, animationWindowX + animationWindowW - 1, upperToleranceY);
       //lower bound
-      line(animationWindowX, lowerToleranceY, animationWindowX + (animationWindowW*1/29), lowerToleranceY);
+      line(animationWindowX + 1, lowerToleranceY, animationWindowX + (animationWindowW*1/29) - 1, lowerToleranceY);
       line(animationWindowX + (animationWindowW*2/29), lowerToleranceY, animationWindowX + (animationWindowW*3/29), lowerToleranceY);
       line(animationWindowX + (animationWindowW*4/29), lowerToleranceY, animationWindowX + (animationWindowW*5/29), lowerToleranceY);
       line(animationWindowX + (animationWindowW*6/29), lowerToleranceY, animationWindowX + (animationWindowW*7/29), lowerToleranceY);
@@ -551,27 +550,23 @@ function setup() {
       line(animationWindowX + (animationWindowW*22/29), lowerToleranceY, animationWindowX + (animationWindowW*23/29), lowerToleranceY);
       line(animationWindowX + (animationWindowW*24/29), lowerToleranceY, animationWindowX + (animationWindowW*25/29), lowerToleranceY);
       line(animationWindowX + (animationWindowW*26/29), lowerToleranceY, animationWindowX + (animationWindowW*27/29), lowerToleranceY);
-      line(animationWindowX + (animationWindowW*28/29), lowerToleranceY, animationWindowX + animationWindowW, lowerToleranceY);
-
+      line(animationWindowX + (animationWindowW*28/29), lowerToleranceY, animationWindowX + animationWindowW - 1, lowerToleranceY);
       //tape
-      fill(255,255,255,150);
-      noStroke();
-      rect((animationWindowX + (animationWindowW/2)) - (tapeW/2), animationWindowY, tapeW, measuredY - animationWindowY);
-      //disk
       fill(255,255,255,255);
-      rect((animationWindowX   + (animationWindowW/2)) - (diskW/2), measuredY - (diskH/2), diskW, diskH);
-
+      noStroke();
+      rect((animationWindowX + (animationWindowW/2)) - (tapeW/2), animationWindowY, tapeW, animationY);
+      //disk
+      rect((animationWindowX + (animationWindowW/2)) - (diskW/2), animationY + animationWindowY, diskW, diskH);
+      fill(255,0,0);
       stroke(0);
-      strokeWeight(2);
-      textSize(14);
-      text("TOLERANCE RANGE", animationWindowX + (animationWindowW*1/29), upperToleranceY - 8, BOLD);
-      textSize(25);
-      strokeWeight(3);
-      text("TARGET DEPTH", ((animationWindowX + (animationWindowW)/2)) - 105, targetY + 11, BOLD);
-
-
+      strokeWeight(1);
+      triangle(animationWindowX - 10, (animationY + animationWindowY) - diskH, animationWindowX + (diskW/6), (animationY + animationWindowY), animationWindowX - 10, (animationY + animationWindowY) + diskH);
+      animationY = animationY + 1;
+        if (animationY > measuredY - animationWindowY) {
+          animationY = measuredY - animationWindowY;
+          animationY = animationY + 0;
+        };
       pop();
-
       resultsRestart.run();
 
     })
@@ -1009,6 +1004,7 @@ this.disp = function(){
      this.y = this.P0.y + (direction.y*(this.currentDepth * 60 + dTheta))%(d0/direction.y);
 
      this.rad = dist(this.x, this.y, this.P1.x-10, this.P1.y-10);// decrease size of disk as it gets closer to the center
+     
    }
  }
 
