@@ -339,7 +339,7 @@ function setup() {
     function() {                                    // THIS IS WHERE THE STUFF FOR THE SIM IS DRAWN
       scenes.background(0);
 
-      fill(lakeColor);
+        fill(lakeColor);
         strokeWeight(5);
         ellipse(width/3+30,height/2,width*.55, height*1.1);
 
