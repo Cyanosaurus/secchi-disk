@@ -31,6 +31,7 @@ var lakeDepth;                // Double
 var lakeTarget;               // Double
 
 var message = "Please begin.";
+var Question1Answer = "Select an Answer.";
 
 /* Reading Results Elements */
 var resultsBoard;
@@ -183,6 +184,17 @@ function setup() {
         },
         function() {}
       );
+
+      introStartTestTaker = new Button(900, top*1.2+240, 95, 60, "Take Test",
+  function() {
+    // Button Selected --> To be changed to a test
+      scenes.setScene(6);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
       // introStartDysProd.color = [245, 245, 245];
       introStartDysProd.fontSize = 14;
 
@@ -196,6 +208,7 @@ function setup() {
       introStartProd.run();
       introStartDys.run();
       introStartDysProd.run();
+      introStartTestTaker.run();
     })
   );
   /* --- End Intro Menu Scene --- */
@@ -460,11 +473,11 @@ function setup() {
       resultsBoard.addTab(1);
       resultsBoard.addText(measuredTolerance, 255, 20, "Helvetica", BOLD);
 
-<<<<<<< HEAD
+// <<<<<<< HEAD
       resultsRestart = new Button(windowWidth/.5, windowHeight/.5 - 50, 95, 50, "Test Again",
-=======
+// =======
       resultsRestart = new Button(windowWidth*5/12, windowHeight*4/5, 95, 50, "Test Again",
->>>>>>> 64b2a0ab6ea59ab46c5d69286cbdad274642ddfe
+// >>>>>>> 64b2a0ab6ea59ab46c5d69286cbdad274642ddfe
 
         function() {
           // Button Selected
@@ -473,7 +486,7 @@ function setup() {
             scenes.setup();
         },
         function() {}
-      );
+      ));
       // introStartDysProd.color = [245, 245, 245];
       introStartDysProd.fontSize = 14;
 
@@ -503,12 +516,12 @@ function setup() {
       var lowerToleranceY = targetY + (animationWindowH * percentToleranceY);
       var greenZone = lowerToleranceY - upperToleranceY;
 
-<<<<<<< HEAD
+// <<<<<<< HEAD
       scenes.background(0);
       resultsBoard.draw();
       push();
-=======
->>>>>>> 64b2a0ab6ea59ab46c5d69286cbdad274642ddfe
+// =======
+// >>>>>>> 64b2a0ab6ea59ab46c5d69286cbdad274642ddfe
 
       //lake background
       fill(lakeColor);
@@ -524,6 +537,17 @@ function setup() {
       if (greenZone > animationWindowX + animationWindowH) {
         greenZone = animationWindowX + animationWindowH;
       }
+
+      resultsRestart = new Button(windowWidth/2+180, windowHeight/2+200, 95, 50, "Test Again",
+        function() {
+          // Button Selected
+            setLakeType(5);
+            scenes.setScene(2);
+            scenes.setup();
+        },
+        function() {}
+      );
+
       //lines
       strokeWeight(1);
       stroke(255, 0, 0, 255);
@@ -627,7 +651,7 @@ var right = windowWidth - left;
 var top = windowHeight / 6;
 var bottom = windowHeight - top;
 
-testBoard = new TextBoard(left, top, right - left/2, bottom - top);
+testBoard = new TextBoard(left, top, right - left/2, bottom - top/2);
 testBoard.background = 60;
 // descBoard.accent = 150;
 testBoard.addText("Secchi Disk Test",240, 40, "Helvetica", BOLD);
@@ -655,7 +679,51 @@ testBoard.addParagraph(1);
 testBoard.addParagraph(1);
 testBoard.addParagraph(1);
 
-finishButton = new Button(right-20, bottom-65, 95, 50, "Next",
+AnswerA = new AnswerButton(right-750, bottom-260, 800, 50, "A. (Answer)",
+function() {
+// Button Selected
+Question1Answer = "A";
+},
+function() {
+// Button Unselected
+}
+);
+
+AnswerB = new AnswerButton(right-750, bottom-200, 800, 50, "B. (Answer)",
+function() {
+// Button Selected
+Question1Answer = "B";
+},
+function() {
+// Button Unselected
+}
+);
+
+AnswerC = new AnswerButton(right-750, bottom-140, 800, 50, "C. (Answer)",
+function() {
+// Button Selected
+Question1Answer = "C";
+},
+function() {
+// Button Unselected
+}
+);
+
+AnswerD = new AnswerButton(right-750, bottom-80, 800, 50, "D. (Answer)",
+function() {
+// Button Selected
+Question1Answer = "D";
+},
+function() {
+// Button Unselected
+}
+// Question1Answer = "D";
+// simInfo.run();
+);
+
+simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question1Answer, function(){});
+
+finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
   function() {
     // Button Selected
       scenes.setScene(8);
@@ -669,6 +737,11 @@ function() {
 scenes.background(0);
 testBoard.draw();
 finishButton.run();
+AnswerA.run();
+AnswerB.run();
+AnswerC.run();
+AnswerD.run();
+simInfo.run();
 })
 );
 
@@ -708,6 +781,50 @@ scenes.addScene(new Scene(windowWidth, windowHeight,
     testBoard.addParagraph(1);
     testBoard.addParagraph(1);
 
+    AnswerA = new AnswerButton(right-750, bottom-260, 800, 50, "A. (Answer)",
+  function() {
+    // Button Selected
+    Question1Answer = "A";
+  },
+  function() {
+    // Button Unselected
+  }
+);
+
+AnswerB = new AnswerButton(right-750, bottom-200, 800, 50, "B. (Answer)",
+  function() {
+    // Button Selected
+    Question1Answer = "B";
+  },
+  function() {
+    // Button Unselected
+  }
+);
+
+AnswerC = new AnswerButton(right-750, bottom-140, 800, 50, "C. (Answer)",
+  function() {
+    // Button Selected
+    Question1Answer = "C";
+  },
+  function() {
+    // Button Unselected
+  }
+);
+
+AnswerD = new AnswerButton(right-750, bottom-80, 800, 50, "D. (Answer)",
+  function() {
+    // Button Selected
+    Question1Answer = "D";
+  },
+  function() {
+    // Button Unselected
+  }
+  // Question1Answer = "D";
+  // simInfo.run();
+);
+
+simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question1Answer, function(){});
+
     finishButton = new Button(right-20, bottom-65, 95, 50, "Next",
       function() {
         // Button Selected
@@ -722,6 +839,11 @@ scenes.addScene(new Scene(windowWidth, windowHeight,
     scenes.background(0);
     testBoard.draw();
     finishButton.run();
+    AnswerA.run();
+    AnswerB.run();
+    AnswerC.run();
+    AnswerD.run();
+    simInfo.run();
   })
 
 );
@@ -1014,7 +1136,7 @@ this.disp = function(){
      this.y = this.P0.y + (direction.y*(this.currentDepth * 60 + dTheta))%(d0/direction.y);
 
      this.rad = dist(this.x, this.y, this.P1.x-10, this.P1.y-10);// decrease size of disk as it gets closer to the center
-     
+
    }
  }
 
