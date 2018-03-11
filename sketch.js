@@ -66,7 +66,7 @@ function setup() {
         scenes.setup();
       }
 
-      scenes.background(60);
+      scenes.background(0);
       compatBoard.draw();
     }
   ));
@@ -456,7 +456,7 @@ function setup() {
       resultsBoard.addTab(1);
       resultsBoard.addText(measuredTolerance, 255, 20, "Helvetica", BOLD);
 
-      resultsRestart = new Button(windowWidth/2, windowHeight/2 - 50, 95, 50, "Test Again",
+      resultsRestart = new Button(windowWidth/.5, windowHeight/.5 - 50, 95, 50, "Test Again",
 
         function() {
           // Button Selected
@@ -495,7 +495,7 @@ function setup() {
 
       var greenZone = lowerToleranceY - upperToleranceY;
 
-      scenes.background(60);
+      scenes.background(0);
       resultsBoard.draw();
       push();
 
