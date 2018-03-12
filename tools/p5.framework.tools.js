@@ -556,6 +556,7 @@ function AnswerButton(cornerX, cornerY, width, height, label, callbackSelected, 
     if (!this.selected) {
       this.selected = true;
       this.callbackSelected();
+      this.selected = false;
     } else {
     this.selected = false;
     this.callbackUnselected();
