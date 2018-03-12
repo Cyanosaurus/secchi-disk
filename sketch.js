@@ -267,7 +267,7 @@ function setup() {
       "Bluish color, with readings above 4 meters",
       240, 18, "Helvetica", BOLD);
       if (clearPass == 1) {
-        introBoard.addText("          Complete");
+        introBoard.addText("     Complete");
       }
     introBoard.addParagraph();
     introBoard.addParagraph();
@@ -278,7 +278,7 @@ function setup() {
     introBoard.addText("                            " +
       "Blue or green-brown, with readings of 4 to 7 meters");
       if (intermediatePass == 1) {
-        introBoard.addText("          Complete");
+        introBoard.addText("     Complete");
       }
       introBoard.addParagraph();
       introBoard.addParagraph();
@@ -287,7 +287,7 @@ function setup() {
       introBoard.addText("                            " +
         "Green Background, high algae, readings less than 3 meters");
       if (productivePass == 1) {
-        introBoard.addText("          Complete");
+        introBoard.addText("     Complete");
       }
       introBoard.addParagraph();
       introBoard.addParagraph();
@@ -296,7 +296,7 @@ function setup() {
       introBoard.addText("                            " +
         "Distinct tea or rootbeer color, readings less than 3 meters");
       if (dystrophicPass == 1) {
-        introBoard.addText("          Complete");
+        introBoard.addText("     Complete");
       }
       introBoard.addParagraph();
       introBoard.addParagraph();
@@ -305,7 +305,7 @@ function setup() {
       introBoard.addText("                            " +
         "Green-brown and murky, readings less than 3 meters");
         if (dystrophicProductivePass == 1) {
-          introBoard.addText("          Complete");
+          introBoard.addText("     Complete");
         }
         // "Productive     Green background, high algae, readings lower than 3 meters\n" +
         // "Dystrophic     Distinct tea or rootbeer color, readings lower than  meters");
