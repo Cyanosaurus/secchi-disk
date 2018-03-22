@@ -196,6 +196,12 @@ var Question19Answer = "Select an Answer.";
 var Question20Answer = "Select an Answer.";
 var Question21Answer = "Type an Answer.";
 
+var clearLakeAttempts;
+var intermediateLakeAttempts;
+var productiveLakeAttempts;
+var dystrophicLakeAttempts;
+var dystrophicProductiveLakeAttempts;
+
 /* Reading Results Elements */
 var resultsBoard;
 var resultsRestart;
@@ -209,12 +215,19 @@ var measuredTolerance;        // String
 /* Animation Variable on Results Page*/
 var animationY;
 
-var input, button, greeting;
 
-var img;            //For using images in the future
+var clearLake;
+var intermediateLake;            //For using images in the future
+var productiveLake;
+var dystrophicLake;
+var dystrophicProductiveLake;
 
 function preload() {
-    img = loadImage('libraries/unnamed.jpg');
+    clearLake = loadImage('libraries/clearLake.jpg');
+    intermediateLake = loadImage('libraries/intermediateLake.jpg');
+    productiveLake = loadImage('libraries/productiveLake.jpg');
+    dystrophicLake = loadImage('libraries/dystrophicLake.jpg');
+    dystrophicProductiveLake = loadImage('libraries/dystrophicProductiveLake.jpg');
 }
 
 function setup() {
@@ -545,9 +558,24 @@ function setup() {
     function() {                                    // THIS IS WHERE THE STUFF FOR THE SIM IS DRAWN
       scenes.background(0);
 
-        fill(lakeColor);
+        // fill(lakeColor);
         strokeWeight(5);
         ellipse(width/3+30,height/2,width*.55, height*1.1);
+        if (lakeType == "Clear") {
+          image(clearLake, 0, 0);
+        }
+        if (lakeType == "Intermediate") {
+          image(intermediateLake, 0, 0);
+        }
+        if (lakeType == "Productive"){
+          image(productiveLake, 0, 0);
+        }
+        if (lakeType == "Dystrophic") {
+          image(dystrophicLake, 0, 0);
+        }
+        if (lakeType == "Dystrophic Productive") {
+          image(dystrophicProductiveLake, 0, 0);
+        }
 
         strokeWeight(0);
         fill("black");
@@ -3431,6 +3459,7 @@ this.disp = function(){
     stroke(0);
     strokeWeight(174);
     ellipse(width/3+30,height/2,width*.7, height*1.4);
+    rect(850, 0, 40, 900);
     strokeWeight(0);
     noStroke();
 
@@ -3440,7 +3469,6 @@ this.disp = function(){
     ellipse(width/3+30,height/2,width*.55, height*1.1);
     strokeWeight(0);
     noStroke();
-
 
     pop();
 
