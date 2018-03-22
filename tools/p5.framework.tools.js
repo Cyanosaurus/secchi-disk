@@ -324,7 +324,7 @@ function infoBox(cornerX, cornerY, width, height)
 
    this.onClick = function() {
      if (!this.selected) {
-       this.selected = true;
+       // this.selected = true;
        this.callbackSelected();
      } else {
      this.selected = false;
@@ -649,6 +649,122 @@ function TextBox(cornerX, cornerY, width, height, label, callbackSelected, callb
   // }
   // pop();
   this.fontSize = 14;
+
+  this.run = function() {
+    // Check if the mouse is currently hovering over the button
+
+    var mouseClicked = this.region.checkClick();
+
+    // if (this.region.checkHover()) {
+    //   this.highlight = true;
+    //   // Check if mouse has already been pressed
+    //   if (mouseClicked) {
+    //     this.onClick();
+    //   }
+    // } else {
+    //   this.highlight = false;
+    // }
+
+    this.draw();
+  }
+
+  // this.onClick = function() {
+  //   if (!this.selected) {
+  //     this.selected = true;
+  //     this.callbackSelected();
+  //   } else {
+  //     this.selected = false;
+  //     this.callbackUnselected();
+  //   }
+  // }
+
+  this.draw = function() {
+    adjustColor = function(c, adjustment) {
+      c[0] += adjustment[0];
+      c[1] += adjustment[1];
+      c[2] += adjustment[2];
+    }
+    var c = [this.color[0], this.color[1], this.color[2]];
+
+    push();
+    strokeWeight(0);
+    // Draw main box
+    if (this.highlight) {
+      dropShadow(2, 2, 4, "rgba(0, 0, 0, 0.2)");
+      adjustColor(c, this.highlightColor);
+    } else {
+      dropShadow(1, 1, 2, "rgba(0, 0, 0, 0.2)");
+    }
+
+    fill(c[0], c[1], c[2]);
+    rect(this.position.x, this.position.y, this.width, this.height);
+    dropShadow(0, 0, 0, 0);
+
+    // // Draw accent bar
+    // if (this.selected) {
+    //   adjustColor(c, this.selectedColor);
+    // }
+    //
+    // adjustColor(c, this.accent);
+    // fill(c[0], c[1], c[2]);
+    // rectMode(CORNERS);
+    // rect(this.position.x, this.position.y + this.height * 0.85,
+    //       this.position.x + this.width, this.position.y + this.height);
+
+    // Draw text
+    textFont("Helvetica");
+    textStyle(BOLD);
+    textSize(this.fontSize);
+    fill(this.fontColor);
+    textAlign(CENTER, CENTER);
+    text(label, this.position.x + this.width / 2, this.position.y + this.height * 0.45);
+
+    pop();
+  }
+}
+
+function TextBox3(cornerX, cornerY, width, height, label, callbackSelected, callbackUnselected) //A textbox with a different font size
+{
+  this.position = createVector(cornerX, cornerY);
+  this.width = width;
+  this.height = height;
+  this.label = label;
+  this.region = new MouseRegion(cornerX, cornerY, width, height);
+
+  // Base background color
+  this.color = [60, 60, 60];
+  // Accent bar adjustment
+  this.accent = [-80, -80, -80];
+  // Accent bar adjsutment for selected state
+  this.selectedColor = [-80, -80, -80];
+  // Button adjustment for highlighted state
+  this.highlightColor = [-20, -20, -20];
+  // Color for text
+  this.fontColor = [255, 255, 255];
+
+  this.selected = false;
+  this.highlght = false;
+
+  this.callbackSelected = callbackSelected;
+  this.callbackUnselected = callbackUnselected;
+
+  // Calculate font size
+  // var fontSize = 10;
+  // var errorPerc = 10.0;
+  // push();
+  // while (abs(errorPerc) > 0.05) {
+  //   textSize(fontSize);
+  //   errorPerc = (textWidth(label) - this.width * 0.6) / (this.width * 0.6);
+  //   console.log(errorPerc);
+  //   if (errorPerc > 0) {
+  //     fontSize--;
+  //   } else {
+  //     fontSize++;
+  //   }
+  //   console.log(fontSize);
+  // }
+  // pop();
+  this.fontSize = 20;
 
   this.run = function() {
     // Check if the mouse is currently hovering over the button

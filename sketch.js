@@ -170,12 +170,6 @@ var Question21 = "Has your eyesight changed over the last year? Have you had cor
   var Question21C = "___";
   var Question21D = "___";
     var Question21Key = "_";
-var Question22 = "__";
-  var Question22A = "___";
-  var Question22B = "___";
-  var Question22C = "___";
-  var Question22D = "___";
-    var Question22Key = "_";
 
     var TestFinished = "No";
 
@@ -200,8 +194,7 @@ var Question17Answer = "Select an Answer.";
 var Question18Answer = "Select an Answer.";
 var Question19Answer = "Select an Answer.";
 var Question20Answer = "Select an Answer.";
-var Question21Answer = "Select an Answer.";
-var Question22Answer = "Select an Answer.";
+var Question21Answer = "Type an Answer.";
 
 /* Reading Results Elements */
 var resultsBoard;
@@ -215,6 +208,14 @@ var measuredErrorRel;         // Double
 var measuredTolerance;        // String
 /* Animation Variable on Results Page*/
 var animationY;
+
+var input, button, greeting;
+
+var img;            //For using images in the future
+
+function preload() {
+    img = loadImage('libraries/unnamed.jpg');
+}
 
 function setup() {
 
@@ -255,7 +256,7 @@ function setup() {
     introBoard.background = 60;
     introBoard.accent = 200;
     // introBoard.addTab();
-    introBoard.addText("Select Your Lake Type", 240, 40, "Helvetica", BOLD);
+    introBoard.addText("Select Your Lake Type", 240, 30, "Helvetica", BOLD);
     introBoard.addParagraph();
     introBoard.addParagraph();
     // introBoard.addParagraph();
@@ -297,6 +298,9 @@ function setup() {
         "Distinct tea or rootbeer color, readings less than 3 meters");
       if (dystrophicPass == 1) {
         introBoard.addText("     Complete");
+      }
+      if (TestFinished == "Yes") {
+        introBoard.addText("                    Complete");
       }
       introBoard.addParagraph();
       introBoard.addParagraph();
@@ -556,7 +560,7 @@ function setup() {
         goBack.run();
 
 
-      measureDepth = new TextBox(width - 300, height - 170, 240, 50, "Current Depth: \n" + floor(D0.currentDepth*100)/100 + " Meters", function(){});
+      measureDepth = new TextBox(width - 300, height - 170, 240, 50, "Secchi Disk Simulator", function(){});
       measureDepth.run();
       visualAttempts = new TextBox(width - 300, height - 110, 240, 50, "Attempts Left: " + attemptsLeft, function(){});
       visualAttempts.run();
@@ -567,7 +571,7 @@ function setup() {
       simBackground = new TextBoxBackground(width - 300, height - 540, 240, 190, "", function(){});
       simBackground.run();
 
-      simInfo = new TextBox(width - 290, height - 530, 220, 170, "Secchi Disk Simulator", function(){});
+      simInfo = new TextBox3(width - 290, height - 530, 220, 170, "Current Depth: \n" + floor(D0.currentDepth*100)/100 + " Meters", function(){});
       simInfo.run();
 
 
@@ -662,11 +666,8 @@ function setup() {
       resultsBoard.addTab(1);
       resultsBoard.addText(measuredTolerance, 255, 20, "Helvetica", BOLD);
 
-// <<<<<<< HEAD
       resultsRestart = new Button(windowWidth/.5, windowHeight/.5 - 50, 95, 50, "Test Again",
-// =======
       resultsRestart = new Button(windowWidth*5/12, windowHeight*4/5, 95, 50, "Test Again",
-// >>>>>>> 64b2a0ab6ea59ab46c5d69286cbdad274642ddfe
 
         function() {
           // Button Selected
@@ -705,12 +706,9 @@ function setup() {
       var lowerToleranceY = targetY + (animationWindowH * percentToleranceY);
       var greenZone = lowerToleranceY - upperToleranceY;
 
-// <<<<<<< HEAD
       scenes.background(0);
       resultsBoard.draw();
       push();
-// =======
-// >>>>>>> 64b2a0ab6ea59ab46c5d69286cbdad274642ddfe
 
       //lake background
       fill(lakeColor);
@@ -812,7 +810,6 @@ scenes.addScene(new Scene(windowWidth, windowHeight,
     preTestBoard.addParagraph(3);
     preTestBoard.addTab(1);
     preTestBoard.addText("\nYou will now begin a multiple choice test.\n\n Please press 'Okay' to begin.");
-
 
     testStart = new Button(right-110, bottom-65, 95, 50, "Okay",
       function() {
@@ -3162,63 +3159,28 @@ testBoard.addParagraph(1);
 testBoard.addParagraph(1);
 testBoard.addParagraph(1);
 
-AnswerA = new AnswerButton(right-750, bottom-280, 800, 50, "A. " + Question21A,
-function() {
-// Button Selected
-Question21Answer = "A";
-simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question21Answer, function(){});
-simInfo.run();
-},
-function() {
-// Button Unselected
-}
-);
+input = createElement('textarea');
+input.position(right-750, bottom-260, );
+input.size(600, 200);
 
-AnswerB = new AnswerButton(right-750, bottom-220, 800, 50, "B. " + Question21B,
-function() {
-// Button Selected
-Question21Answer = "B";
-simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question21Answer, function(){});
-simInfo.run();
-},
-function() {
-// Button Unselected
-}
-);
+  submitAnswer = new Button(right-110, bottom-265, 95, 50, "Submit",
+    function() {
+      // Button Selected
+        Question21Answer = input.value();
+        simInfo.run();
+    },
+    function() {}
+  );
 
-AnswerC = new AnswerButton(right-750, bottom-160, 800, 50, "C. " + Question21C,
-function() {
-// Button Selected
-Question21Answer = "C";
-simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question21Answer, function(){});
-simInfo.run();
-},
-function() {
-// Button Unselected
-}
-);
-
-AnswerD = new AnswerButton(right-750, bottom-100, 800, 50, "D. " + Question21D,
-function() {
-// Button Selected
-Question21Answer = "D";
-simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question21Answer, function(){});
-simInfo.run();
-},
-function() {
-// Button Unselected
-}
-// Question1Answer = "D";
-// simInfo.run();
-);
-
-simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question21Answer, function(){});
+simInfo = new TextBox(right-650, bottom-20, 250, 50, Question21Answer, function(){});
 
 finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
   function() {
     // Button Selected
       scenes.setScene(28);
       scenes.setup();
+      input.hide();
+      TestFinished = "Yes";
   },
   function() {}
 );
@@ -3227,125 +3189,9 @@ introStartDysProd.fontSize = 14;
 function() {
 scenes.background(0);
 testBoard.draw();
-AnswerA.run();
-AnswerB.run();
-AnswerC.run();
-AnswerD.run();
+submitAnswer.run();
 simInfo.run();
-if (Question21Answer != "Select an Answer.") {
-  finishButton.run();
-}
-})
-);
-
-//Question 22
-scenes.addScene(new Scene(windowWidth, windowHeight,
-function() {
-
-var left = windowWidth / 6;
-var right = windowWidth - left;
-var top = windowHeight / 6;
-var bottom = windowHeight - top;
-
-testBoard = new TextBoard(left, top, right - left/2, bottom - top/2);
-testBoard.background = 60;
-// descBoard.accent = 150;
-testBoard.addText("Secchi Disk Test",240, 40, "Helvetica", BOLD);
-testBoard.addParagraph(1);
-testBoard.addText("\nQuestion 22: " + Question22, 240, 24, "Helvetica", BOLD);
-testBoard.addParagraph(1);
-testBoard.addParagraph(1);
-testBoard.addParagraph(1);
-testBoard.addParagraph(1);
-testBoard.addParagraph(1);
-testBoard.addText("\n ")
-testBoard.addParagraph(1);
-testBoard.addParagraph(1);
-testBoard.addParagraph(1);
-testBoard.addText("\n ")
-testBoard.addParagraph(1);
-testBoard.addParagraph(1);
-testBoard.addParagraph(1);
-testBoard.addText("\n ")
-testBoard.addParagraph(1);
-testBoard.addParagraph(1);
-testBoard.addParagraph(1);
-testBoard.addText("\n ")
-testBoard.addParagraph(1);
-testBoard.addParagraph(1);
-testBoard.addParagraph(1);
-
-AnswerA = new AnswerButton(right-750, bottom-260, 800, 50, "A. " + Question22A,
-function() {
-// Button Selected
-Question22Answer = "A";
-simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question22Answer, function(){});
-simInfo.run();
-},
-function() {
-// Button Unselected
-}
-);
-
-AnswerB = new AnswerButton(right-750, bottom-200, 800, 50, "B. " + Question22B,
-function() {
-// Button Selected
-Question22Answer = "B";
-simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question22Answer, function(){});
-simInfo.run();
-},
-function() {
-// Button Unselected
-}
-);
-
-AnswerC = new AnswerButton(right-750, bottom-140, 800, 50, "C. " + Question22C,
-function() {
-// Button Selected
-Question22Answer = "C";
-simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question22Answer, function(){});
-simInfo.run();
-},
-function() {
-// Button Unselected
-}
-);
-
-AnswerD = new AnswerButton(right-750, bottom-80, 800, 50, "D. " + Question22D,
-function() {
-// Button Selected
-Question22Answer = "D";
-simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question22Answer, function(){});
-simInfo.run();
-},
-function() {
-// Button Unselected
-}
-// Question1Answer = "D";
-// simInfo.run();
-);
-
-simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question22Answer, function(){});
-
-finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
-  function() {
-    // Button Selected
-      scenes.setScene(29);
-      scenes.setup();
-  },
-  function() {}
-);
-introStartDysProd.fontSize = 14;
-},
-function() {
-scenes.background(0);
-testBoard.draw();
-AnswerA.run();
-AnswerB.run();
-AnswerC.run();
-AnswerD.run();
-simInfo.run();
-if (Question22Answer != "Select an Answer.") {
+if (Question21Answer != "Type an Answer.") {
   finishButton.run();
 }
 })
