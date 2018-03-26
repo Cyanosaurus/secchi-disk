@@ -45,38 +45,38 @@ var Question1 = "Why is a Secchi disk a good tool to measure water quality?";
   var Question1B = "It is quick, simple, and accurate";
   var Question1C = "It is difficult to measure algae";
   var Question1D = "None of the above";
-    var Question1Key = "_";
+    var Question1Key = "B";
 var Question2 = "Is anchoring the boat required when taking a Secchi disk reading?";
   var Question2A = "No, the boat does not need to be anchored";
   var Question2B = "Yes, so the Secchi tape measure hangs straight down";
   var Question2C = "Yes, so you do not disturb the other boaters";
   var Question2D = "None of the above";
-    var Question2Key = "_";
+    var Question2Key = "B";
 var Question3 = "What can influence Secchi disk readings?";
   var Question3A = "Amount of sediment suspended in the water";
   var Question3B = "Clay particles";
   var Question3C = "Amount of algae in the water";
   var Question3D = "All of the above";
   var Question3E = "None of the above";
-    var Question3Key = "_";
+    var Question3Key = "D";
 var Question4 = "Why is a water view scope used?";
   var Question4A = "It makes objects appear closer than they really are";
   var Question4B = "It helps to focus attention on Secchi disk";
   var Question4C = "It reduces the effects of glare and wave disturbance";
   var Question4D = "None of the above";
-    var Question4Key = "_";
+    var Question4Key = "C";
 var Question5 = "During which months of the year should Secchi readings be taken?";
   var Question5A = "April and October";
   var Question5B = "May through September";
   var Question5C = "___";
   var Question5D = "___";
-    var Question5Key = "_";
+    var Question5Key = "B";
 var Question6 = "Ideally how often should Secchi readings be taken?";
   var Question6A = "Every day";
   var Question6B = "Once a week";
   var Question6C = "At two-week intervals";
   var Question6D = "Once a month";
-    var Question6Key = "_";
+    var Question6Key = "C";
 var Question7 = "From which side of the boat should the readings be taken?";
   var Question7A = "Bow";
   var Question7B = "Stern";
@@ -84,86 +84,86 @@ var Question7 = "From which side of the boat should the readings be taken?";
   var Question7D = "Starboard";
   var Question7E = "Sunny";
   var Question7F = "Shady";
-    var Question7Key = "_";
+    var Question7Key = "F";
 var Question8 = "What are the preferred hours to take a Secchi reading?";
   var Question8A = "6:00 a.m. to 12:00 p.m.";
   var Question8B = "9:00 a.m. to 3:00 p.m.";
   var Question8C = "12:00 p.m. to 6:00 p.m.";
   var Question8D = "3:00 p.m. to 9:00 p.m.";
-    var Question8Key = "_";
+    var Question8Key = "B";
 var Question9 = "What can monitors do to increase reliability of Secchi data?";
   var Question9A = "Nothing can improve reliability of data";
   var Question9B = "Take readings at about the same time of day and weather conditions";
   var Question9C = "Take readings at different times of day each time";
   var Question9D = "None of the above";
-    var Question9Key = "_";
-var Question10 = "How shoud you record military time?";
+    var Question9Key = "B";
+var Question10 = "How should you record military time?";
   var Question10A = "It is not necessary to record in military time";
   var Question10B = "From 1 p.m. until midnight, add 12 hours to the time";
   var Question10C = "___";
   var Question10D = "___";
-    var Question10Key = "_";
+    var Question10Key = "B";
 var Question11 = "When recording the wind speed, you should";
   var Question11A = "Write down the range of wind speed, as listed on the form. Ex: 0-7, 8-11, 12-16, 17-24, 25-35";
   var Question11B = "Write down a discrete number within a range of wind speed. Ex: 04";
   var Question11C = "It is not necessary to record the wind speed.";
   var Question11D = "___";
-    var Question11Key = "_";
+    var Question11Key = "B";
 var Question12 = "How do you take a Secchi disk transparency reading?";
   var Question12A = "Take the reading when disk goes out of sight, while being lowered through the water column";
   var Question12B = "Take reading by lowering the disk until even the glow of the disk goes out of sight, \n then raising it until you see it, lowering it again to disappearance \n and raising it again until it reappears so that you are confident that \n you've honed in on the depth of the disappearance";
   var Question12C = "Take a reading just before disk goes out of sight, when lowering it";
   var Question12D = "___";
-    var Question12Key = "_";
+    var Question12Key = "A";
 var Question13 = "Eyesight influences the results of Secchi transparency readings. \n Which of the following helps one obtain consistent readings?";
   var Question13A = "Compare readings taken with and without glasses,  \n then consistently take readings with whichever method allows you to obtian the deepest readings.";
   var Question13B = "Allow enough time for photogray glasses to lighten before taking the reading.";
   var Question13C = "Allow enough time for eyes to adjust to the ow light levels encountered \n when peering through the scope before obtaining readings.";
   var Question13D = "All of the above";
   var Question13E = "Never";
-    var Question13Key = "_";
+    var Question13Key = "D";
 var Question14 = "When you take more than one Secchi reading, what is the best way to record it?";
   var Question14A = "Individual readings";
   var Question14B = "Average of readings";
   var Question14C = "___";
   var Question14D = "___";
-    var Question14Key = "_";
+    var Question14Key = "A";
 var Question15 = "When more than one certified lake monitor is taking Secchi readings on the same lake, \n it is important to periodically compare the results of the individuals through side-by-side readings. \n While it is not necessary to do this every time a reading is taken, it should be done at least:";
   var Question15A = "At least once a year";
   var Question15B = "Every time they monitor together";
   var Question15C = "Only when a lake is blooming";
   var Question15D = "Never - Readings are confidential";
-    var Question15Key = "_";
+    var Question15Key = "A";
 var Question16 = "When recording your required Quality Assurance duplicate readings, \n how should those readings be numbered on the form?";
   var Question16A = "By monitor, for each reading taken all season. Ex: John Smith, 1, 2, 3, 4, 5, 6, etc.";
   var Question16B = "By monitor, per boat trip. Ex: John Smith, 1, 2 and Jane Smith, 1, 2";
   var Question16C = "Per boat trip, counting all monitors. Ex: Jane Smith, 1, 2, and John Smith 3, 4";
   var Question16D = "___";
-    var Question16Key = "_";
+    var Question16Key = "B";
 var Question17 = "In order for your Secchi readings to meet Quality Assurance standards, \n an essential part of certifying your data, you must periodically take and record a duplicate reading. \n How often should this be done?";
   var Question17A = "Never";
   var Question17B = "Every reading";
   var Question17C = "Once every ten readings, or at least once per season";
   var Question17D = "Only when the wind is gusty";
-    var Question17Key = "_";
+    var Question17Key = "C";
 var Question18 = "When mailing in your completed Secchi or DO data form to the VLMP, do you send:";
   var Question18A = "Just the white page";
   var Question18B = "Just the yellow page";
   var Question18C = "Both yellow & white pages";
   var Question18D = "___";
-    var Question18Key = "_";
+    var Question18Key = "A";
 var Question19 = "How often do you need to get re-certified (in person/on the water) to take Secchi readings?";
   var Question19A = "Never, re-certification is not necessary";
   var Question19B = "Every summer";
   var Question19C = "Every 5 years";
   var Question19D = "Every 6 years, if I test online annually using the Secchi Simulator; every 3 years if I do not use the Simulator";
-    var Question19Key = "_";
+    var Question19Key = "D";
 var Question20 = "Whom do you call if you have questions about the Program, equiptment, or forms?";
   var Question20A = "Ghost Busters";
   var Question20B = "Inland Fisheries and Wildlife";
   var Question20C = "Volunteer Lake Monitoring Program";
   var Question20D = "Department of Environmental Protection";
-    var Question20Key = "_";
+    var Question20Key = "C";
 var Question21 = "Has your eyesight changed over the last year? Have you had corrective eye surgery? \n If yes, when?";
   var Question21A = "___";
   var Question21B = "___";
@@ -513,18 +513,28 @@ function setup() {
           scenes.setup();
           if (lakeType == "Clear") {
             clearPass = 1;
+            clearLakeAttempts = attemptsLeft;
+            console.log(clearLakeAttempts);
           }
           if (lakeType == "Intermediate") {
             intermediatePass = 1;
+            intermediateLakeAttempts = attemptsLeft;
+            console.log(intermediateLakeAttempts);
           }
           if (lakeType == "Productive"){
             productivePass = 1;
+            productiveLakeAttempts = attemptsLeft;
+            console.log(productiveLakeAttempts);
           }
           if (lakeType == "Dystrophic") {
             dystrophicPass = 1;
+            dystrophicLakeAttempts = attemptsLeft;
+            console.log(dystrophicLakeAttempts);
           }
           if (lakeType == "Dystrophic Productive") {
             dystrophicProductivePass = 1;
+            dystrophicProductiveLakeAttempts = attemptsLeft;
+            console.log(dystrophicProductiveLakeAttempts);
           }
           } else {
             attemptsLeft--;
@@ -694,17 +704,6 @@ function setup() {
       resultsBoard.addTab(1);
       resultsBoard.addText(measuredTolerance, 255, 20, "Helvetica", BOLD);
 
-      resultsRestart = new Button(windowWidth/.5, windowHeight/.5 - 50, 95, 50, "Test Again",
-      resultsRestart = new Button(windowWidth*5/12, windowHeight*4/5, 95, 50, "Test Again",
-
-        function() {
-          // Button Selected
-            setLakeType(5);
-            scenes.setScene(2);
-            scenes.setup();
-        },
-        function() {}
-      ));
       // introStartDysProd.color = [245, 245, 245];
       introStartDysProd.fontSize = 14;
 
@@ -753,7 +752,7 @@ function setup() {
         greenZone = animationWindowX + animationWindowH;
       }
 
-      resultsRestart = new Button(windowWidth/2+180, windowHeight/2+200, 95, 50, "Test Again",
+      resultsRestart = new Button(780, 500, 95, 50, "Test Again",
         function() {
           // Button Selected
             setLakeType(5);
@@ -955,6 +954,17 @@ finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(6);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -965,6 +975,7 @@ AnswerB.run();
 AnswerC.run();
 AnswerD.run();
 simInfo.run();
+backButton.run();
 if (Question1Answer != "Select an Answer.") {
   finishButton.run();
 }
@@ -1069,6 +1080,17 @@ finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(7);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -1079,6 +1101,7 @@ AnswerB.run();
 AnswerC.run();
 AnswerD.run();
 simInfo.run();
+backButton.run();
 if (Question2Answer != "Select an Answer.") {
   finishButton.run();
 }
@@ -1183,6 +1206,17 @@ finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(8);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -1193,6 +1227,7 @@ AnswerB.run();
 AnswerC.run();
 AnswerD.run();
 simInfo.run();
+backButton.run();
 if (Question3Answer != "Select an Answer.") {
   finishButton.run();
 }
@@ -1296,6 +1331,17 @@ finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(9);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -1306,6 +1352,7 @@ AnswerB.run();
 AnswerC.run();
 AnswerD.run();
 simInfo.run();
+backButton.run();
 if (Question4Answer != "Select an Answer.") {
   finishButton.run();
 }
@@ -1409,6 +1456,17 @@ finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(10);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -1419,6 +1477,7 @@ AnswerB.run();
 // AnswerC.run();
 // AnswerD.run();
 simInfo.run();
+backButton.run();
 if (Question5Answer != "Select an Answer.") {
   finishButton.run();
 }
@@ -1522,6 +1581,17 @@ finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(11);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -1532,6 +1602,7 @@ AnswerB.run();
 AnswerC.run();
 AnswerD.run();
 simInfo.run();
+backButton.run();
 if (Question6Answer != "Select an Answer.") {
   finishButton.run();
 }
@@ -1663,6 +1734,17 @@ finishButton = new Button(right-395, bottom-60, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(12);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -1675,6 +1757,7 @@ AnswerD.run();
 AnswerE.run();
 AnswerF.run();
 simInfo.run();
+backButton.run();
 if (Question7Answer != "Select an Answer.") {
   finishButton.run();
 }
@@ -1778,6 +1861,17 @@ finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(13);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -1788,6 +1882,7 @@ AnswerB.run();
 AnswerC.run();
 AnswerD.run();
 simInfo.run();
+backButton.run();
 if (Question8Answer != "Select an Answer.") {
   finishButton.run();
 }
@@ -1891,6 +1986,17 @@ finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(14);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -1901,6 +2007,7 @@ AnswerB.run();
 AnswerC.run();
 AnswerD.run();
 simInfo.run();
+backButton.run();
 if (Question9Answer != "Select an Answer.") {
   finishButton.run();
 }
@@ -2004,6 +2111,17 @@ finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(15);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -2014,6 +2132,7 @@ AnswerB.run();
 // AnswerC.run();
 // AnswerD.run();
 simInfo.run();
+backButton.run();
 if (Question10Answer != "Select an Answer.") {
   finishButton.run();
 }
@@ -2117,6 +2236,17 @@ finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(16);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -2127,6 +2257,7 @@ AnswerB.run();
 AnswerC.run();
 // AnswerD.run();
 simInfo.run();
+backButton.run();
 if (Question11Answer != "Select an Answer.") {
   finishButton.run();
 }
@@ -2230,6 +2361,17 @@ finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(17);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -2240,6 +2382,7 @@ AnswerB.run();
 AnswerC.run();
 // AnswerD.run();
 simInfo.run();
+backButton.run();
 if (Question12Answer != "Select an Answer.") {
   finishButton.run();
 }
@@ -2343,6 +2486,17 @@ finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(18);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -2353,6 +2507,7 @@ AnswerB.run();
 AnswerC.run();
 AnswerD.run();
 simInfo.run();
+backButton.run();
 if (Question13Answer != "Select an Answer.") {
   finishButton.run();
 }
@@ -2456,6 +2611,17 @@ finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(19);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -2466,6 +2632,7 @@ AnswerB.run();
 // AnswerC.run();
 // AnswerD.run();
 simInfo.run();
+backButton.run();
 if (Question14Answer != "Select an Answer.") {
   finishButton.run();
 }
@@ -2569,6 +2736,17 @@ finishButton = new Button(right-395, bottom-60, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(20);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -2579,6 +2757,7 @@ AnswerB.run();
 AnswerC.run();
 AnswerD.run();
 simInfo.run();
+backButton.run();
 if (Question15Answer != "Select an Answer.") {
   finishButton.run();
 }
@@ -2682,6 +2861,17 @@ finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(21);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -2692,6 +2882,7 @@ AnswerB.run();
 AnswerC.run();
 // AnswerD.run();
 simInfo.run();
+backButton.run();
 if (Question16Answer != "Select an Answer.") {
   finishButton.run();
 }
@@ -2795,6 +2986,17 @@ finishButton = new Button(right-395, bottom-40, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(22);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -2805,6 +3007,7 @@ AnswerB.run();
 AnswerC.run();
 AnswerD.run();
 simInfo.run();
+backButton.run();
 if (Question17Answer != "Select an Answer.") {
   finishButton.run();
 }
@@ -2908,6 +3111,17 @@ finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(23);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -2918,6 +3132,7 @@ AnswerB.run();
 AnswerC.run();
 // AnswerD.run();
 simInfo.run();
+backButton.run();
 if (Question18Answer != "Select an Answer.") {
   finishButton.run();
 }
@@ -3021,6 +3236,17 @@ finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(24);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -3031,6 +3257,7 @@ AnswerB.run();
 AnswerC.run();
 AnswerD.run();
 simInfo.run();
+backButton.run();
 if (Question19Answer != "Select an Answer.") {
   finishButton.run();
 }
@@ -3134,6 +3361,17 @@ finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(25);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -3144,6 +3382,7 @@ AnswerB.run();
 AnswerC.run();
 AnswerD.run();
 simInfo.run();
+backButton.run();
 if (Question20Answer != "Select an Answer.") {
   finishButton.run();
 }
@@ -3212,6 +3451,17 @@ finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
   },
   function() {}
 );
+
+backButton = new Button(right-20, top+20, 95, 50, "Go Back",
+  function() {
+    // Button Selected
+      scenes.setScene(26);
+      scenes.setup();
+  },
+  function() {}
+);
+
+
 introStartDysProd.fontSize = 14;
 },
 function() {
@@ -3219,6 +3469,7 @@ scenes.background(0);
 testBoard.draw();
 submitAnswer.run();
 simInfo.run();
+backButton.run();
 if (Question21Answer != "Type an Answer.") {
   finishButton.run();
 }
@@ -3231,17 +3482,218 @@ scenes.addScene(new Scene(windowWidth, windowHeight,
 
       var left = windowWidth / 12;
       var right = windowWidth - left;
-      var top = windowHeight / 12;
+      var top = windowHeight / 120;
       var bottom = windowHeight - top;
+
+      var Question1Conclusion, Question2Conclusion, Question3Conclusion, Question4Conclusion, Question5Conlusion, Question6Conclusion, Question7Conclusion, Question8Conclusion, Question9Conclusion, Question10Conclusion, Question11Conclusion, Question12Conclusion, Question13Conclusion, Question14Conclusion, Question15Conclusion, Question16Conclusion, Question17Conclusion, Question18Conclusion, Question19Conclusion, Question20Conclusion, Question21Conclusion;
+      var numCorrect = 0;
+
+      if (Question1Answer == Question1Key) {
+        Question1Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question1Conclusion = "Incorrect";
+      }
+
+      if (Question2Answer == Question2Key) {
+        Question2Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question2Conclusion = "Incorrect";
+      }
+
+      if (Question3Answer == Question3Key) {
+        Question3Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question3Conclusion = "Incorrect";
+      }
+
+      if (Question4Answer == Question4Key) {
+        Question4Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question4Conclusion = "Incorrect";
+      }
+
+      if (Question5Answer == Question5Key) {
+        Question5Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question5Conclusion = "Incorrect";
+      }
+
+      if (Question6Answer == Question6Key) {
+        Question6Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question6Conclusion = "Incorrect";
+      }
+
+      if (Question7Answer == Question7Key) {
+        Question7Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question7Conclusion = "Incorrect";
+      }
+
+      if (Question8Answer == Question8Key) {
+        Question8Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question8Conclusion = "Incorrect";
+      }
+
+      if (Question9Answer == Question9Key) {
+        Question9Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question9Conclusion = "Incorrect";
+      }
+
+      if (Question10Answer == Question10Key) {
+        Question10Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question10Conclusion = "Incorrect";
+      }
+
+      if (Question11Answer == Question11Key) {
+        Question11Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question11Conclusion = "Incorrect";
+      }
+
+      if (Question12Answer == Question12Key) {
+        Question12Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question12Conclusion = "Incorrect";
+      }
+
+      if (Question13Answer == Question13Key) {
+        Question13Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question13Conclusion = "Incorrect";
+      }
+
+      if (Question14Answer == Question14Key) {
+        Question14Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question14Conclusion = "Incorrect";
+      }
+
+      if (Question15Answer == Question15Key) {
+        Question15Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question15Conclusion = "Incorrect";
+      }
+
+      if (Question16Answer == Question16Key) {
+        Question16Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question16Conclusion = "Incorrect";
+      }
+
+      if (Question17Answer == Question17Key) {
+        Question1Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question1Conclusion = "Incorrect";
+      }
+
+      if (Question18Answer == Question18Key) {
+        Question18Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question18Conclusion = "Incorrect";
+      }
+
+      if (Question19Answer == Question19Key) {
+        Question19Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question19Conclusion = "Incorrect";
+      }
+
+      Question20Conclusion = Question20Answer;
 
       TestResultsBoard = new TextBoard(left, top, right - left, bottom - top);
       TestResultsBoard.background = 60;
       // descBoard.accent = 150;
       TestResultsBoard.addText("You're finished!",240, 20, "Helvetica", BOLD);
-      TestResultsBoard.addParagraph(3);
-      TestResultsBoard.addTab(1);
-      TestResultsBoard.addText("\nCongrats!");
-
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nHere's how you did.");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nQuestion 1: " + Question1Conclusion + "\n ");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nQuestion 2: " + Question2Conclusion+ "\n ");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nQuestion 3: " + Question3Conclusion+ "\n ");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nQuestion 4: " + Question4Conclusion+ "\n ");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nQuestion 5: " + Question5Conclusion+ "\n ");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nQuestion 6: " + Question6Conclusion+ "\n ");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nQuestion 7: " + Question7Conclusion+ "\n ");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nQuestion 8: " + Question8Conclusion+ "\n ");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nQuestion 9: " + Question9Conclusion+ "\n ");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nQuestion 10: " + Question10Conclusion+ "\n ");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nQuestion 11: " + Question11Conclusion+ "\n ");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nQuestion 12: " + Question12Conclusion+ "\n ");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nQuestion 13: " + Question13Conclusion+ "\n ");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nQuestion 14: " + Question14Conclusion+ "\n ");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nQuestion 15: " + Question15Conclusion+ "\n ");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nQuestion 16: " + Question16Conclusion+ "\n ");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nQuestion 17: " + Question17Conclusion+ "\n ");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nQuestion 18: " + Question18Conclusion+ "\n ");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nQuestion 19: " + Question19Conclusion+ "\n ");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nQuestion 20: " + Question20Conclusion+ "\n ");
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addParagraph(1);
+      TestResultsBoard.addText("\nTotal Correct: " + numCorrect+ "\n ");
 
       startOver = new Button(right-110, bottom-65, 95, 50, "Return",
         function() {
