@@ -23,6 +23,10 @@ var goBack;
 var measurements;     // the display panel
 var drawMeasurements = true;
 var attemptsLeftBoard;
+<<<<<<< HEAD
+var passOrFail;
+=======
+>>>>>>> development
 var clearPass = 0;
 var intermediatePass = 0;
 var productivePass = 0;
@@ -239,9 +243,16 @@ function preload() {
 // img1 = loadImage("https://imgur.com/YenZkQx");
 }
 
+<<<<<<< HEAD
 function setup() {
+=======
   windowWidth = 1200;     //Static Window Width and Height
   windowHeight = 600;
+
+>>>>>>> development
+  /* --- Compatibility Check Scene --- */
+      windowWidth = 1200;     //Static Window Width and Height
+      windowHeight = 600;
 
   scenes.addScene(new Scene(windowWidth, windowHeight,
     function() {
@@ -265,6 +276,20 @@ function setup() {
 
   /* --- Opening Menu Scene --- */
   scenes.addScene(new Scene(windowWidth, windowHeight,
+<<<<<<< HEAD
+    function() {
+      // setup()
+      var left = width / 7;
+      var right = width - left;
+      var top = height / 4;
+      var bottom = height - top  / 6;
+
+      introBoard = new TextBoard(left, top/2, right - left, bottom - top);
+      introBoard.background = 60;
+      introBoard.accent = 200;
+      // introBoard.addTab();
+      introBoard.addText("Select Your Lake Type", 240, 40, "Helvetica", BOLD);
+=======
   function() {
     // setup()
     var left = width / 7;
@@ -302,20 +327,81 @@ function setup() {
         introBoard.addText("     Complete");
       }
       introBoard.addParagraph();
+>>>>>>> development
       introBoard.addParagraph();
       introBoard.addParagraph();
       introBoard.addParagraph();
       introBoard.addParagraph();
       introBoard.addText("                            " +
+<<<<<<< HEAD
+        "Bluish color, with readings above 4 meters",
+        240, 18, "Helvetica", BOLD);
+        if (clearPass == 1) {
+          introBoard.addText("          Complete");
+        }
+=======
         "Green Background, high algae, readings less than 3 meters");
       if (productivePass == 1) {
         introBoard.addText("     Complete");
       }
+>>>>>>> development
       introBoard.addParagraph();
       introBoard.addParagraph();
       introBoard.addParagraph();
       introBoard.addParagraph();
       introBoard.addText("                            " +
+<<<<<<< HEAD
+        "Blue or green-brown, with readings of 4 to 7 meters");
+        if (intermediatePass == 1) {
+          introBoard.addText("          Complete");
+        }
+        introBoard.addParagraph();
+        introBoard.addParagraph();
+        introBoard.addParagraph();
+        introBoard.addParagraph();
+        introBoard.addText("                            " +
+          "Green Background, high algae, readings less than 3 meters");
+        if (productivePass == 1) {
+          introBoard.addText("          Complete");
+        }
+        introBoard.addParagraph();
+        introBoard.addParagraph();
+        introBoard.addParagraph();
+        introBoard.addParagraph();
+        introBoard.addText("                            " +
+          "Distinct tea or rootbeer color, readings less than 3 meters");
+        if (dystrophicPass == 1) {
+          introBoard.addText("          Complete");
+        }
+        introBoard.addParagraph();
+        introBoard.addParagraph();
+        introBoard.addParagraph();
+        introBoard.addParagraph();
+        introBoard.addText("                            " +
+          "Green-brown and murky, readings less than 3 meters");
+          if (dystrophicProductivePass == 1) {
+            introBoard.addText("          Complete");
+          }
+          // "Productive     Green background, high algae, readings lower than 3 meters\n" +
+          // "Dystrophic     Distinct tea or rootbeer color, readings lower than  meters");
+      introStartClear = new Button(200, top*1.2, 95, 40, "Clear",
+        function() {
+          // Button Selected
+            setLakeType(1);
+            scenes.nextScene();
+            scenes.setup();
+        },
+        function() {}
+      );
+      // introStartClear.color = [245, 245, 245];
+      introStartClear.fontSize = 14;
+
+      introStartIntmdt = new Button(200, top*1.2+60, 95, 40, "Intermediate",
+
+        function() {
+          // Button Selected
+          setLakeType(2);
+=======
         "Distinct tea or rootbeer color, readings less than 3 meters");
       if (dystrophicPass == 1) {
         introBoard.addText("     Complete");
@@ -338,6 +424,7 @@ function setup() {
       function() {
         // Button Selected
           setLakeType(1);
+>>>>>>> development
           scenes.nextScene();
           scenes.setup();
       },
@@ -361,6 +448,48 @@ function setup() {
 
     introStartProd = new Button(200, top*1.2+120, 95, 40, "Productive",
 
+<<<<<<< HEAD
+      introStartDysProd = new Button(200, top*1.2+240, 95, 60, "Dystrophic\nProductive",
+        function() {
+          // Button Selected
+            setLakeType(5);
+            scenes.nextScene();
+            scenes.setup();
+        },
+        function() {}
+      );
+      // introStartDysProd.color = [245, 245, 245];
+      introStartDysProd.fontSize = 14;
+
+      // introStartDys.color = [245, 245, 245];
+      introStartDys.fontSize = 14;
+
+      introStartTestTaker = new Button(900, top*1.2+240, 95, 60, "Take Test",
+        function() {
+          // Button Selected --> To be changed to a test
+            scenes.setScene(6);
+            scenes.setup();
+        },
+        function() {}
+      );
+      // introStartDysProd.color = [245, 245, 245];
+      introStartDysProd.fontSize = 14;
+
+
+    },
+    function() {
+      // draw()
+      scenes.background(0);
+      introBoard.draw();
+      introStartClear.run();
+      introStartIntmdt.run();
+      introStartProd.run();
+      introStartDys.run();
+      introStartDysProd.run();
+      introStartTestTaker.run();
+    })
+  );
+=======
       function() {
         // Button Selected
           setLakeType(3);
@@ -425,6 +554,7 @@ function setup() {
     introStartTestTaker.run();
   })
 );
+>>>>>>> development
   /* --- End Intro Menu Scene --- */
 
   /* --- Instruction Scene --- */
@@ -507,6 +637,7 @@ function setup() {
       D0 = new disk();
       attemptsLeft = 3;
 
+<<<<<<< HEAD
        submitButton = new Button2(width - 300, height - 340, 110, 50, "Submit",
 
           function() {
@@ -580,8 +711,80 @@ function setup() {
       				}
             }
          },
-         function() {}
+         function() {
+           // Button Deselected
+           // if (D0.currentDepth != 0) {
+      			// measuredDepth = D0.currentDepth;
+      			// if (analyzeTrial()) {
+        		// 	scenes.nextScene();
+        		// 	scenes.setup();
+      			// 	} else {
+      			// 		// console.log(attemptsLeft);
+           //      message = "You're too far off. Try again!";
+        		// 		attemptsLeft--;
+      			// 	}
+           //  }
+         }
       );
+=======
+      submitButton = new Button2(width - 300, height - 340, 110, 50, "Submit",
+
+      function() {
+       // Button Selected
+       // Analyze trial and give feedback
+       // NOTE: THESE SELECT AND DESELECT FUNCTIONS ARE THE SAME BECAUSE IT ALTERNATES PER PRESS
+
+      if (D0.currentDepth != -0.1) {
+        measuredDepth = D0.currentDepth;
+        if (analyzeTrial()) {                          // if correct move to next scene, otherwise the run section below
+          scenes.nextScene();                        // will deal with the case of no chances left
+          scenes.setup();
+          if (lakeType == "Clear") {
+            clearPass = 1;
+            clearLakeAttempts = attemptsLeft;
+            console.log(clearLakeAttempts);
+          }
+          if (lakeType == "Intermediate") {
+            intermediatePass = 1;
+            intermediateLakeAttempts = attemptsLeft;
+            console.log(intermediateLakeAttempts);
+          }
+          if (lakeType == "Productive"){
+            productivePass = 1;
+            productiveLakeAttempts = attemptsLeft;
+            console.log(productiveLakeAttempts);
+          }
+          if (lakeType == "Dystrophic") {
+            dystrophicPass = 1;
+            dystrophicLakeAttempts = attemptsLeft;
+            console.log(dystrophicLakeAttempts);
+          }
+          if (lakeType == "Dystrophic Productive") {
+            dystrophicProductivePass = 1;
+            dystrophicProductiveLakeAttempts = attemptsLeft;
+            console.log(dystrophicProductiveLakeAttempts);
+          }
+          } else {
+            attemptsLeft--;
+          }
+        }
+     },
+     function() {
+       // Button Deselected
+       // if (D0.currentDepth != 0) {
+        // measuredDepth = D0.currentDepth;
+        // if (analyzeTrial()) {
+        // 	scenes.nextScene();
+        // 	scenes.setup();
+        // 	} else {
+        // 		// console.log(attemptsLeft);
+       //      message = "You're too far off. Try again!";
+        // 		attemptsLeft--;
+        // 	}
+       //  }
+     }
+  );
+>>>>>>> development
 
       goBack = new Button(width - 170, height - 340, 110, 50, "Switch Types",
         function() {
