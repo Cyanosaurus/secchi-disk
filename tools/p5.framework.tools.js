@@ -258,33 +258,62 @@ function infoBox(cornerX, cornerY, width, height)
 
 function serverConnect()
 {
-  var valuesClear = document.getElementById("depthClear");
-  var valuesIntermediate = document.getElementById("depthIntermediate");
-  var valuesProductive = document.getElementById("depthProductive");
-  var valuesDystrophic = document.getElementById("depthDystrophic");
-  var valuesDystrophicProductive = document.getElementById("depthDystrophicProductive");
 
-  var mysql = require('mysql');
+  var rawValuesClear = document.getElementById("depthValuesClear");
+  var rawValuesIntermediate = document.getElementById("depthValuesIntermediate");
+  var rawValuesProductive = document.getElementById("depthValuesProductive");
+  var rawValuesDystrophic = document.getElementById("depthValuesDystrophic");
+  var rawValuesDProductive = document.getElementById("depthValuesDProductive");
 
-  var connection = mysql.createConnection({
-    host: "localhost",
-    user: "secchi",
-    password: "AsAp4U8u",
-    database: "mainevlm_secchi2"
-  });
+  var lakeValues = new Array();
+  var lakeData = {};
 
-  connection.connect(function(err) {
-    if (err) throw err;
+  if(rawValuesClear != null)
+    {lakeValues.push(rawValuesClear.value);}
+  if(rawValuesIntermediate != null)
+    {lakeValues.push(rawValuesIntermediate.value);}
+  if(rawValuesProductive != null)
+    {lakeValues.push(rawValuesProductive.value);}
+  if(rawValuesDystrophic != null)
+    {lakeValues.push(rawValuesDystrophic.value);}
+  if(rawValuesDProductive != null)
+    {lakeValues.push(rawValuesDProductive.value);}
 
-    console.log("Connected!");
+  // print(lakeValues);
 
-    var sql = "INSERT INTO customers (name, address) VALUES ('Company Inc', 'Highway 37')";
+  for (var key in lakeValues)
+  {
+    lakeData[key] = {
+      "lakeType":lakeValues[key][0],
+      "measuredDepth":lakeValues[key][1],
+      "generatedDepth":lakeValues[key][2],
+      "attemptsUsed":lakeValues[key][3]
+    };
+  }
 
-    connection.query(sql, function (err, result) {
-      if (err) throw err;
-      console.log("1 record inserted");
-    });
-  });
+  // print(lakeData);
+
+  if (window.XMLHttpRequest)
+  {
+    // code for modern browsers
+    xmlhttp = new XMLHttpRequest();
+  } else {
+    // code for old IE browsers
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+
+  myJSON = JSON.stringify(lakeData);
+
+  xmlhttp.onreadystatechange = function()
+  {
+    if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+    {
+      print(xmlhttp.responseText);
+    }
+  }
+
+  xmlhttp.open("GET", "server_connection.php?val="+myJSON, true);
+  xmlhttp.send();
 }
 
 /**
@@ -316,12 +345,6 @@ function Button(cornerX, cornerY, width, height, label, callbackSelected, callba
 
   this.callbackSelected = callbackSelected;
   this.callbackUnselected = callbackUnselected;
-
-  if(select('#'+this.label) == null)
-    createElement('div').id(this.label).position(cornerX, cornerY).size(width, height).mousePressed(function(){
-      // alert(this.label);
-      return true;
-    });
 
   // Calculate font size
   // var fontSize = 10;
@@ -437,10 +460,110 @@ function Button2(cornerX, cornerY, width, height, label, callbackSelected, callb
 
   this.callbackSelected = callbackSelected;
   this.callbackUnselected = callbackUnselected;
+  
+  this.fontSize = 14;
+
+  this.run = function() {
+    // Check if the mouse is currently hovering over the button
+
+    var mouseClicked = this.region.checkClick();
+
+    if (this.region.checkHover()) {
+      this.highlight = true;
+      // Check if mouse has already been pressed
+      if (mouseClicked) {
+        this.onClick();
+      }
+    } else {
+      this.highlight = false;
+    }
+
+    this.draw();
+  }
+
+  this.onClick = function() {
+    if (!this.selected) {
+      this.selected = true;
+      this.callbackSelected();
+    }
+    this.selected = false;
+    this.callbackUnselected();
+  }
+
+  this.draw = function() {
+    adjustColor = function(c, adjustment) {
+      c[0] += adjustment[0];
+      c[1] += adjustment[1];
+      c[2] += adjustment[2];
+    }
+    var c = [this.color[0], this.color[1], this.color[2]];
+
+    push();
+    strokeWeight(0);
+    // Draw main box
+    if (this.highlight) {
+      dropShadow(2, 2, 4, "rgba(0, 0, 0, 0.2)");
+      adjustColor(c, this.highlightColor);
+    } else {
+      dropShadow(1, 1, 2, "rgba(0, 0, 0, 0.2)");
+    }
+
+    fill(c[0], c[1], c[2]);
+    rect(this.position.x, this.position.y, this.width, this.height);
+    dropShadow(0, 0, 0, 0);
+
+    // Draw accent bar
+    if (this.selected) {
+      adjustColor(c, this.selectedColor);
+    }
+
+    adjustColor(c, this.accent);
+    fill(c[0], c[1], c[2]);
+    rectMode(CORNERS);
+    rect(this.position.x, this.position.y + this.height * 0.85,
+          this.position.x + this.width, this.position.y + this.height);
+
+    // Draw text
+    textFont("Helvetica");
+    textStyle(BOLD);
+    textSize(this.fontSize);
+    fill(this.fontColor);
+    textAlign(CENTER, CENTER);
+    text(label, this.position.x + this.width / 2, this.position.y + this.height * 0.45);
+
+    pop();
+  }
+}
+
+function ServerButton(cornerX, cornerY, width, height, label, callbackSelected, callbackUnselected)
+{
+  this.position = createVector(cornerX, cornerY);
+  this.width = width;
+  this.height = height;
+  this.label = label;
+  this.region = new MouseRegion(cornerX, cornerY, width, height);
+
+  // Base background color
+  this.color = [100, 200, 300];
+  // Accent bar adjustment
+  this.accent = [-40, -40, -40];
+  // Accent bar adjsutment for selected state
+  this.selectedColor = [-80, -80, -80];
+  // Button adjustment for highlighted state
+  this.highlightColor = [-20, -20, -20];
+  // Color for text
+  this.fontColor = [255, 255, 255];
+
+  this.selected = false;
+  this.highlght = false;
+
+  this.callbackSelected = callbackSelected;
+  this.callbackUnselected = callbackUnselected;
 
   if(select('#'+this.label) == null)
     createElement('div').id(this.label).position(cornerX, cornerY).size(width, height).mousePressed(function(){
       //Submit data to database if the button at the end of the test is pushed, select for that button
+      serverConnect();
       return true;
     });
   

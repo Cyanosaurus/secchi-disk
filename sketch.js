@@ -333,20 +333,61 @@ function setup() {
       			if (analyzeTrial()) {                          // if correct move to next scene, otherwise the run section below
         			scenes.nextScene();                        // will deal with the case of no chances left
         			scenes.setup();
+              attemptsLeft--;
               if (lakeType == "Clear") {
                 clearPass = 1;
+                var depthClear = createDiv().hide().id("depthValuesClear").value(
+                  [
+                    1,
+                    floor(D0.currentDepth*100)/100,
+                    floor(lakeTarget*100)/100,
+                    3-attemptsLeft
+                  ]
+                  );
               }
               if (lakeType == "Intermediate") {
                 intermediatePass = 1;
+                var depthIntermediate = createDiv().hide().id("depthValuesIntermediate").value(
+                  [
+                    2,
+                    floor(D0.currentDepth*100)/100,
+                    floor(lakeTarget*100)/100,
+                    3-attemptsLeft
+                  ]
+                  );
               }
               if (lakeType == "Productive"){
                 productivePass = 1;
+                var depthProductive = createDiv().hide().id("depthValuesProductive").value(
+                  [
+                    3,
+                    floor(D0.currentDepth*100)/100,
+                    floor(lakeTarget*100)/100,
+                    3-attemptsLeft
+                  ]
+                  );
               }
               if (lakeType == "Dystrophic") {
                 dystrophicPass = 1;
+                var depthDystrophic = createDiv().hide().id("depthValuesDystrophic").value(
+                  [
+                    4,
+                    floor(D0.currentDepth*100)/100,
+                    floor(lakeTarget*100)/100,
+                    3-attemptsLeft
+                  ]
+                  );
               }
               if (lakeType == "Dystrophic Productive") {
                 dystrophicProductivePass = 1;
+                var depthDystrophicProductive = createDiv().hide().id("depthValuesDProductive").value(
+                  [
+                    5,
+                    floor(D0.currentDepth*100)/100,
+                    floor(lakeTarget*100)/100,
+                    3-attemptsLeft
+                  ]
+                  );
               }
       				} else {
         				attemptsLeft--;
@@ -375,14 +416,6 @@ function setup() {
           scenes.setup();
         }
       );
-
-      // hideMeter = new Button(width - 170, 240, 110, 50, "Hide Depth Meter",
-      //   function()
-      //   {
-      //     depthMeter.hide = !depthMeter.hide;
-      //     depthTriangle.hide = !depthTriangle.hide;
-      //   }
-      // );
 
     },
     function() {                                    // THIS IS WHERE THE STUFF FOR THE SIM IS DRAWN
@@ -487,6 +520,9 @@ function setup() {
         },
         function() {}
       );
+
+      serverButton = new ServerButton(780, 390, 95, 50, "Server Submit", function(){}, function(){});
+
       // introStartDysProd.color = [245, 245, 245];
       introStartDysProd.fontSize = 14;
 
@@ -501,6 +537,7 @@ function setup() {
       // line(210, 317, 890, 317);
       // line(385, 317, 385, 680);
       pop();
+      // serverButton.run();
       resultsRestart.run();
     })
   );
