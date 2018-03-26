@@ -256,15 +256,17 @@ function infoBox(cornerX, cornerY, width, height)
   this.fontSize = 14;
 }
 
+//A function for submitting everything to the database, at the moment only includes the lake data
 function serverConnect()
 {
-
+  //Gather the values for the lakes
   var rawValuesClear = document.getElementById("depthValuesClear");
   var rawValuesIntermediate = document.getElementById("depthValuesIntermediate");
   var rawValuesProductive = document.getElementById("depthValuesProductive");
   var rawValuesDystrophic = document.getElementById("depthValuesDystrophic");
   var rawValuesDProductive = document.getElementById("depthValuesDProductive");
 
+  //Creates an array and an object, one array for each buffer of information, and the object to concatenate all the information
   var lakeValues = new Array();
   var lakeData = {};
 
@@ -279,8 +281,6 @@ function serverConnect()
   if(rawValuesDProductive != null)
     {lakeValues.push(rawValuesDProductive.value);}
 
-  // print(lakeValues);
-
   for (var key in lakeValues)
   {
     lakeData[key] = {
@@ -291,8 +291,7 @@ function serverConnect()
     };
   }
 
-  // print(lakeData);
-
+  //Opens up AJAX for requests and handling
   if (window.XMLHttpRequest)
   {
     // code for modern browsers
@@ -302,8 +301,10 @@ function serverConnect()
     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
   }
 
-  myJSON = JSON.stringify(lakeData);
+  //Sets the myJSON to a json object of the regular object for easy transfer
+  var myJSON = JSON.stringify(lakeData);
 
+  //When do stuff
   xmlhttp.onreadystatechange = function()
   {
     if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
@@ -312,6 +313,7 @@ function serverConnect()
     }
   }
 
+  //Do stuff
   xmlhttp.open("GET", "server_connection.php?val="+myJSON, true);
   xmlhttp.send();
 }

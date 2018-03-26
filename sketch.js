@@ -523,7 +523,6 @@ function setup() {
 
       serverButton = new ServerButton(780, 390, 95, 50, "Server Submit", function(){}, function(){});
 
-      // introStartDysProd.color = [245, 245, 245];
       introStartDysProd.fontSize = 14;
 
     },
@@ -920,7 +919,8 @@ arc(this.x, this.y, this.rad, this.rad, 3*PI/2, 0);
 pop();
 
 push();
-
+  
+  //Function to create a rectangle with defined bounds with a color of 1 at the top and 2 at the bottom (top is 1 & 4 bottom is 2 & 3)
   function gradientRect(x1, y1, x2, y2, x3, y3, x4, y4, color1, color2)
     {
       var xO = (x1+x2)/2;
@@ -928,12 +928,16 @@ push();
       var yO = (y1+y2)/2;
       var yT = (y4+y3)/2;
 
+      //Creates a whole new color just for this only based on these coordinates, very intriquite and special.
       var grad = this.drawingContext.createLinearGradient(xO, yO, xT, yT);
+      //At 0, top, set to color one and gradually between 0 and 1 set to color2 at position 1
       grad.addColorStop(0, color1);
       grad.addColorStop(1, color2);
 
+      //Sets the fill style to above
       this.drawingContext.fillStyle = grad;
 
+      //Makes shape
       beginShape();
         vertex(x1, y1);
         vertex(x2, y2);
@@ -942,7 +946,7 @@ push();
       endShape();
     }
 
-
+    //Do it
     gradientRect(-25, -25, -25, 75, this.x, this.y+this.rad/40, this.x, this.y-this.rad/40, color(255, 255, 255, 255), color(255, 255, 255, alpha));
 
 
