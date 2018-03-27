@@ -196,6 +196,7 @@ var Question19Answer = "Select an Answer.";
 var Question20Answer = "Select an Answer.";
 var Question21Answer = "Type an Answer.";
 
+//For keeping track of attempts for each lake
 var clearLakeAttempts;
 var intermediateLakeAttempts;
 var productiveLakeAttempts;
@@ -221,13 +222,27 @@ var intermediateLake;            //For using images in the future
 var productiveLake;
 var dystrophicLake;
 var dystrophicProductiveLake;
+var tapepic1;
+var tapepic2;
+var secchiReadings;
+var secchiSkyPerson;
+var secchiSolo;
+var secchiDisk;
+var manWithSecchi;
 
-function preload() {
+function preload() {          //Where we load all our images
     clearLake = loadImage('libraries/clearLake.jpg');
     intermediateLake = loadImage('libraries/intermediateLake.jpg');
     productiveLake = loadImage('libraries/productiveLake.jpg');
     dystrophicLake = loadImage('libraries/dystrophicLake.jpg');
     dystrophicProductiveLake = loadImage('libraries/dystrophicProductiveLake.jpg');
+    tapepic1 = loadImage('libraries/tapepic1.jpg');
+    tapepic2 = loadImage('libraries/tapepic2.jpg');
+    secchiReadings = loadImage('libraries/SecchiReadings12.jpg');
+    secchiSkyPerson = loadImage('libraries/Secchi-Sky-Person.jpg');
+    secchiSolo = loadImage('libraries/Secchi-Solo-1.jpg');
+    secchiDisk = loadImage('libraries/SecchiDisk.jpg');
+    manWithSecchi = loadImage('libraries/manwithsecchi.jpg');
 }
 
 function setup() {
@@ -1288,13 +1303,13 @@ if (Question3Answer != "Select an Answer.") {
 );
 
 //Question 4
-scenes.addScene(new Scene(windowWidth, windowHeight,
+scenes.addScene(new Scene(windowWidth, windowHeight*2,
 function() {
 
 var left = windowWidth / 6;
 var right = windowWidth - left;
 var top = windowHeight / 6;
-var bottom = windowHeight - top;
+var bottom = windowHeight*1.5;
 
 testBoard = new TextBoard(left, top, right - left/2, bottom - top/2);
 testBoard.background = 60;
@@ -1323,6 +1338,9 @@ testBoard.addText("\n ")
 testBoard.addParagraph(1);
 testBoard.addParagraph(1);
 testBoard.addParagraph(1);
+
+image(manWithSecchi, 300, 300, 100, 200);
+
 
 AnswerA = new AnswerButton(right-750, bottom-260, 800, 50, "A. " + Question4A,
 function() {
@@ -1393,7 +1411,6 @@ backButton = new Button(right-20, top+20, 95, 50, "Go Back",
   },
   function() {}
 );
-
 
 introStartDysProd.fontSize = 14;
 },
@@ -3530,23 +3547,23 @@ if (Question21Answer != "Type an Answer.") {
 );
 
 //Test Finished Screen
-scenes.addScene(new Scene(windowWidth, windowHeight,
+scenes.addScene(new Scene(windowWidth, windowHeight*2,
     function() {
 
       var left = windowWidth / 12;
       var right = windowWidth - left;
-      var top = 60
-      var bottom = windowHeight - top;
+      var top = windowHeight / 12;
+      var bottom = windowHeight*1.5;
 
       var Question1Conclusion, Question2Conclusion, Question3Conclusion, Question4Conclusion, Question5Conlusion, Question6Conclusion, Question7Conclusion, Question8Conclusion, Question9Conclusion, Question10Conclusion, Question11Conclusion, Question12Conclusion, Question13Conclusion, Question14Conclusion, Question15Conclusion, Question16Conclusion, Question17Conclusion, Question18Conclusion, Question19Conclusion, Question20Conclusion, Question21Conclusion;
       var numCorrect = 0;
 
-      // if (Question1Answer == Question1Key) {
-      //   Question1Conclusion = "Correct";
-      //   numCorrect++;
-      // } else {
-      //   Question1Conclusion = "Incorrect";
-      // }
+      if (Question1Answer == Question1Key) {
+        Question1Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question1Conclusion = "Incorrect";
+      }
 
       if (Question2Answer == Question2Key) {
         Question2Conclusion = "Correct";
@@ -3654,10 +3671,10 @@ scenes.addScene(new Scene(windowWidth, windowHeight,
       }
 
       if (Question17Answer == Question17Key) {
-        Question1Conclusion = "Correct";
+        Question17Conclusion = "Correct";
         numCorrect++;
       } else {
-        Question1Conclusion = "Incorrect";
+        Question17Conclusion = "Incorrect";
       }
 
       if (Question18Answer == Question18Key) {
@@ -3683,7 +3700,7 @@ scenes.addScene(new Scene(windowWidth, windowHeight,
 
       Question21Conclusion = Question21Answer
 
-      TestResultsBoard = new TextBoard(left, top, 1000, 1000);
+      TestResultsBoard = new TextBoard(left, top, right - left/2, bottom - top/2);
       TestResultsBoard.background = 60;
       // descBoard.accent = 150;
       TestResultsBoard.addText("You're finished!",240, 20, "Helvetica", BOLD);
