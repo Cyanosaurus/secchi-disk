@@ -856,6 +856,15 @@ scenes.addScene(new Scene(windowWidth, windowHeight,
       function() {}
     );
 
+    skipButton = new Button(right-20, top+20, 95, 50, "(Testing)SkipToResults",
+      function() {
+        // Button Selected
+          scenes.setScene(28);
+          scenes.setup();
+      },
+      function() {}
+    );
+
 
     introStartDysProd.fontSize = 14;
   },
@@ -864,6 +873,7 @@ scenes.addScene(new Scene(windowWidth, windowHeight,
     preTestBoard.draw();
     testStart.run();
     backButton.run();
+    skipButton.run();
   })
 );
 
@@ -3489,12 +3499,12 @@ if (Question21Answer != "Type an Answer.") {
 );
 
 //Test Finished Screen
-scenes.addScene(new Scene(windowWidth, windowHeight*2,
+scenes.addScene(new Scene(windowWidth, windowHeight,
     function() {
 
       var left = windowWidth / 12;
       var right = windowWidth - left;
-      var top = windowHeight*2;
+      var top = 60
       var bottom = windowHeight - top;
 
       var Question1Conclusion, Question2Conclusion, Question3Conclusion, Question4Conclusion, Question5Conlusion, Question6Conclusion, Question7Conclusion, Question8Conclusion, Question9Conclusion, Question10Conclusion, Question11Conclusion, Question12Conclusion, Question13Conclusion, Question14Conclusion, Question15Conclusion, Question16Conclusion, Question17Conclusion, Question18Conclusion, Question19Conclusion, Question20Conclusion, Question21Conclusion;
@@ -3642,7 +3652,7 @@ scenes.addScene(new Scene(windowWidth, windowHeight*2,
 
       Question21Conclusion = Question21Answer
 
-      TestResultsBoard = new TextBoard(left, top, right - left, bottom - top);
+      TestResultsBoard = new TextBoard(left, top, 1000, 1000);
       TestResultsBoard.background = 60;
       // descBoard.accent = 150;
       TestResultsBoard.addText("You're finished!",240, 20, "Helvetica", BOLD);
