@@ -3511,12 +3511,13 @@ input.size(600, 200);
 
 simInfo = new TextBox(right-650, bottom-20, 250, 50, Question21Answer, function(){});
 
-finishButton = new Button(right-395, bottom-20, 95, 50, "Next",
+finishButton = new Button(right-395, bottom-20, 95, 50, "Finish",
   function() {
     // Button Selected
       scenes.setScene(28);
       scenes.setup();
       input.hide();
+      serverConnect();
       TestFinished = "Yes";
   },
   function() {}
@@ -3560,145 +3561,404 @@ scenes.addScene(new Scene(windowWidth, windowHeight*2,
 
       if (Question1Answer == Question1Key) {
         Question1Conclusion = "Correct";
+<<<<<<< HEAD
         numCorrect++;
       } else {
         Question1Conclusion = "Incorrect";
+=======
+        createDiv().hide().id("question1").value([
+            1,
+            Question1Answer,
+            1,
+            Question1Key
+          ]);
+        numCorrect++;
+      } else {
+        Question1Conclusion = "Incorrect";
+        createDiv().hide().id("question1").value([
+            1,
+            Question1Answer,
+            0,
+            Question1Key
+          ]);
+>>>>>>> 6c131a015c0415f575f997aa4aef40306e09fba1
       }
 
       if (Question2Answer == Question2Key) {
         Question2Conclusion = "Correct";
+        createDiv().hide().id("question2").value([
+            2,
+            Question2Answer,
+            1,
+            Question2Key
+          ]);
         numCorrect++;
       } else {
         Question2Conclusion = "Incorrect";
+        createDiv().hide().id("question2").value([
+            2,
+            Question2Answer,
+            0,
+            Question2Key
+          ]);
       }
 
       if (Question3Answer == Question3Key) {
         Question3Conclusion = "Correct";
+        createDiv().hide().id("question3").value([
+            3,
+            Question3Answer,
+            1,
+            Question3Key
+          ]);
         numCorrect++;
       } else {
         Question3Conclusion = "Incorrect";
+        createDiv().hide().id("question3").value([
+            3,
+            Question3Answer,
+            0,
+            Question3Key
+          ]);
       }
 
       if (Question4Answer == Question4Key) {
         Question4Conclusion = "Correct";
+        createDiv().hide().id("question4").value([
+            4,
+            Question4Answer,
+            1,
+            Question4Key
+          ]);
         numCorrect++;
       } else {
         Question4Conclusion = "Incorrect";
+        createDiv().hide().id("question4").value([
+            4,
+            Question4Answer,
+            0,
+            Question4Key
+          ]);
       }
 
       if (Question5Answer == Question5Key) {
         Question5Conclusion = "Correct";
+        createDiv().hide().id("question5").value([
+            5,
+            Question5Answer,
+            1,
+            Question5Key
+          ]);
         numCorrect++;
       } else {
         Question5Conclusion = "Incorrect";
+        createDiv().hide().id("question5").value([
+            5,
+            Question5Answer,
+            0,
+            Question5Key
+          ]);
       }
 
       if (Question6Answer == Question6Key) {
         Question6Conclusion = "Correct";
+        createDiv().hide().id("question6").value([
+            6,
+            Question6Answer,
+            1,
+            Question6Key
+          ]);
         numCorrect++;
       } else {
         Question6Conclusion = "Incorrect";
+        createDiv().hide().id("question6").value([
+            6,
+            Question6Answer,
+            0,
+            Question6Key
+          ]);
       }
 
       if (Question7Answer == Question7Key) {
         Question7Conclusion = "Correct";
+        createDiv().hide().id("question7").value([
+            7,
+            Question7Answer,
+            1,
+            Question7Key
+          ]);
         numCorrect++;
       } else {
         Question7Conclusion = "Incorrect";
+        createDiv().hide().id("question7").value([
+            7,
+            Question7Answer,
+            0,
+            Question7Key
+          ]);
       }
 
       if (Question8Answer == Question8Key) {
         Question8Conclusion = "Correct";
+        createDiv().hide().id("question8").value([
+            8,
+            Question8Answer,
+            1,
+            Question8Key
+          ]);
         numCorrect++;
       } else {
         Question8Conclusion = "Incorrect";
+        createDiv().hide().id("question8").value([
+            8,
+            Question8Answer,
+            0,
+            Question8Key
+          ]);
       }
 
       if (Question9Answer == Question9Key) {
         Question9Conclusion = "Correct";
+        createDiv().hide().id("question9").value([
+            9,
+            Question9Answer,
+            1,
+            Question9Key
+          ]);
         numCorrect++;
       } else {
         Question9Conclusion = "Incorrect";
+        createDiv().hide().id("question9").value([
+            9,
+            Question9Answer,
+            0,
+            Question9Key
+          ]);
       }
 
       if (Question10Answer == Question10Key) {
         Question10Conclusion = "Correct";
+        createDiv().hide().id("question10").value([
+            10,
+            Question10Answer,
+            1,
+            Question10Key
+          ]);
         numCorrect++;
       } else {
         Question10Conclusion = "Incorrect";
+        createDiv().hide().id("question10").value([
+            10,
+            Question10Answer,
+            0,
+            Question10Key
+          ]);
       }
 
       if (Question11Answer == Question11Key) {
         Question11Conclusion = "Correct";
+        createDiv().hide().id("question11").value([
+            11,
+            Question11Answer,
+            1,
+            Question11Key
+          ]);
         numCorrect++;
       } else {
         Question11Conclusion = "Incorrect";
+        createDiv().hide().id("question11").value([
+            11,
+            Question11Answer,
+            0,
+            Question11Key
+          ]);
       }
 
       if (Question12Answer == Question12Key) {
         Question12Conclusion = "Correct";
+        createDiv().hide().id("question12").value([
+            12,
+            Question12Answer,
+            1,
+            Question12Key
+          ]);
         numCorrect++;
       } else {
         Question12Conclusion = "Incorrect";
+        createDiv().hide().id("question12").value([
+            12,
+            Question12Answer,
+            0,
+            Question12Key
+          ]);
       }
 
       if (Question13Answer == Question13Key) {
         Question13Conclusion = "Correct";
+        createDiv().hide().id("question13").value([
+            13,
+            Question13Answer,
+            1,
+            Question13Key
+          ]);
         numCorrect++;
       } else {
         Question13Conclusion = "Incorrect";
+        createDiv().hide().id("question13").value([
+            13,
+            Question13Answer,
+            0,
+            Question13Key
+          ]);
       }
 
       if (Question14Answer == Question14Key) {
         Question14Conclusion = "Correct";
+        createDiv().hide().id("question14").value([
+            14,
+            Question14Answer,
+            1,
+            Question14Key
+          ]);
         numCorrect++;
       } else {
         Question14Conclusion = "Incorrect";
+        createDiv().hide().id("question14").value([
+            14,
+            Question14Answer,
+            0,
+            Question14Key
+          ]);
       }
 
       if (Question15Answer == Question15Key) {
         Question15Conclusion = "Correct";
+        createDiv().hide().id("question15").value([
+            15,
+            Question15Answer,
+            1,
+            Question15Key
+          ]);
         numCorrect++;
       } else {
         Question15Conclusion = "Incorrect";
+        createDiv().hide().id("question15").value([
+            15,
+            Question15Answer,
+            0,
+            Question15Key
+          ]);
       }
 
       if (Question16Answer == Question16Key) {
         Question16Conclusion = "Correct";
+        createDiv().hide().id("question16").value([
+            16,
+            Question16Answer,
+            1,
+            Question16Key
+          ]);
         numCorrect++;
       } else {
         Question16Conclusion = "Incorrect";
+        createDiv().hide().id("question16").value([
+            16,
+            Question16Answer,
+            0,
+            Question16Key
+          ]);
       }
 
       if (Question17Answer == Question17Key) {
+<<<<<<< HEAD
         Question17Conclusion = "Correct";
         numCorrect++;
       } else {
         Question17Conclusion = "Incorrect";
+=======
+        Question1Conclusion = "Correct";
+        createDiv().hide().id("question17").value([
+            17,
+            Question17Answer,
+            1,
+            Question17Key
+          ]);
+        numCorrect++;
+      } else {
+        Question1Conclusion = "Incorrect";
+        createDiv().hide().id("question17").value([
+            17,
+            Question17Answer,
+            0,
+            Question17Key
+          ]);
+>>>>>>> 6c131a015c0415f575f997aa4aef40306e09fba1
       }
 
       if (Question18Answer == Question18Key) {
         Question18Conclusion = "Correct";
+        createDiv().hide().id("question18").value([
+            18,
+            Question18Answer,
+            1,
+            Question18Key
+          ]);
         numCorrect++;
       } else {
         Question18Conclusion = "Incorrect";
+        createDiv().hide().id("question18").value([
+            18,
+            Question18Answer,
+            0,
+            Question18Key
+          ]);
       }
 
       if (Question19Answer == Question19Key) {
         Question19Conclusion = "Correct";
+        createDiv().hide().id("question19").value([
+            19,
+            Question19Answer,
+            1,
+            Question19Key
+          ]);
         numCorrect++;
       } else {
         Question19Conclusion = "Incorrect";
+        createDiv().hide().id("question19").value([
+            19,
+            Question19Answer,
+            0,
+            Question19Key
+          ]);
       }
 
       if (Question20Answer == Question20Key) {
         Question20Conclusion = "Correct";
+        createDiv().hide().id("question20").value([
+            20,
+            Question20Answer,
+            1,
+            Question20Key
+          ]);
         numCorrect++;
       } else {
         Question20Conclusion = "Incorrect";
+        createDiv().hide().id("question20").value([
+            20,
+            Question20Answer,
+            0,
+            Question20Key
+          ]);
       }
 
       Question21Conclusion = Question21Answer
+      createDiv().hide().id("question21").value([
+            21,
+            Question21Answer,
+            1,
+            "All Responses Correct"
+          ]);
 
       TestResultsBoard = new TextBoard(left, top, right - left/2, bottom - top/2);
       TestResultsBoard.background = 60;

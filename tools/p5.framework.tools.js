@@ -525,6 +525,20 @@ function serverConnect()
     };
   }
 
+  var questionData = {};
+
+  //Get the arrays for questions and put them in the same configuration as the lake data
+  for(i = 0;i < 21;i++)
+  {
+    var questionValue = document.getElementById("question"+(i+1)).value;
+    questionData[i] = {
+      "questionID":questionValue[0],
+      "answer":questionValue[1],
+      "correct":questionValue[2],
+      "correctResponse":questionValue[3]
+    }
+  }
+
   //Opens up AJAX for requests and handling
   if (window.XMLHttpRequest)
   {
@@ -536,7 +550,8 @@ function serverConnect()
   }
 
   //Sets the myJSON to a json object of the regular object for easy transfer
-  var myJSON = JSON.stringify(lakeData);
+  var lakeJSON = JSON.stringify(lakeData);
+  var questionJSON = JSON.stringify(questionData);
 
   //When do stuff
   xmlhttp.onreadystatechange = function()
@@ -548,7 +563,7 @@ function serverConnect()
   }
 
   //Do stuff
-  xmlhttp.open("GET", "server_connection.php?val="+myJSON, true);
+  xmlhttp.open("GET", "server_connection.php?lake="+lakeJSON+"&question="+questionJSON, true);
   xmlhttp.send();
 }
 
@@ -578,11 +593,13 @@ function ServerButton(cornerX, cornerY, width, height, label, callbackSelected, 
   this.callbackUnselected = callbackUnselected;
 
   if(select('#'+this.label) == null)
-    createElement('div').id(this.label).position(cornerX, cornerY).size(width, height).mousePressed(function(){
+  {
+      createElement('div').id(this.label).position(cornerX, cornerY).size(width, height).mousePressed(function(){
       //Submit data to database if the button at the end of the test is pushed, select for that button
       serverConnect();
       return true;
     });
+  }
   
   this.fontSize = 14;
 
