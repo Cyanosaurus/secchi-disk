@@ -846,12 +846,24 @@ scenes.addScene(new Scene(windowWidth, windowHeight,
       },
       function() {}
     );
+
+    backButton = new Button(right-110, top+20, 95, 50, "Go Back",
+      function() {
+        // Button Selected
+          scenes.setScene(2);
+          scenes.setup();
+      },
+      function() {}
+    );
+
+
     introStartDysProd.fontSize = 14;
   },
   function() {
     scenes.background(0);
     preTestBoard.draw();
     testStart.run();
+    backButton.run();
   })
 );
 
@@ -3477,23 +3489,23 @@ if (Question21Answer != "Type an Answer.") {
 );
 
 //Test Finished Screen
-scenes.addScene(new Scene(windowWidth, windowHeight,
+scenes.addScene(new Scene(windowWidth, windowHeight*2,
     function() {
 
       var left = windowWidth / 12;
       var right = windowWidth - left;
-      var top = windowHeight / 120;
+      var top = windowHeight*2;
       var bottom = windowHeight - top;
 
       var Question1Conclusion, Question2Conclusion, Question3Conclusion, Question4Conclusion, Question5Conlusion, Question6Conclusion, Question7Conclusion, Question8Conclusion, Question9Conclusion, Question10Conclusion, Question11Conclusion, Question12Conclusion, Question13Conclusion, Question14Conclusion, Question15Conclusion, Question16Conclusion, Question17Conclusion, Question18Conclusion, Question19Conclusion, Question20Conclusion, Question21Conclusion;
       var numCorrect = 0;
 
-      if (Question1Answer == Question1Key) {
-        Question1Conclusion = "Correct";
-        numCorrect++;
-      } else {
-        Question1Conclusion = "Incorrect";
-      }
+      // if (Question1Answer == Question1Key) {
+      //   Question1Conclusion = "Correct";
+      //   numCorrect++;
+      // } else {
+      //   Question1Conclusion = "Incorrect";
+      // }
 
       if (Question2Answer == Question2Key) {
         Question2Conclusion = "Correct";
@@ -3621,7 +3633,14 @@ scenes.addScene(new Scene(windowWidth, windowHeight,
         Question19Conclusion = "Incorrect";
       }
 
-      Question20Conclusion = Question20Answer;
+      if (Question20Answer == Question20Key) {
+        Question20Conclusion = "Correct";
+        numCorrect++;
+      } else {
+        Question20Conclusion = "Incorrect";
+      }
+
+      Question21Conclusion = Question21Answer
 
       TestResultsBoard = new TextBoard(left, top, right - left, bottom - top);
       TestResultsBoard.background = 60;
