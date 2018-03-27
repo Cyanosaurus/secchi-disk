@@ -511,30 +511,61 @@ function setup() {
         if (analyzeTrial()) {                          // if correct move to next scene, otherwise the run section below
           scenes.nextScene();                        // will deal with the case of no chances left
           scenes.setup();
+          attemptsLeft--;
           if (lakeType == "Clear") {
             clearPass = 1;
-            clearLakeAttempts = attemptsLeft;
-            console.log(clearLakeAttempts);
+            var depthClear = createDiv().hide().id("depthValuesClear").value(
+              [
+                1,
+                floor(D0.currentDepth*100)/100,
+                floor(lakeTarget*100)/100,
+                3-attemptsLeft
+              ]
+              );
           }
           if (lakeType == "Intermediate") {
             intermediatePass = 1;
-            intermediateLakeAttempts = attemptsLeft;
-            console.log(intermediateLakeAttempts);
+            var depthIntermediate = createDiv().hide().id("depthValuesIntermediate").value(
+              [
+                2,
+                floor(D0.currentDepth*100)/100,
+                floor(lakeTarget*100)/100,
+                3-attemptsLeft
+              ]
+              );
           }
           if (lakeType == "Productive"){
             productivePass = 1;
-            productiveLakeAttempts = attemptsLeft;
-            console.log(productiveLakeAttempts);
+            var depthProductive = createDiv().hide().id("depthValuesProductive").value(
+              [
+                3,
+                floor(D0.currentDepth*100)/100,
+                floor(lakeTarget*100)/100,
+                3-attemptsLeft
+              ]
+              );
           }
           if (lakeType == "Dystrophic") {
             dystrophicPass = 1;
-            dystrophicLakeAttempts = attemptsLeft;
-            console.log(dystrophicLakeAttempts);
+            var depthDystrophic = createDiv().hide().id("depthValuesDystrophic").value(
+              [
+                4,
+                floor(D0.currentDepth*100)/100,
+                floor(lakeTarget*100)/100,
+                3-attemptsLeft
+              ]
+              );
           }
           if (lakeType == "Dystrophic Productive") {
             dystrophicProductivePass = 1;
-            dystrophicProductiveLakeAttempts = attemptsLeft;
-            console.log(dystrophicProductiveLakeAttempts);
+            var depthDystrophicProductive = createDiv().hide().id("depthValuesDProductive").value(
+              [
+                5,
+                floor(D0.currentDepth*100)/100,
+                floor(lakeTarget*100)/100,
+                3-attemptsLeft
+              ]
+              );
           }
           } else {
             attemptsLeft--;

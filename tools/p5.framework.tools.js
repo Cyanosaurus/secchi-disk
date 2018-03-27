@@ -491,6 +491,129 @@ function Button2(cornerX, cornerY, width, height, label, callbackSelected, callb
   }
 }
 
+function serverConnect()
+{
+  //Gather the values for the lakes
+  var rawValuesClear = document.getElementById("depthValuesClear");
+  var rawValuesIntermediate = document.getElementById("depthValuesIntermediate");
+  var rawValuesProductive = document.getElementById("depthValuesProductive");
+  var rawValuesDystrophic = document.getElementById("depthValuesDystrophic");
+  var rawValuesDProductive = document.getElementById("depthValuesDProductive");
+
+  //Creates an array and an object, one array for each buffer of information, and the object to concatenate all the information
+  var lakeValues = new Array();
+  var lakeData = {};
+
+  if(rawValuesClear != null)
+    {lakeValues.push(rawValuesClear.value);}
+  if(rawValuesIntermediate != null)
+    {lakeValues.push(rawValuesIntermediate.value);}
+  if(rawValuesProductive != null)
+    {lakeValues.push(rawValuesProductive.value);}
+  if(rawValuesDystrophic != null)
+    {lakeValues.push(rawValuesDystrophic.value);}
+  if(rawValuesDProductive != null)
+    {lakeValues.push(rawValuesDProductive.value);}
+
+  for (var key in lakeValues)
+  {
+    lakeData[key] = {
+      "lakeType":lakeValues[key][0],
+      "measuredDepth":lakeValues[key][1],
+      "generatedDepth":lakeValues[key][2],
+      "attemptsUsed":lakeValues[key][3]
+    };
+  }
+
+  //Opens up AJAX for requests and handling
+  if (window.XMLHttpRequest)
+  {
+    // code for modern browsers
+    xmlhttp = new XMLHttpRequest();
+  } else {
+    // code for old IE browsers
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+
+  //Sets the myJSON to a json object of the regular object for easy transfer
+  var myJSON = JSON.stringify(lakeData);
+
+  //When do stuff
+  xmlhttp.onreadystatechange = function()
+  {
+    if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+    {
+      print(xmlhttp.responseText);
+    }
+  }
+
+  //Do stuff
+  xmlhttp.open("GET", "server_connection.php?val="+myJSON, true);
+  xmlhttp.send();
+}
+
+function ServerButton(cornerX, cornerY, width, height, label, callbackSelected, callbackUnselected)
+{
+  this.position = createVector(cornerX, cornerY);
+  this.width = width;
+  this.height = height;
+  this.label = label;
+  this.region = new MouseRegion(cornerX, cornerY, width, height);
+
+  // Base background color
+  this.color = [100, 200, 300];
+  // Accent bar adjustment
+  this.accent = [-40, -40, -40];
+  // Accent bar adjsutment for selected state
+  this.selectedColor = [-80, -80, -80];
+  // Button adjustment for highlighted state
+  this.highlightColor = [-20, -20, -20];
+  // Color for text
+  this.fontColor = [255, 255, 255];
+
+  this.selected = false;
+  this.highlght = false;
+
+  this.callbackSelected = callbackSelected;
+  this.callbackUnselected = callbackUnselected;
+
+  if(select('#'+this.label) == null)
+    createElement('div').id(this.label).position(cornerX, cornerY).size(width, height).mousePressed(function(){
+      //Submit data to database if the button at the end of the test is pushed, select for that button
+      serverConnect();
+      return true;
+    });
+  
+  this.fontSize = 14;
+
+  this.run = function() {
+    // Check if the mouse is currently hovering over the button
+
+    var mouseClicked = this.region.checkClick();
+
+    if (this.region.checkHover()) {
+      this.highlight = true;
+      // Check if mouse has already been pressed
+      if (mouseClicked) {
+        this.onClick();
+      }
+    } else {
+      this.highlight = false;
+    }
+
+    this.draw();
+  }
+
+  this.onClick = function() {
+    if (!this.selected) {
+      this.selected = true;
+      this.callbackSelected();
+    }
+    this.selected = false;
+    this.callbackUnselected();
+  }
+}
+
 function AnswerButton(cornerX, cornerY, width, height, label, callbackSelected, callbackUnselected)
 {
   this.position = createVector(cornerX, cornerY);
