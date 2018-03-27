@@ -670,12 +670,13 @@ function setup() {
       // setup()
       animationY = windowHeight/12;
 
-      resultsBoard =  new TextBoard(windowWidth/12, windowHeight/12, windowWidth*8/12, windowHeight*5/6);
+      resultsBoard =  new TextBoard(25, 23, windowWidth - 50, windowHeight - 50);
 
       resultsBoard.background = 0;
+      
       resultsBoard.accent = 50;
       resultsBoard.addParagraph(5);
-      resultsBoard.addParagraph(5);
+      resultsBoard.addTab(1);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
       resultsBoard.addText("Reading Results", color(255, 0, 0) , 40, "Helvetica", BOLD);
@@ -683,6 +684,7 @@ function setup() {
       resultsBoard.addParagraph(5);
       resultsBoard.addParagraph(5);
       resultsBoard.addParagraph(5);
+      resultsBoard.addTab(1);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
      //("Words", color, size, font, type);
@@ -695,6 +697,7 @@ function setup() {
       resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
+      resultsBoard.addTab(1);
       resultsBoard.addText("Target Depth", 200, 20, "Helvetica", BOLD);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
@@ -702,6 +705,7 @@ function setup() {
       resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
+      resultsBoard.addTab(1);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
       resultsBoard.addText("Measured Depth", 200, 20, "Helvetica", BOLD);
@@ -713,6 +717,7 @@ function setup() {
       resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
+      resultsBoard.addTab(1);
       resultsBoard.addText("Error (absolute)", 200, 20, "Helvetica", BOLD);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
@@ -720,6 +725,7 @@ function setup() {
       resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
+      resultsBoard.addTab(1);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
       resultsBoard.addText("Error (relative)", 200, 20, "Helvetica", BOLD);
@@ -731,27 +737,23 @@ function setup() {
       resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
+      resultsBoard.addTab(1);
       resultsBoard.addText("Within Tolerance?", 200, 20, "Helvetica", BOLD);
       resultsBoard.addTab(1);
       resultsBoard.addText(measuredTolerance, 255, 20, "Helvetica", BOLD);
 
-      // introStartDysProd.color = [245, 245, 245];
       introStartDysProd.fontSize = 14;
 
     },
     function() {
       // draw()
-      scenes.background(60);
-      resultsBoard.draw();
-
-      push();
-      var animationWindowX = windowWidth*9/12;
-      var animationWindowY = windowHeight/12;
-      var animationWindowW = windowWidth/6;
-      var animationWindowH = windowHeight*5/6;
-      var diskH = animationWindowH/50;
-      var diskW = animationWindowW*2/3;
-      var tapeW = animationWindowW/25;
+      var animationWindowX = 1000;
+      var animationWindowY = 25;
+      var animationWindowW = 175;
+      var animationWindowH = 550;
+      var diskH = 5;
+      var diskW = 400/3;
+      var tapeW = 6;
 
       var percentMeasuredY = measuredDepth/lakeDepth;
       var measuredY = animationWindowY + (animationWindowH * percentMeasuredY);
@@ -764,14 +766,13 @@ function setup() {
       var lowerToleranceY = targetY + (animationWindowH * percentToleranceY);
       var greenZone = lowerToleranceY - upperToleranceY;
 
-      scenes.background(0);
+      scenes.background(50);
       resultsBoard.draw();
       push();
 
       //lake background
       fill(lakeColor);
-      strokeWeight(2);
-      stroke(255);
+      noStroke();
       rect(animationWindowX, animationWindowY, animationWindowW, animationWindowH);
       fill(255,255,255,100);
       noStroke();
@@ -783,7 +784,7 @@ function setup() {
         greenZone = animationWindowX + animationWindowH;
       }
 
-      resultsRestart = new Button(780, 500, 95, 50, "Test Again",
+      resultsRestart = new Button(315, 450, 95, 50, "Test Again",
         function() {
           // Button Selected
             setLakeType(5);
@@ -839,8 +840,8 @@ function setup() {
       fill(255,0,0);
       stroke(0);
       strokeWeight(1);
-      triangle(animationWindowX - 10, (animationY + animationWindowY) - diskH, animationWindowX + (diskW/6), (animationY + animationWindowY), animationWindowX - 10, (animationY + animationWindowY) + diskH);
-      animationY = animationY + 1;
+      triangle(animationWindowX - 15, (animationY + animationWindowY) - 10, animationWindowX + 5, (animationY + animationWindowY), animationWindowX - 15, (animationY + animationWindowY) +10);
+      animationY = animationY + 2;
         if (animationY > measuredY - animationWindowY) {
           animationY = measuredY - animationWindowY;
           animationY = animationY + 0;
