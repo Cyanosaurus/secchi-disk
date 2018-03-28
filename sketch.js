@@ -223,11 +223,11 @@ var dystrophicLake;
 var dystrophicProductiveLake;
 
 function preload() {
-    clearLake = loadImage('libraries/clearLake.jpg');
-    intermediateLake = loadImage('libraries/intermediateLake.jpg');
-    productiveLake = loadImage('libraries/productiveLake.jpg');
-    dystrophicLake = loadImage('libraries/dystrophicLake.jpg');
-    dystrophicProductiveLake = loadImage('libraries/dystrophicProductiveLake.jpg');
+    clearLake = loadImage('libraries/clearLake.png');
+    intermediateLake = loadImage('libraries/intermediateLake.png');
+    productiveLake = loadImage('libraries/productiveLake.png');
+    dystrophicLake = loadImage('libraries/dystrophicLake.png');
+    dystrophicProductiveLake = loadImage('libraries/dystrophicProductiveLake.png');
 }
 
 function setup() {
@@ -603,19 +603,19 @@ function setup() {
         strokeWeight(5);
         ellipse(width/3+30,height/2,width*.55, height*1.1);
         if (lakeType == "Clear") {
-          image(clearLake, 0, 0);
+          image(clearLake, -100, -200);
         }
         if (lakeType == "Intermediate") {
-          image(intermediateLake, 0, 0);
+          image(intermediateLake, -100, -200);
         }
         if (lakeType == "Productive"){
-          image(productiveLake, 0, 0);
+          image(productiveLake, -100, -200);
         }
         if (lakeType == "Dystrophic") {
-          image(dystrophicLake, 0, 0);
+          image(dystrophicLake, -100, -200);
         }
         if (lakeType == "Dystrophic Productive") {
-          image(dystrophicProductiveLake, 0, 0);
+          image(dystrophicProductiveLake, -100, -200);
         }
 
         strokeWeight(0);
@@ -673,7 +673,7 @@ function setup() {
       resultsBoard =  new TextBoard(25, 23, windowWidth - 50, windowHeight - 50);
 
       resultsBoard.background = 0;
-      
+
       resultsBoard.accent = 50;
       resultsBoard.addParagraph(5);
       resultsBoard.addTab(1);
@@ -888,14 +888,14 @@ scenes.addScene(new Scene(windowWidth, windowHeight,
       function() {}
     );
 
-    skipButton = new Button(right-20, top+20, 95, 50, "(Testing)SkipToResults",
-      function() {
-        // Button Selected
-          scenes.setScene(28);
-          scenes.setup();
-      },
-      function() {}
-    );
+    // skipButton = new Button(right-20, top+20, 95, 50, "(Testing)SkipToResults",
+    //   function() {
+    //     // Button Selected
+    //       scenes.setScene(28);
+    //       scenes.setup();
+    //   },
+    //   function() {}
+    // );
 
 
     introStartDysProd.fontSize = 14;
@@ -905,7 +905,7 @@ scenes.addScene(new Scene(windowWidth, windowHeight,
     preTestBoard.draw();
     testStart.run();
     backButton.run();
-    skipButton.run();
+    // skipButton.run();
   })
 );
 
@@ -3532,13 +3532,13 @@ if (Question21Answer != "Type an Answer.") {
 );
 
 //Test Finished Screen
-scenes.addScene(new Scene(windowWidth, windowHeight,
+scenes.addScene(new Scene(windowWidth, windowHeight*1.8,
     function() {
 
       var left = windowWidth / 12;
       var right = windowWidth - left;
-      var top = 60
-      var bottom = windowHeight - top;
+      var top = windowHeight / 12;
+      var bottom = windowHeight*1.5;
 
       var Question1Conclusion, Question2Conclusion, Question3Conclusion, Question4Conclusion, Question5Conlusion, Question6Conclusion, Question7Conclusion, Question8Conclusion, Question9Conclusion, Question10Conclusion, Question11Conclusion, Question12Conclusion, Question13Conclusion, Question14Conclusion, Question15Conclusion, Question16Conclusion, Question17Conclusion, Question18Conclusion, Question19Conclusion, Question20Conclusion, Question21Conclusion;
       var numCorrect = 0;
@@ -3857,7 +3857,7 @@ scenes.addScene(new Scene(windowWidth, windowHeight,
           ]);
         numCorrect++;
       } else {
-        Question1Conclusion = "Incorrect";
+        Question17Conclusion = "Incorrect";
         createDiv().hide().id("question17").value([
             17,
             Question17Answer,
@@ -3931,7 +3931,7 @@ scenes.addScene(new Scene(windowWidth, windowHeight,
             "All Responses Correct"
           ]);
 
-      TestResultsBoard = new TextBoard(left, top, 1000, 1000);
+      TestResultsBoard = new TextBoard(left, top, right - left/2, bottom - top/2);
       TestResultsBoard.background = 60;
       // descBoard.accent = 150;
       TestResultsBoard.addText("You're finished!",240, 20, "Helvetica", BOLD);
