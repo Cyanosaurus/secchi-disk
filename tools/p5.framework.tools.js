@@ -94,7 +94,6 @@ function SceneManager() {
     return this.current + 1;
   }
 
-
   this.setup = function() {
     this.width = this.currentScene.width;
     this.height = this.currentScene.height;
@@ -102,7 +101,7 @@ function SceneManager() {
     this.xmax = this.xzero + this.width;
     this.yzero = this.currentScene.yzero;
     this.ymax = this.yzero + this.height;
-    createCanvas(this.currentScene.cWidth, this.currentScene.cHeight);
+    createCanvas(this.currentScene.cWidth, this.currentScene.cHeight, "WEBGL");
     this.currentScene.setup();
     for (var i = 0; i < this.currentScene.children.length; i++) {
       this.width = this.currentScene.children[i].width;
@@ -241,9 +240,9 @@ function infoBox(cornerX, cornerY, width, height)
   this.region = new MouseRegion(cornerX, cornerY, width, height);
 
   // Base background color
-  this.color = [255, 255, 255];
+  this.color = [100, 100, 100];
   // Accent bar adjustment
-  this.accent = [0, 0, 0];
+  this.accent = [-80, -80, -80];
   // Accent bar adjsutment for selected state
   this.selectedColor = [-80, -80, -80];
   // Button adjustment for highlighted state
@@ -255,68 +254,6 @@ function infoBox(cornerX, cornerY, width, height)
   this.highlght = false;
 
   this.fontSize = 14;
-}
-
-//A function for submitting everything to the database, at the moment only includes the lake data
-function serverConnect()
-{
-  //Gather the values for the lakes
-  var rawValuesClear = document.getElementById("depthValuesClear");
-  var rawValuesIntermediate = document.getElementById("depthValuesIntermediate");
-  var rawValuesProductive = document.getElementById("depthValuesProductive");
-  var rawValuesDystrophic = document.getElementById("depthValuesDystrophic");
-  var rawValuesDProductive = document.getElementById("depthValuesDProductive");
-
-  //Creates an array and an object, one array for each buffer of information, and the object to concatenate all the information
-  var lakeValues = new Array();
-  var lakeData = {};
-
-  if(rawValuesClear != null)
-    {lakeValues.push(rawValuesClear.value);}
-  if(rawValuesIntermediate != null)
-    {lakeValues.push(rawValuesIntermediate.value);}
-  if(rawValuesProductive != null)
-    {lakeValues.push(rawValuesProductive.value);}
-  if(rawValuesDystrophic != null)
-    {lakeValues.push(rawValuesDystrophic.value);}
-  if(rawValuesDProductive != null)
-    {lakeValues.push(rawValuesDProductive.value);}
-
-  for (var key in lakeValues)
-  {
-    lakeData[key] = {
-      "lakeType":lakeValues[key][0],
-      "measuredDepth":lakeValues[key][1],
-      "generatedDepth":lakeValues[key][2],
-      "attemptsUsed":lakeValues[key][3]
-    };
-  }
-
-  //Opens up AJAX for requests and handling
-  if (window.XMLHttpRequest)
-  {
-    // code for modern browsers
-    xmlhttp = new XMLHttpRequest();
-  } else {
-    // code for old IE browsers
-    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-  }
-
-  //Sets the myJSON to a json object of the regular object for easy transfer
-  var myJSON = JSON.stringify(lakeData);
-
-  //When do stuff
-  xmlhttp.onreadystatechange = function()
-  {
-    if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
-    {
-      print(xmlhttp.responseText);
-    }
-  }
-
-  //Do stuff
-  xmlhttp.open("GET", "server_connection.php?val="+myJSON, true);
-  xmlhttp.send();
 }
 
 /**
@@ -524,25 +461,6 @@ function Button2(cornerX, cornerY, width, height, label, callbackSelected, callb
       dropShadow(2, 2, 4, "rgba(0, 0, 0, 0.2)");
       adjustColor(c, this.highlightColor);
     } else {
-    this.selected = false;
-    this.callbackUnselected();
-  } }
-
-  this.draw = function() {
-    adjustColor = function(c, adjustment) {
-      c[0] += adjustment[0];
-      c[1] += adjustment[1];
-      c[2] += adjustment[2];
-    }
-    var c = [this.color[0], this.color[1], this.color[2]];
-
-    push();
-    strokeWeight(0);
-    // Draw main box
-    if (this.highlight) {
-      dropShadow(2, 2, 4, "rgba(0, 0, 0, 0.2)");
-      adjustColor(c, this.highlightColor);
-    } else {
       dropShadow(1, 1, 2, "rgba(0, 0, 0, 0.2)");
     }
 
@@ -573,103 +491,80 @@ function Button2(cornerX, cornerY, width, height, label, callbackSelected, callb
   }
 }
 
-function Button2(cornerX, cornerY, width, height, label, callbackSelected, callbackUnselected)
+function serverConnect()
 {
-  this.position = createVector(cornerX, cornerY);
-  this.width = width;
-  this.height = height;
-  this.label = label;
-  this.region = new MouseRegion(cornerX, cornerY, width, height);
+  //Gather the values for the lakes
+  var rawValuesClear = document.getElementById("depthValuesClear");
+  var rawValuesIntermediate = document.getElementById("depthValuesIntermediate");
+  var rawValuesProductive = document.getElementById("depthValuesProductive");
+  var rawValuesDystrophic = document.getElementById("depthValuesDystrophic");
+  var rawValuesDProductive = document.getElementById("depthValuesDProductive");
 
-  // Base background color
-  this.color = [100, 200, 300];
-  // Accent bar adjustment
-  this.accent = [-40, -40, -40];
-  // Accent bar adjsutment for selected state
-  this.selectedColor = [-80, -80, -80];
-  // Button adjustment for highlighted state
-  this.highlightColor = [-20, -20, -20];
-  // Color for text
-  this.fontColor = [255, 255, 255];
+  //Creates an array and an object, one array for each buffer of information, and the object to concatenate all the information
+  var lakeValues = new Array();
+  var lakeData = {};
 
-  this.selected = false;
-  this.highlght = false;
+  if(rawValuesClear != null)
+    {lakeValues.push(rawValuesClear.value);}
+  if(rawValuesIntermediate != null)
+    {lakeValues.push(rawValuesIntermediate.value);}
+  if(rawValuesProductive != null)
+    {lakeValues.push(rawValuesProductive.value);}
+  if(rawValuesDystrophic != null)
+    {lakeValues.push(rawValuesDystrophic.value);}
+  if(rawValuesDProductive != null)
+    {lakeValues.push(rawValuesDProductive.value);}
 
-  this.callbackSelected = callbackSelected;
-  this.callbackUnselected = callbackUnselected;
-  
-  this.fontSize = 14;
-
-  this.run = function() {
-    // Check if the mouse is currently hovering over the button
-
-    var mouseClicked = this.region.checkClick();
-
-    if (this.region.checkHover()) {
-      this.highlight = true;
-      // Check if mouse has already been pressed
-      if (mouseClicked) {
-        this.onClick();
-      }
-    } else {
-      this.highlight = false;
-    }
-
-    this.draw();
+  for (var key in lakeValues)
+  {
+    lakeData[key] = {
+      "lakeType":lakeValues[key][0],
+      "measuredDepth":lakeValues[key][1],
+      "generatedDepth":lakeValues[key][2],
+      "attemptsUsed":lakeValues[key][3]
+    };
   }
 
-  this.onClick = function() {
-    if (!this.selected) {
-      this.selected = true;
-      this.callbackSelected();
+  var questionData = {};
+
+  //Get the arrays for questions and put them in the same configuration as the lake data
+  for(i = 0;i < 21;i++)
+  {
+    var questionValue = document.getElementById("question"+(i+1)).value;
+    questionData[i] = {
+      "questionID":questionValue[0],
+      "answer":questionValue[1],
+      "correct":questionValue[2],
+      "correctResponse":questionValue[3]
     }
-    this.selected = false;
-    this.callbackUnselected();
   }
 
-  this.draw = function() {
-    adjustColor = function(c, adjustment) {
-      c[0] += adjustment[0];
-      c[1] += adjustment[1];
-      c[2] += adjustment[2];
-    }
-    var c = [this.color[0], this.color[1], this.color[2]];
-
-    push();
-    strokeWeight(0);
-    // Draw main box
-    if (this.highlight) {
-      dropShadow(2, 2, 4, "rgba(0, 0, 0, 0.2)");
-      adjustColor(c, this.highlightColor);
-    } else {
-      dropShadow(1, 1, 2, "rgba(0, 0, 0, 0.2)");
-    }
-
-    fill(c[0], c[1], c[2]);
-    rect(this.position.x, this.position.y, this.width, this.height);
-    dropShadow(0, 0, 0, 0);
-
-    // Draw accent bar
-    if (this.selected) {
-      adjustColor(c, this.selectedColor);
-    }
-
-    adjustColor(c, this.accent);
-    fill(c[0], c[1], c[2]);
-    rectMode(CORNERS);
-    rect(this.position.x, this.position.y + this.height * 0.85,
-          this.position.x + this.width, this.position.y + this.height);
-
-    // Draw text
-    textFont("Helvetica");
-    textStyle(BOLD);
-    textSize(this.fontSize);
-    fill(this.fontColor);
-    textAlign(CENTER, CENTER);
-    text(label, this.position.x + this.width / 2, this.position.y + this.height * 0.45);
-
-    pop();
+  //Opens up AJAX for requests and handling
+  if (window.XMLHttpRequest)
+  {
+    // code for modern browsers
+    xmlhttp = new XMLHttpRequest();
+  } else {
+    // code for old IE browsers
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
   }
+
+  //Sets the myJSON to a json object of the regular object for easy transfer
+  var lakeJSON = JSON.stringify(lakeData);
+  var questionJSON = JSON.stringify(questionData);
+
+  //When do stuff
+  xmlhttp.onreadystatechange = function()
+  {
+    if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+    {
+      print(xmlhttp.responseText);
+    }
+  }
+
+  //Do stuff
+  xmlhttp.open("GET", "server_connection.php?lake="+lakeJSON+"&question="+questionJSON, true);
+  xmlhttp.send();
 }
 
 function ServerButton(cornerX, cornerY, width, height, label, callbackSelected, callbackUnselected)
@@ -698,11 +593,13 @@ function ServerButton(cornerX, cornerY, width, height, label, callbackSelected, 
   this.callbackUnselected = callbackUnselected;
 
   if(select('#'+this.label) == null)
-    createElement('div').id(this.label).position(cornerX, cornerY).size(width, height).mousePressed(function(){
+  {
+      createElement('div').id(this.label).position(cornerX, cornerY).size(width, height).mousePressed(function(){
       //Submit data to database if the button at the end of the test is pushed, select for that button
       serverConnect();
       return true;
     });
+  }
   
   this.fontSize = 14;
 
@@ -1198,6 +1095,7 @@ function TextBoxBackground(cornerX, cornerY, width, height, label, callbackSelec
   }
 }
 
+
 function TextChunk(text, fontColor, fontSize, fontName, fontStyle) {
   this.text = text;
   this.fontSize = fontSize;
@@ -1214,7 +1112,7 @@ function TextBoard(cornerX, cornerY, width, height) {
   this.text = [new TextChunk("", "#000000", 12, "Helvetica", BOLD, LEFT)];
 
   this.background = "#FFFFFF";
-  this.accent = "#FFFFFF"
+  this.accent = "#CCCCCC"
 
   this.addText = function(text, fontColor, fontSize, fontName, fontStyle) {
     newText = new TextChunk(text, fontColor, fontSize, fontName, fontStyle);
