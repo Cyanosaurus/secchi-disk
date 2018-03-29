@@ -1,6 +1,7 @@
 <?php
+	include "database.php";
 	//Sets up a new connection to the database with the specified values
-	$con = new mysqli('localhost','secchi','AsAp4U8u','mainevlm_secchi2');
+	$con = new mysqli($MY_HOST, $MY_USERNAME, $MY_PASSWORD, $MY_DATABASE);
 	if (!$con) {
 	    die('Could not connect: ' . mysqli_error($con));
 	}
@@ -21,7 +22,7 @@
 
 		$currentDate = date("Y-m-d");
 
-		$sql = "INSERT INTO `test`(`ID`, `Version`, `Current`, `Date`) VALUES (null, 1, 1,DATE '$currentDate')";
+		$sql = "INSERT INTO `Test`(`ID`, `Version`, `Current`, `Date`) VALUES (null, 1, 1,DATE '$currentDate')";
 
 		if ($con->query($sql) === TRUE)
 		{
@@ -79,7 +80,7 @@
 				};
 
 				//Sets variable for what is going to be parsed in SQL
-				$sql = "INSERT INTO `answer`(`ID`, `QuestionID`, `Answer`, `Correct`, `Index`)
+				$sql = "INSERT INTO `Answer`(`ID`, `QuestionID`, `Answer`, `Correct`, `Index`)
 				VALUES (null, $questionID, '$answer', $correct, $last_id)";
 
 				//Executes the query and if true (successful) it will echo back the success message, otherwise it will give the error.
@@ -93,7 +94,7 @@
 
 				$response = $selected($answer);
 
-				$sql = "INSERT INTO `account_answer`
+				$sql = "INSERT INTO `Account_answer`
 				(`ID`, `QuestionID`, `AccountID`, `TestTID`, `Selected`, `Answer`, `Correct`, `Attempt`, `Corrected`)
 				VALUES (null, $questionID, $accountID, $last_id, $response, '$correctResponse', $correct, 1, 0)";
 				if($con->query($sql) === TRUE)
@@ -124,7 +125,7 @@
 				$attempt = $lakeDatum->attemptsUsed;
 
 				//Sets variable for what is going to be parsed in SQL
-				$sql = "INSERT INTO `reading`(`ID`, `TestID`, `AccountID`, `Reading`, `Generated`, `Lake_type`, `Attempt`)
+				$sql = "INSERT INTO `Reading`(`ID`, `TestID`, `AccountID`, `Reading`, `Generated`, `Lake_type`, `Attempt`)
 				VALUES (null, $testID, $accountID, $reading, $generated, $lakeType, $attempt)";
 
 				//Executes the query and if true (successful) it will echo back the success message, otherwise it will give the error.
@@ -141,7 +142,7 @@
 		{
 			echo "lake values not set";
 		}
-		$sql = "INSERT INTO `test_taken`(`ID`, `TestID`, `AccountID`, `Date`, `Completed`)
+		$sql = "INSERT INTO `Test_taken`(`ID`, `TestID`, `AccountID`, `Date`, `Completed`)
 		VALUES (null, $last_id, $accountID, DATE '$currentDate', 1)";
 		if($con->query($sql) === TRUE)
 		{

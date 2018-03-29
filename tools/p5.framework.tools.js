@@ -563,7 +563,7 @@ function serverConnect()
   }
 
   //Do stuff
-  xmlhttp.open("GET", "server_connection.php?lake="+lakeJSON+"&question="+questionJSON, true);
+  xmlhttp.open("GET", "tools/server_connection.php?lake="+lakeJSON+"&question="+questionJSON, true);
   xmlhttp.send();
 }
 
