@@ -312,10 +312,10 @@ function setup() {
       if (dystrophicPass == 1) {
         introBoard.addText("     Complete");
       }
-      if (TestFinished == "Yes") {
-        introBoard.addText("                    Complete");
-      }
       introBoard.addParagraph();
+      if (TestFinished == "Yes") {
+        introBoard.addText("                                                                                                                                            Complete");
+      }
       introBoard.addParagraph();
       introBoard.addParagraph();
       introBoard.addParagraph();
@@ -1007,7 +1007,7 @@ function() {
 Question1Answer = "D";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question1Answer, function(){});
 simInfo.run();
-if (Question1Answer = "B") {
+if (Question1Answer = "D") {
 this.color=[100,200,300];
 AnswerA.color=[60, 60, 60];
 AnswerB.color=[60, 60, 60];
@@ -1121,6 +1121,12 @@ function() {
 Question2Answer = "B";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question2Answer, function(){});
 simInfo.run();
+if (Question2Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1133,6 +1139,12 @@ function() {
 Question2Answer = "C";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question2Answer, function(){});
 simInfo.run();
+if (Question2Answer = "C") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1145,6 +1157,12 @@ function() {
 Question2Answer = "D";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question2Answer, function(){});
 simInfo.run();
+if (Question2Answer = "D") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1253,6 +1271,12 @@ function() {
 Question3Answer = "B";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question3Answer, function(){});
 simInfo.run();
+if (Question3Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1265,6 +1289,12 @@ function() {
 Question3Answer = "C";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question3Answer, function(){});
 simInfo.run();
+if (Question3Answer = "C") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1277,6 +1307,12 @@ function() {
 Question3Answer = "D";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question3Answer, function(){});
 simInfo.run();
+if (Question3Answer = "D") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1384,6 +1420,12 @@ function() {
 Question4Answer = "B";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question4Answer, function(){});
 simInfo.run();
+if (Question4Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1396,6 +1438,12 @@ function() {
 Question4Answer = "C";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question4Answer, function(){});
 simInfo.run();
+if (Question4Answer = "C") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1408,6 +1456,12 @@ function() {
 Question4Answer = "D";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question4Answer, function(){});
 simInfo.run();
+if (Question4Answer = "D") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1515,6 +1569,12 @@ function() {
 Question5Answer = "B";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question5Answer, function(){});
 simInfo.run();
+if (Question5Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+// AnswerC.color=[60, 60, 60];
+// AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1646,6 +1706,12 @@ function() {
 Question6Answer = "B";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question6Answer, function(){});
 simInfo.run();
+if (Question6Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1658,6 +1724,12 @@ function() {
 Question6Answer = "C";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question6Answer, function(){});
 simInfo.run();
+if (Question6Answer = "C") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1670,6 +1742,12 @@ function() {
 Question6Answer = "D";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question6Answer, function(){});
 simInfo.run();
+if (Question6Answer = "D") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1764,6 +1842,8 @@ this.color=[100,200,300];
 AnswerB.color=[60, 60, 60];
 AnswerC.color=[60, 60, 60];
 AnswerD.color=[60, 60, 60];
+AnswerE.color=[60, 60, 60];
+AnswerF.color=[60, 60, 60];
 }
 },
 function() {
@@ -1777,6 +1857,14 @@ function() {
 Question7Answer = "B";
 simInfo = new TextBox(right-650, bottom-60, 250, 50, "Current Answer: " + Question7Answer, function(){});
 simInfo.run();
+if (Question7Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+AnswerE.color=[60, 60, 60];
+AnswerF.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1789,6 +1877,14 @@ function() {
 Question7Answer = "C";
 simInfo = new TextBox(right-650, bottom-60, 250, 50, "Current Answer: " + Question7Answer, function(){});
 simInfo.run();
+if (Question7Answer = "C") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+AnswerE.color=[60, 60, 60];
+AnswerF.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1801,6 +1897,14 @@ function() {
 Question7Answer = "D";
 simInfo = new TextBox(right-650, bottom-60, 250, 50, "Current Answer: " + Question7Answer, function(){});
 simInfo.run();
+if (Question7Answer = "D") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerE.color=[60, 60, 60];
+AnswerF.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1815,6 +1919,14 @@ function() {
 Question7Answer = "E";
 simInfo = new TextBox(right-650, bottom-60, 250, 50, "Current Answer: " + Question7Answer, function(){});
 simInfo.run();
+if (Question7Answer = "E") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+AnswerF.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1829,6 +1941,14 @@ function() {
 Question7Answer = "F";
 simInfo = new TextBox(right-650, bottom-60, 250, 50, "Current Answer: " + Question7Answer, function(){});
 simInfo.run();
+if (Question7Answer = "F") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+AnswerE.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1938,6 +2058,12 @@ function() {
 Question8Answer = "B";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question8Answer, function(){});
 simInfo.run();
+if (Question8Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1950,6 +2076,12 @@ function() {
 Question8Answer = "C";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question8Answer, function(){});
 simInfo.run();
+if (Question8Answer = "C") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1962,6 +2094,12 @@ function() {
 Question8Answer = "D";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question8Answer, function(){});
 simInfo.run();
+if (Question8Answer = "D") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2051,6 +2189,12 @@ function() {
 Question9Answer = "A";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question9Answer, function(){});
 simInfo.run();
+if (Question9Answer = "A") {
+this.color=[100,200,300];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2063,6 +2207,12 @@ function() {
 Question9Answer = "B";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question9Answer, function(){});
 simInfo.run();
+if (Question9Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2075,6 +2225,12 @@ function() {
 Question9Answer = "C";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question9Answer, function(){});
 simInfo.run();
+if (Question9Answer = "C") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2087,6 +2243,12 @@ function() {
 Question9Answer = "D";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question9Answer, function(){});
 simInfo.run();
+if (Question9Answer = "D") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2176,6 +2338,12 @@ function() {
 Question10Answer = "A";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question10Answer, function(){});
 simInfo.run();
+if (Question10Answer = "A") {
+this.color=[100,200,300];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2188,6 +2356,12 @@ function() {
 Question10Answer = "B";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question10Answer, function(){});
 simInfo.run();
+if (Question10Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+// AnswerC.color=[60, 60, 60];
+// AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2301,6 +2475,12 @@ function() {
 Question11Answer = "A";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question11Answer, function(){});
 simInfo.run();
+if (Question11Answer = "A") {
+this.color=[100,200,300];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+// AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2313,6 +2493,12 @@ function() {
 Question11Answer = "B";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question11Answer, function(){});
 simInfo.run();
+if (Question11Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+// AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2325,6 +2511,12 @@ function() {
 Question11Answer = "C";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question11Answer, function(){});
 simInfo.run();
+if (Question11Answer = "C") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2426,6 +2618,12 @@ function() {
 Question12Answer = "A";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question12Answer, function(){});
 simInfo.run();
+if (Question12Answer = "A") {
+this.color=[100,200,300];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2438,6 +2636,12 @@ function() {
 Question12Answer = "B";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question12Answer, function(){});
 simInfo.run();
+if (Question12Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+// AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2450,6 +2654,12 @@ function() {
 Question12Answer = "C";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question12Answer, function(){});
 simInfo.run();
+if (Question12Answer = "C") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2551,6 +2761,12 @@ function() {
 Question13Answer = "A";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question13Answer, function(){});
 simInfo.run();
+if (Question13Answer = "A") {
+this.color=[100,200,300];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2563,6 +2779,12 @@ function() {
 Question13Answer = "B";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question13Answer, function(){});
 simInfo.run();
+if (Question13Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2575,6 +2797,12 @@ function() {
 Question13Answer = "C";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question13Answer, function(){});
 simInfo.run();
+if (Question13Answer = "C") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2587,6 +2815,12 @@ function() {
 Question13Answer = "D";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question13Answer, function(){});
 simInfo.run();
+if (Question13Answer = "D") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2676,6 +2910,12 @@ function() {
 Question14Answer = "A";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question14Answer, function(){});
 simInfo.run();
+if (Question14Answer = "A") {
+this.color=[100,200,300];
+AnswerB.color=[60, 60, 60];
+// AnswerC.color=[60, 60, 60];
+// AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2688,6 +2928,12 @@ function() {
 Question14Answer = "B";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question14Answer, function(){});
 simInfo.run();
+if (Question14Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+// AnswerC.color=[60, 60, 60];
+// AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2801,6 +3047,12 @@ function() {
 Question15Answer = "A";
 simInfo = new TextBox(right-650, bottom-60, 250, 50, "Current Answer: " + Question15Answer, function(){});
 simInfo.run();
+if (Question15Answer = "A") {
+this.color=[100,200,300];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2813,6 +3065,12 @@ function() {
 Question15Answer = "B";
 simInfo = new TextBox(right-650, bottom-60, 250, 50, "Current Answer: " + Question15Answer, function(){});
 simInfo.run();
+if (Question15Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2825,6 +3083,12 @@ function() {
 Question15Answer = "C";
 simInfo = new TextBox(right-650, bottom-60, 250, 50, "Current Answer: " + Question15Answer, function(){});
 simInfo.run();
+if (Question15Answer = "C") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2837,6 +3101,12 @@ function() {
 Question15Answer = "D";
 simInfo = new TextBox(right-650, bottom-60, 250, 50, "Current Answer: " + Question15Answer, function(){});
 simInfo.run();
+if (Question15Answer = "D") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2926,6 +3196,12 @@ function() {
 Question16Answer = "A";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question16Answer, function(){});
 simInfo.run();
+if (Question16Answer = "A") {
+this.color=[100,200,300];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2938,6 +3214,12 @@ function() {
 Question16Answer = "B";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question16Answer, function(){});
 simInfo.run();
+if (Question16Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+// AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -2950,6 +3232,12 @@ function() {
 Question16Answer = "C";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question16Answer, function(){});
 simInfo.run();
+if (Question16Answer = "C") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -3051,6 +3339,12 @@ function() {
 Question17Answer = "A";
 simInfo = new TextBox(right-650, bottom-40, 250, 50, "Current Answer: " + Question17Answer, function(){});
 simInfo.run();
+if (Question17Answer = "A") {
+this.color=[100,200,300];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -3063,6 +3357,12 @@ function() {
 Question17Answer = "B";
 simInfo = new TextBox(right-650, bottom-40, 250, 50, "Current Answer: " + Question17Answer, function(){});
 simInfo.run();
+if (Question17Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -3075,6 +3375,12 @@ function() {
 Question17Answer = "C";
 simInfo = new TextBox(right-650, bottom-40, 250, 50, "Current Answer: " + Question17Answer, function(){});
 simInfo.run();
+if (Question17Answer = "C") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -3087,6 +3393,12 @@ function() {
 Question17Answer = "D";
 simInfo = new TextBox(right-650, bottom-40, 250, 50, "Current Answer: " + Question17Answer, function(){});
 simInfo.run();
+if (Question17Answer = "D") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -3176,6 +3488,12 @@ function() {
 Question18Answer = "A";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question18Answer, function(){});
 simInfo.run();
+if (Question18Answer = "A") {
+this.color=[100,200,300];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+// AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -3188,6 +3506,12 @@ function() {
 Question18Answer = "B";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question18Answer, function(){});
 simInfo.run();
+if (Question18Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+// AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -3200,6 +3524,12 @@ function() {
 Question18Answer = "C";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question18Answer, function(){});
 simInfo.run();
+if (Question18Answer = "C") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -3301,6 +3631,12 @@ function() {
 Question19Answer = "A";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question19Answer, function(){});
 simInfo.run();
+if (Question19Answer = "A") {
+this.color=[100,200,300];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -3313,6 +3649,12 @@ function() {
 Question19Answer = "B";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question19Answer, function(){});
 simInfo.run();
+if (Question19Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -3325,6 +3667,12 @@ function() {
 Question19Answer = "C";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question19Answer, function(){});
 simInfo.run();
+if (Question19Answer = "C") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -3337,6 +3685,12 @@ function() {
 Question19Answer = "D";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question19Answer, function(){});
 simInfo.run();
+if (Question19Answer = "D") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -3426,6 +3780,12 @@ function() {
 Question20Answer = "A";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question20Answer, function(){});
 simInfo.run();
+if (Question20Answer = "A") {
+this.color=[100,200,300];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -3438,6 +3798,12 @@ function() {
 Question20Answer = "B";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question20Answer, function(){});
 simInfo.run();
+if (Question20Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -3450,6 +3816,12 @@ function() {
 Question20Answer = "C";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question20Answer, function(){});
 simInfo.run();
+if (Question20Answer = "C") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -3462,6 +3834,12 @@ function() {
 Question20Answer = "D";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question20Answer, function(){});
 simInfo.run();
+if (Question20Answer = "D") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
