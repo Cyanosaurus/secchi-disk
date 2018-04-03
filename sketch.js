@@ -436,7 +436,7 @@ function setup() {
       descBoard.addParagraph(5);
       descBoard.addParagraph(5);
       // descBoard.addTab(1);
-      descBoard.addText("The up and down arrows on your keyboard control the movement of the secchi disk. \nThe up arrow moves the disk further into the water, and the down arrow retrieves it.", 240, 18, "Helvetica", BOLD);
+      descBoard.addText("The up and down arrows on your keyboard control the movement of the secchi disk. \nThe down arrow moves the disk further into the water, and the up arrow retrieves it.", 240, 18, "Helvetica", BOLD);
       descUpArrow = new RoundedBox(right-(windowWidth/9), top+(windowHeight/5), 80, 60);
       descDownArrow = new RoundedBox(right-(windowWidth/9), top+1.5*(windowHeight/5), 80, 60);
       descBoard.addParagraph(5);
@@ -954,9 +954,14 @@ function() {
 Question1Answer = "A";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question1Answer, function(){});
 simInfo.run();
+if (Question1Answer = "A") {
+this.color=[100,200,300];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
-// Button Unselected
 }
 );
 
@@ -966,6 +971,12 @@ function() {
 Question1Answer = "B";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question1Answer, function(){});
 simInfo.run();
+if (Question1Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -978,6 +989,12 @@ function() {
 Question1Answer = "C";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question1Answer, function(){});
 simInfo.run();
+if (Question1Answer = "C") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -990,6 +1007,12 @@ function() {
 Question1Answer = "D";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question1Answer, function(){});
 simInfo.run();
+if (Question1Answer = "B") {
+this.color=[100,200,300];
+AnswerA.color=[60, 60, 60];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1080,6 +1103,12 @@ function() {
 Question2Answer = "A";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question2Answer, function(){});
 simInfo.run();
+if (Question2Answer = "A") {
+this.color=[100,200,300];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1206,6 +1235,12 @@ function() {
 Question3Answer = "A";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question3Answer, function(){});
 simInfo.run();
+if (Question3Answer = "A") {
+this.color=[100,200,300];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1331,6 +1366,12 @@ function() {
 Question4Answer = "A";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question4Answer, function(){});
 simInfo.run();
+if (Question4Answer = "A") {
+this.color=[100,200,300];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1456,6 +1497,12 @@ function() {
 Question5Answer = "A";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question5Answer, function(){});
 simInfo.run();
+if (Question5Answer = "A") {
+this.color=[100,200,300];
+AnswerB.color=[60, 60, 60];
+// AnswerC.color=[60, 60, 60];
+// AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1581,6 +1628,12 @@ function() {
 Question6Answer = "A";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question6Answer, function(){});
 simInfo.run();
+if (Question6Answer = "A") {
+this.color=[100,200,300];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1706,6 +1759,12 @@ function() {
 Question7Answer = "A";
 simInfo = new TextBox(right-650, bottom-60, 250, 50, "Current Answer: " + Question7Answer, function(){});
 simInfo.run();
+if (Question7Answer = "A") {
+this.color=[100,200,300];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -1861,6 +1920,12 @@ function() {
 Question8Answer = "A";
 simInfo = new TextBox(right-650, bottom-20, 250, 50, "Current Answer: " + Question8Answer, function(){});
 simInfo.run();
+if (Question8Answer = "A") {
+this.color=[100,200,300];
+AnswerB.color=[60, 60, 60];
+AnswerC.color=[60, 60, 60];
+AnswerD.color=[60, 60, 60];
+}
 },
 function() {
 // Button Unselected
@@ -4276,11 +4341,11 @@ this.disp = function(){
    if(this.hide == false){ // WE DON'T WANT TO DRAW THE DISK IF IT'S HIDDEN
 
      this.dx += .005;
-     var noiz = noise(this.dx);
-     var dTheta = map(noiz, 0, 1, 0, 35);  //UPDATE PERLIN NOISE, HIGHER RANGE GREATER FLUCTUATION
+     var noiz = noise(this.dx/2);
+     var dTheta = map(noiz, 0, .8, 0, 125);  //UPDATE PERLIN NOISE, HIGHER RANGE GREATER FLUCTUATION
 
      this.detheta += .02;
-     var dRadius = map(noiz, 0, 1, 2, 10);
+     var dRadius = map(noiz, 0, 1, 0, 40);
      var changeInDir = createVector(this.P1.x + dRadius*cos(3*this.detheta) , this.P1.y + dRadius*sin(2*this.detheta));
 
      var d0 = dist(this.P0.x, this.P0.y, this.P1.x, this.P1.y);
@@ -4293,9 +4358,9 @@ this.disp = function(){
 
      this.deltaDelta = -.03*this.deltaDepth;
 
-     if(keyIsDown(UP_ARROW) && this.currentDepth < lakeDepth)            // gets input only if the disk is under the limit
+     if(keyIsDown(DOWN_ARROW) && this.currentDepth < lakeDepth)            // gets input only if the disk is under the limit
      	this.deltaDepth += .0005
-     if(keyIsDown(DOWN_ARROW) && this.currentDepth >= 0)                // get input only when the disk is at or above 0
+     if(keyIsDown(UP_ARROW) && this.currentDepth >= 0)                // get input only when the disk is at or above 0
      	this.deltaDepth += -.0005
      if((this.currentDepth >= lakeDepth && this.deltaDepth > 0)|| (this.currentDepth < 0 && this.deltaDepth < 0))     // if the disk is at the limit and is still going up, or below zero and going down, stop it
      	this.deltaDepth = 0;

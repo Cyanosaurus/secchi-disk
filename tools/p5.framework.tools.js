@@ -600,7 +600,7 @@ function ServerButton(cornerX, cornerY, width, height, label, callbackSelected, 
       return true;
     });
   }
-  
+
   this.fontSize = 14;
 
   this.run = function() {
@@ -651,7 +651,7 @@ function AnswerButton(cornerX, cornerY, width, height, label, callbackSelected, 
   this.fontColor = [255, 255, 255];
 
   this.selected = false;
-  this.highlght = false;
+  this.highlight = false;
 
   this.callbackSelected = callbackSelected;
   this.callbackUnselected = callbackUnselected;
@@ -700,7 +700,9 @@ function AnswerButton(cornerX, cornerY, width, height, label, callbackSelected, 
     } else {
     this.selected = false;
     this.callbackUnselected();
-  } }
+  }
+this.draw();
+}
 
   this.draw = function() {
     adjustColor = function(c, adjustment) {
