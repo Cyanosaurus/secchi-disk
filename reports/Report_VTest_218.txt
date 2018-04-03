@@ -1,0 +1,90 @@
+RO-0839	Jim Entwood	Virtual Test #218	05-20-2008	2008	1.22	1.231	-0.011	1.22	1.398	-0.178								
+RO-0839	Jim Entwood	Virtual Test #218	05-20-2008	2008	1.32	1.318	0.002											
+RO-0839	Jim Entwood	Virtual Test #218	05-20-2008	2008	1.49	1.524	-0.034											
+RO-0839	Jim Entwood	Virtual Test #218	05-20-2008	2008	6.77	6.672	0.098	6.77	6.886	-0.116								
+RO-0839	Jim Entwood	Virtual Test #218	05-20-2008	2008	5.2	5.235	-0.035											
+WI-0490	Williams, Scott	Virtual Test #218	05-20-2008	2008	2.9	2.905	-0.0049999999999999											
+WI-0490	Williams, Scott	Virtual Test #218	05-20-2008	2008	1.79	1.797	-0.0069999999999999											
+WI-0490	Williams, Scott	Virtual Test #218	05-20-2008	2008	6.27	6.284	-0.014											
+WI-0490	Williams, Scott	Virtual Test #218	05-20-2008	2008	11.67	11.59	0.08											
+WI-0490	Williams, Scott	Virtual Test #218	05-20-2008	2008	2.35	2.369	-0.019											
+WI-0490	Williams, Scott	Virtual Test #218	05-20-2008	2008	2.57	2.583	-0.013											
+WI-0490	Williams, Scott	Virtual Test #218	05-20-2008	2008	1.82	1.83	-0.01											
+WI-0490	Williams, Scott	Virtual Test #218	05-20-2008	2008	4.96	5.003	-0.043											
+WI-0490	Williams, Scott	Virtual Test #218	05-20-2008	2008	9.97	9.912	0.058											
+WI-0490	Williams, Scott	Virtual Test #218	05-20-2008	2008	2.93	2.9	0.03											
+WI-0490	Williams, Scott	Virtual Test #218	05-20-2008	2008	1.68	1.703	-0.023											
+WI-0490	Williams, Scott	Virtual Test #218	05-20-2008	2008	1.84	1.863	-0.023											
+WI-0490	Williams, Scott	Virtual Test #218	05-20-2008	2008	6.6	6.606	-0.0060000000000002											
+WI-0490	Williams, Scott	Virtual Test #218	05-20-2008	2008	10.82	10.846	-0.026											
+JE-2082	Jennings, Richard	Virtual Test #218	05-20-2008	2008	2.8	2.803	-0.0030000000000001											
+JE-2082	Jennings, Richard	Virtual Test #218	05-20-2008	2008	2.02	2.026	-0.0059999999999998											
+JE-2082	Jennings, Richard	Virtual Test #218	05-20-2008	2008	2.91	2.92	-0.0099999999999998											
+JE-2082	Jennings, Richard	Virtual Test #218	05-20-2008	2008	4.5	4.508	-0.008											
+JE-2082	Jennings, Richard	Virtual Test #218	05-20-2008	2008	11.49	11.482	0.0080000000000009											
+WE-0859	Wetzel, Lew	Virtual Test #218	05-20-2008	2008	11.72	11.627	0.093	11.72	11.617	0.103								
+WE-0859	Wetzel, Lew	Virtual Test #218	05-20-2008	2008	2	2.003	-0.0030000000000001											
+WE-0859	Wetzel, Lew	Virtual Test #218	05-20-2008	2008	2.26	2.285	-0.025											
+WE-0859	Wetzel, Lew	Virtual Test #218	05-20-2008	2008	1.91	1.932	-0.022											
+WE-0859	Wetzel, Lew	Virtual Test #218	05-20-2008	2008	4.58	4.564	0.016											
+WE-0859	Wetzel, Lew	Virtual Test #218	05-20-2008	2008	11.81	11.725	0.085000000000001											
+PA-0836	Payne, Elizabeth	Virtual Test #218	05-20-2008	2008	1.96	1.968	-0.008											
+PA-0836	Payne, Elizabeth	Virtual Test #218	05-20-2008	2008	2.37	2.389	-0.019											
+PA-0836	Payne, Elizabeth	Virtual Test #218	05-20-2008	2008	1.64	1.648	-0.008											
+PA-0836	Payne, Elizabeth	Virtual Test #218	05-20-2008	2008	6.49	6.494	-0.0039999999999996											
+PA-0836	Payne, Elizabeth	Virtual Test #218	05-20-2008	2008	4.66	4.667	-0.0069999999999997											
+vaux	Vaux, Peter	Virtual Test #218	05-20-2008	2008	1.07	1.078	-0.008											
+vaux	Vaux, Peter	Virtual Test #218	05-20-2008	2008	1.12	1.116	0.004											
+vaux	Vaux, Peter	Virtual Test #218	05-20-2008	2008	1.42	1.43	-0.01											
+vaux	Vaux, Peter	Virtual Test #218	05-20-2008	2008	4.74	4.735	0.0049999999999999											
+vaux	Vaux, Peter	Virtual Test #218	05-20-2008	2008	8.5	8.506	-0.0060000000000002											
+DI-0588	Dillingham, Mary Jane	Virtual Test #218	05-20-2008	2008	9.33	9.325	0.0050000000000008											
+DI-0588	Dillingham, Mary Jane	Virtual Test #218	05-20-2008	2008	2.17	2.168	0.0019999999999998											
+DI-0588	Dillingham, Mary Jane	Virtual Test #218	05-20-2008	2008	1.49	1.487	0.0029999999999999											
+DI-0588	Dillingham, Mary Jane	Virtual Test #218	05-20-2008	2008	2.23	2.226	0.004											
+DI-0588	Dillingham, Mary Jane	Virtual Test #218	05-20-2008	2008	5.85	5.843	0.0069999999999997											
+DI-0588	Dillingham, Mary Jane	Virtual Test #218	05-20-2008	2008	6.13	6.128	0.0019999999999998											
+BA-0900	Bacon, Linda	Virtual Test #218	05-20-2008	2008	8.27	8.216	0.054											
+BA-0900	Bacon, Linda	Virtual Test #218	05-20-2008	2008	6.26	6.274	-0.014											
+BA-0900	Bacon, Linda	Virtual Test #218	05-20-2008	2008	1.23	1.257	-0.027											
+BA-0900	Bacon, Linda	Virtual Test #218	05-20-2008	2008	1.64	1.644	-0.004											
+BA-0900	Bacon, Linda	Virtual Test #218	05-20-2008	2008	2.06	2.091	-0.031											
+BA-0900	Bacon, Linda	Virtual Test #218	05-20-2008	2008	2.69	2.712	-0.022											
+BA-0900	Bacon, Linda	Virtual Test #218	05-20-2008	2008	1.94	1.961	-0.021											
+BA-0900	Bacon, Linda	Virtual Test #218	05-20-2008	2008	6.79	6.742	0.048	6.79	6.667	0.123								
+BA-0900	Bacon, Linda	Virtual Test #218	05-20-2008	2008	9.87	9.773	0.097											
+CO-0723	Corr, Mary	Virtual Test #218	05-20-2008	2008	2.36	2.314	0.046											
+CO-0723	Corr, Mary	Virtual Test #218	05-20-2008	2008	2.46	2.415	0.045											
+CO-0723	Corr, Mary	Virtual Test #218	05-20-2008	2008	1.93	1.94	-0.01											
+CO-0723	Corr, Mary	Virtual Test #218	05-20-2008	2008	5.13	5.039	0.091											
+CO-0723	Corr, Mary	Virtual Test #218	05-20-2008	2008	8.57	8.486	0.084											
+CO-0105	Cook, James	Virtual Test #218	05-17-2008	2008														
+PO-0901	Potvin, Judy	Virtual Test #218	05-14-2008	2008	1	1.003	-0.0029999999999999											
+PO-0901	Potvin, Judy	Virtual Test #218	05-14-2008	2008	2.85	2.856	-0.0059999999999998											
+PO-0901	Potvin, Judy	Virtual Test #218	05-14-2008	2008	2.56	2.569	-0.0089999999999999											
+PO-0901	Potvin, Judy	Virtual Test #218	05-14-2008	2008	6.82	6.829	-0.0089999999999995											
+PO-0901	Potvin, Judy	Virtual Test #218	05-14-2008	2008	7.32	7.346	-0.026											
+BO-0305	Bouchard, George	Virtual Test #218	05-11-2008	2008	4.55	4.552	-0.0019999999999998	4.55	4.752	-0.202								
+BO-0305	Bouchard, George	Virtual Test #218	05-11-2008	2008	5.51	5.567	-0.057	5.51	0.1	5.41								
+BO-0305	Bouchard, George	Virtual Test #218	05-11-2008	2008	4.55	4.552	-0.0019999999999998	4.55	4.752	-0.202								
+BO-0305	Bouchard, George	Virtual Test #218	05-11-2008	2008	5.51	5.567	-0.057	5.51	0.1	5.41								
+BO-0905	Bouchard, Roy	Virtual Test #218	05-08-2008	2008	4.82	4.759	0.061											
+WI-0490	Williams, Scott	Virtual Test #218	05-08-2008	2008	2.9	2.905	-0.0049999999999999											
+WI-0490	Williams, Scott	Virtual Test #218	05-08-2008	2008	1.79	1.797	-0.0069999999999999											
+WI-0490	Williams, Scott	Virtual Test #218	05-08-2008	2008	6.27	6.284	-0.014											
+WI-0490	Williams, Scott	Virtual Test #218	05-08-2008	2008	11.67	11.59	0.08											
+WI-0490	Williams, Scott	Virtual Test #218	05-08-2008	2008	2.35	2.369	-0.019											
+WI-0490	Williams, Scott	Virtual Test #218	05-08-2008	2008	2.57	2.583	-0.013											
+WI-0490	Williams, Scott	Virtual Test #218	05-08-2008	2008	1.82	1.83	-0.01											
+WI-0490	Williams, Scott	Virtual Test #218	05-08-2008	2008	4.96	5.003	-0.043											
+WI-0490	Williams, Scott	Virtual Test #218	05-08-2008	2008	9.97	9.912	0.058											
+WI-0490	Williams, Scott	Virtual Test #218	05-08-2008	2008	2.93	2.9	0.03											
+WI-0490	Williams, Scott	Virtual Test #218	05-08-2008	2008	1.68	1.703	-0.023											
+WI-0490	Williams, Scott	Virtual Test #218	05-08-2008	2008	1.84	1.863	-0.023											
+WI-0490	Williams, Scott	Virtual Test #218	05-08-2008	2008	6.6	6.606	-0.0060000000000002											
+WI-0490	Williams, Scott	Virtual Test #218	05-08-2008	2008	10.82	10.846	-0.026											
+RO-0839	Jim Entwood	Virtual Test #218	05-08-2008	2008	1.22	1.231	-0.011	1.22	1.398	-0.178								
+RO-0839	Jim Entwood	Virtual Test #218	05-08-2008	2008	1.32	1.318	0.002											
+RO-0839	Jim Entwood	Virtual Test #218	05-08-2008	2008	1.49	1.524	-0.034											
+RO-0839	Jim Entwood	Virtual Test #218	05-08-2008	2008	6.77	6.672	0.098	6.77	6.886	-0.116								
+RO-0839	Jim Entwood	Virtual Test #218	05-08-2008	2008	5.2	5.235	-0.035											

@@ -1,0 +1,95 @@
+HO-0330	Hodsdon, Charles	Virtual Test #224	10-27-2011	2011	8.19	8.137	0.052999999999999											
+HO-0330	Hodsdon, Charles	Virtual Test #224	10-27-2011	2011	11.58	11.496	0.084	11.58	11.476	0.104								
+HO-0330	Hodsdon, Charles	Virtual Test #224	10-27-2011	2011	8.19	8.137	0.052999999999999											
+HO-0330	Hodsdon, Charles	Virtual Test #224	10-27-2011	2011	11.58	11.496	0.084	11.58	11.476	0.104								
+HA-0942	Harte, Norm	Virtual Test #224	09-22-2011	2011	5.47	5.408	0.061999999999999											
+HA-0942	Harte, Norm	Virtual Test #224	09-22-2011	2011	5.95	5.787	0.163	5.95	5.837	0.113								
+VA-2109	Vanpelt, Gary	Virtual Test #224	09-05-2011	2011	6.12	6.025	0.095											
+BU-2235	Burke, Eric	Virtual Test #224	09-01-2011	2011	4.79	4.734	0.056	4.79	0.1	4.69								
+BU-2235	Burke, Eric	Virtual Test #224	09-01-2011	2011	2.78	2.747	0.033											
+BU-2235	Burke, Eric	Virtual Test #224	09-01-2011	2011	2.31	2.27	0.04											
+BU-2235	Burke, Eric	Virtual Test #224	09-01-2011	2011	7.71	7.635	0.075											
+BU-2235	Burke, Eric	Virtual Test #224	09-01-2011	2011	4.67	4.628	0.042											
+BU-2235	Burke, Eric	Virtual Test #224	09-01-2011	2011	2.6	2.595	0.0049999999999999											
+BU-2235	Burke, Eric	Virtual Test #224	09-01-2011	2011	11.86	11.795	0.065											
+BU-2235	Burke, Eric	Virtual Test #224	09-01-2011	2011	6.46	6.377	0.083	6.46	6.357	0.103	6.46	6.347	0.113	6.46	6.337	0.123		
+BU-0863	Burke, Kathy	Virtual Test #224	08-27-2011	2011	5.34	5.306	0.034											
+BU-0863	Burke, Kathy	Virtual Test #224	08-27-2011	2011	4.66	4.664	-0.0039999999999996	4.66	4.504	0.156	4.66	4.484	0.176					
+BR-2329	Bridges, Glen	Virtual Test #224	08-12-2011	2011	1.19	1.182	0.008											
+KU-0269	Kutzen, Dr Barry	Virtual Test #224	08-01-2011	2011														
+BE-0780	Becker, Mike	Virtual Test #224	08-01-2011	2011	1.62	1.63	-0.0099999999999998											
+BE-0780	Becker, Mike	Virtual Test #224	08-01-2011	2011	4.59	4.592	-0.0019999999999998											
+SO-0991	Southwick, Richard	Virtual Test #224	08-01-2011	2011	1.76	1.726	0.034											
+ST-2244	Stillwell, Carl	Virtual Test #224	07-29-2011	2011	6.74	6.741	-0.00099999999999945											
+OF-0234	Offinger, Richard	Virtual Test #224	07-28-2011	2011	8.37	8.372	-0.0020000000000007											
+OF-0234	Offinger, Richard	Virtual Test #224	07-28-2011	2011	10.02	9.925	0.094999999999999											
+AN-2175	Anderson, Bob	Virtual Test #224	07-24-2011	2011	5.87	5.897	-0.027											
+AN-2175	Anderson, Bob	Virtual Test #224	07-24-2011	2011	6.41	6.477	-0.067											
+CH-2384	Chase, Robert	Virtual Test #224	07-14-2011	2011	4.51	4.422	0.088	4.51	4.636	-0.126								
+SU-0095	Susbury, Robert	Virtual Test #224	07-12-2011	2011	5.07	5.045	0.025											
+SO-0990	Southwick, Rebecca	Virtual Test #224	07-12-2011	2011	2.61	2.566	0.044	2.61	2.516	0.094	2.61	2.716	-0.106					
+SO-0990	Southwick, Rebecca	Virtual Test #224	07-12-2011	2011	2.59	2.59	0	2.59	2.5	0.09	2.59	2.54	0.05					
+WA-0700	Wattles, Alden	Virtual Test #224	07-12-2011	2011	4.67	4.617	0.053											
+WA-0700	Wattles, Alden	Virtual Test #224	07-12-2011	2011	5.37	5.081	0.289	5.37	4.895	0.475	5.37	5.171	0.199					
+WA-0700	Wattles, Alden	Virtual Test #224	07-12-2011	2011	5.3	5.141	0.159	5.3	5.175	0.125	5.3	5.595	-0.295					
+WA-0700	Wattles, Alden	Virtual Test #224	07-12-2011	2011	4.58	4.727	-0.147											
+WA-0449	Wattles, Ann	Virtual Test #224	07-12-2011	2011	4.95	5.001	-0.051	4.95	0.13	4.82								
+CH-2385	Chase, Joan	Virtual Test #224	07-12-2011	2011	4.64	4.56	0.08											
+LA-0997	Labbe, Mark	Virtual Test #224	07-09-2011	2011	9.37	9.282	0.087999999999999											
+PO-2037	Poulin, Christain	Virtual Test #224	07-09-2011	2011	5.44	5.341	0.099											
+WE-2138	Webb, Kenneth	Virtual Test #224	07-06-2011	2011	5.78	5.784	-0.0039999999999996											
+VO-2373	Volpe, Dennis	Virtual Test #224	07-05-2011	2011	4.75	4.744	0.0060000000000002											
+MU-2369	Muir-Volpe, Leslie	Virtual Test #224	07-05-2011	2011	5.94	5.931	0.0090000000000003											
+BE-2346	Bell, Mary Ellen	Virtual Test #224	06-30-2011	2011	10.63	10.534	0.096											
+DA-2356	Davis, Julia	Virtual Test #224	06-29-2011	2011	5.33	5.251	0.079	5.33	5.101	0.229								
+DA-2356	Davis, Julia	Virtual Test #224	06-29-2011	2011	5.66	5.573	0.087	5.66	5.499	0.161	5.66	5.344	0.316					
+EL-2068	Eland, Susan	Virtual Test #224	06-28-2011	2011	6.39	6.388	0.0019999999999998											
+RI-1266	Richardson, Donald	Virtual Test #224	06-24-2011	2011	2.14	2.142	-0.0019999999999998											
+RI-1266	Richardson, Donald	Virtual Test #224	06-24-2011	2011	2.17	2.174	-0.004											
+RI-1266	Richardson, Donald	Virtual Test #224	06-24-2011	2011	1.77	1.796	-0.026											
+RI-1266	Richardson, Donald	Virtual Test #224	06-24-2011	2011	4.02	4.024	-0.0040000000000004											
+RI-1266	Richardson, Donald	Virtual Test #224	06-24-2011	2011	10.2	10.24	-0.040000000000001											
+HO-0551	Holland, Jack	Virtual Test #224	06-20-2011	2011	4.37	4.285	0.085											
+CA-2166	Carey, Carol	Virtual Test #224	06-17-2011	2011	1.9	1.907	-0.0070000000000001											
+CA-2166	Carey, Carol	Virtual Test #224	06-17-2011	2011	1.91	1.912	-0.002											
+CA-2166	Carey, Carol	Virtual Test #224	06-17-2011	2011	1.24	1.241	-0.0010000000000001											
+CA-2166	Carey, Carol	Virtual Test #224	06-17-2011	2011	6.58	6.582	-0.0019999999999998											
+CA-2166	Carey, Carol	Virtual Test #224	06-17-2011	2011	8.15	8.086	0.064	8.15	8.357	-0.207								
+AP-1241	Appleby, Penny	Virtual Test #224	06-15-2011	2011	5.59	5.598	-0.008											
+TR-2289	Trask, Elwood	Virtual Test #224	06-14-2011	2011	4.86	4.854	0.0060000000000002											
+CH-0564	Chamberlain, Allen	Virtual Test #224	06-14-2011	2011	1.8	1.809	-0.0089999999999999											
+CH-0564	Chamberlain, Allen	Virtual Test #224	06-14-2011	2011	1.74	1.744	-0.004											
+CH-0564	Chamberlain, Allen	Virtual Test #224	06-14-2011	2011	7.65	7.658	-0.008											
+CH-0564	Chamberlain, Allen	Virtual Test #224	06-14-2011	2011	1.11	1.118	-0.008											
+CH-0564	Chamberlain, Allen	Virtual Test #224	06-14-2011	2011	6.53	6.535	-0.0049999999999999	6.53	6.355	0.175	6.53	0.1	6.43					
+WH-0176	White, Ralph	Virtual Test #224	06-13-2011	2011	6.87	6.815	0.055											
+TR-0322	Tranchemontagne, Jackie	Virtual Test #224	06-12-2011	2011	5.59	5.597	-0.0070000000000006											
+TR-0321	Tranchemontagne, George	Virtual Test #224	06-12-2011	2011	6.87	6.802	0.068000000000001											
+BU-0512	Buchanan, Bill	Virtual Test #224	06-12-2011	2011	6.8	6.802	-0.0019999999999998											
+KR-0739	Kramer, Bob	Virtual Test #224	06-09-2011	2011	6.65	6.646	0.0040000000000004											
+BU-0513	Buchanan, Nicole	Virtual Test #224	06-08-2011	2011	4.22	4.145	0.075											
+JA-2385	Jackson, Laurel	Virtual Test #224	06-06-2011	2011	4.64	4.647	-0.0070000000000006	4.64	4.982	-0.342								
+JA-2385	Jackson, Laurel	Virtual Test #224	06-06-2011	2011	6.33	6.269	0.061											
+LA-0274	Laskey, John	Virtual Test #224	06-03-2011	2011	6.58	6.583	-0.0030000000000001											
+LA-0274	Laskey, John	Virtual Test #224	06-03-2011	2011	6.96	6.877	0.083											
+RE-2136	True, Rob	Virtual Test #224	06-03-2011	2011	2.61	2.614	-0.004											
+RE-2136	True, Rob	Virtual Test #224	06-03-2011	2011	2.89	2.896	-0.0059999999999998											
+RE-2136	True, Rob	Virtual Test #224	06-03-2011	2011	2.37	2.373	-0.0030000000000001											
+RE-2136	True, Rob	Virtual Test #224	06-03-2011	2011	4.34	4.347	-0.0070000000000006											
+RE-2136	True, Rob	Virtual Test #224	06-03-2011	2011	7.85	7.851	-0.0010000000000003											
+RE-2136	True, Rob	Virtual Test #224	06-03-2011	2011	1.77	1.778	-0.008											
+RE-2136	True, Rob	Virtual Test #224	06-03-2011	2011	1.58	1.6	-0.02											
+RE-2136	True, Rob	Virtual Test #224	06-03-2011	2011	1.53	1.537	-0.0069999999999999											
+RE-2136	True, Rob	Virtual Test #224	06-03-2011	2011	6.18	6.133	0.047	6.18	0.1	6.08								
+RE-2136	True, Rob	Virtual Test #224	06-03-2011	2011	6.62	6.621	-0.0010000000000003											
+WH-2384	Wade, Tim	Virtual Test #224	06-02-2011	2011	11.17	11.124	0.045999999999999	11.17	11.07	0.1	11.17	11.06	0.11					
+WH-2384	Wade, Tim	Virtual Test #224	06-02-2011	2011	2.42	2.413	0.0070000000000001											
+RE-0230	Reid, Dr William	Virtual Test #224	06-01-2011	2011	4.83	4.825	0.0049999999999999											
+LA-2314	Lahaye, Christina	Virtual Test #224	05-31-2011	2011	5.13	5.085	0.045											
+LA-2314	Lahaye, Christina	Virtual Test #224	05-31-2011	2011	5.31	5.3	0.0099999999999998	5.31	5.537	-0.227	5.31	0.1	5.21					
+LA-2314	Lahaye, Christina	Virtual Test #224	05-31-2011	2011	5.13	5.085	0.045											
+LA-2314	Lahaye, Christina	Virtual Test #224	05-31-2011	2011	5.31	5.3	0.0099999999999998	5.31	5.537	-0.227	5.31	0.1	5.21					
+CO-0723	Corr, Mary	Virtual Test #224	05-30-2011	2011	2.62	2.63	-0.0099999999999998											
+WI-2292	Windsor, Michele	Virtual Test #224	05-28-2011	2011	5.43	5.354	0.076											
+RY-0003	Ryan, Mary	Virtual Test #224	05-27-2011	2011	4.28	4.219	0.061											
+LA-0979	Labbe, Michelle	Virtual Test #224	05-27-2011	2011	8.82	8.822	-0.0019999999999989											
