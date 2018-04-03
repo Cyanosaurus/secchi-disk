@@ -3556,28 +3556,19 @@ if (Question21Answer != "Type an Answer.") {
 );
 
 //Test Finished Screen
-<<<<<<< HEAD
-scenes.addScene(new Scene(windowWidth, windowHeight*2,
-=======
+
 scenes.addScene(new Scene(windowWidth, windowHeight*1.8,
->>>>>>> eb66e2476daf80127638e7e5a4adae9745b4a82f
+
     function() {
 
       var left = windowWidth / 12;
       var right = windowWidth - left;
       var top = windowHeight / 12;
       var bottom = windowHeight*1.5;
-
       var Question1Conclusion, Question2Conclusion, Question3Conclusion, Question4Conclusion, Question5Conlusion, Question6Conclusion, Question7Conclusion, Question8Conclusion, Question9Conclusion, Question10Conclusion, Question11Conclusion, Question12Conclusion, Question13Conclusion, Question14Conclusion, Question15Conclusion, Question16Conclusion, Question17Conclusion, Question18Conclusion, Question19Conclusion, Question20Conclusion, Question21Conclusion;
       var numCorrect = 0;
-
       if (Question1Answer == Question1Key) {
         Question1Conclusion = "Correct";
-<<<<<<< HEAD
-        numCorrect++;
-      } else {
-        Question1Conclusion = "Incorrect";
-=======
         createDiv().hide().id("question1").value([
             1,
             Question1Answer,
@@ -3593,7 +3584,6 @@ scenes.addScene(new Scene(windowWidth, windowHeight*1.8,
             0,
             Question1Key
           ]);
->>>>>>> 6c131a015c0415f575f997aa4aef40306e09fba1
       }
 
       if (Question2Answer == Question2Key) {
@@ -3882,13 +3872,7 @@ scenes.addScene(new Scene(windowWidth, windowHeight*1.8,
       }
 
       if (Question17Answer == Question17Key) {
-<<<<<<< HEAD
         Question17Conclusion = "Correct";
-        numCorrect++;
-      } else {
-        Question17Conclusion = "Incorrect";
-=======
-        Question1Conclusion = "Correct";
         createDiv().hide().id("question17").value([
             17,
             Question17Answer,
@@ -3904,7 +3888,6 @@ scenes.addScene(new Scene(windowWidth, windowHeight*1.8,
             0,
             Question17Key
           ]);
->>>>>>> 6c131a015c0415f575f997aa4aef40306e09fba1
       }
 
       if (Question18Answer == Question18Key) {
@@ -4053,6 +4036,7 @@ scenes.addScene(new Scene(windowWidth, windowHeight*1.8,
         },
         function() {}
       );
+
       introStartDysProd.fontSize = 14;
     },
     function() {
@@ -4386,4 +4370,5 @@ function RoundedBox(cornerX, cornerY, width, height)
       triangle(cornerX+(width/4), cornerY+(2*(height/3)), cornerX+(width/2), cornerY+(height/4), cornerX+(3*(width/4)), cornerY+(2*(height/3)));
       fill("white");
   }
+}
 }
