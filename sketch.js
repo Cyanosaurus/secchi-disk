@@ -217,18 +217,37 @@ var animationY;
 
 
 var clearLake;
-var intermediateLake;            //For using images in the future
+var clearLakeFinal;
+var intermediateLake;     
+var intermediateLakeFinal;       //For using images in the future
 var productiveLake;
+var productiveLakeFinal;
 var dystrophicLake;
+var dystrophicLakeFinal;
 var dystrophicProductiveLake;
+var dystrophicProductiveLakeFinal;
+var tapepic1;
+var tapepic2;
+var secchiReadings;
+var secchiSkyPerson;
+var secchiSolo;
+var secchiDisk;
+var manWithSecchi;
+
 
 function preload() {
     clearLake = loadImage('libraries/clearLake.png');
+    clearLakeFinal = loadImage('libraries/clearFinal.png');
     intermediateLake = loadImage('libraries/intermediateLake.png');
+    intermediateLakeFinal = loadImage('libraries/intermediateFinal.png');
     productiveLake = loadImage('libraries/productiveLake.png');
+    productiveLakeFinal = loadImage('libraries/productiveFinal.png');
     dystrophicLake = loadImage('libraries/dystrophicLake.png');
+    dystrophicLakeFinal = loadImage('libraries/dystrophicFinal.png');
     dystrophicProductiveLake = loadImage('libraries/dystrophicProductiveLake.png');
+    dystrophicProductiveLakeFinal = loadImage('libraries/dystrophicProductiveFinal.png');
 }
+
 
 function setup() {
 
@@ -771,12 +790,21 @@ function setup() {
       push();
 
       //lake background
-      fill(lakeColor);
-      noStroke();
-      rect(animationWindowX, animationWindowY, animationWindowW, animationWindowH);
-      fill(255,255,255,100);
-      noStroke();
-      rect(animationWindowX, animationWindowY, animationWindowW, animationWindowH/12);
+      if (lakeType == "Clear") {
+          image(clearLakeFinal, animationWindowX, animationWindowY);
+        }
+        if (lakeType == "Intermediate") {
+          image(intermediateLakeFinal, animationWindowX, animationWindowY-1);
+        }
+        if (lakeType == "Productive"){
+          image(productiveLakeFinal, animationWindowX, animationWindowY-1);
+        }
+        if (lakeType == "Dystrophic") {
+          image(dystrophicLakeFinal, animationWindowX, animationWindowY-1);
+        }
+        if (lakeType == "Dystrophic Productive") {
+          image(dystrophicProductiveLakeFinal, animationWindowX, animationWindowY-1);
+        }
       //green area
       fill(100,255,100,200);
       rect(animationWindowX, upperToleranceY, animationWindowW, greenZone);
