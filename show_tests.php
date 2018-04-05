@@ -99,7 +99,7 @@ $alert_text = "";				//Message User, if Any
 
 
 					echo "<center>Complete the test and take a Secchi Disk reading.<br />Your most recent reading and test will be used to certify you.</center>";
-					echo "<br /><center><form action='secchi-disk_v2/index.html' method='post'>".form_hidden("TestID",$TestID).form_hidden("TestTID",$TestTID).form_submit("Start Test")."</form></center>";
+					echo "<br /><center><form action='take_test.php' method='post'>".form_hidden("TestID",$TestID).form_hidden("TestTID",$TestTID).form_submit("Start Test")."</form></center>";
 				} 
 
 				//Secchi simulator lnk
@@ -156,7 +156,7 @@ $alert_text = "";				//Message User, if Any
 						echo "<center><br />Your most recent reading and test will be used to certify you.  You have not taken a reading for your lake type yet.</center><br />";
 					}
 				}
-				echo "<form action='secchi-disk_v2/index.html' method='POST'>\n";
+				echo "<form action='disk.php' method='POST'>\n";
 				echo "<center>\n";
 				if ( $row_count > 0 || $testTaken ) { echo "<br />" . form_submit("Go to Disk Simulator"); }
 				echo "</center></form>\n";

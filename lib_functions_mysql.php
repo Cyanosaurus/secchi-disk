@@ -15,7 +15,7 @@ function mysql_get($query)
 	//Login/DB information
     $server = "localhost";
 	$login  = "secchi";//"mainevlm_dbuser2";
-	$pass   = 'AsAp4U8u';//wxqsLAxqRHzdbjxV7ncLmqZ8";
+	$pass   = "AsAp4U8u";//"wxqsLAxqRHzdbjxV7ncLmqZ8";
 	# $dbname = "mainevlm_recertify";
 	$dbname = "mainevlm_secchi2";
 
