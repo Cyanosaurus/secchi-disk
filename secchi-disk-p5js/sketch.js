@@ -315,14 +315,14 @@ function setup() {
     introStartDysProd.fontColor = color(0);
     introStartDysProd.fontSize = 14;
 
-    homeButton = new Button(1000, 275, 110, 30, "Home",
+    homeButton = new Button(1000, 515, 110, 30, "Home",
         function()
         {
           window.location.href = '../show_tests.php?';
         }
       );
 
-    helpButton = new Button(1000, 515, 160, 30, "How To Use Simulator",
+    helpButton = new Button(1000, 275, 160, 30, "How To Use Simulator",
         function()
         {
           secondHelp = true;
