@@ -1,0 +1,180 @@
+RO-0839	Entwood, Jim	Virtual Test #222	01-26-2011	2011	6.58	6.595	-0.015	6.58	6.701	-0.121								
+GR-0741	Arsenault, Beth	Virtual Test #222	12-10-2010	2010	1.08	1.083	-0.0029999999999999											
+GR-0741	Arsenault, Beth	Virtual Test #222	12-10-2010	2010	1.01	1.019	-0.0089999999999999											
+GR-0741	Arsenault, Beth	Virtual Test #222	12-10-2010	2010	2.64	2.632	0.008											
+GR-0741	Arsenault, Beth	Virtual Test #222	12-10-2010	2010	5.76	5.767	-0.0070000000000006											
+GR-0741	Arsenault, Beth	Virtual Test #222	12-10-2010	2010	5.48	5.488	-0.008											
+ST-0094	Strandberg, Chuck	Virtual Test #222	10-27-2010	2010	7.42	7.35	0.07											
+WE-0927	Wedin, John	Virtual Test #222	10-15-2010	2010	7.1	7.022	0.077999999999999											
+test	Test, Account	Virtual Test #222	08-30-2010	2010	11.96	11.865	0.095000000000001	11.96	11.845	0.115	11.96	12.157	-0.197	11.96	11.444	0.516		
+AR-0504	Arnold, Martin	Virtual Test #222	08-25-2010	2010	6.09	6.1	-0.0099999999999998											
+CH-0289	Chapman, Charles	Virtual Test #222	08-23-2010	2010	6.71	6.622	0.088											
+MO-0644	Motley, Susan	Virtual Test #222	08-20-2010	2010	2.25	2.246	0.004											
+MO-0644	Motley, Susan	Virtual Test #222	08-20-2010	2010	7.72	7.652	0.068											
+MO-0644	Motley, Susan	Virtual Test #222	08-20-2010	2010	2.22	2.23	-0.0099999999999998											
+MO-0644	Motley, Susan	Virtual Test #222	08-20-2010	2010	2.12	2.103	0.017											
+TA-0574	Taylor, Rob	Virtual Test #222	08-18-2010	2010	1.59	1.593	-0.0029999999999999											
+BU-2148	Burson, Malcolm	Virtual Test #222	08-09-2010	2010	6.21	6.204	0.0060000000000002											
+WH-0099	Wheeler, Paula	Virtual Test #222	08-06-2010	2010	6.9	6.906	-0.0059999999999993											
+VO-2033	Voigt, Herman	Virtual Test #222	07-30-2010	2010	5.31	5.258	0.052											
+SO-0991	Southwick, Richard	Virtual Test #222	07-29-2010	2010	2.53	2.521	0.0089999999999999											
+SO-0990	Southwick, Rebecca	Virtual Test #222	07-28-2010	2010	2.75	2.702	0.048	2.75	2.698	0.052								
+SO-0990	Southwick, Rebecca	Virtual Test #222	07-28-2010	2010	1.22	1.211	0.0089999999999999											
+RE-0230	Reid, Dr William	Virtual Test #222	07-25-2010	2010	8.99	8.893	0.097											
+RE-0230	Reid, Dr William	Virtual Test #222	07-25-2010	2010	6.52	6.462	0.058											
+TH-0517	Thoits, Peter	Virtual Test #222	07-24-2010	2010	5.37	5.371	-0.0010000000000003											
+PL-2066	Plummer, John	Virtual Test #222	07-23-2010	2010	6.26	6.194	0.066											
+HA-1255	Haugen, Elin	Virtual Test #222	07-19-2010	2010	6.82	6.829	-0.0089999999999995	6.82	6.699	0.121								
+ST-2244	Stillwell, Carl	Virtual Test #222	07-13-2010	2010	8.04	8.047	-0.0070000000000014											
+CA-2296	Cayer, Richard	Virtual Test #222	07-12-2010	2010														
+FI-0053	Fischer, Peter	Virtual Test #222	07-04-2010	2010	6.23	6.233	-0.0029999999999992											
+FI-0053	Fischer, Peter	Virtual Test #222	07-04-2010	2010	4.72	4.73	-0.010000000000001											
+BO-0305	Bouchard, George	Virtual Test #222	07-04-2010	2010	10.19	10.099	0.090999999999999											
+BO-0305	Bouchard, George	Virtual Test #222	07-04-2010	2010	10.14	10.052	0.088000000000001	10.14	10.022	0.118								
+SC-0033	Schooley, John	Virtual Test #222	06-29-2010	2010	6.96	6.959	0.0010000000000003	6.96	6.859	0.101	6.96	6.833	0.127	6.96	6.763	0.197		
+RA-2279	Rawinski, Renee	Virtual Test #222	06-29-2010	2010	8.16	8.158	0.0020000000000007											
+GA-0951	Gameros, Jim	Virtual Test #222	06-27-2010	2010	9.27	9.307	-0.037000000000001											
+GA-0951	Gameros, Jim	Virtual Test #222	06-27-2010	2010	8.74	8.768	-0.028											
+BA-0480	Bannen, Tom	Virtual Test #222	06-25-2010	2010	6.93	6.92	0.0099999999999998	6.93	6.796	0.134	6.93	6.786	0.144					
+WE-2138	Webb, Kenneth	Virtual Test #222	06-25-2010	2010	4.5	4.527	-0.027											
+WE-2138	Webb, Kenneth	Virtual Test #222	06-25-2010	2010	6.7	6.749	-0.048999999999999	6.7	6.569	0.131								
+WE-2138	Webb, Kenneth	Virtual Test #222	06-25-2010	2010	10.04	10.056	-0.016	10.04	9.866	0.174	10.04	9.757	0.283	10.04	9.885	0.155		
+GU-2088	Guerette, Christine	Virtual Test #222	06-24-2010	2010	1.62	1.621	-0.00099999999999989											
+KA-2299	Kalloch, Audrey	Virtual Test #222	06-24-2010	2010	5.49	5.398	0.092000000000001											
+MA-0425	Mansfield, Bill	Virtual Test #222	06-22-2010	2010	6.02	5.956	0.063999999999999											
+BA-2061	Bartosch, Bill	Virtual Test #222	06-18-2010	2010	4.36	4.388	-0.028											
+BA-2061	Bartosch, Bill	Virtual Test #222	06-18-2010	2010	5.15	5.114	0.036											
+PR-0475	Preble, Waldo	Virtual Test #222	06-17-2010	2010	9.71	9.647	0.063000000000001	9.71	9.607	0.103								
+PR-0475	Preble, Waldo	Virtual Test #222	06-17-2010	2010	6.21	6.131	0.079	6.21	6.069	0.141	6.21	6.027	0.183					
+BR-2329	Bridges, Glen	Virtual Test #222	06-17-2010	2010	2.38	2.412	-0.032											
+BR-2329	Bridges, Glen	Virtual Test #222	06-17-2010	2010	6.31	6.08	0.23	6.31	6.043	0.267	6.31	6.023	0.287					
+BR-2329	Bridges, Glen	Virtual Test #222	06-17-2010	2010	6.53	5.908	0.622	6.53	5.878	0.652	6.53	5.808	0.722	6.53	5.394	1.136		
+SC-2247	Scholz, John	Virtual Test #222	06-15-2010	2010	5.19	5.187	0.0030000000000001											
+GR-2270	Greene, Thomas	Virtual Test #222	06-15-2010	2010	5.99	5.943	0.047000000000001											
+GR-2270	Greene, Thomas	Virtual Test #222	06-15-2010	2010	6.6	6.503	0.097											
+CA-2166	Carey, Carol	Virtual Test #222	06-13-2010	2010	4.16	4.111	0.049											
+CA-2166	Carey, Carol	Virtual Test #222	06-13-2010	2010	4.74	4.653	0.087000000000001	4.74	4.6	0.14	4.74	4.55	0.19	4.74	4.524	0.216		
+OF-0234	Offinger, Richard	Virtual Test #222	06-13-2010	2010	11.75	11.747	0.0030000000000001											
+OF-0234	Offinger, Richard	Virtual Test #222	06-13-2010	2010	7.4	7.41	-0.0099999999999998											
+OF-0234	Offinger, Richard	Virtual Test #222	06-13-2010	2010	10.75	10.755	-0.0050000000000008	10.75	10.635	0.115								
+CL-2344	Clark, Douglas	Virtual Test #222	06-11-2010	2010	6.78	6.693	0.087000000000001											
+CL-2344	Clark, Douglas	Virtual Test #222	06-11-2010	2010	1.91	1.871	0.039											
+GA-2337	Garcia, Kristy	Virtual Test #222	06-10-2010	2010	2.34	2.348	-0.008											
+TR-2160	Tragert, Amy	Virtual Test #222	06-10-2010	2010	5.81	5.811	-0.0010000000000003											
+KA-2274	Kalloch, Norman	Virtual Test #222	06-10-2010	2010	6.71	6.739	-0.029											
+GO-2040	Gobeil, Rosemarie	Virtual Test #222	06-10-2010	2010	6.78	6.784	-0.0039999999999996											
+GO-2040	Gobeil, Rosemarie	Virtual Test #222	06-10-2010	2010	1.36	1.362	-0.002											
+GO-2040	Gobeil, Rosemarie	Virtual Test #222	06-10-2010	2010	1.71	1.711	-0.0010000000000001											
+GO-2040	Gobeil, Rosemarie	Virtual Test #222	06-10-2010	2010	4.69	4.699	-0.0089999999999995											
+GO-2040	Gobeil, Rosemarie	Virtual Test #222	06-10-2010	2010	2.98	2.988	-0.008											
+GO-2040	Gobeil, Rosemarie	Virtual Test #222	06-10-2010	2010	5.43	5.434	-0.0040000000000004	5.43	5.324	0.106								
+GO-2040	Gobeil, Rosemarie	Virtual Test #222	06-10-2010	2010	6.72	6.561	0.159	6.72	6.591	0.129								
+GO-2040	Gobeil, Rosemarie	Virtual Test #222	06-10-2010	2010	8.95	8.859	0.090999999999999											
+GO-0273	Gobeil, Robert	Virtual Test #222	06-10-2010	2010	5.31	5.313	-0.0030000000000001											
+GO-0273	Gobeil, Robert	Virtual Test #222	06-10-2010	2010	1.73	1.732	-0.002											
+GO-0273	Gobeil, Robert	Virtual Test #222	06-10-2010	2010	5.35	5.353	-0.0030000000000001											
+NI-0928	Nicol, Emile	Virtual Test #222	06-09-2010	2010	2.89	2.917	-0.027											
+CH-0564	Chamberlain, Allen	Virtual Test #222	06-09-2010	2010	1.74	1.745	-0.0050000000000001											
+DA-2356	Davis, Julia	Virtual Test #222	06-09-2010	2010	4.55	4.556	-0.0060000000000002											
+WI-0604	Wilcox, John	Virtual Test #222	06-08-2010	2010	5	4.955	0.045											
+WI-0604	Wilcox, John	Virtual Test #222	06-08-2010	2010	4.64	4.55	0.09											
+JO-0601	Johnson, Roland	Virtual Test #222	06-07-2010	2010	5.54	5.538	0.0019999999999998	5.54	4.897	0.643	5.54	5.648	-0.108					
+BE-0202	Bell, Dick	Virtual Test #222	06-06-2010	2010	11.94	11.93	0.0099999999999998	11.94	11.648	0.292	11.94	11.787	0.153					
+TU-0295	Turner, Charles	Virtual Test #222	06-02-2010	2010	6.3	6.393	-0.093											
+OU-0943	Ouellette, Phillip	Virtual Test #222	06-01-2010	2010	4.67	4.662	0.008											
+EM-2192	Emery, Patrick	Virtual Test #222	05-31-2010	2010	1.92	1.939	-0.019											
+EM-2192	Emery, Patrick	Virtual Test #222	05-31-2010	2010	2.38	2.395	-0.015											
+EM-2192	Emery, Patrick	Virtual Test #222	05-31-2010	2010	2.62	2.628	-0.008											
+EM-2192	Emery, Patrick	Virtual Test #222	05-31-2010	2010	5.12	5.087	0.033											
+EM-2192	Emery, Patrick	Virtual Test #222	05-31-2010	2010	8.79	8.707	0.082999999999998											
+AP-1241	Appleby, Penny	Virtual Test #222	05-31-2010	2010	10.55	10.452	0.098000000000001											
+WH-2231	Whitmore, Elizabeth	Virtual Test #222	05-29-2010	2010	4.74	4.763	-0.023											
+FE-2038	Ferrell, Debbie	Virtual Test #222	05-27-2010	2010	1.4	1.397	0.0029999999999999											
+CL-0855	Cloutier, Mike	Virtual Test #222	05-26-2010	2010	11.31	11.311	-0.00099999999999945	11.31	11.201	0.109								
+RO-2144	Rothenberg, Carol	Virtual Test #222	05-25-2010	2010	7.54	7.549	-0.0090000000000003											
+RY-0003	Ryan, Mary	Virtual Test #222	05-25-2010	2010	5.71	5.655	0.055											
+CO-0723	Corr, Mary	Virtual Test #222	05-24-2010	2010	1.51	1.522	-0.012											
+SU-0095	Susbury, Robert	Virtual Test #222	05-23-2010	2010	4.65	4.615	0.035											
+DI-0226	Dionne, Steve	Virtual Test #222	05-22-2010	2010	5.38	5.315	0.065	5.38	5.275	0.105								
+BU-0759	Burgess, John	Virtual Test #222	05-20-2010	2010	10.07	10.127	-0.057											
+BU-0759	Burgess, John	Virtual Test #222	05-20-2010	2010	9.11	8.892	0.218	9.11	8.41	0.7	9.11	8.35	0.76	9.11	8.158	0.952		
+BU-0759	Burgess, John	Virtual Test #222	05-20-2010	2010	11.95	10.714	1.236	11.95	9.215	2.735	11.95	10.656	1.294	11.95	11.325	0.625		
+LI-0998	Lingwood, Eldin	Virtual Test #222	05-19-2010	2010	6.4	6.408	-0.008											
+WI-2292	Windsor, Michele	Virtual Test #222	05-18-2010	2010	5.58	5.601	-0.021											
+MA-1292	Mahaffey, Connie	Virtual Test #222	05-17-2010	2010	7.66	7.676	-0.016											
+MA-1292	Mahaffey, Connie	Virtual Test #222	05-17-2010	2010	4.23	4.246	-0.016											
+KE-2106	Kersbergen, Rick	Virtual Test #222	05-16-2010	2010	2.97	2.968	0.0020000000000002											
+LI-2328	Lind, David	Virtual Test #222	05-13-2010	2010	1.08	1.089	-0.0089999999999999											
+MC-2282	McLane, Shawn	Virtual Test #222	05-13-2010	2010	7.67	7.612	0.058											
+MC-2282	McLane, Shawn	Virtual Test #222	05-13-2010	2010	11.48	11.38	0.1	11.48	11.35	0.13	11.48	11.126	0.354					
+TR-2289	Trask, Elwood	Virtual Test #222	05-12-2010	2010	5.73	5.739	-0.0089999999999995											
+KR-0739	Kramer, Bob	Virtual Test #222	05-11-2010	2010	8.34	8.336	0.0039999999999996											
+KR-0739	Kramer, Bob	Virtual Test #222	05-11-2010	2010	4.38	4.378	0.0019999999999998											
+DO-0329	Dolbec, Pat	Virtual Test #222	05-08-2010	2010	11.25	11.168	0.082000000000001											
+DO-0329	Dolbec, Pat	Virtual Test #222	05-08-2010	2010	8.87	8.803	0.066999999999998											
+SE-0174	Sekera, Todd	Virtual Test #222	05-07-2010	2010	1.48	1.478	0.002											
+SE-0174	Sekera, Todd	Virtual Test #222	05-07-2010	2010	8.15	8.15	0											
+SE-0174	Sekera, Todd	Virtual Test #222	05-07-2010	2010	5.02	5.016	0.0039999999999996											
+EA-0081	Eastman, Bruce	Virtual Test #222	05-06-2010	2010	4.56	4.556	0.0039999999999996											
+HO-0141	Hodsdon, Kenneth	Virtual Test #222	05-06-2010	2010	1.6	1.622	-0.022											
+HO-0141	Hodsdon, Kenneth	Virtual Test #222	05-06-2010	2010	7.48	7.392	0.088											
+LA-2314	Lahaye, Christina	Virtual Test #222	05-04-2010	2010	4.77	4.774	-0.0040000000000004											
+CH-2224	Chase, Jen	Virtual Test #222	05-04-2010	2010	6.38	6.373	0.0069999999999997											
+FA-1262	Facciolo, Megan	Virtual Test #222	05-04-2010	2010	6.36	6.37	-0.0099999999999998											
+FA-1262	Facciolo, Megan	Virtual Test #222	05-04-2010	2010	5.79	5.791	-0.0010000000000003											
+CL-0965	Clarke, Pete	Virtual Test #222	05-04-2010	2010	2.18	2.161	0.019	2.18	2.121	0.059								
+SW-0096	Swain, Ross	Virtual Test #222	05-03-2010	2010	4.91	4.915	-0.0049999999999999											
+BR-2202	Brettler, Matthew	Virtual Test #222	05-03-2010	2010	6.85	6.86	-0.010000000000001	6.85	6.969	-0.119								
+TI-2204	Timmins, Jim	Virtual Test #222	05-03-2010	2010	9.94	9.842	0.097999999999999											
+PO-2037	Poulin, Christain	Virtual Test #222	05-02-2010	2010	5.8	5.809	-0.0090000000000003											
+MA-0275	Mann, Bill	Virtual Test #222	04-30-2010	2010	6.54	6.529	0.011											
+MA-0275	Mann, Bill	Virtual Test #222	04-30-2010	2010	10.36	10.261	0.099											
+LI-0701	Little, Dana	Virtual Test #222	04-30-2010	2010	6.29	6.286	0.0040000000000004											
+WO-0115	Wood, Stan	Virtual Test #222	04-30-2010	2010	4.06	3.987	0.073											
+WO-0115	Wood, Stan	Virtual Test #222	04-30-2010	2010	5.01	4.963	0.047											
+RO-0539	Rollo, Adrienne	Virtual Test #222	04-30-2010	2010	1.86	1.819	0.041											
+ME-0693	Meyer, Richard	Virtual Test #222	04-30-2010	2010	10.04	9.944	0.095999999999998											
+VA-0402	Valleau, Dana	Virtual Test #222	04-30-2010	2010	7.19	7.109	0.081											
+MC-0157	McClead, Charles	Virtual Test #222	04-28-2010	2010	7.28	7.237	0.043											
+MA-0634	Mathieu, Rene	Virtual Test #222	04-28-2010	2010	6.75	6.753	-0.0030000000000001											
+BR-2306	Greenan, Dick	Virtual Test #222	04-27-2010	2010	6.98	6.883	0.097	6.98	0.1	6.88								
+DE-2302	Derby, George	Virtual Test #222	04-27-2010	2010	9.06	9.013	0.047000000000001											
+SO-0129	Soucy, Cheryl	Virtual Test #222	04-27-2010	2010	5.94	5.933	0.0070000000000006											
+SO-0129	Soucy, Cheryl	Virtual Test #222	04-27-2010	2010	2.9	2.897	0.0030000000000001											
+SO-0129	Soucy, Cheryl	Virtual Test #222	04-27-2010	2010	1.36	1.356	0.004											
+SO-0129	Soucy, Cheryl	Virtual Test #222	04-27-2010	2010	1.78	1.773	0.0070000000000001											
+SO-0129	Soucy, Cheryl	Virtual Test #222	04-27-2010	2010	11.2	11.087	0.113	11.2	10.971	0.229	11.2	11.091	0.109	11.2	11.097	0.103		
+SO-0129	Soucy, Cheryl	Virtual Test #222	04-27-2010	2010	4.96	4.968	-0.008											
+GA-2240	Gaudreau, Larry	Virtual Test #222	04-26-2010	2010	1.78	1.786	-0.006											
+HO-0042	Hodsdon, David	Virtual Test #222	04-26-2010	2010	1.32	1.328	-0.008											
+HO-0042	Hodsdon, David	Virtual Test #222	04-26-2010	2010	5.13	5.039	0.091	5.13	4.949	0.181								
+BA-0037	Bailey, Ken	Virtual Test #222	04-26-2010	2010	4.16	4.08	0.08	4.16	3.99	0.17	4.16	4.02	0.14	4.16	4.04	0.12		
+RE-2136	True, Rob	Virtual Test #222	04-26-2010	2010	1.03	1.043	-0.013											
+RE-2136	True, Rob	Virtual Test #222	04-26-2010	2010	2.62	2.63	-0.0099999999999998											
+RE-2136	True, Rob	Virtual Test #222	04-26-2010	2010	2.87	2.881	-0.011											
+RE-2136	True, Rob	Virtual Test #222	04-26-2010	2010	6.51	6.514	-0.0040000000000004											
+RE-2136	True, Rob	Virtual Test #222	04-26-2010	2010	5.43	5.432	-0.0020000000000007											
+LA-0274	Laskey, John	Virtual Test #222	04-25-2010	2010	5.51	5.518	-0.008	5.51	5.398	0.112								
+BU-2323	Bukata, Joe	Virtual Test #222	04-24-2010	2010	5.33	5.249	0.081											
+BR-0703	Brann, Kendall	Virtual Test #222	04-24-2010	2010	4.82	4.826	-0.0059999999999993											
+HA-0140	Hallowell, Dana	Virtual Test #222	04-24-2010	2010	1.19	1.194	-0.004											
+DU-0876	Duplisea, Debbie	Virtual Test #222	04-23-2010	2010	7.45	7.46	-0.0099999999999998											
+DU-0876	Duplisea, Debbie	Virtual Test #222	04-23-2010	2010	6.26	6.265	-0.0049999999999999											
+DU-0876	Duplisea, Debbie	Virtual Test #222	04-23-2010	2010	5.54	5.55	-0.0099999999999998											
+DU-0876	Duplisea, Debbie	Virtual Test #222	04-23-2010	2010	8.87	8.871	-0.0010000000000012											
+DU-0876	Duplisea, Debbie	Virtual Test #222	04-23-2010	2010	7.45	7.46	-0.0099999999999998											
+DU-0876	Duplisea, Debbie	Virtual Test #222	04-23-2010	2010	6.26	6.265	-0.0049999999999999											
+DU-0876	Duplisea, Debbie	Virtual Test #222	04-23-2010	2010	5.54	5.55	-0.0099999999999998											
+DU-0876	Duplisea, Debbie	Virtual Test #222	04-23-2010	2010	8.87	8.871	-0.0010000000000012											
+EL-0923	Ellis, Bob	Virtual Test #222	04-23-2010	2010	5.65	5.58	0.07	5.65	5.55	0.1								
+PA-2283	Paradise, Sara	Virtual Test #222	04-23-2010	2010	4.4	4.403	-0.0029999999999992											
+PA-2283	Paradise, Sara	Virtual Test #222	04-23-2010	2010	8.34	8.334	0.0060000000000002											
+PA-2283	Paradise, Sara	Virtual Test #222	04-23-2010	2010	1.57	1.58	-0.01											
+PA-2283	Paradise, Sara	Virtual Test #222	04-23-2010	2010	2.97	2.98	-0.0099999999999998											
+PA-2283	Paradise, Sara	Virtual Test #222	04-23-2010	2010	5.04	5.04	0											
+PA-2283	Paradise, Sara	Virtual Test #222	04-23-2010	2010	5.69	5.662	0.028											
+PA-2283	Paradise, Sara	Virtual Test #222	04-23-2010	2010	5.08	4.982	0.098											
+CA-0992	Caron, Rob	Virtual Test #222	04-23-2010	2010	11.17	11.18	-0.0099999999999998											
+YO-0223	Young, Rick	Virtual Test #222	04-21-2010	2010	6.7	6.649	0.051	6.7	6.539	0.161								
+BU-0749	Burgeson, Barry	Virtual Test #222	04-19-2010	2010	2.17	2.135	0.035											
+BU-0719	Bucklin, Gary	Virtual Test #222	04-16-2010	2010	4.71	4.772	-0.062	4.71	4.585	0.125	4.71	4.842	-0.132					

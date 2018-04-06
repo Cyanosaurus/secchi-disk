@@ -1,0 +1,309 @@
+GU-2088	Guerette, Christine	Virtual Test #221	03-15-2010	2010	2.18	2.186	-0.0059999999999998											
+GU-2088	Guerette, Christine	Virtual Test #221	03-15-2010	2010	1.4	1.409	-0.0090000000000001											
+GU-2088	Guerette, Christine	Virtual Test #221	03-15-2010	2010	5.96	5.967	-0.0069999999999997											
+GU-2088	Guerette, Christine	Virtual Test #221	03-15-2010	2010	1.77	1.769	0.0010000000000001											
+GE-2290	Gelina, Ed	Virtual Test #221	03-06-2010	2010	8.39	8.321	0.069000000000001											
+GE-2290	Gelina, Ed	Virtual Test #221	03-06-2010	2010	11.23	11.14	0.09	11.23	11.12	0.11								
+LA-0256	Lane, Lawrence	Virtual Test #221	03-06-2010	2010	9.76	9.712	0.048											
+LA-0256	Lane, Lawrence	Virtual Test #221	03-06-2010	2010	9.91	0.1	9.81											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	1.08	1.114	-0.034											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	2.04	2.08	-0.04											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	1.42	1.44	-0.02											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	4.4	4.436	-0.036											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	6.46	6.423	0.037											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	6.18	6.125	0.055	6.18	6.004	0.176								
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	6.61	6.53	0.08											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	4.26	4.18	0.08											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	2.55	2.525	0.025											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	1	1.001	-0.00099999999999989											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	1.76	1.787	-0.027											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	4.14	4.102	0.037999999999999	4.14	4.461	-0.321								
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	5.89	5.855	0.034999999999999											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	1.08	1.114	-0.034											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	2.04	2.08	-0.04											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	1.42	1.44	-0.02											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	4.4	4.436	-0.036											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	6.46	6.423	0.037											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	6.18	6.125	0.055	6.18	6.004	0.176								
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	6.61	6.53	0.08											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	4.26	4.18	0.08											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	2.55	2.525	0.025											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	1	1.001	-0.00099999999999989											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	1.76	1.787	-0.027											
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	4.14	4.102	0.037999999999999	4.14	4.461	-0.321								
+YO-0568	Young, Richard	Virtual Test #221	02-24-2010	2010	5.89	5.855	0.034999999999999											
+SO-0562	Sonksen, Marshall	Virtual Test #221	02-08-2010	2010	7.18	7.174	0.0059999999999993											
+JO-0312	Joy, Denise	Virtual Test #221	11-11-2009	2009	1.38	1.378	0.002											
+HO-0609	Hopkins, Ellen	Virtual Test #221	10-27-2009	2009	5.68	5.628	0.052											
+GL-0684	Glann, Sue	Virtual Test #221	10-26-2009	2009	4.05	4.054	-0.0040000000000004											
+GL-0684	Glann, Sue	Virtual Test #221	10-26-2009	2009	5.79	5.801	-0.011											
+GL-0684	Glann, Sue	Virtual Test #221	10-26-2009	2009	6.23	6.247	-0.016999999999999	6.23	6.117	0.113								
+GL-0684	Glann, Sue	Virtual Test #221	10-26-2009	2009	4.05	4.054	-0.0040000000000004											
+GL-0684	Glann, Sue	Virtual Test #221	10-26-2009	2009	5.79	5.801	-0.011											
+GL-0684	Glann, Sue	Virtual Test #221	10-26-2009	2009	6.23	6.247	-0.016999999999999	6.23	6.117	0.113								
+WA-2208	Watts, Bill	Virtual Test #221	10-17-2009	2009	4.59	4.552	0.038											
+VA-2109	Vanpelt, Gary	Virtual Test #221	10-01-2009	2009	1.73	1.745	-0.015											
+VA-0424	Vantassell, James	Virtual Test #221	09-29-2009	2009	2.65	2.657	-0.0070000000000001											
+VA-0424	Vantassell, James	Virtual Test #221	09-29-2009	2009	2.89	2.852	0.038											
+VA-0424	Vantassell, James	Virtual Test #221	09-29-2009	2009	1.21	1.204	0.006											
+VA-0424	Vantassell, James	Virtual Test #221	09-29-2009	2009	4.9	4.812	0.088											
+VA-0424	Vantassell, James	Virtual Test #221	09-29-2009	2009	7.69	7.595	0.095000000000001	7.69	7.535	0.155	7.69	7.575	0.115					
+CO-0335	Coulter, Janet	Virtual Test #221	09-25-2009	2009	7.74	7.573	0.167	7.74	7.583	0.157	7.74	7.593	0.147					
+BE-2085	Begiebing, Brie	Virtual Test #221	09-21-2009	2009	8.14	8.059	0.081000000000001											
+MC-2315	McMenimen, Joseph	Virtual Test #221	09-19-2009	2009	6.75	6.763	-0.013											
+PA-2153	Paradis, Roger	Virtual Test #221	09-18-2009	2009	2.82	2.822	-0.0020000000000002											
+PA-2153	Paradis, Roger	Virtual Test #221	09-18-2009	2009	1.77	1.771	-0.00099999999999989											
+PA-2153	Paradis, Roger	Virtual Test #221	09-18-2009	2009	2.46	2.474	-0.014											
+PA-2153	Paradis, Roger	Virtual Test #221	09-18-2009	2009	5.01	5.014	-0.0040000000000004											
+PA-2153	Paradis, Roger	Virtual Test #221	09-18-2009	2009	5.16	5.118	0.042											
+TA-0574	Taylor, Rob	Virtual Test #221	09-04-2009	2009	6.23	6.232	-0.0019999999999998											
+HA-0765	Hall, Bob	Virtual Test #221	08-20-2009	2009	5.75	5.76	-0.0099999999999998											
+BR-2306	Greenan, Dick	Virtual Test #221	08-11-2009	2009	6.5	6.499	0.0010000000000003	6.5	6.391	0.109								
+BU-0863	Burke, Kathy	Virtual Test #221	08-11-2009	2009	5.46	5.381	0.079											
+BU-0863	Burke, Kathy	Virtual Test #221	08-11-2009	2009	1.51	1.482	0.028											
+BE-0780	Becker, Mike	Virtual Test #221	08-05-2009	2009	6.08	6.088	-0.008											
+MA-2317	Mancine, Dennis	Virtual Test #221	08-04-2009	2009	6.72	6.722	-0.0020000000000007											
+MA-1292	Mahaffey, Connie	Virtual Test #221	08-04-2009	2009	4.8	4.814	-0.014											
+BU-2294	Butler, Jack	Virtual Test #221	08-03-2009	2009	1.55	1.547	0.0030000000000001											
+SM-2308	Smith, Lyndsey	Virtual Test #221	08-03-2009	2009	7.66	7.661	-0.00099999999999945											
+EL-2068	Eland, Susan	Virtual Test #221	07-23-2009	2009	4.51	4.507	0.0030000000000001											
+PE-0946	Pettyjohn, Sherry	Virtual Test #221	07-15-2009	2009	2.46	2.468	-0.008											
+PE-0946	Pettyjohn, Sherry	Virtual Test #221	07-15-2009	2009	11.52	11.528	-0.0080000000000009											
+SW-0096	Swain, Ross	Virtual Test #221	07-14-2009	2009	4.43	4.438	-0.008											
+CR-0546	Crawford, Bob	Virtual Test #221	07-14-2009	2009	6.57	6.523	0.047000000000001											
+CR-0546	Crawford, Bob	Virtual Test #221	07-14-2009	2009	6.28	6.213	0.067											
+MA-0144	Martin, Reynold	Virtual Test #221	07-13-2009	2009	1.24	1.228	0.012											
+JE-2064	Jesperson, Jennifer	Virtual Test #221	07-13-2009	2009	5.95	5.954	-0.0039999999999996											
+LI-0968	Littell, David	Virtual Test #221	07-10-2009	2009	6.07	6.069	0.0010000000000003											
+RO-0319	Rood, Teg	Virtual Test #221	07-03-2009	2009	11.91	11.861	0.048999999999999	11.91	11.792	0.118								
+SO-0991	Southwick, Richard	Virtual Test #221	07-02-2009	2009	1.83	1.838	-0.008											
+SO-0990	Southwick, Rebecca	Virtual Test #221	07-02-2009	2009	2.47	2.467	0.0030000000000001											
+TE-0278	Tetu, Tim	Virtual Test #221	07-02-2009	2009	4.53	4.532	-0.0019999999999998											
+TE-0278	Tetu, Tim	Virtual Test #221	07-02-2009	2009	4.39	4.397	-0.0070000000000006											
+TE-0278	Tetu, Tim	Virtual Test #221	07-02-2009	2009	10.01	10.019	-0.0090000000000003											
+TE-0278	Tetu, Tim	Virtual Test #221	07-02-2009	2009	5.58	5.587	-0.0069999999999997											
+TE-0278	Tetu, Tim	Virtual Test #221	07-02-2009	2009	5.26	5.265	-0.0049999999999999											
+TE-0278	Tetu, Tim	Virtual Test #221	07-02-2009	2009	2.91	2.914	-0.004											
+TE-0278	Tetu, Tim	Virtual Test #221	07-02-2009	2009	2.3	2.306	-0.0060000000000002											
+TE-0278	Tetu, Tim	Virtual Test #221	07-02-2009	2009	2.77	2.776	-0.0059999999999998											
+TE-0278	Tetu, Tim	Virtual Test #221	07-02-2009	2009	10.85	10.87	-0.02											
+TE-0278	Tetu, Tim	Virtual Test #221	07-02-2009	2009	6.67	6.618	0.052	6.67	6.542	0.128	6.67	6.492	0.178	6.67	6.412	0.258		
+SU-0095	Susbury, Robert	Virtual Test #221	06-28-2009	2009	4.32	4.23	0.09											
+LA-0979	Labbe, Michelle	Virtual Test #221	06-26-2009	2009	11.22	11.126	0.094000000000001											
+LA-0997	Labbe, Mark	Virtual Test #221	06-26-2009	2009	9.69	9.693	-0.0030000000000001											
+BU-0759	Burgess, John	Virtual Test #221	06-26-2009	2009	6.51	6.416	0.093999999999999	6.51	6.3	0.21								
+BR-0394	Bryant, Warren	Virtual Test #221	06-25-2009	2009	4.46	4.463	-0.0030000000000001											
+JO-0601	Johnson, Roland	Virtual Test #221	06-25-2009	2009	6.02	6.01	0.0099999999999998											
+JO-0601	Johnson, Roland	Virtual Test #221	06-25-2009	2009	4.77	4.543	0.227	4.77	5.509	-0.739								
+JO-0601	Johnson, Roland	Virtual Test #221	06-25-2009	2009	6.39	5.762	0.628											
+BU-0512	Buchanan, Bill	Virtual Test #221	06-24-2009	2009	5.87	5.794	0.076000000000001											
+BU-0513	Buchanan, Nicole	Virtual Test #221	06-24-2009	2009	8.9	8.819	0.081											
+BU-0513	Buchanan, Nicole	Virtual Test #221	06-24-2009	2009	9.38	9.284	0.096											
+AN-0561	Andrews, Charles	Virtual Test #221	06-24-2009	2009	5.4	5.323	0.077	5.4	5.283	0.117								
+TI-2204	Timmins, Jim	Virtual Test #221	06-24-2009	2009	8.3	8.232	0.068000000000001											
+ZA-2243	Zambella, Fran	Virtual Test #221	06-22-2009	2009	8.97	8.886	0.084000000000001											
+ST-0501	Stewart, Bud	Virtual Test #221	06-21-2009	2009	7.04	7.066	-0.026	7.04	4.563	2.477								
+KR-0739	Kramer, Bob	Virtual Test #221	06-15-2009	2009	4.85	4.847	0.0029999999999992											
+BL-2070	Blaine, Bill	Virtual Test #221	06-14-2009	2009	10.42	10.415	0.0050000000000008											
+LI-0701	Little, Dana	Virtual Test #221	06-14-2009	2009	4.05	4.043	0.0069999999999997											
+EM-2192	Emery, Patrick	Virtual Test #221	06-11-2009	2009	1.18	1.184	-0.004											
+EM-2192	Emery, Patrick	Virtual Test #221	06-11-2009	2009	2.98	2.983	-0.0030000000000001											
+EM-2192	Emery, Patrick	Virtual Test #221	06-11-2009	2009	2.21	2.214	-0.004											
+EM-2192	Emery, Patrick	Virtual Test #221	06-11-2009	2009	4.59	4.594	-0.0040000000000004											
+EM-2192	Emery, Patrick	Virtual Test #221	06-11-2009	2009	6.19	6.194	-0.0039999999999996											
+CI-2167	Cirigliano, Joe	Virtual Test #221	06-11-2009	2009	1.42	1.43	-0.01											
+PI-0829	Pichette, Charlie	Virtual Test #221	06-11-2009	2009	2.22	2.226	-0.0059999999999998											
+PR-0475	Preble, Waldo	Virtual Test #221	06-11-2009	2009	4.96	4.881	0.079											
+HA-2229	Harold, Jessica	Virtual Test #221	06-11-2009	2009	6.92	6.913	0.0069999999999997											
+RI-0844	Rier, David	Virtual Test #221	06-11-2009	2009	6.12	6.119	0.0010000000000003											
+KU-0269	Kutzen, Dr Barry	Virtual Test #221	06-09-2009	2009	6.49	6.493	-0.0030000000000001											
+LE-0957	Lee, Betty	Virtual Test #221	06-08-2009	2009	5.75	5.654	0.096											
+CA-0732	Cannon, Michael	Virtual Test #221	06-05-2009	2009	2.62	2.63	-0.0099999999999998											
+CA-0732	Cannon, Michael	Virtual Test #221	06-05-2009	2009	2.05	2.057	-0.0070000000000001											
+WE-2138	Webb, Kenneth	Virtual Test #221	06-05-2009	2009	6.37	6.377	-0.0069999999999997											
+LA-2215	Lagueux, Dan	Virtual Test #221	06-03-2009	2009	1.67	1.652	0.018											
+LA-2215	Lagueux, Dan	Virtual Test #221	06-03-2009	2009	2.72	2.68	0.04											
+LA-2215	Lagueux, Dan	Virtual Test #221	06-03-2009	2009	1.38	1.374	0.0059999999999998											
+LA-2215	Lagueux, Dan	Virtual Test #221	06-03-2009	2009	4.17	4.075	0.095	4.17	4.055	0.115								
+LA-2215	Lagueux, Dan	Virtual Test #221	06-03-2009	2009	5	4.934	0.066											
+HO-0141	Hodsdon, Kenneth	Virtual Test #221	06-03-2009	2009	1.02	1.057	-0.037											
+HO-0141	Hodsdon, Kenneth	Virtual Test #221	06-03-2009	2009	1.16	1.191	-0.031											
+LA-0982	Lagasse, Beth	Virtual Test #221	06-02-2009	2009	4.44	4.383	0.057	4.44	4.304	0.136	4.44	4.244	0.196					
+LA-0982	Lagasse, Beth	Virtual Test #221	06-02-2009	2009	4.48	4.403	0.077000000000001											
+LA-0982	Lagasse, Beth	Virtual Test #221	06-02-2009	2009	4.92	4.837	0.083	4.92	4.777	0.143								
+LA-0982	Lagasse, Beth	Virtual Test #221	06-02-2009	2009	6.16	6.324	-0.164	6.16	6.364	-0.204	6.16	6.012	0.148	6.16	5.962	0.198		
+LA-0982	Lagasse, Beth	Virtual Test #221	06-02-2009	2009	6.57	6.475	0.095000000000001	6.57	6.411	0.159								
+FA-1262	Facciolo, Megan	Virtual Test #221	06-02-2009	2009	4.5	4.505	-0.0049999999999999											
+FA-1262	Facciolo, Megan	Virtual Test #221	06-02-2009	2009	7.38	7.388	-0.008											
+QU-2180	Quebec, Sharon	Virtual Test #221	06-01-2009	2009	5.9	5.811	0.089											
+QU-2181	Quebec, Bob	Virtual Test #221	06-01-2009	2009	4.82	4.726	0.094											
+HO-0330	Hodsdon, Charles	Virtual Test #221	05-31-2009	2009	5.11	5.017	0.093	5.11	4.997	0.113	5.11	4.987	0.123					
+HO-0330	Hodsdon, Charles	Virtual Test #221	05-31-2009	2009	9.54	9.449	0.090999999999999	9.54	9.439	0.101								
+CA-0992	Caron, Rob	Virtual Test #221	05-31-2009	2009	9.88	9.834	0.046000000000001											
+AP-1241	Appleby, Penny	Virtual Test #221	05-30-2009	2009	8.84	8.756	0.084											
+AN-2175	Anderson, Bob	Virtual Test #221	05-30-2009	2009	6.19	5.944	0.246											
+AN-2175	Anderson, Bob	Virtual Test #221	05-30-2009	2009	6.35	5.931	0.419											
+AN-2175	Anderson, Bob	Virtual Test #221	05-30-2009	2009	4	4.515	-0.515											
+AN-2175	Anderson, Bob	Virtual Test #221	05-30-2009	2009	6.42	5.792	0.628	6.42	5.522	0.898	6.42	6.143	0.277	6.42	6.223	0.197		
+AN-2175	Anderson, Bob	Virtual Test #221	05-30-2009	2009	6.31	6.348	-0.038											
+AN-2175	Anderson, Bob	Virtual Test #221	05-30-2009	2009	6.86	6.379	0.481											
+AN-2175	Anderson, Bob	Virtual Test #221	05-30-2009	2009	5.87	5.883	-0.013											
+AN-2175	Anderson, Bob	Virtual Test #221	05-30-2009	2009	4.21	4.844	-0.634	4.21	4.794	-0.584								
+AN-2175	Anderson, Bob	Virtual Test #221	05-30-2009	2009	6.24	5.802	0.438	6.24	5.772	0.468								
+AN-2175	Anderson, Bob	Virtual Test #221	05-30-2009	2009	4.15	3.967	0.183	4.15	3.907	0.243								
+AN-2175	Anderson, Bob	Virtual Test #221	05-30-2009	2009	4.72	4.253	0.467											
+AN-2175	Anderson, Bob	Virtual Test #221	05-30-2009	2009	4.04	3.8	0.24	4.04	0.1	3.94								
+RU-2219	Ruff, Lois	Virtual Test #221	05-30-2009	2009	6.68	6.681	-0.0010000000000003											
+BY-2211	Byrne, Chip	Virtual Test #221	05-30-2009	2009	6.9	6.895	0.0050000000000008											
+BY-2211	Byrne, Chip	Virtual Test #221	05-30-2009	2009	2.01	2.01	0											
+BY-2211	Byrne, Chip	Virtual Test #221	05-30-2009	2009	2.16	2.159	0.0010000000000003											
+BY-2211	Byrne, Chip	Virtual Test #221	05-30-2009	2009	2.49	2.482	0.008											
+BY-2211	Byrne, Chip	Virtual Test #221	05-30-2009	2009	1.46	1.459	0.00099999999999989											
+BY-2211	Byrne, Chip	Virtual Test #221	05-30-2009	2009	4.74	4.734	0.0060000000000002											
+BY-2211	Byrne, Chip	Virtual Test #221	05-30-2009	2009	6.05	6.042	0.008	6.05	5.922	0.128								
+BY-2211	Byrne, Chip	Virtual Test #221	05-30-2009	2009	5.02	4.968	0.052											
+RI-2084	Rix, Mark	Virtual Test #221	05-29-2009	2009	6.74	6.771	-0.031											
+TR-0322	Tranchemontagne, Jackie	Virtual Test #221	05-28-2009	2009	10.57	10.477	0.093	10.57	10.381	0.189								
+TR-0321	Tranchemontagne, George	Virtual Test #221	05-28-2009	2009	8.37	8.294	0.075999999999999	8.37	8.783	-0.413								
+OR-0999	Orino, Dan	Virtual Test #221	05-28-2009	2009	8.57	8.493	0.077											
+OR-0999	Orino, Dan	Virtual Test #221	05-28-2009	2009	8.91	8.826	0.084											
+RO-2077	Rouleau, Tricia	Virtual Test #221	05-27-2009	2009	6	5.994	0.0060000000000002											
+MC-0603	McGreavy, Birdie	Virtual Test #221	05-27-2009	2009	6.63	6.632	-0.0019999999999998											
+EA-0081	Eastman, Bruce	Virtual Test #221	05-26-2009	2009	6.68	6.609	0.071											
+WH-0222	Whitmore, Mike	Virtual Test #221	05-26-2009	2009	6.55	6.65	-0.1											
+WH-0222	Whitmore, Mike	Virtual Test #221	05-26-2009	2009	8.36	8.239	0.121											
+WH-0222	Whitmore, Mike	Virtual Test #221	05-26-2009	2009	6.55	6.65	-0.1											
+WH-0222	Whitmore, Mike	Virtual Test #221	05-26-2009	2009	8.36	8.239	0.121											
+HA-0195	Hayward, Jeff	Virtual Test #221	05-26-2009	2009	1.15	1.153	-0.0030000000000001											
+KE-2107	Kersbergen, Gary	Virtual Test #221	05-24-2009	2009	1.29	1.289	0.0010000000000001											
+KE-2105	Kersbergen, Cj	Virtual Test #221	05-24-2009	2009	1.01	1.008	0.002											
+KE-2106	Kersbergen, Rick	Virtual Test #221	05-24-2009	2009	1.9	1.885	0.015											
+FE-0770	Fenn, Susan	Virtual Test #221	05-24-2009	2009	7.87	7.876	-0.0060000000000002											
+BO-0305	Bouchard, George	Virtual Test #221	05-23-2009	2009	6.56	6.576	-0.016											
+OU-0943	Ouellette, Phillip	Virtual Test #221	05-23-2009	2009	4.8	4.807	-0.0070000000000006											
+WI-0604	Wilcox, John	Virtual Test #221	05-23-2009	2009	6.19	6.27	-0.079999999999999	6.19	6.048	0.142								
+WI-0604	Wilcox, John	Virtual Test #221	05-23-2009	2009	6.41	6.317	0.093	6.41	6.257	0.153	6.41	6.243	0.167	6.41	6.233	0.177		
+WH-2231	Whitmore, Elizabeth	Virtual Test #221	05-23-2009	2009	2.55	2.556	-0.0060000000000002											
+LA-2172	Langworthy, Ron	Virtual Test #221	05-22-2009	2009	4.23	4.233	-0.0029999999999992											
+CA-0988	Cabanna, Dave	Virtual Test #221	05-21-2009	2009	2.5	2.513	-0.013											
+CA-0988	Cabanna, Dave	Virtual Test #221	05-21-2009	2009	2.34	2.355	-0.015											
+CA-0988	Cabanna, Dave	Virtual Test #221	05-21-2009	2009	1.6	1.617	-0.017											
+CA-0988	Cabanna, Dave	Virtual Test #221	05-21-2009	2009	4.68	4.717	-0.037											
+CA-0988	Cabanna, Dave	Virtual Test #221	05-21-2009	2009	10.7	10.709	-0.0090000000000003											
+CA-0988	Cabanna, Dave	Virtual Test #221	05-21-2009	2009	1.88	1.893	-0.013											
+CA-0988	Cabanna, Dave	Virtual Test #221	05-21-2009	2009	2.35	2.331	0.019											
+CA-0988	Cabanna, Dave	Virtual Test #221	05-21-2009	2009	1.23	1.233	-0.0030000000000001											
+CA-0988	Cabanna, Dave	Virtual Test #221	05-21-2009	2009	4.25	4.262	-0.012											
+CA-0988	Cabanna, Dave	Virtual Test #221	05-21-2009	2009	9.38	9.289	0.091000000000001											
+CA-0988	Cabanna, Dave	Virtual Test #221	05-21-2009	2009	2.5	2.513	-0.013											
+CA-0988	Cabanna, Dave	Virtual Test #221	05-21-2009	2009	2.34	2.355	-0.015											
+CA-0988	Cabanna, Dave	Virtual Test #221	05-21-2009	2009	1.6	1.617	-0.017											
+CA-0988	Cabanna, Dave	Virtual Test #221	05-21-2009	2009	4.68	4.717	-0.037											
+CA-0988	Cabanna, Dave	Virtual Test #221	05-21-2009	2009	10.7	10.709	-0.0090000000000003											
+CA-0988	Cabanna, Dave	Virtual Test #221	05-21-2009	2009	1.88	1.893	-0.013											
+CA-0988	Cabanna, Dave	Virtual Test #221	05-21-2009	2009	2.35	2.331	0.019											
+CA-0988	Cabanna, Dave	Virtual Test #221	05-21-2009	2009	1.23	1.233	-0.0030000000000001											
+CA-0988	Cabanna, Dave	Virtual Test #221	05-21-2009	2009	4.25	4.262	-0.012											
+CA-0988	Cabanna, Dave	Virtual Test #221	05-21-2009	2009	9.38	9.289	0.091000000000001											
+CL-0855	Cloutier, Mike	Virtual Test #221	05-21-2009	2009	6.31	6.237	0.073											
+CL-0855	Cloutier, Mike	Virtual Test #221	05-21-2009	2009	7.48	7.409	0.071000000000001											
+FI-2116	Fish, Linda	Virtual Test #221	05-20-2009	2009	10.57	10.51	0.06											
+DE-0178	Desrosiers, Earnest	Virtual Test #221	05-20-2009	2009	6.99	6.992	-0.0019999999999998											
+AR-0504	Arnold, Martin	Virtual Test #221	05-20-2009	2009	5.87	5.816	0.054											
+FE-0771	Fenn, Bruce	Virtual Test #221	05-19-2009	2009	5.67	5.625	0.045											
+FE-0771	Fenn, Bruce	Virtual Test #221	05-19-2009	2009	6.26	6.176	0.084	6.26	6.136	0.124								
+FE-0771	Fenn, Bruce	Virtual Test #221	05-19-2009	2009	11.13	11.104	0.026000000000002	11.13	10.994	0.136	11.13	10.944	0.186	11.13	10.914	0.216		
+HU-2293	Hunsicker, Qiuhong	Virtual Test #221	05-18-2009	2009	5.85	5.854	-0.0040000000000004											
+HU-2293	Hunsicker, Qiuhong	Virtual Test #221	05-18-2009	2009	1.44	1.415	0.025											
+CA-0937	Carville, Katie	Virtual Test #221	05-18-2009	2009	6.51	6.497	0.013	6.51	6.387	0.123								
+PR-2157	Proctor, Joan	Virtual Test #221	05-16-2009	2009	7.72	7.718	0.0019999999999998											
+RY-0003	Ryan, Mary	Virtual Test #221	05-15-2009	2009														
+BA-2024	Backenstose, Charlie	Virtual Test #221	05-15-2009	2009	5.82	5.813	0.0070000000000006	5.82	5.703	0.117								
+CL-0965	Clarke, Pete	Virtual Test #221	05-15-2009	2009	1.82	1.824	-0.004											
+RO-2144	Rothenberg, Carol	Virtual Test #221	05-14-2009	2009	10.72	10.713	0.0070000000000014											
+GA-0951	Gameros, Jim	Virtual Test #221	05-13-2009	2009	1.09	1.088	0.002											
+GA-0951	Gameros, Jim	Virtual Test #221	05-13-2009	2009	1.59	1.589	0.0010000000000001											
+GA-0951	Gameros, Jim	Virtual Test #221	05-13-2009	2009	6.25	6.243	0.0069999999999997											
+PR-2162	Proctor, Jim	Virtual Test #221	05-12-2009	2009	9.82	9.725	0.095000000000001	9.82	9.715	0.105								
+FE-2038	Ferrell, Debbie	Virtual Test #221	05-11-2009	2009	2.66	2.66	0											
+BA-0037	Bailey, Ken	Virtual Test #221	05-11-2009	2009	4.22	4.193	0.027	4.22	0.1	4.12								
+BA-0037	Bailey, Ken	Virtual Test #221	05-11-2009	2009	6.87	6.799	0.071	6.87	6.567	0.303	6.87	6.657	0.213					
+BA-0037	Bailey, Ken	Virtual Test #221	05-11-2009	2009	4.19	4.109	0.081											
+BA-0037	Bailey, Ken	Virtual Test #221	05-11-2009	2009	5.95	5.164	0.786	5.95	5.637	0.313	5.95	5.757	0.193	5.95	5.837	0.113		
+BA-2213	Bazzolo, Johanna	Virtual Test #221	05-11-2009	2009	4.27	4.273	-0.0030000000000001											
+BR-2202	Brettler, Matthew	Virtual Test #221	05-10-2009	2009	6.15	6.07	0.08	6.15	6.341	-0.191								
+EG-0307	Eger, Robert	Virtual Test #221	05-09-2009	2009	4.58	4.583	-0.0030000000000001											
+EG-0307	Eger, Robert	Virtual Test #221	05-09-2009	2009	5.57	5.481	0.089											
+GU-2088	Guerette, Christine	Virtual Test #221	05-07-2009	2009	2.18	2.186	-0.0059999999999998											
+GU-2088	Guerette, Christine	Virtual Test #221	05-07-2009	2009	1.4	1.409	-0.0090000000000001											
+GU-2088	Guerette, Christine	Virtual Test #221	05-07-2009	2009	5.96	5.967	-0.0069999999999997											
+GU-2088	Guerette, Christine	Virtual Test #221	05-07-2009	2009	1.77	1.769	0.0010000000000001											
+RE-0467	Reeve, Dan	Virtual Test #221	05-07-2009	2009	5.06	5.07	-0.010000000000001											
+CA-0410	Carville, Linwood	Virtual Test #221	05-06-2009	2009	9.81	9.641	0.169											
+CA-0410	Carville, Linwood	Virtual Test #221	05-06-2009	2009	9.09	9.009	0.081											
+CA-0410	Carville, Linwood	Virtual Test #221	05-06-2009	2009	8.82	9.447	-0.627											
+CA-0410	Carville, Linwood	Virtual Test #221	05-06-2009	2009	11.62	11.281	0.339											
+CA-0410	Carville, Linwood	Virtual Test #221	05-06-2009	2009	7.07	6.925	0.145											
+CA-0410	Carville, Linwood	Virtual Test #221	05-06-2009	2009	11.08	10.646	0.434											
+CA-0410	Carville, Linwood	Virtual Test #221	05-06-2009	2009	8.51	8.11	0.4	8.51	8.012	0.498								
+CA-0410	Carville, Linwood	Virtual Test #221	05-06-2009	2009	6.25	5.667	0.583											
+MA-0634	Mathieu, Rene	Virtual Test #221	05-05-2009	2009	5.51	5.507	0.0030000000000001											
+CI-0191	Cianchette, Scott	Virtual Test #221	05-04-2009	2009	1.46	1.451	0.0089999999999999											
+TR-0853	Tracy, Bob	Virtual Test #221	04-30-2009	2009	9.74	9.742	-0.0020000000000007											
+DU-0168	Dunlap, Bob	Virtual Test #221	04-29-2009	2009	6.31	6.252	0.058											
+GU-2088	Guerette, Christine	Virtual Test #221	04-29-2009	2009	2.18	2.186	-0.0059999999999998											
+GU-2088	Guerette, Christine	Virtual Test #221	04-29-2009	2009	1.4	1.409	-0.0090000000000001											
+GU-2088	Guerette, Christine	Virtual Test #221	04-29-2009	2009	5.96	5.967	-0.0069999999999997											
+GU-2088	Guerette, Christine	Virtual Test #221	04-29-2009	2009	1.77	1.769	0.0010000000000001											
+HA-1255	Haugen, Elin	Virtual Test #221	04-29-2009	2009	5	5.017	-0.017											
+RO-1056	Robbins, Karen	Virtual Test #221	04-29-2009	2009	2.37	2.346	0.024											
+DE-0193	Devine, Peter	Virtual Test #221	04-28-2009	2009	6.98	6.891	0.089	6.98	6.851	0.129	6.98	6.871	0.109					
+JA-0633	Jacques, Richard	Virtual Test #221	04-25-2009	2009	2.75	2.75	0											
+MO-0271	Mower, Tom	Virtual Test #221	04-24-2009	2009	4.51	4.798	-0.288											
+MO-0271	Mower, Tom	Virtual Test #221	04-24-2009	2009	5.91	5.819	0.091											
+BU-0116	Burckhardt, Yvonne	Virtual Test #221	04-23-2009	2009	6.25	6.185	0.065	6.25	6.135	0.115	6.25	6.055	0.195	6.25	5.805	0.445		
+CH-2224	Chase, Jen	Virtual Test #221	04-23-2009	2009	10.88	10.88	0	10.88	10.77	0.11	10.88	0.374	10.506					
+RO-0539	Rollo, Adrienne	Virtual Test #221	04-22-2009	2009	2.7	2.672	0.028											
+PE-0889	Perron, Adam	Virtual Test #221	04-22-2009	2009	9.88	9.882	-0.0019999999999989											
+CO-0723	Corr, Mary	Virtual Test #221	04-22-2009	2009	2.35	2.366	-0.016											
+CO-0723	Corr, Mary	Virtual Test #221	04-22-2009	2009	2.82	2.789	0.031	2.82	2.769	0.051								
+FO-0339	Forde, Kenneth	Virtual Test #221	04-22-2009	2009	6.82	6.763	0.057											
+HO-0488	Holme, Colin	Virtual Test #221	04-22-2009	2009	1.9	1.902	-0.002											
+HO-0488	Holme, Colin	Virtual Test #221	04-22-2009	2009	2.28	2.281	-0.0010000000000003											
+HO-0488	Holme, Colin	Virtual Test #221	04-22-2009	2009	1.97	1.973	-0.0030000000000001											
+HO-0488	Holme, Colin	Virtual Test #221	04-22-2009	2009	10.99	10.999	-0.0090000000000003											
+HO-0488	Holme, Colin	Virtual Test #221	04-22-2009	2009	5.03	5.029	0.0010000000000003											
+HO-0488	Holme, Colin	Virtual Test #221	04-22-2009	2009	10.84	10.857	-0.016999999999999	10.84	10.737	0.103								
+WE-0927	Wedin, John	Virtual Test #221	04-21-2009	2009	7.64	7.643	-0.0030000000000001											
+MC-0157	McClead, Charles	Virtual Test #221	04-20-2009	2009	10.59	10.595	-0.0050000000000008											
+DW-2124	Dwyer, Suzanne	Virtual Test #221	04-19-2009	2009	4.81	4.72	0.09											
+DW-2124	Dwyer, Suzanne	Virtual Test #221	04-19-2009	2009	5.26	5.162	0.098											
+DI-0226	Dionne, Steve	Virtual Test #221	04-17-2009	2009	4.45	4.379	0.071000000000001											
+SO-0129	Soucy, Cheryl	Virtual Test #221	04-15-2009	2009	2.76	2.767	-0.0070000000000001											
+SO-0129	Soucy, Cheryl	Virtual Test #221	04-15-2009	2009	1.44	1.44	0											
+SO-0129	Soucy, Cheryl	Virtual Test #221	04-15-2009	2009	2.08	2.081	-0.00099999999999989											
+SO-0129	Soucy, Cheryl	Virtual Test #221	04-15-2009	2009	6.42	6.363	0.056999999999999											
+SO-0129	Soucy, Cheryl	Virtual Test #221	04-15-2009	2009	8.81	8.722	0.088000000000001											
+LA-2129	Lane, Jack	Virtual Test #221	04-15-2009	2009	1.53	1.546	-0.016											
+LA-2129	Lane, Jack	Virtual Test #221	04-15-2009	2009	1.42	1.433	-0.013											
+LA-2129	Lane, Jack	Virtual Test #221	04-15-2009	2009	2.44	2.443	-0.0030000000000001											
+LA-2129	Lane, Jack	Virtual Test #221	04-15-2009	2009	5.11	5.149	-0.039											
+LA-2129	Lane, Jack	Virtual Test #221	04-15-2009	2009	10.42	10.33	0.09	10.42	10.318	0.102								
+BU-0749	Burgeson, Barry	Virtual Test #221	04-15-2009	2009	2.09	2.05	0.04											
+BU-0749	Burgeson, Barry	Virtual Test #221	04-15-2009	2009	1.21	1.178	0.032											
+RA-0554	Ray, Tom	Virtual Test #221	04-15-2009	2009	9.75	9.662	0.087999999999999	9.75	9.622	0.128	9.75	9.648	0.102					
+TU-0295	Turner, Charles	Virtual Test #221	04-02-2009	2009	10.95	10.864	0.085999999999999											
+PA-0974	Parsons, Betty	Virtual Test #221	03-13-2009	2009	6.76	6.698	0.061999999999999											
+KN-0550	Knapp, Ed	Virtual Test #221	03-12-2009	2009	6.59	6.507	0.083	6.59	6.467	0.123								
+WH-0481	Whalen, Nate	Virtual Test #221	03-11-2009	2009														
+LA-0409	Latham, Bill	Virtual Test #221	03-11-2009	2009	6.4	6.297	0.103	6.4	6.287	0.113	6.4	6.29	0.11					
+LA-0409	Latham, Bill	Virtual Test #221	03-11-2009	2009	8.26	8.196	0.064											
+TR-0630	Trask, David	Virtual Test #221	02-08-2009	2009	9.86	9.812	0.048											
+BA-0037	Bailey, Ken	Virtual Test #221	12-28-2008	2008	4.22	4.193	0.027	4.22	0.1	4.12								
+BA-0037	Bailey, Ken	Virtual Test #221	12-28-2008	2008	6.87	6.799	0.071	6.87	6.567	0.303	6.87	6.657	0.213					
+BA-0037	Bailey, Ken	Virtual Test #221	12-28-2008	2008	4.19	4.109	0.081											
+BA-0037	Bailey, Ken	Virtual Test #221	12-28-2008	2008	5.95	5.164	0.786	5.95	5.637	0.313	5.95	5.757	0.193	5.95	5.837	0.113		
+YO-0223	Young, Rick	Virtual Test #221	11-21-2008	2008	9.16	9.084	0.076000000000001											
+YO-0223	Young, Rick	Virtual Test #221	11-21-2008	2008	11.59	11.438	0.152	11.59	11.418	0.172	11.59	11.388	0.202	11.59	11.356	0.234		
+MI-0088	Miller, Charles	Virtual Test #221	11-16-2008	2008	5.68	5.698	-0.018000000000001											
+BA-0480	Bannen, Tom	Virtual Test #221	11-07-2008	2008	5.45	5.46	-0.0099999999999998											

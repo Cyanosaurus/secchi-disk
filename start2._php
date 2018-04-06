@@ -1,0 +1,54 @@
+sigh....
+<?php
+
+//Given a MySQL query, will fetch results from the Alaska DB (Update for changes)
+function mysql_get($query)
+{
+	//Login/DB information
+    	$server = "localhost";
+	$login  = "root";
+	$pass   = "24Maple";
+	$dbname = "secchi";
+
+    //Connect and Select DB
+	mysql_connect($server,$login,$pass);
+	mysql_select_db($dbname);
+
+	//Get and return results
+	$results = mysql_query($query);
+
+	mysql_close();
+	return $results;
+}
+
+
+
+	$result = mysql_get("SELECT * FROM `Account`");
+	if ( !$result ) { echo "bah"; }
+$count = 0;
+	while($row = mysql_fetch_array($result))
+	{
+$count++;
+		echo $row['Username'] . "<br />";
+
+			$subject = "VLMP Launches Virtual Secchi Re-Certification";
+$name = $row['Name'];
+$email = $row['Email'];
+$username = $row['Username'];
+$pass = $row['Password'];
+			$body = "Dear $name ($email),\n\nYour Virtual Secchi Re-Certification Login Information:\nUsername: $username\nPassword: $pass\n\nLink to site: http://www.mainevolunteerlakemonitors.org/recertify\n\n\nWelcome to the Maine Volunteer Lake Monitoring Program's online workshop for Virtual Secchi Re-Certification.ÿ Certified Water Quality Monitors can log-in to test their knowledge of Secchi disk procedures and take a Secchi reading on a virtual lake.ÿ To login, please use your individual username and password included at the top of this message.ÿ The site can be accessed by clicking the link on the VLMP home page or directly at http://www.mainevolunteerlakemonitors.org/recertify. \n\n\nThe Virtual Secchi Re-Certification site will supplement the field re-certification workshops for Secchi monitors.ÿ After an evaluation period we hope this new site will allow us to extend the time between field re-certification.ÿ The goals are to improve QA/QC, allow more flexibility in timing of Secchi re-certifications and to reduce travel costs for volunteers and the program.\n\nWe look forward to your feedback.ÿ Please visit the site, take a few readings, answer a few questions then share your comments and suggestions with us by phone at 207-783-7733 or by email at vlmp@mainevlmp.org.\n\n\nThere is also an option for the public to take a demonstration Secchi reading by clicking on the \"Try It Out\" button.ÿ Certified monitors must login however in order for the full test version and to have their results submitted to the VLMP.\n\nThe Virtual Secchi Re-Certification site is made possible by support from the Maine Department of Environmental Protection and individual donors to the VLMP.ÿ The magic behind the site was designed and programmed by ASAP Media Services at the University of Maine.ÿ \n\n\n\nJim Entwood\nVLMP Program Coordinator\n\nMaine Volunteer Lake Monitoring Program\n\n24 Maple Hill Rd, Auburn, ME 04210\n\nvlmp@mainevlmp.org\nhttp://www.MaineVolunteerLakeMonitors.org\n207-783-7733\n";
+			$body = preg_replace('/([^a-zA-Z0-9. \n-\/,@:])+/',"",$body);
+			$from = "From: vlmp@mainevlmp.org";
+
+			echo "$body<br />";
+			if ( $count > 37 ) {
+			if ( !mail($row['Email'], $subject, $body, $from)) { echo "Error sending email."; }
+			}
+			echo "Sent {$row['Email']}<br />";
+
+
+	}
+echo "Done.";
+
+
+?>

@@ -1,0 +1,5 @@
+jasper	Turcotte, Jasper	Virtual Test #145	06-14-2007	2007	3.71	3.406	0.304	3.71	2.635	1.075	3.71	1.49	2.22	3.71	0.453	3.257		
+jasper	Turcotte, Jasper	Virtual Test #145	06-14-2007	2007	3.26	3.228	0.032											
+jasper	Turcotte, Jasper	Virtual Test #145	06-14-2007	2007	2.97	3.006	-0.036											
+jasper	Turcotte, Jasper	Virtual Test #145	06-14-2007	2007	6.22	5.632	0.588	6.22	5.02	1.2	6.22	4.772	1.448	6.22	5.858	0.362		
+jasper	Turcotte, Jasper	Virtual Test #145	06-14-2007	2007	2.35	2.705	-0.355	2.35	2.94	-0.59	2.35	2.041	0.309	2.35	1.962	0.388		
