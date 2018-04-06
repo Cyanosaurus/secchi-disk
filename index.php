@@ -282,7 +282,7 @@ if ( isset($_POST['trig']) && $action == "Login")
 					delimit(); //2.2 Go to secchi disk
 		
 						//Secchi simulator lnk
-						echo "<form action='disk.php' method='POST'>\n";
+						echo "<form action='secchi-disk-p5js/index.html' method='POST'>\n";
 						echo "<table bgcolor='#336799' style='border: solid thick #000044;color: #ffffff;' align='center'>\n";
 						echo "<th colspan='1'>Secchi Disk Simulator</th>\n";
 						echo "<tr><td align='left'>".form_submit("Try It Out!")."</td></tr>\n";
