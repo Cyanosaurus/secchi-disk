@@ -1,0 +1,150 @@
+MA-2465	Markarian, Stephen	Virtual Test #233	03-21-2017	2017	4.33	4.254	0.076000000000001											
+GR-2357	Swain, Christine	Virtual Test #233	02-23-2017	2017	6.76	6.776	-0.016											
+BA-0480	Bannen, Tom	Virtual Test #233	02-19-2017	2017	6.14	6.143	-0.0030000000000001											
+BA-0480	Bannen, Tom	Virtual Test #233	02-19-2017	2017	4.39	4.388	0.0019999999999998											
+SW-0096	Swain, Ross	Virtual Test #233	02-06-2017	2017	6.43	6.433	-0.0030000000000001											
+RA-2479	Rau, Shelley	Virtual Test #233	10-14-2016	2016	11.89	11.797	0.093	11.89	11.767	0.123								
+GL-0684	Glann, Sue	Virtual Test #233	10-11-2016	2016	4.05	4.028	0.022											
+SU-0095	Susbury, Robert	Virtual Test #233	10-02-2016	2016	5.59	5.501	0.089	5.59	5.481	0.109								
+FA-2523	Farley, Denise	Virtual Test #233	08-22-2016	2016	4.35	4.339	0.010999999999999	4.35	0.123	4.227								
+FA-2522	Farley, Larry	Virtual Test #233	08-22-2016	2016	4.81	4.722	0.087999999999999											
+BE-0780	Becker, Mike	Virtual Test #233	08-08-2016	2016	5.53	5.531	-0.00099999999999945											
+BA-1424	Barber, Peter	Virtual Test #233	08-06-2016	2016	7.03	6.955	0.075											
+BA-1424	Barber, Peter	Virtual Test #233	08-06-2016	2016	5.13	5.129	0.0010000000000003											
+BA-1424	Barber, Peter	Virtual Test #233	08-06-2016	2016	6.78	6.774	0.0060000000000002	6.78	0.1	6.68								
+GO-0273	Gobeil, Robert	Virtual Test #233	08-06-2016	2016	10.6	10.606	-0.0060000000000002											
+GO-2040	Gobeil, Rosemarie	Virtual Test #233	08-06-2016	2016	9.56	9.564	-0.0039999999999996											
+WH-0099	Wheeler, Paula	Virtual Test #233	08-02-2016	2016	2.28	2.281	-0.0010000000000003											
+WH-0099	Wheeler, Paula	Virtual Test #233	08-02-2016	2016	2.28	2.281	-0.0010000000000003											
+MC-0451	Mcallister, David	Virtual Test #233	07-27-2016	2016	5.22	5.173	0.047											
+MC-0450	Mcallister, Dorthy	Virtual Test #233	07-27-2016	2016	9.31	9.224	0.086											
+BL-2070	Blaine, Bill	Virtual Test #233	07-26-2016	2016	7.93	7.935	-0.0049999999999999											
+MA-1292	Mahaffey, Connie	Virtual Test #233	07-23-2016	2016	6.62	6.615	0.0049999999999999											
+MA-1292	Mahaffey, Connie	Virtual Test #233	07-23-2016	2016	4.79	4.788	0.0019999999999998											
+MA-1292	Mahaffey, Connie	Virtual Test #233	07-23-2016	2016	5.2	5.209	-0.0089999999999995											
+SE-1591	Sears, Doug	Virtual Test #233	07-18-2016	2016														
+CO-2364	Cotter, William	Virtual Test #233	07-17-2016	2016	4.71	4.73	-0.02											
+BR-2202	Brettler, Matthew	Virtual Test #233	07-16-2016	2016	4.64	4.617	0.023											
+ST-2300	Staples, Nancy	Virtual Test #233	07-13-2016	2016	8.3	8.246	0.054	8.3	8.186	0.114	8.3	8.149	0.151	8.3	8.44	-0.14		
+ST-2300	Staples, Nancy	Virtual Test #233	07-13-2016	2016	10.84	10.741	0.099	10.84	10.551	0.289								
+RY-2714	Ryan, Kevin	Virtual Test #233	07-13-2016	2016	8.41	8.331	0.079000000000001											
+BR-0834	Brown, Robert	Virtual Test #233	07-06-2016	2016	5.68	5.622	0.058											
+SO-0991	Southwick, Richard	Virtual Test #233	07-06-2016	2016	6.79	6.736	0.054	6.79	6.616	0.174								
+SO-0990	Southwick, Rebecca	Virtual Test #233	07-05-2016	2016	2.4	2.405	-0.0049999999999999	2.4	2.345	0.055								
+MU-1416	Muller, Sandra	Virtual Test #233	07-01-2016	2016														
+MU-1415	Muller, Wynn	Virtual Test #233	07-01-2016	2016														
+PE-0946	Pettyjohn, Sherry	Virtual Test #233	07-01-2016	2016	2.73	2.714	0.016											
+PE-0946	Pettyjohn, Sherry	Virtual Test #233	07-01-2016	2016	6.99	6.927	0.063000000000001											
+MA-0087	Marin, Terri	Virtual Test #233	07-01-2016	2016	8.06	7.994	0.066000000000001	8.06	0.12	7.94								
+MO-2726	Moran, Katie	Virtual Test #233	06-22-2016	2016	6.32	6.323	-0.0030000000000001											
+SI-2733	Silverman, Jeanne	Virtual Test #233	06-22-2016	2016	6.77	6.71	0.06											
+CA-2748	Carson, Jack	Virtual Test #233	06-21-2016	2016														
+AP-1241	Jaskalen, Penny	Virtual Test #233	06-20-2016	2016	7.36	7.358	0.0020000000000007											
+JA-2621	Jaskalen, Gary	Virtual Test #233	06-20-2016	2016	6.83	6.831	-0.0010000000000003	6.83	7.011	-0.181								
+HO-0042	Hodsdon, David	Virtual Test #233	06-18-2016	2016	4.4	4.339	0.061	4.4	4.239	0.161								
+SC-2616	Schenk, Billy	Virtual Test #233	06-15-2016	2016	4.39	4.339	0.050999999999999											
+WO-2701	Woodbury, Rich	Virtual Test #233	06-15-2016	2016	4.2	4.195	0.0049999999999999											
+LE-0973	Lerish, Victor	Virtual Test #233	06-11-2016	2016	5.34	5.332	0.008											
+BY-2211	Byrne, Chip	Virtual Test #233	06-11-2016	2016	2.21	2.204	0.0059999999999998											
+PR-2157	Proctor, Joan	Virtual Test #233	06-10-2016	2016	6.03	6.022	0.008											
+PR-2157	Proctor, Joan	Virtual Test #233	06-10-2016	2016	5.81	5.819	-0.0090000000000003											
+EV-2307	Everett, Chris	Virtual Test #233	06-10-2016	2016	6.28	6.288	-0.008											
+EV-2307	Everett, Chris	Virtual Test #233	06-10-2016	2016	11.41	11.411	-0.00099999999999945	11.41	11.291	0.119	11.41	11.301	0.109					
+CA-2166	Carey, Carol	Virtual Test #233	06-10-2016	2016	1.78	1.782	-0.002											
+PR-2162	Proctor, Jim	Virtual Test #233	06-07-2016	2016	5.52	5.511	0.0089999999999995											
+MO-1473	Moore, William	Virtual Test #233	06-07-2016	2016	7	7.005	-0.0049999999999999											
+DI-2481	Diemer, Laura	Virtual Test #233	06-06-2016	2016	5.67	5.68	-0.0099999999999998											
+RI-2661	Richey, John	Virtual Test #233	06-05-2016	2016	10.47	10.384	0.086											
+LA-2314	Lahaye, Christina	Virtual Test #233	06-04-2016	2016	5.5	5.505	-0.0049999999999999											
+BR-0394	Bryant, Warren	Virtual Test #233	06-03-2016	2016	5.73	5.748	-0.018											
+KR-0739	Kramer, Bob	Virtual Test #233	06-03-2016	2016	6.1	6.043	0.056999999999999	6.1	5.983	0.117	6.1	5.923	0.177					
+KR-0739	Kramer, Bob	Virtual Test #233	06-03-2016	2016	6.36	6.225	0.135	6.36	6.097	0.263	6.36	6.223	0.137					
+GO-2623	Goodwin, David	Virtual Test #233	05-31-2016	2016	7.53	7.461	0.069											
+WI-2491	Wilson, Bruce	Virtual Test #233	05-31-2016	2016	7.37	7.357	0.013											
+BU-0355	Buck, Richard	Virtual Test #233	05-31-2016	2016	6.58	6.574	0.0060000000000002											
+CR-0429	Connor-Crouch, Poppy	Virtual Test #233	05-29-2016	2016	4.23	4.237	-0.0069999999999997	4.23	0.1	4.13								
+MA-0460	Mayer, Larry	Virtual Test #233	05-29-2016	2016														
+RI-1266	Richardson, Donald	Virtual Test #233	05-28-2016	2016	8.84	8.809	0.031000000000001											
+WI-2292	Windsor, Michele	Virtual Test #233	05-28-2016	2016	4.61	4.611	-0.00099999999999945											
+FE-2038	Ferrell, Debbie	Virtual Test #233	05-27-2016	2016	2.11	2.093	0.017											
+WH-2322	Wheaton, Gloria	Virtual Test #233	05-26-2016	2016	11.68	11.621	0.058999999999999											
+WH-2322	Wheaton, Gloria	Virtual Test #233	05-26-2016	2016	6.48	6.482	-0.0019999999999998											
+WH-2322	Wheaton, Gloria	Virtual Test #233	05-26-2016	2016	6.84	6.777	0.063											
+BO-0646	Borko, Victor	Virtual Test #233	05-26-2016	2016	11.34	11.278	0.061999999999999	11.34	11.124	0.216								
+GI-2730	Girifalco, Sal	Virtual Test #233	05-25-2016	2016	2.19	2.149	0.041	2.19	0.1	2.09								
+RU-2219	Ruff, Lois	Virtual Test #233	05-24-2016	2016	5.91	5.918	-0.008											
+RU-2219	Ruff, Lois	Virtual Test #233	05-24-2016	2016	5.73	5.683	0.047000000000001											
+FE-2753	Fenwood, Laurie	Virtual Test #233	05-23-2016	2016	5.61	5.561	0.049	5.61	0.18	5.43								
+MU-2369	Muir-Volpe, Leslie	Virtual Test #233	05-22-2016	2016	6.9	6.851	0.049	6.9	6.791	0.109	6.9	6.751	0.149					
+LI-0968	Littell, David	Virtual Test #233	05-22-2016	2016	6.05	5.984	0.066											
+LI-0968	Littell, David	Virtual Test #233	05-22-2016	2016	9.1	9.01	0.09											
+LI-0968	Littell, David	Virtual Test #233	05-22-2016	2016	10.25	10.038	0.212	10.25	10.088	0.162								
+BA-2754	Baynes, Kathleen	Virtual Test #233	05-20-2016	2016	11.42	11.349	0.071	11.42	11.319	0.101	11.42	11.309	0.111					
+KU-0269	Kutzen, Dr Barry	Virtual Test #233	05-20-2016	2016	11.16	11.09	0.07	11.16	11.06	0.1	11.16	10.98	0.18					
+KU-0269	Kutzen, Dr Barry	Virtual Test #233	05-20-2016	2016	5.91	5.853	0.057	5.91	5.803	0.107								
+BU-2713	Burns, Margaret	Virtual Test #233	05-18-2016	2016	2.54	2.544	-0.004											
+BU-2713	Burns, Margaret	Virtual Test #233	05-18-2016	2016	1.14	1.146	-0.006											
+BU-2713	Burns, Margaret	Virtual Test #233	05-18-2016	2016	2.79	2.796	-0.0059999999999998											
+BU-2713	Burns, Margaret	Virtual Test #233	05-18-2016	2016	6.28	6.272	0.008											
+BU-2713	Burns, Margaret	Virtual Test #233	05-18-2016	2016	8.99	8.985	0.0050000000000008											
+CL-0855	Cloutier, Mike	Virtual Test #233	05-18-2016	2016	10.29	10.209	0.081	10.29	10.189	0.101								
+FE-2752	Fenwood, James	Virtual Test #233	05-17-2016	2016	9.64	9.544	0.096	9.64	9.47	0.17								
+LE-0068	Lewis, Steve	Virtual Test #233	05-16-2016	2016	6.02	6.023	-0.0030000000000001											
+LE-0068	Lewis, Steve	Virtual Test #233	05-16-2016	2016	4.47	4.489	-0.019											
+LI-2328	Lind, David	Virtual Test #233	05-16-2016	2016	5.16	5.118	0.042											
+LI-2328	Lind, David	Virtual Test #233	05-16-2016	2016	2.27	2.283	-0.013											
+BA-0480	Bannen, Tom	Virtual Test #233	05-15-2016	2016	6.14	6.143	-0.0030000000000001											
+BA-0480	Bannen, Tom	Virtual Test #233	05-15-2016	2016	4.39	4.388	0.0019999999999998											
+KR-0739	Kramer, Bob	Virtual Test #233	05-15-2016	2016	6.1	6.043	0.056999999999999	6.1	5.983	0.117	6.1	5.923	0.177					
+KR-0739	Kramer, Bob	Virtual Test #233	05-15-2016	2016	6.36	6.225	0.135	6.36	6.097	0.263	6.36	6.223	0.137					
+YO-0568	Young, Richard	Virtual Test #233	05-11-2016	2016	1.62	1.622	-0.002											
+YO-0568	Young, Richard	Virtual Test #233	05-11-2016	2016	1.96	1.935	0.025											
+YO-0568	Young, Richard	Virtual Test #233	05-11-2016	2016	1.82	1.805	0.015											
+YO-0568	Young, Richard	Virtual Test #233	05-11-2016	2016	5.07	5.025	0.045											
+YO-0568	Young, Richard	Virtual Test #233	05-11-2016	2016	6.72	6.923	-0.203											
+DE-2302	Derby, George	Virtual Test #233	05-09-2016	2016	7.46	7.4	0.06											
+PO-2037	Poulin, Christain	Virtual Test #233	05-08-2016	2016	6.33	6.339	-0.0090000000000003											
+LI-0701	Little, Dana	Virtual Test #233	05-07-2016	2016	4.4	4.406	-0.0059999999999993											
+GA-2557	Gammon, Sue	Virtual Test #233	05-06-2016	2016	5.46	5.431	0.029											
+GA-2557	Gammon, Sue	Virtual Test #233	05-06-2016	2016	1.23	1.232	-0.002											
+MA-0634	Mathieu, Rene	Virtual Test #233	05-05-2016	2016	4.03	3.954	0.076											
+BA-2024	Backenstose, Charlie	Virtual Test #233	05-05-2016	2016	2.1	2.103	-0.0030000000000001											
+CH-2521	Champion, Don	Virtual Test #233	05-05-2016	2016	7.29	7.296	-0.0060000000000002											
+CO-0723	Corr, Mary	Virtual Test #233	05-05-2016	2016	2.67	2.622	0.048											
+ST-2461	Steinwand, Brian	Virtual Test #233	05-04-2016	2016	5.05	5.052	-0.0019999999999998											
+FE-2648	Fergusson, George	Virtual Test #233	05-04-2016	2016	5.84	5.844	-0.0040000000000004											
+GR-2615	Greenman, Katie	Virtual Test #233	05-03-2016	2016	6.55	6.544	0.0060000000000002	6.55	6.444	0.106	6.55	6.414	0.136					
+GR-2614	Greenman, John	Virtual Test #233	05-03-2016	2016	4.51	4.52	-0.0099999999999998											
+BR-0266	Breton, Bert	Virtual Test #233	05-03-2016	2016	10.18	10.225	-0.045											
+BR-0266	Breton, Bert	Virtual Test #233	05-03-2016	2016	10.52	10.437	0.083	10.52	10.417	0.103								
+EM-2301	Emery, Kyle	Virtual Test #233	05-03-2016	2016	1.71	1.692	0.018											
+EM-2301	Emery, Kyle	Virtual Test #233	05-03-2016	2016	1.14	1.134	0.006											
+EM-2301	Emery, Kyle	Virtual Test #233	05-03-2016	2016	1.06	1.058	0.002											
+EM-2301	Emery, Kyle	Virtual Test #233	05-03-2016	2016	6.45	6.424	0.026											
+EM-2301	Emery, Kyle	Virtual Test #233	05-03-2016	2016	6.68	6.591	0.089											
+EM-2301	Emery, Kyle	Virtual Test #233	05-03-2016	2016	1.71	1.737	-0.027											
+EM-2301	Emery, Kyle	Virtual Test #233	05-03-2016	2016	1.16	1.181	-0.021											
+EM-2301	Emery, Kyle	Virtual Test #233	05-03-2016	2016	1.88	1.911	-0.031											
+EM-2301	Emery, Kyle	Virtual Test #233	05-03-2016	2016	4.76	4.724	0.036											
+EM-2301	Emery, Kyle	Virtual Test #233	05-03-2016	2016	9.28	9.198	0.081999999999999											
+WE-0927	Wedin, John	Virtual Test #233	05-03-2016	2016	10.43	10.434	-0.0039999999999996											
+BO-2734	Borst, Kristi	Virtual Test #233	05-02-2016	2016	5.75	5.753	-0.0030000000000001											
+BU-0719	Bucklin, Gary	Virtual Test #233	05-02-2016	2016	5.36	5.279	0.081	5.36	5.225	0.135								
+KI-2634	Kincer, Donna	Virtual Test #233	05-02-2016	2016	5.47	5.393	0.077											
+WU-2718	Wurm, Heinrich	Virtual Test #233	05-02-2016	2016	6.32	6.259	0.061											
+CI-2167	Cirigliano, Joe	Virtual Test #233	05-02-2016	2016	2.03	2.019	0.011											
+PA-2283	Paradise, Sara	Virtual Test #233	05-02-2016	2016	6.82	6.827	-0.0069999999999997											
+RO-0539	Rollo, Adrienne	Virtual Test #233	04-30-2016	2016	6.61	6.545	0.065	6.61	6.505	0.105	6.61	6.485	0.125					
+HA-0140	Hallowell, Dana	Virtual Test #233	04-29-2016	2016	1.65	1.652	-0.002											
+CI-0191	Cianchette, Scott	Virtual Test #233	04-29-2016	2016	1.02	1.018	0.002											
+WH-2482	White, Jr., Norman	Virtual Test #233	04-29-2016	2016														
+DU-2487	Dudac, Thomas	Virtual Test #233	04-29-2016	2016	4.99	4.891	0.099											
+BR-0703	Brann, Kendall	Virtual Test #233	04-29-2016	2016	6.48	6.425	0.055000000000001											
+TR-0322	Tranchemontagne, Jackie	Virtual Test #233	04-29-2016	2016	9.71	9.642	0.068000000000001											
+TR-0321	Tranchemontagne, George	Virtual Test #233	04-29-2016	2016	6.9	6.859	0.041											
+WR-2756	Wronker, Callie	Virtual Test #233	04-28-2016	2016														
+BU-0749	Burgeson, Barry	Virtual Test #233	04-21-2016	2016	4.66	4.571	0.089	4.66	4.541	0.119	4.66	4.521	0.139					
+BU-0749	Burgeson, Barry	Virtual Test #233	04-21-2016	2016	1.14	1.126	0.014											
+ZE-2740	Zeeman, Stephan	Virtual Test #233	04-21-2016	2016	4.13	4.137	-0.0069999999999997											
+CO-2773	Conway, Jay	Virtual Test #233	04-20-2016	2016	5.01	4.985	0.024999999999999											
+CA-0992	Caron, Rob	Virtual Test #233	04-18-2016	2016	7.15	7.098	0.052											

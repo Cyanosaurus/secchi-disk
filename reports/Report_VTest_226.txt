@@ -1,0 +1,181 @@
+SO-0562	Sonksen, Marshall	Virtual Test #226	04-09-2013	2013														
+DY-0169	Dyer, Tricia	Virtual Test #226	04-08-2013	2013	10.27	10.267	0.0030000000000001											
+BU-0719	Bucklin, Gary	Virtual Test #226	04-08-2013	2013	4.65	4.62	0.03	4.65	4.884	-0.234								
+BU-0719	Bucklin, Gary	Virtual Test #226	04-08-2013	2013	6.59	6.649	-0.059	6.59	6.771	-0.181	6.59	7.774	-1.184					
+DU-2487	Dudac, Thomas	Virtual Test #226	04-08-2013	2013	5.45	5.416	0.034											
+GE-2290	Gelina, Ed	Virtual Test #226	02-01-2013	2013	8.28	8.287	-0.0070000000000014											
+GE-2290	Gelina, Ed	Virtual Test #226	02-01-2013	2013	7.49	7.494	-0.0039999999999996	7.49	0.1	7.39								
+GU-2088	Guerette, Christine	Virtual Test #226	01-25-2013	2013	9.67	9.583	0.087											
+GL-0684	Glann, Sue	Virtual Test #226	11-19-2012	2012	2.98	2.932	0.048											
+GL-0684	Glann, Sue	Virtual Test #226	11-19-2012	2012	1.79	1.768	0.022											
+GL-0684	Glann, Sue	Virtual Test #226	11-19-2012	2012	1.59	1.578	0.012											
+GL-0684	Glann, Sue	Virtual Test #226	11-19-2012	2012	6.44	6.363	0.077											
+GL-0684	Glann, Sue	Virtual Test #226	11-19-2012	2012	8.85	8.758	0.092000000000001	8.85	8.738	0.112	8.85	8.698	0.152	8.85	8.688	0.162		
+GL-0684	Glann, Sue	Virtual Test #226	11-19-2012	2012	9.7	9.616	0.084	9.7	9.596	0.104	9.7	9.566	0.134	9.7	9.526	0.174		
+GL-0684	Glann, Sue	Virtual Test #226	11-19-2012	2012	6.51	6.464	0.045999999999999	6.51	6.374	0.136	6.51	6.384	0.126					
+JA-2385	Jackson, Laurel	Virtual Test #226	10-02-2012	2012	11.05	10.961	0.089	11.05	10.833	0.217								
+CO-2361	Collin, Maurice	Virtual Test #226	08-26-2012	2012	6.21	6.162	0.048											
+CO-2361	Collin, Maurice	Virtual Test #226	08-26-2012	2012	4.36	4.257	0.103											
+CO-2361	Collin, Maurice	Virtual Test #226	08-26-2012	2012	6.34	6.214	0.126											
+CO-2361	Collin, Maurice	Virtual Test #226	08-26-2012	2012	6.21	6.162	0.048											
+CO-2361	Collin, Maurice	Virtual Test #226	08-26-2012	2012	4.36	4.257	0.103											
+CO-2361	Collin, Maurice	Virtual Test #226	08-26-2012	2012	6.34	6.214	0.126											
+ST-2461	Steinwand, Brian	Virtual Test #226	08-23-2012	2012	5.62	5.597	0.023											
+MA-2465	Markarian, Stephen	Virtual Test #226	08-22-2012	2012	5.05	5.07	-0.02											
+MA-2465	Markarian, Stephen	Virtual Test #226	08-22-2012	2012	5.15	5.052	0.098000000000001											
+HE-2462	Hesseltine, Steve	Virtual Test #226	08-22-2012	2012	5.51	5.425	0.085											
+HE-2462	Hesseltine, Steve	Virtual Test #226	08-22-2012	2012	4.84	4.82	0.02											
+HE-2462	Hesseltine, Steve	Virtual Test #226	08-22-2012	2012	6.88	6.8	0.08	6.88	6.75	0.13	6.88	6.72	0.16					
+BE-0780	Becker, Mike	Virtual Test #226	08-18-2012	2012	5.61	5.616	-0.0059999999999993											
+BE-0780	Becker, Mike	Virtual Test #226	08-18-2012	2012	1.53	1.539	-0.0089999999999999											
+BE-0780	Becker, Mike	Virtual Test #226	08-18-2012	2012	6.55	6.557	-0.0070000000000006											
+PL-2367	Plourde, Gerard	Virtual Test #226	08-16-2012	2012	6.08	6.002	0.078											
+SO-0991	Southwick, Richard	Virtual Test #226	08-15-2012	2012	1.37	1.37	0											
+WH-0099	Wheeler, Paula	Virtual Test #226	08-10-2012	2012	6.97	6.974	-0.0040000000000004	6.97	0.1	6.87								
+LA-2054	Lajoie, Ed	Virtual Test #226	08-03-2012	2012	4.51	4.495	0.015											
+ST-2300	Staples, Nancy	Virtual Test #226	07-21-2012	2012	2.1	2.108	-0.008											
+ST-2300	Staples, Nancy	Virtual Test #226	07-21-2012	2012	2.6	2.606	-0.0059999999999998											
+ST-2300	Staples, Nancy	Virtual Test #226	07-21-2012	2012	2.83	2.833	-0.0030000000000001											
+ST-2300	Staples, Nancy	Virtual Test #226	07-21-2012	2012	4.63	4.634	-0.0040000000000004											
+ST-2300	Staples, Nancy	Virtual Test #226	07-21-2012	2012	7.7	7.714	-0.014											
+BA-2442	Baker, Rick	Virtual Test #226	07-18-2012	2012	1.56	1.567	-0.0069999999999999											
+BA-2442	Baker, Rick	Virtual Test #226	07-18-2012	2012	2.53	2.538	-0.008											
+BA-2442	Baker, Rick	Virtual Test #226	07-18-2012	2012	2.33	2.33	0											
+BA-2442	Baker, Rick	Virtual Test #226	07-18-2012	2012	6.01	6.012	-0.0019999999999998											
+BA-2442	Baker, Rick	Virtual Test #226	07-18-2012	2012	8.21	8.135	0.075000000000001											
+BU-2235	Burke, Eric	Virtual Test #226	07-16-2012	2012	6.59	6.501	0.089											
+AN-0561	Andrews, Charles	Virtual Test #226	07-15-2012	2012	5.37	5.272	0.098											
+HO-2171	Horr, Richard	Virtual Test #226	07-12-2012	2012	6.53	6.448	0.082											
+SO-0990	Southwick, Rebecca	Virtual Test #226	07-09-2012	2012	2.39	2.384	0.0060000000000002											
+TA-0574	Taylor, Rob	Virtual Test #226	07-09-2012	2012	6.31	6.318	-0.008											
+TA-0574	Taylor, Rob	Virtual Test #226	07-09-2012	2012	2.27	2.276	-0.0059999999999998											
+TA-0574	Taylor, Rob	Virtual Test #226	07-09-2012	2012	4.93	4.934	-0.0040000000000004											
+HA-0942	Harte, Norm	Virtual Test #226	07-09-2012	2012	2.81	2.775	0.035											
+LA-0849	Lamon, David	Virtual Test #226	07-02-2012	2012	6.92	6.853	0.067											
+LA-0849	Lamon, David	Virtual Test #226	07-02-2012	2012	6.89	6.738	0.152	6.89	6.708	0.182	6.89	6.688	0.202	6.89	6.668	0.222		
+ST-0094	Strandberg, Chuck	Virtual Test #226	06-26-2012	2012														
+RE-0230	Reid, Dr William	Virtual Test #226	06-23-2012	2012	6.25	6.186	0.064											
+BR-2330	Bridges, David	Virtual Test #226	06-22-2012	2012	6.03	5.947	0.083	6.03	5.866	0.164								
+OF-0234	Offinger, Richard	Virtual Test #226	06-21-2012	2012	9.1	9.066	0.033999999999999											
+KN-0550	Knapp, Ed	Virtual Test #226	06-15-2012	2012	4.92	4.929	-0.0090000000000003											
+GA-0951	Gameros, Jim	Virtual Test #226	06-12-2012	2012	1.17	1.164	0.006											
+GA-0951	Gameros, Jim	Virtual Test #226	06-12-2012	2012	5.69	5.681	0.0090000000000003											
+ST-2244	Stillwell, Carl	Virtual Test #226	06-12-2012	2012	11.16	11.164	-0.0039999999999996											
+MA-0460	Mayer, Larry	Virtual Test #226	06-12-2012	2012	2.9	2.903	-0.0030000000000001											
+HO-0042	Hodsdon, David	Virtual Test #226	06-11-2012	2012	2.31	2.305	0.0049999999999999											
+AP-1241	Appleby, Penny	Virtual Test #226	06-11-2012	2012	11.21	11.207	0.0030000000000001											
+GI-2081	Gilmore, Milt	Virtual Test #226	06-08-2012	2012	4.68	4.709	-0.029											
+KA-2299	Kalloch, Audrey	Virtual Test #226	06-04-2012	2012	4.56	4.558	0.0019999999999998											
+CR-0429	Connor-Crouch, Poppy	Virtual Test #226	06-04-2012	2012	9.3	9.215	0.085000000000001											
+CO-1285	Cotter, Kathleen	Virtual Test #226	06-04-2012	2012	5.26	5.279	-0.019											
+CO-2364	Cotter, William	Virtual Test #226	06-04-2012	2012	4.06	4.053	0.0069999999999997											
+BE-2085	Begiebing, Brie	Virtual Test #226	06-01-2012	2012	6.74	6.675	0.065											
+RI-1266	Richardson, Donald	Virtual Test #226	06-01-2012	2012														
+LE-0068	Lewis, Steve	Virtual Test #226	05-31-2012	2012	8.63	8.561	0.069000000000001											
+LE-0068	Lewis, Steve	Virtual Test #226	05-31-2012	2012	8.96	8.87	0.090000000000002											
+MC-2185	McPherson, Noel	Virtual Test #226	05-31-2012	2012	5.35	5.306	0.044											
+MC-2184	McPherson, Ron	Virtual Test #226	05-31-2012	2012	11.86	11.77	0.09											
+MC-2282	McLane, Shawn	Virtual Test #226	05-31-2012	2012														
+KR-0739	Kramer, Bob	Virtual Test #226	05-30-2012	2012	6.68	6.698	-0.018000000000001											
+DE-2302	Derby, George	Virtual Test #226	05-30-2012	2012	7.26	7.199	0.061											
+GO-2040	Gobeil, Rosemarie	Virtual Test #226	05-29-2012	2012	5.7	5.708	-0.008											
+GO-0273	Gobeil, Robert	Virtual Test #226	05-29-2012	2012	2.49	2.494	-0.004											
+FI-2116	Fish, Linda	Virtual Test #226	05-29-2012	2012	4.67	4.588	0.082											
+BU-2323	Bukata, Joe	Virtual Test #226	05-29-2012	2012	4.68	4.625	0.055	4.68	5.144	-0.464								
+LA-2314	Lahaye, Christina	Virtual Test #226	05-28-2012	2012	9.19	9.104	0.086											
+GA-2240	Gaudreau, Larry	Virtual Test #226	05-26-2012	2012	4.09	4.018	0.072											
+WE-2138	Webb, Kenneth	Virtual Test #226	05-25-2012	2012														
+BA-2061	Bartosch, Bill	Virtual Test #226	05-25-2012	2012	4.51	4.425	0.085											
+BA-2061	Bartosch, Bill	Virtual Test #226	05-25-2012	2012	5.52	5.572	-0.052	5.52	5.663	-0.143								
+BA-2061	Bartosch, Bill	Virtual Test #226	05-25-2012	2012	4.99	5.036	-0.045999999999999											
+BA-2061	Bartosch, Bill	Virtual Test #226	05-25-2012	2012	11.35	11.198	0.152	11.35	11.07	0.28	11.35	11.646	-0.296					
+LA-2111	Labelle, Sandra	Virtual Test #226	05-25-2012	2012	11.44	11.343	0.097											
+RO-0539	Rollo, Adrienne	Virtual Test #226	05-24-2012	2012	1.74	1.741	-0.0010000000000001											
+RO-0539	Rollo, Adrienne	Virtual Test #226	05-24-2012	2012	6.52	6.331	0.189											
+FE-2335	Feindel, Kristin	Virtual Test #226	05-23-2012	2012	5.69	5.634	0.056											
+DO-0635	Douglas, Patti-Ann	Virtual Test #226	05-22-2012	2012	6.62	6.622	-0.0019999999999998											
+NE-0587	Ness, Kirsten	Virtual Test #226	05-22-2012	2012	11	10.913	0.087	11	10.893	0.107								
+BA-2024	Backenstose, Charlie	Virtual Test #226	05-21-2012	2012	2.17	2.174	-0.004											
+RU-2219	Ruff, Lois	Virtual Test #226	05-20-2012	2012	1.92	1.92	0											
+RU-2219	Ruff, Lois	Virtual Test #226	05-20-2012	2012	5.82	5.817	0.0030000000000001											
+RU-2219	Ruff, Lois	Virtual Test #226	05-20-2012	2012	11.08	11.073	0.0069999999999997	11.08	10.963	0.117								
+WI-2292	Windsor, Michele	Virtual Test #226	05-19-2012	2012	5.67	5.673	-0.0030000000000001											
+GO-0435	Gould, Ralph	Virtual Test #226	05-19-2012	2012	5.22	5.128	0.092											
+BU-0719	Bucklin, Gary	Virtual Test #226	05-17-2012	2012	4.65	4.62	0.03	4.65	4.884	-0.234								
+BU-0719	Bucklin, Gary	Virtual Test #226	05-17-2012	2012	6.59	6.649	-0.059	6.59	6.771	-0.181	6.59	7.774	-1.184					
+MC-0451	Mcallister, David	Virtual Test #226	05-16-2012	2012	8.61	8.53	0.08											
+MC-0450	Mcallister, Dorthy	Virtual Test #226	05-16-2012	2012	6.19	6.139	0.051											
+BL-2070	Blaine, Bill	Virtual Test #226	05-16-2012	2012	7.11	7.111	-0.00099999999999945											
+CO-2332	Connors, Beth	Virtual Test #226	05-15-2012	2012	5.53	5.547	-0.016999999999999											
+EM-2192	Emery, Patrick	Virtual Test #226	05-15-2012	2012	4.5	4.525	-0.025											
+CO-0723	Corr, Mary	Virtual Test #226	05-15-2012	2012	1.88	1.884	-0.004											
+BU-0355	Buck, Richard	Virtual Test #226	05-14-2012	2012	4.2	4.196	0.0040000000000004											
+HA-0765	Hall, Bob	Virtual Test #226	05-12-2012	2012	6.97	7.006	-0.036											
+RY-0003	Ryan, Mary	Virtual Test #226	05-12-2012	2012	5.42	5.368	0.052											
+MC-0157	McClead, Charles	Virtual Test #226	05-11-2012	2012	10.3	10.366	-0.065999999999999											
+MC-0157	McClead, Charles	Virtual Test #226	05-11-2012	2012	10.67	10.568	0.102	10.67	10.518	0.152	10.67	10.458	0.212	10.67	10.799	-0.129		
+TR-2289	Trask, Elwood	Virtual Test #226	05-10-2012	2012	6.07	6.095	-0.024999999999999											
+MO-2386	Morrison, Sarah	Virtual Test #226	05-10-2012	2012	6.37	6.38	-0.0099999999999998											
+WH-2322	Wheaton, Gloria	Virtual Test #226	05-09-2012	2012	5.51	5.503	0.0069999999999997											
+YO-0223	Young, Rick	Virtual Test #226	05-09-2012	2012	5.51	5.441	0.069	5.51	5.401	0.109	5.51	5.341	0.169					
+MU-0926	Musante, Joe	Virtual Test #226	05-09-2012	2012	10.59	10.586	0.0039999999999996											
+MU-0926	Musante, Joe	Virtual Test #226	05-09-2012	2012	5.32	5.318	0.0020000000000007											
+JE-2387	Jewett, Mary	Virtual Test #226	05-09-2012	2012	11.96	11.926	0.034000000000001	11.96	11.846	0.114								
+WE-0927	Wedin, John	Virtual Test #226	05-09-2012	2012	5.17	5.19	-0.02											
+SC-0712	Schneider, Lonny	Virtual Test #226	05-08-2012	2012	5.56	5.536	0.024											
+SC-0711	Schneider, Richard	Virtual Test #226	05-08-2012	2012	8.86	8.772	0.087999999999999											
+SC-0711	Schneider, Richard	Virtual Test #226	05-08-2012	2012	10.9	10.89	0.0099999999999998											
+CH-0564	Chamberlain, Allen	Virtual Test #226	05-08-2012	2012	5.44	5.396	0.044	5.44	5.326	0.114								
+CH-0564	Chamberlain, Allen	Virtual Test #226	05-08-2012	2012	6.23	6.004	0.226	6.23	5.984	0.246	6.23	5.964	0.266	6.23	5.944	0.286		
+CH-0564	Chamberlain, Allen	Virtual Test #226	05-08-2012	2012	2.63	2.6	0.03	2.63	2.58	0.05	2.63	0.1	2.53					
+NI-0928	Nicol, Emile	Virtual Test #226	05-08-2012	2012	2	1.951	0.049											
+BR-0492	Brown, Kevin	Virtual Test #226	05-07-2012	2012	5.73	5.633	0.097	5.73	5.613	0.117	5.73	5.593	0.137					
+MC-0984	McIver, Frank	Virtual Test #226	05-07-2012	2012	4.37	4.329	0.041											
+CI-2167	Cirigliano, Joe	Virtual Test #226	05-06-2012	2012	1.45	1.418	0.032											
+LE-0973	Lerish, Victor	Virtual Test #226	05-06-2012	2012	5.71	5.68	0.03	5.71	5.592	0.118								
+LE-0973	Lerish, Victor	Virtual Test #226	05-06-2012	2012	4.13	4.008	0.122	4.13	3.978	0.152	4.13	3.979	0.151	4.13	3.875	0.255		
+MI-0962	Mitnik, Paul	Virtual Test #226	05-05-2012	2012	2.09	2.095	-0.0050000000000003											
+MI-0962	Mitnik, Paul	Virtual Test #226	05-05-2012	2012	1.1	1.107	-0.0069999999999999											
+MI-0962	Mitnik, Paul	Virtual Test #226	05-05-2012	2012	1.35	1.362	-0.012											
+MI-0962	Mitnik, Paul	Virtual Test #226	05-05-2012	2012	11.76	11.665	0.095000000000001											
+MI-0962	Mitnik, Paul	Virtual Test #226	05-05-2012	2012	6.77	6.675	0.095											
+MI-0962	Mitnik, Paul	Virtual Test #226	05-05-2012	2012	6.05	5.989	0.061	6.05	5.939	0.111								
+DU-2429	Dunn, Jared	Virtual Test #226	05-05-2012	2012	4.22	4.23	-0.010000000000001											
+TI-2204	Timmins, Jim	Virtual Test #226	05-05-2012	2012	5.85	5.878	-0.028											
+BR-0703	Brann, Kendall	Virtual Test #226	05-05-2012	2012	5.34	5.36	-0.02											
+TR-2136	True, Rob	Virtual Test #226	05-05-2012	2012	1.1	1.102	-0.002											
+TR-2136	True, Rob	Virtual Test #226	05-05-2012	2012	1.81	1.814	-0.004											
+TR-2136	True, Rob	Virtual Test #226	05-05-2012	2012	1.87	1.872	-0.002											
+TR-2136	True, Rob	Virtual Test #226	05-05-2012	2012	4.28	4.286	-0.0059999999999993											
+TR-2136	True, Rob	Virtual Test #226	05-05-2012	2012	9.36	9.369	-0.0090000000000003											
+BR-2202	Brettler, Matthew	Virtual Test #226	05-04-2012	2012	5.23	5.24	-0.0099999999999998											
+PU-2117	Purlenn, Ron	Virtual Test #226	05-04-2012	2012	6.66	6.66	0											
+DE-0193	Devine, Peter	Virtual Test #226	05-04-2012	2012	6.15	6.155	-0.0049999999999999											
+RE-0467	Reeve, Dan	Virtual Test #226	05-04-2012	2012	10.6	10.602	-0.0020000000000007											
+LA-0256	Lane, Lawrence	Virtual Test #226	05-04-2012	2012	11.8	11.803	-0.0030000000000001											
+LA-0256	Lane, Lawrence	Virtual Test #226	05-04-2012	2012	9.06	8.987	0.073	9.06	8.897	0.163								
+LA-0256	Lane, Lawrence	Virtual Test #226	05-04-2012	2012	7.73	7.91	-0.18	7.73	7.96	-0.23	7.73	7.9	-0.17	7.73	7.98	-0.25		
+LA-0256	Lane, Lawrence	Virtual Test #226	05-04-2012	2012	4.49	4.774	-0.284	4.49	4.724	-0.234	4.49	4.364	0.126					
+LA-0256	Lane, Lawrence	Virtual Test #226	05-04-2012	2012	8.63	8.2	0.43	8.63	8.14	0.49	8.63	8.09	0.54	8.63	8.03	0.6		
+LA-0256	Lane, Lawrence	Virtual Test #226	05-04-2012	2012	6.27	6.049	0.221	6.27	5.949	0.321	6.27	0.1	6.17					
+MO-0644	Motley, Susan	Virtual Test #226	05-03-2012	2012														
+ME-2286	Mendrzychowski, Steve	Virtual Test #226	05-03-2012	2012	4.05	4.052	-0.0019999999999998											
+LA-0256	Lane, Lawrence	Virtual Test #226	05-03-2012	2012	11.8	11.803	-0.0030000000000001											
+LA-0256	Lane, Lawrence	Virtual Test #226	05-03-2012	2012	9.06	8.987	0.073	9.06	8.897	0.163								
+LA-0256	Lane, Lawrence	Virtual Test #226	05-03-2012	2012	7.73	7.91	-0.18	7.73	7.96	-0.23	7.73	7.9	-0.17	7.73	7.98	-0.25		
+LA-0256	Lane, Lawrence	Virtual Test #226	05-03-2012	2012	4.49	4.774	-0.284	4.49	4.724	-0.234	4.49	4.364	0.126					
+LA-0256	Lane, Lawrence	Virtual Test #226	05-03-2012	2012	8.63	8.2	0.43	8.63	8.14	0.49	8.63	8.09	0.54	8.63	8.03	0.6		
+LA-0256	Lane, Lawrence	Virtual Test #226	05-03-2012	2012	6.27	6.049	0.221	6.27	5.949	0.321	6.27	0.1	6.17					
+WI-0604	Wilcox, John	Virtual Test #226	05-03-2012	2012	4.11	4.08	0.03											
+WI-0604	Wilcox, John	Virtual Test #226	05-03-2012	2012	5.32	5.273	0.047000000000001											
+SI-0733	Simmons, Ed	Virtual Test #226	05-03-2012	2012														
+HA-0140	Hallowell, Dana	Virtual Test #226	05-03-2012	2012	1.5	1.494	0.006											
+TR-0853	Tracy, Bob	Virtual Test #226	05-02-2012	2012	5.9	5.904	-0.0039999999999996											
+BA-0480	Bannen, Tom	Virtual Test #226	05-02-2012	2012	4.65	4.653	-0.0029999999999992											
+CI-0191	Cianchette, Scott	Virtual Test #226	05-02-2012	2012	1.13	1.135	-0.0050000000000001											
+CI-0191	Cianchette, Scott	Virtual Test #226	05-02-2012	2012	1.46	1.433	0.027											
+HO-0609	Hopkins, Ellen	Virtual Test #226	05-02-2012	2012	6.89	6.841	0.048999999999999	6.89	6.751	0.139								
+LI-2328	Lind, David	Virtual Test #226	05-01-2012	2012	6	6.006	-0.0060000000000002											
+LI-2328	Lind, David	Virtual Test #226	05-01-2012	2012	1.12	1.128	-0.0079999999999998											
+WH-0481	Whalen, Nate	Virtual Test #226	04-18-2012	2012	10.69	10.596	0.093999999999999	10.69	0.1	10.59								
+RO-0319	Rood, Teg	Virtual Test #226	04-17-2012	2012	7.18	7.123	0.056999999999999											

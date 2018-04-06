@@ -1,0 +1,110 @@
+secchi	MWC08, Tester	Virtual Test #166	02-29-2008	2008	8.01	7.948	0.061999999999999	8.01	8.259	-0.249								
+MC-0906	McPhedran, John	Virtual Test #166	12-27-2007	2007	6.35	6.356	-0.0060000000000002											
+MO-0644	Motley, Susan	Virtual Test #166	09-20-2007	2007	11.03	10.947	0.083	11.03	10.927	0.103								
+MO-0644	Motley, Susan	Virtual Test #166	09-20-2007	2007	4.14	4.133	0.0069999999999997											
+MO-0644	Motley, Susan	Virtual Test #166	09-20-2007	2007	2.27	2.28	-0.0099999999999998											
+SO-0562	Sonksen, Marshall	Virtual Test #166	09-14-2007	2007	5.49	5.495	-0.0049999999999999											
+PR-0475	Preble, Waldo	Virtual Test #166	09-08-2007	2007	4.12	4.046	0.074											
+PR-0475	Preble, Waldo	Virtual Test #166	09-08-2007	2007	6.81	6.621	0.189	6.81	6.581	0.229	6.81	0.12	6.69					
+BE-0210	Bell, Pat	Virtual Test #166	09-05-2007	2007	4.35	4.341	0.0089999999999995											
+HA-0942	Harte, Norm	Virtual Test #166	08-29-2007	2007	11.31	11.225	0.085000000000001											
+HA-0942	Harte, Norm	Virtual Test #166	08-29-2007	2007	4.65	4.575	0.075											
+VA-0406	Vachon, Maurice	Virtual Test #166	08-22-2007	2007	5.2	5.202	-0.0019999999999998											
+SP-0837	Sprague, Shawn	Virtual Test #166	08-16-2007	2007	2.23	2.231	-0.00099999999999989											
+CA-0988	Cabanna, Dave	Virtual Test #166	08-13-2007	2007	1.55	1.56	-0.01											
+CA-0988	Cabanna, Dave	Virtual Test #166	08-13-2007	2007	1.95	1.956	-0.006											
+CA-0988	Cabanna, Dave	Virtual Test #166	08-13-2007	2007	2.92	2.925	-0.0049999999999999											
+CA-0988	Cabanna, Dave	Virtual Test #166	08-13-2007	2007	6.23	6.237	-0.0069999999999997											
+CA-0988	Cabanna, Dave	Virtual Test #166	08-13-2007	2007	9.91	9.821	0.089											
+MC-0157	McClead, Charles	Virtual Test #166	08-10-2007	2007	9.32	9.227	0.093											
+PE-0946	Pettyjohn, Sherry	Virtual Test #166	08-07-2007	2007	2.35	2.352	-0.0019999999999998											
+PE-0946	Pettyjohn, Sherry	Virtual Test #166	08-07-2007	2007	7.88	7.806	0.074											
+TR-0853	Tracy, Bob	Virtual Test #166	08-03-2007	2007	5.65	5.662	-0.012	5.65	6.115	-0.465								
+SO-0991	Southwick, Richard	Virtual Test #166	08-01-2007	2007	4.05	4.06	-0.0099999999999998											
+SO-0991	Southwick, Richard	Virtual Test #166	08-01-2007	2007	10.33	10.218	0.112											
+SO-0991	Southwick, Richard	Virtual Test #166	08-01-2007	2007	5.15	5.124	0.026000000000001	5.15	0.208	4.942								
+GL-0684	Glann, Sue	Virtual Test #166	07-31-2007	2007	5.93	5.836	0.093999999999999	5.93	5.788	0.142	5.93	5.78	0.15					
+BU-2148	Burson, Malcolm	Virtual Test #166	07-31-2007	2007	6.51	6.504	0.0060000000000002											
+LE-0068	Lewis, Steve	Virtual Test #166	07-30-2007	2007	1.83	1.838	-0.008											
+LE-0068	Lewis, Steve	Virtual Test #166	07-30-2007	2007	6.89	6.836	0.053999999999999											
+LE-0068	Lewis, Steve	Virtual Test #166	07-30-2007	2007	6.15	6.058	0.092000000000001	6.15	6.028	0.122								
+BL-2070	Blaine, Bill	Virtual Test #166	07-30-2007	2007	5	5.002	-0.0019999999999998											
+BL-2070	Blaine, Bill	Virtual Test #166	07-30-2007	2007	11.34	11.251	0.089	11.34	11.231	0.109								
+GO-0435	Gould, Ralph	Virtual Test #166	07-30-2007	2007														
+CO-0165	Cook, Dick	Virtual Test #166	07-30-2007	2007	5.42	5.366	0.054	5.42	5.314	0.106								
+CO-0165	Cook, Dick	Virtual Test #166	07-30-2007	2007	8.89	8.819	0.071	8.89	8.783	0.107	8.89	8.721	0.169	8.89	0.1	8.79		
+BO-0305	Bouchard, George	Virtual Test #166	07-29-2007	2007	10.53	10.444	0.085999999999999											
+BO-0305	Bouchard, George	Virtual Test #166	07-29-2007	2007	10.45	10.349	0.101											
+BO-0305	Bouchard, George	Virtual Test #166	07-29-2007	2007	10.4	10.297	0.103											
+BO-0305	Bouchard, George	Virtual Test #166	07-29-2007	2007	9.26	9.169	0.090999999999999											
+BO-0305	Bouchard, George	Virtual Test #166	07-29-2007	2007	5.48	0.1	5.38											
+BO-0305	Bouchard, George	Virtual Test #166	07-29-2007	2007	10.23	10.151	0.079000000000001	10.23	10.081	0.149	10.23	10.061	0.169					
+JA-0633	Jacques, Richard	Virtual Test #166	07-29-2007	2007														
+BR-0485	Brigham, Ted	Virtual Test #166	07-29-2007	2007														
+BO-0305	Bouchard, George	Virtual Test #166	07-29-2007	2007	10.53	10.444	0.085999999999999											
+BO-0305	Bouchard, George	Virtual Test #166	07-29-2007	2007	10.45	10.349	0.101											
+BO-0305	Bouchard, George	Virtual Test #166	07-29-2007	2007	10.4	10.297	0.103											
+BO-0305	Bouchard, George	Virtual Test #166	07-29-2007	2007	9.26	9.169	0.090999999999999											
+BO-0305	Bouchard, George	Virtual Test #166	07-29-2007	2007	5.48	0.1	5.38											
+BO-0305	Bouchard, George	Virtual Test #166	07-29-2007	2007	10.23	10.151	0.079000000000001	10.23	10.081	0.149	10.23	10.061	0.169					
+EG-0307	Eger, Robert	Virtual Test #166	07-29-2007	2007	5.82	5.737	0.083	5.82	5.707	0.113								
+HA-0140	Hallowell, Dana	Virtual Test #166	07-28-2007	2007	1.43	1.428	0.002											
+HA-0140	Hallowell, Dana	Virtual Test #166	07-28-2007	2007	2.29	2.284	0.0060000000000002											
+HA-0140	Hallowell, Dana	Virtual Test #166	07-28-2007	2007	1.9	1.899	0.00099999999999989											
+MO-0110	Moore, Richard	Virtual Test #166	07-28-2007	2007	4.52	4.546	-0.026000000000001											
+SO-0833	Souza, Christie	Virtual Test #166	07-27-2007	2007	6.39	6.389	0.00099999999999945											
+SO-0833	Souza, Christie	Virtual Test #166	07-27-2007	2007	7.91	7.822	0.088											
+FI-0053	Fischer, Peter	Virtual Test #166	07-27-2007	2007	4.44	4.359	0.081											
+HO-0042	Hodsdon, David	Virtual Test #166	07-27-2007	2007	5.54	5.5	0.04	5.54	5.691	-0.151	5.54	5.429	0.111	5.54	5.329	0.211		
+RO-0839	Jim Entwood	Virtual Test #166	07-27-2007	2007	2.16	2.122	0.038											
+RO-0839	Jim Entwood	Virtual Test #166	07-27-2007	2007	7.24	7.319	-0.079	7.24	7.413	-0.173								
+RO-0839	Jim Entwood	Virtual Test #166	07-27-2007	2007	11.32	11.304	0.016											
+RO-0839	Jim Entwood	Virtual Test #166	07-27-2007	2007	5.21	5.249	-0.039											
+RO-0839	Jim Entwood	Virtual Test #166	07-27-2007	2007	9.48	9.601	-0.121	9.48	9.749	-0.269	9.48	9.201	0.279					
+VO-2033	Voigt, Herman	Virtual Test #166	07-27-2007	2007	6.79	6.74	0.05											
+VO-2033	Voigt, Herman	Virtual Test #166	07-27-2007	2007	11.72	11.634	0.086											
+HI-0980	Hickey, Peter	Virtual Test #166	07-27-2007	2007														
+BR-0675	Brainard, Dave	Virtual Test #166	07-27-2007	2007														
+CA-0992	Caron, Rob	Virtual Test #166	07-26-2007	2007	8.52	8.536	-0.016											
+KN-0550	Knapp, Ed	Virtual Test #166	07-26-2007	2007	9.55	9.462	0.088000000000001	9.55	9.372	0.178	9.55	9.312	0.238					
+WE-0859	Wetzel, Lew	Virtual Test #166	07-26-2007	2007	5.68	5.639	0.040999999999999											
+HO-0551	Holland, Jack	Virtual Test #166	07-25-2007	2007	5.41	5.36	0.05	5.41	5.31	0.1								
+ME-0693	Meyer, Richard	Virtual Test #166	07-25-2007	2007	6.4	6.339	0.061	6.4	6.277	0.123								
+KU-0269	Kutzen, Dr Barry	Virtual Test #166	07-25-2007	2007	6.04	6.035	0.0049999999999999											
+GR-2142	Groves, Eric	Virtual Test #166	07-25-2007	2007	6.82	6.629	0.191	6.82	6.559	0.261	6.82	7.572	-0.752	6.82	6.647	0.173		
+WO-0115	Wood, Stan	Virtual Test #166	07-25-2007	2007	1.37	1.338	0.032											
+WO-0115	Wood, Stan	Virtual Test #166	07-25-2007	2007	2.52	2.499	0.021											
+CA-2113	Carey, Sharron	Virtual Test #166	07-25-2007	2007	10.01	10.018	-0.0080000000000009											
+CA-2113	Carey, Sharron	Virtual Test #166	07-25-2007	2007	2.21	2.219	-0.0089999999999999											
+CA-2113	Carey, Sharron	Virtual Test #166	07-25-2007	2007	2.72	2.749	-0.029											
+FE-0770	Fenn, Susan	Virtual Test #166	07-25-2007	2007	6.24	6.243	-0.0030000000000001											
+RO-1056	Robbins, Karen	Virtual Test #166	07-25-2007	2007	1.74	1.738	0.002											
+WO-0115	Wood, Stan	Virtual Test #166	07-25-2007	2007	1.37	1.338	0.032											
+WO-0115	Wood, Stan	Virtual Test #166	07-25-2007	2007	2.52	2.499	0.021											
+FO-0589	Fortin, Dan	Virtual Test #166	07-25-2007	2007	7.11	7.159	-0.048999999999999											
+DE-0023	Dennis, Wendy	Virtual Test #166	07-25-2007	2007														
+DI-0588	Dillingham, Mary Jane	Virtual Test #166	07-25-2007	2007	4.7	4.696	0.0040000000000004											
+MI-0448	Micucci, Bruce	Virtual Test #166	07-25-2007	2007														
+OF-0234	Offinger, Richard	Virtual Test #166	07-25-2007	2007	10.42	10.347	0.073	10.42	10.297	0.123	10.42	10.237	0.183	10.42	10.231	0.189		
+VA-0402	Valleau, Dana	Virtual Test #166	07-25-2007	2007	5.1	5.044	0.056	5.1	0.1	5								
+MA-0087	Marin, Terri	Virtual Test #166	07-25-2007	2007	6.9	6.899	0.0010000000000003											
+KR-0739	Kramer, Bob	Virtual Test #166	07-25-2007	2007	8.55	8.498	0.052000000000001											
+JO-0820	Joslyn, Eben	Virtual Test #166	07-25-2007	2007	1.42	1.414	0.006											
+JO-0820	Joslyn, Eben	Virtual Test #166	07-25-2007	2007	5.56	5.461	0.098999999999999	5.56	5.363	0.197								
+CO-0723	Corr, Mary	Virtual Test #166	07-25-2007	2007	7.84	7.771	0.069											
+CO-0723	Corr, Mary	Virtual Test #166	07-25-2007	2007	1.47	1.471	-0.0010000000000001											
+MA-2101	MacKenzie, John	Virtual Test #166	07-25-2007	2007	9.46	9.4	0.06	9.46	9.298	0.162								
+RO-0839	Jim Entwood	Virtual Test #166	07-23-2007	2007	2.16	2.122	0.038											
+RO-0839	Jim Entwood	Virtual Test #166	07-23-2007	2007	7.24	7.319	-0.079	7.24	7.413	-0.173								
+RO-0839	Jim Entwood	Virtual Test #166	07-23-2007	2007	11.32	11.304	0.016											
+RO-0839	Jim Entwood	Virtual Test #166	07-23-2007	2007	5.21	5.249	-0.039											
+RO-0839	Jim Entwood	Virtual Test #166	07-23-2007	2007	9.48	9.601	-0.121	9.48	9.749	-0.269	9.48	9.201	0.279					
+RO-0839	Jim Entwood	Virtual Test #166	07-20-2007	2007	2.16	2.122	0.038											
+RO-0839	Jim Entwood	Virtual Test #166	07-20-2007	2007	7.24	7.319	-0.079	7.24	7.413	-0.173								
+RO-0839	Jim Entwood	Virtual Test #166	07-20-2007	2007	11.32	11.304	0.016											
+RO-0839	Jim Entwood	Virtual Test #166	07-20-2007	2007	5.21	5.249	-0.039											
+RO-0839	Jim Entwood	Virtual Test #166	07-20-2007	2007	9.48	9.601	-0.121	9.48	9.749	-0.269	9.48	9.201	0.279					
+bob17	fdsgdfg	Virtual Test #166	07-18-2007	2007	4.05	0.1	3.95											
+bob17	fdsgdfg	Virtual Test #166	07-18-2007	2007	5.86	4.51	1.35	5.86	2.366	3.494								
+bob17	fdsgdfg	Virtual Test #166	07-18-2007	2007	4.05	0.1	3.95											
+bob17	fdsgdfg	Virtual Test #166	07-18-2007	2007	5.86	4.51	1.35	5.86	2.366	3.494								

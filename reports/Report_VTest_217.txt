@@ -1,0 +1,10 @@
+TR-0853	Tracy, Bob	Virtual Test #217	05-02-2008	2008	5.58	5.587	-0.0069999999999997											
+WH-0176	White, Ralph	Virtual Test #217	05-02-2008	2008	4.37	4.32	0.05	4.37	4.24	0.13								
+WH-0176	White, Ralph	Virtual Test #217	05-02-2008	2008	6.2	6.146	0.054	6.2	6.032	0.168	6.2	5.972	0.228	6.2	5.952	0.248		
+JA-0633	Jacques, Richard	Virtual Test #217	05-02-2008	2008	1.75	1.788	-0.038	1.75	1.808	-0.058								
+CA-0992	Caron, Rob	Virtual Test #217	05-02-2008	2008	6.62	6.567	0.053											
+JO-0291	Johnston, Ralph	Virtual Test #217	05-02-2008	2008	5.63	5.539	0.091	5.63	5.757	-0.127								
+JO-0291	Johnston, Ralph	Virtual Test #217	05-02-2008	2008	5.74	6.311	-0.571	5.74	5.585	0.155	5.74	5.463	0.277					
+JO-0291	Johnston, Ralph	Virtual Test #217	05-02-2008	2008	2.39	2.349	0.041											
+JO-0291	Johnston, Ralph	Virtual Test #217	05-02-2008	2008	7.82	7.736	0.084000000000001	7.82	0.1	7.72								
+BU-0749	Burgeson, Barry	Virtual Test #217	05-01-2008	2008	2.17	2.124	0.046											

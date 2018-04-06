@@ -1,0 +1,113 @@
+LA-0982	Lagasse, Beth	Virtual Test #220	10-20-2008	2008	2.04	2.056	-0.016											
+LA-0982	Lagasse, Beth	Virtual Test #220	10-20-2008	2008	2.64	2.631	0.0090000000000003											
+LA-0982	Lagasse, Beth	Virtual Test #220	10-20-2008	2008	2.48	2.527	-0.047											
+LA-0982	Lagasse, Beth	Virtual Test #220	10-20-2008	2008	6.06	6.042	0.018	6.06	5.948	0.112	6.06	5.878	0.182					
+LA-0982	Lagasse, Beth	Virtual Test #220	10-20-2008	2008	10.16	10.072	0.088000000000001	10.16	10.002	0.158								
+OH-2233	O\`Hara, Ray	Virtual Test #220	10-01-2008	2008	6.96	6.966	-0.0060000000000002											
+GO-0273	Gobeil, Robert	Virtual Test #220	09-30-2008	2008	4.88	4.879	0.0010000000000003											
+GO-2040	Gobeil, Rosemarie	Virtual Test #220	09-30-2008	2008	6.14	6.089	0.050999999999999											
+BO-0940	Borges, Kim	Virtual Test #220	09-17-2008	2008	5.98	5.989	-0.0089999999999995											
+CR-0211	Croce, Bob	Virtual Test #220	09-13-2008	2008	1.76	1.757	0.0030000000000001	1.76	2.145	-0.385								
+CR-0211	Croce, Bob	Virtual Test #220	09-13-2008	2008	1.88	2.151	-0.271	1.88	2.171	-0.291	1.88	2.251	-0.371	1.88	0.22	1.66		
+WA-0422	Warren, Robert	Virtual Test #220	09-12-2008	2008	5.07	4.984	0.086											
+WA-0422	Warren, Robert	Virtual Test #220	09-12-2008	2008	6.34	6.216	0.124	6.34	6.226	0.114								
+RU-2219	Ruff, Lois	Virtual Test #220	09-12-2008	2008	9.69	9.595	0.094999999999999											
+BU-0719	Bucklin, Gary	Virtual Test #220	09-02-2008	2008	11.92	11.829	0.090999999999999											
+VO-2033	Voigt, Herman	Virtual Test #220	08-31-2008	2008	9.39	9.31	0.08											
+KR-0739	Kramer, Bob	Virtual Test #220	08-22-2008	2008	6.55	6.542	0.008											
+BL-2070	Blaine, Bill	Virtual Test #220	08-21-2008	2008	1.36	1.361	-0.00099999999999989											
+BL-2070	Blaine, Bill	Virtual Test #220	08-21-2008	2008	1.81	1.813	-0.0029999999999999											
+BL-2070	Blaine, Bill	Virtual Test #220	08-21-2008	2008	1.13	1.134	-0.004											
+BL-2070	Blaine, Bill	Virtual Test #220	08-21-2008	2008	5.19	5.192	-0.0019999999999998											
+BL-2070	Blaine, Bill	Virtual Test #220	08-21-2008	2008	9.99	9.9	0.09											
+KA-0054	Kahl, Steve	Virtual Test #220	08-20-2008	2008	7.82	7.749	0.071000000000001											
+WH-0222	Whitmore, Mike	Virtual Test #220	08-10-2008	2008	8.51	8.431	0.079000000000001											
+PO-2037	Poulin, Christain	Virtual Test #220	08-10-2008	2008	4.63	4.637	-0.0069999999999997											
+PO-2037	Poulin, Christain	Virtual Test #220	08-10-2008	2008	1.88	1.89	-0.01											
+PO-2037	Poulin, Christain	Virtual Test #220	08-10-2008	2008	1.06	1.068	-0.008											
+PO-2037	Poulin, Christain	Virtual Test #220	08-10-2008	2008	2.6	2.61	-0.0099999999999998											
+PO-2037	Poulin, Christain	Virtual Test #220	08-10-2008	2008	5.35	5.354	-0.0040000000000004											
+PO-2037	Poulin, Christain	Virtual Test #220	08-10-2008	2008	9.11	9.118	-0.0080000000000009											
+PO-2037	Poulin, Christain	Virtual Test #220	08-10-2008	2008	5.9	5.904	-0.0039999999999996											
+PE-0946	Pettyjohn, Sherry	Virtual Test #220	08-07-2008	2008	2.58	2.605	-0.025											
+PE-0946	Pettyjohn, Sherry	Virtual Test #220	08-07-2008	2008	7.89	7.813	0.077											
+MC-0183	McLaughlin, Ellen	Virtual Test #220	08-01-2008	2008	4.12	4.128	-0.008											
+LI-0998	Lingwood, Eldin	Virtual Test #220	07-31-2008	2008	11.95	11.868	0.081999999999999	11.95	11.848	0.102								
+GL-0684	Glann, Sue	Virtual Test #220	07-31-2008	2008	4.1	4.061	0.039	4.1	3.973	0.127	4.1	3.993	0.107					
+LA-2054	Lajoie, Ed	Virtual Test #220	07-26-2008	2008	4	3.95	0.05											
+VA-0406	Vachon, Maurice	Virtual Test #220	07-22-2008	2008	1.38	1.385	-0.0050000000000001											
+VA-0406	Vachon, Maurice	Virtual Test #220	07-22-2008	2008	1.96	1.965	-0.0050000000000001											
+VA-0406	Vachon, Maurice	Virtual Test #220	07-22-2008	2008	1.71	1.714	-0.004											
+VA-0406	Vachon, Maurice	Virtual Test #220	07-22-2008	2008	4	4.004	-0.0039999999999996											
+VA-0406	Vachon, Maurice	Virtual Test #220	07-22-2008	2008	7.88	7.884	-0.0040000000000004											
+FO-0589	Fortin, Dan	Virtual Test #220	07-22-2008	2008	5.87	5.878	-0.008											
+LA-0997	Labbe, Mark	Virtual Test #220	07-17-2008	2008	10.16	10.177	-0.016999999999999	10.16	10.304	-0.144	10.16	10.402	-0.242	10.16	10.472	-0.312		
+LA-0997	Labbe, Mark	Virtual Test #220	07-17-2008	2008	11.62	11.758	-0.138	11.62	12.19	-0.57	11.62	11.507	0.113	11.62	11.393	0.227		
+DI-0588	Dillingham, Mary Jane	Virtual Test #220	07-11-2008	2008	2.98	2.976	0.004											
+DI-0588	Dillingham, Mary Jane	Virtual Test #220	07-11-2008	2008	1.55	1.55	0											
+DI-0588	Dillingham, Mary Jane	Virtual Test #220	07-11-2008	2008	2.08	2.074	0.0060000000000002											
+DI-0588	Dillingham, Mary Jane	Virtual Test #220	07-11-2008	2008	11.34	11.34	0											
+DI-0588	Dillingham, Mary Jane	Virtual Test #220	07-11-2008	2008	4.41	4.407	0.0030000000000001											
+PU-0031	Pucciarelli, John	Virtual Test #220	07-11-2008	2008	5.58	5.641	-0.061	5.58	5.305	0.275								
+MA-0108	Mailloux, Bruce	Virtual Test #220	07-11-2008	2008	7.49	7.431	0.059											
+MA-0108	Mailloux, Bruce	Virtual Test #220	07-11-2008	2008	11.19	11.103	0.087											
+CA-0992	Caron, Rob	Virtual Test #220	07-09-2008	2008	6.66	6.668	-0.008											
+SO-0991	Southwick, Richard	Virtual Test #220	07-08-2008	2008	2.29	2.282	0.008											
+DR-0632	Drouin, Dave	Virtual Test #220	07-08-2008	2008	5.97	5.93	0.04											
+DR-0632	Drouin, Dave	Virtual Test #220	07-08-2008	2008	5.68	0.1	5.58											
+WI-0604	Wilcox, John	Virtual Test #220	07-08-2008	2008	6.8	6.721	0.079											
+CH-0403	Chadbourne, Heidi	Virtual Test #220	07-07-2008	2008	5.91	5.849	0.061											
+KU-0269	Kutzen, Dr Barry	Virtual Test #220	07-07-2008	2008	5.6	5.625	-0.025											
+KU-0269	Kutzen, Dr Barry	Virtual Test #220	07-07-2008	2008	11.57	11.443	0.127	11.57	11.463	0.107								
+BE-0780	Becker, Mike	Virtual Test #220	07-03-2008	2008	6.42	6.427	-0.0069999999999997											
+RA-0554	Ray, Tom	Virtual Test #220	06-30-2008	2008	5.16	5.064	0.096											
+FR-0280	Francis, Bob	Virtual Test #220	06-30-2008	2008	5.02	4.97	0.05											
+FR-0280	Francis, Bob	Virtual Test #220	06-30-2008	2008	11.87	11.756	0.114	11.87	11.696	0.174	11.87	11.586	0.284	11.87	0.14	11.73		
+BU-0513	Buchanan, Nicole	Virtual Test #220	06-28-2008	2008	5.52	5.487	0.032999999999999	5.52	5.328	0.192								
+WO-0115	Wood, Stan	Virtual Test #220	06-27-2008	2008	9.47	9.278	0.192	9.47	9.288	0.182								
+LA-0979	Labbe, Michelle	Virtual Test #220	06-27-2008	2008	8.26	8.237	0.023	8.26	8.119	0.141	8.26	8.089	0.171					
+TR-0853	Tracy, Bob	Virtual Test #220	06-26-2008	2008	11.21	11.213	-0.0029999999999983											
+HA-0140	Hallowell, Dana	Virtual Test #220	06-25-2008	2008	2.61	2.577	0.033	2.61	2.547	0.063								
+HA-0140	Hallowell, Dana	Virtual Test #220	06-25-2008	2008	2.7	2.666	0.034											
+HA-0140	Hallowell, Dana	Virtual Test #220	06-25-2008	2008	1.26	1.225	0.035											
+SO-0990	Southwick, Rebecca	Virtual Test #220	06-24-2008	2008	6.37	6.273	0.097	6.37	6.147	0.223								
+MA-0425	Mansfield, Bill	Virtual Test #220	06-24-2008	2008	9.2	9.128	0.071999999999999											
+GE-0465	Geisler, Paul	Virtual Test #220	06-23-2008	2008	5.57	5.578	-0.008											
+GE-0465	Geisler, Paul	Virtual Test #220	06-23-2008	2008	6.1	6.107	-0.0070000000000006	6.1	5.987	0.113	6.1	5.927	0.173					
+BU-0512	Buchanan, Bill	Virtual Test #220	06-22-2008	2008	5.33	5.285	0.045	5.33	5.225	0.105								
+RI-0983	Rich, Brenda	Virtual Test #220	06-21-2008	2008	9.45	9.357	0.093	9.45	9.347	0.103								
+RI-0983	Rich, Brenda	Virtual Test #220	06-21-2008	2008	9.49	9.394	0.096	9.49	9.344	0.146								
+SO-0562	Sonksen, Marshall	Virtual Test #220	06-19-2008	2008	6.09	6.099	-0.0090000000000003											
+GO-0435	Gould, Ralph	Virtual Test #220	06-19-2008	2008	5.38	5.294	0.086											
+MC-0157	McClead, Charles	Virtual Test #220	06-17-2008	2008	8.34	8.26	0.08											
+MA-0634	Mathieu, Rene	Virtual Test #220	06-15-2008	2008	5.18	5.264	-0.084000000000001											
+MA-0634	Mathieu, Rene	Virtual Test #220	06-15-2008	2008	4.01	3.978	0.032											
+SI-0733	Simmons, Ed	Virtual Test #220	06-13-2008	2008	5.73	5.65	0.08	5.73	5.62	0.11								
+SW-0096	Swain, Ross	Virtual Test #220	06-12-2008	2008	4.69	4.696	-0.0059999999999993											
+CR-0682	Creesy, Bill	Virtual Test #220	06-11-2008	2008	5.52	5.434	0.085999999999999											
+EG-0307	Eger, Robert	Virtual Test #220	06-11-2008	2008	4.88	4.882	-0.0019999999999998											
+HA-0942	Harte, Norm	Virtual Test #220	06-11-2008	2008	9.52	9.493	0.026999999999999											
+HA-0942	Harte, Norm	Virtual Test #220	06-11-2008	2008	5.09	5.059	0.031											
+HA-0942	Harte, Norm	Virtual Test #220	06-11-2008	2008	9.11	9.017	0.093											
+HA-0942	Harte, Norm	Virtual Test #220	06-11-2008	2008	9.52	9.493	0.026999999999999											
+HA-0942	Harte, Norm	Virtual Test #220	06-11-2008	2008	5.09	5.059	0.031											
+HA-0942	Harte, Norm	Virtual Test #220	06-11-2008	2008	9.11	9.017	0.093											
+RY-0003	Ryan, Mary	Virtual Test #220	06-09-2008	2008	11.22	10.601	0.619	11.22	10.581	0.639	11.22	10.551	0.669	11.22	10.491	0.729		
+RO-0822	Rogers, Pamela	Virtual Test #220	06-06-2008	2008	6	5.981	0.019	6	5.891	0.109	6	6.383	-0.383					
+RO-0822	Rogers, Pamela	Virtual Test #220	06-06-2008	2008	6.63	6.519	0.111	6.63	6.509	0.121	6.63	6.489	0.141	6.63	6.419	0.211		
+BL-0897	Blair, Dennis	Virtual Test #220	06-04-2008	2008	8.68	8.669	0.010999999999999											
+BL-0897	Blair, Dennis	Virtual Test #220	06-04-2008	2008	10.3	10.207	0.093	10.3	10.187	0.113								
+GR-0898	Grant, Nicole	Virtual Test #220	06-04-2008	2008	6.87	6.877	-0.0069999999999997											
+SO-0129	Soucy, Cheryl	Virtual Test #220	06-03-2008	2008	1.03	1.033	-0.0029999999999999											
+SO-0129	Soucy, Cheryl	Virtual Test #220	06-03-2008	2008	2.83	2.836	-0.0059999999999998											
+SO-0129	Soucy, Cheryl	Virtual Test #220	06-03-2008	2008	1.03	1.038	-0.008											
+SO-0129	Soucy, Cheryl	Virtual Test #220	06-03-2008	2008	6.26	6.264	-0.0040000000000004											
+SO-0129	Soucy, Cheryl	Virtual Test #220	06-03-2008	2008	10.04	9.941	0.098999999999998											
+RO-0319	Rood, Teg	Virtual Test #220	06-03-2008	2008	5.02	5.028	-0.008											
+BR-0599	Brey, Richard	Virtual Test #220	06-02-2008	2008	2.72	2.696	0.024											
+BR-0599	Brey, Richard	Virtual Test #220	06-02-2008	2008	1.49	1.462	0.028											
+BO-0305	Bouchard, George	Virtual Test #220	05-31-2008	2008	1.48	1.48	0											
+BO-0305	Bouchard, George	Virtual Test #220	05-31-2008	2008	2.92	2.923	-0.0030000000000001											
+BO-0305	Bouchard, George	Virtual Test #220	05-31-2008	2008	2.43	2.439	-0.0089999999999999											
+BO-0305	Bouchard, George	Virtual Test #220	05-31-2008	2008	9.73	9.738	-0.0079999999999991											
+BO-0305	Bouchard, George	Virtual Test #220	05-31-2008	2008	5.13	5.131	-0.0010000000000003											
