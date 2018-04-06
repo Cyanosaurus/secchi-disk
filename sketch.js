@@ -482,16 +482,16 @@ function setup() {
       descBoard.addTab();
       descBoard.addTab();
       descBoard.addText("        The ", 240, 18, "Helvetica");
-      descBoard.addText("up and down arrows ", color(75, 75, 255), 18, "Helvetica");
+      descBoard.addText("up and down arrows ", color(0, 191, 255), 18, "Helvetica");
       descBoard.addText("on your keyboard control the movement of the secchi disk.", 200, 18, "Helvetica");
       descBoard.addParagraph(5);
       descBoard.addParagraph(5);
       descBoard.addTab();
       descBoard.addTab();
       descBoard.addText("        The ");
-      descBoard.addText("down arrow ", color(75, 75, 255), 18, "Helvetica");
+      descBoard.addText("down arrow ", color(0, 191, 255), 18, "Helvetica");
       descBoard.addText("moves the disk further into the water, and the ", 200, 18, "Helvetica");
-      descBoard.addText("up arrow ", color(75, 75, 255), 18, "Helvetica");
+      descBoard.addText("up arrow ", color(0, 191, 255), 18, "Helvetica");
       descBoard.addText("retrieves it.", 200, 18, "Helvetica");
       descUpArrow = new RoundedBox(150, 400, 80, 60);
       descDownArrow = new RoundedBox(150, 500, 80, 60);
@@ -504,23 +504,23 @@ function setup() {
       descBoard.addTab();
 
       // descBoard.addTab(1);
-      descBoard.addText("Holding down ", color(75, 75, 255), 18, "Helvetica");
+      descBoard.addText("Holding down ", color(0, 191, 255), 18, "Helvetica");
       descBoard.addText("the arrow keys will ", 200, 18, "Helvetica");
-      descBoard.addText("build up momentum", color(75, 75, 255), 18, "Helvetica");
+      descBoard.addText("build up momentum", color(0, 191, 255), 18, "Helvetica");
       descBoard.addText(", if you want to move it with ", 200, 18, "Helvetica");
-      descBoard.addText("precision", color(75, 75, 255), 18, "Helvetica");
+      descBoard.addText("precision", color(0, 191, 255), 18, "Helvetica");
       descBoard.addText(", only ", 200, 18, "Helvetica");
-      descBoard.addText("tap the arrow keys.", color(75, 75, 255), 18, "Helvetica");
+      descBoard.addText("tap the arrow keys.", color(0, 191, 255), 18, "Helvetica");
 
       descBoard.addParagraph(5);
       descBoard.addParagraph(5);
       descBoard.addParagraph(5);
       descBoard.addParagraph(5);
       // descBoard.addTab(1);
-      descBoard.addText("          Measure the depth at which the disk has", 200, 18, "Helvetica");
-      descBoard.addText("just disappeared", color(75, 75, 255), 18, "Helvetica");
+      descBoard.addText("          Measure the depth at which the disk has ", 200, 18, "Helvetica");
+      descBoard.addText("just disappeared", color(0, 191, 255), 18, "Helvetica");
       descBoard.addText(" out of view. Click ", 200, 18, "Helvetica");
-      descBoard.addText("submit", color(75, 75, 255), 18, "Helvetica");
+      descBoard.addText("submit", color(0, 191, 255), 18, "Helvetica");
       descBoard.addText(" when you think the reading is accurate.", 200, 18, "Helvetica");
 
       descBoard.addParagraph(5);
@@ -532,7 +532,7 @@ function setup() {
       descBoard.addTab();
       // descBoard.addTab(1);
       descBoard.addText("        You will have ");
-      descBoard.addText("three attempts", color(75, 75, 255), 18, "Helvetica");
+      descBoard.addText("three attempts", color(0, 191, 255), 18, "Helvetica");
       descBoard.addText("to take a proper measurement", 200, 18, "Helvetica");
 
       descBoardClear = new Button(1050, 500, 100, 60, "Continue",
@@ -564,7 +564,7 @@ function setup() {
 
       attemptsLeft = 3;
 
-      submitButton = new Button2(width - 300, height - 340, 110, 50, "Submit",
+      submitButton = new Button2(width - 300, height - 275, 110, 50, "Submit",
 
       function() {
        // Button Selected
@@ -637,6 +637,8 @@ function setup() {
           }
         }
      },
+     
+
      function() {
        // Button Deselected
        // if (D0.currentDepth != 0) {
@@ -652,13 +654,17 @@ function setup() {
        //  }
      }
   );
+      submitButton.fontColor = color(0);
+      submitButton.fontSize = 18;
 
-      goBack = new Button(width - 170, height - 340, 110, 50, "Switch Types",
+      goBack = new Button(width - 170, height - 275, 110, 50, "Switch Types",
         function() {
           scenes.setScene(2);
           scenes.setup();
         }
       );
+      goBack.fontColor = color(0);
+      goBack.fontSize = 14;
 
     },
     function() {                                    // THIS IS WHERE THE STUFF FOR THE SIM IS DRAWN
@@ -693,20 +699,51 @@ function setup() {
         submitButton.run();
         goBack.run();
 
+      measureDepthBackground = new TextBoxBackground(width - 300, 60, 240, 110, "", function(){});
+      measureDepthBackground.run();
 
-      measureDepth = new TextBox(width - 300, height - 170, 240, 50, "Secchi Disk Simulator", function(){});
+
+      measureDepth = new TextBox(width - 295, 65, 230, 100, "Secchi Disk \nSimulator", function(){});
+      measureDepth.fontSize = 35;
+      measureDepth.fontStroke = 0;
       measureDepth.run();
-      visualAttempts = new TextBox(width - 300, height - 110, 240, 50, "Attempts Left: " + attemptsLeft, function(){});
+
+
+
+      attemptBackground = new TextBoxBackground(width - 300, 260, 240, 50, "", function(){});
+      attemptBackground.run();
+      visualAttempts = new TextBox(width - 295, 265, 230, 40, "Attempts Left: " + attemptsLeft, function(){});
+      if(attemptsLeft == 3)
+      {
+        visualAttempts.fontColor = color(0,255,0);
+      } if(attemptsLeft == 2)
+      {
+        visualAttempts.fontColor = color(255,255,0);
+      } if(attemptsLeft == 1)
+      {
+        visualAttempts.fontColor = color(255,0,0);
+      }
       visualAttempts.run();
 
-      messageDisplay = new TextBox(width - 300, height - 280, 240, 100, message, function(){});
+      messageBackground = new TextBoxBackground(width - 300, 390, 240, 150, "", function(){});
+      messageBackground.run();
+
+      messageDisplay = new TextBox(width - 295, 395, 230, 140, message, function(){});
+      messageDisplay.fontSize = 18;
+       if (measuredDepth < lakeTarget) {
+       messageDisplay.fontColor = color(255, 0, 0);
+       }if (measuredDepth > lakeTarget) {
+       messageDisplay.fontColor = color(255, 0, 0);
+       }
       messageDisplay.run();
 
-      simBackground = new TextBoxBackground(width - 300, height - 540, 240, 190, "", function(){});
+      simBackground = new TextBoxBackground(width - 300, 180, 240, 70, "", function(){});
       simBackground.run();
 
-      simInfo = new TextBox3(width - 290, height - 530, 220, 170, "Current Depth: \n" + floor(D0.currentDepth*100)/100 + " Meters", function(){});
+      simInfo = new TextBox3(width - 295, 185, 230, 60, "Current Depth: \n" + floor(D0.currentDepth*100)/100 + " Meters", function(){});
       simInfo.run();
+
+
 
 
       // If chances are zero, move to results
@@ -4589,10 +4626,11 @@ function setLakeType (type) {
    measuredError = abs(measuredDepth - lakeTarget);
    measuredErrorRel = measuredError / lakeTarget * 100;
    if (measuredDepth < lakeTarget) {
-     message = "You're too shallow! Try again.";
+   // messageDisplay.fontColor = color(255, 0, 0);
+     message = "You're too shallow! \n Try again.";
    }
    if (measuredDepth > lakeTarget) {
-     message = "You're too deep! Try again.";
+     message = "You're too deep! \n Try again.";
    }
 
    if (measuredErrorRel < 2.0) {
