@@ -768,9 +768,20 @@ function setup() {
       resultsRestart = new Button(500, 475, 95, 50, "Test Again",
         function() {
           // Button Selected
-            setLakeType(5);
-            scenes.setScene(2);
-            scenes.setup();
+          var rawValuesClear = document.getElementById("depthValuesClear");
+          var rawValuesIntermediate = document.getElementById("depthValuesIntermediate");
+          var rawValuesProductive = document.getElementById("depthValuesProductive");
+          var rawValuesDystrophic = document.getElementById("depthValuesDystrophic");
+          var rawValuesDProductive = document.getElementById("depthValuesDProductive");
+
+          rawValuesClear == null ? true : rawValuesClear.parentNode.removeChild(rawValuesClear);
+          rawValuesIntermediate == null ? true : rawValuesIntermediate.parentNode.removeChild(rawValuesIntermediate);
+          rawValuesProductive == null ? true : rawValuesProductive.parentNode.removeChild(rawValuesProductive);
+          rawValuesDystrophic == null ? true : rawValuesDystrophic.parentNode.removeChild(rawValuesDystrophic);
+          rawValuesDProductive == null ? true : rawValuesDProductive.parentNode.removeChild(rawValuesDProductive);
+
+          scenes.setScene(2);
+          scenes.setup();
         },
         function() {}
       );

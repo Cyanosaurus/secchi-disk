@@ -551,6 +551,12 @@ function serverConnect()
   //Do stuff
   xmlhttp.open("GET", "tools/server_connection.php?lake="+lakeJSON, true);
   xmlhttp.send();
+
+  rawValuesClear == null ? true : rawValuesClear.parentNode.removeChild(rawValuesClear);
+  rawValuesIntermediate == null ? true : rawValuesIntermediate.parentNode.removeChild(rawValuesIntermediate);
+  rawValuesProductive == null ? true : rawValuesProductive.parentNode.removeChild(rawValuesProductive);
+  rawValuesDystrophic == null ? true : rawValuesDystrophic.parentNode.removeChild(rawValuesDystrophic);
+  rawValuesDProductive == null ? true : rawValuesDProductive.parentNode.removeChild(rawValuesDProductive);
 }
 
 function ServerButton(cornerX, cornerY, width, height, label, callbackSelected, callbackUnselected)
