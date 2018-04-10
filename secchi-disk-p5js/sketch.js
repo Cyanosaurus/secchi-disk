@@ -61,7 +61,7 @@ var animationY;
 
 var clearLake;
 var clearLakeFinal;
-var intermediateLake;     
+var intermediateLake;
 var intermediateLakeFinal;       //For using images in the future
 var productiveLake;
 var productiveLakeFinal;
@@ -333,7 +333,7 @@ function setup() {
     homeButton.fontColor = color(0);
     helpButton.fontColor = color(0);
     homeButton.fontSize = 14;
-    helpButton.fontSize = 14;    
+    helpButton.fontSize = 14;
   },
   function() {
     // draw()
@@ -707,14 +707,14 @@ function setup() {
       resultsBoard.addText(measuredTolerance, 255, 20, "Helvetica", BOLD);
 
       introStartDysProd.fontSize = 14;
-      
+
       submitResults = new Button(350, 475, 125, 50, "Submit Results",
         function() {
           serverConnect();
           scenes.setScene(2);
           scenes.setup();
         });
-      submitResults.fontColor = color(0);      
+      submitResults.fontColor = color(0);
       submitResults.fontSize = 14;
     },
     function() {
@@ -932,7 +932,7 @@ function setLakeType (type) {
 
 function disk(){ //THE BIG DISK CLASS
  this.P0 = createVector(width/6, height/6); // BEGIN POINT    // changed from height/8
- this.P1 = createVector(width/2, height/2); // END POINT
+ this.P1 = createVector(width/2+70, height/2+70); // END POINT
 
  this.maxDepth = lakeDepth; //10; // MAXIMUM DEPTH OF DISK
 
@@ -1099,10 +1099,10 @@ this.disp = function(){
 
      this.dx += .005;
      var noiz = noise(this.dx/2);
-     var dTheta = map(noiz, 0, .8, 0, 125);  //UPDATE PERLIN NOISE, HIGHER RANGE GREATER FLUCTUATION
+     var dTheta = map(noiz, 0, .8, 0, 100);  //UPDATE PERLIN NOISE, HIGHER RANGE GREATER FLUCTUATION
 
      this.detheta += .02;
-     var dRadius = map(noiz, 0, 1, 0, 40);
+     var dRadius = map(noiz, 0, 1, 0, 20);
      var changeInDir = createVector(this.P1.x + dRadius*cos(3*this.detheta) , this.P1.y + dRadius*sin(2*this.detheta));
 
      var d0 = dist(this.P0.x, this.P0.y, this.P1.x, this.P1.y);
