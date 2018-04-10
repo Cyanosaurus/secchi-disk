@@ -544,7 +544,16 @@ function serverConnect()
     if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
     {
       console.log(xmlhttp.responseText);
-      alert("Successfully Submitted Results!");
+      if (xmlhttp.responseText == "success")
+      {
+        alert("Successfully Submitted Results!");
+      } else if(xmlhttp.responseText == "nolog")
+      {
+        alert("No user logged in, no results submitted");
+      } else
+      {
+        alert("Error submitting results, please try again");
+      }
     }
   }
 

@@ -38,17 +38,24 @@
 				//Sets this variable to the attempts performed
 				$attempt = $lakeDatum->attemptsUsed;
 
-				//Sets variable for what is going to be parsed in SQL
-				$sql = "INSERT INTO `Reading`(`ID`, `TestID`, `AccountID`, `Reading`, `Generated`, `Lake_type`, `Attempt`)
-				VALUES (null, $testID, '$accountID', $reading, $generated, $lakeType, $attempt)";
-
-				//Executes the query and if true (successful) it will echo back the success message, otherwise it will give the error.
-				if($con->query($sql) === TRUE)
+				if($accountID == 0)
 				{
-					echo "New record(s) created!";
+					echo "nolog";
 				}
-				else {
-				    echo "Error: " . $sql . "<br>" . $con->error;
+				else
+				{
+					//Sets variable for what is going to be parsed in SQL
+					$sql = "INSERT INTO `Reading`(`ID`, `TestID`, `AccountID`, `Reading`, `Generated`, `Lake_type`, `Attempt`)
+					VALUES (null, $testID, '$accountID', $reading, $generated, $lakeType, $attempt)";
+
+					//Executes the query and if true (successful) it will echo back the success message, otherwise it will give the error.
+					if($con->query($sql) === TRUE)
+					{
+						echo "success";
+					}
+					else {
+					    echo "Error: " . $sql . "<br>" . $con->error;
+					}
 				}
 			}
 		}
