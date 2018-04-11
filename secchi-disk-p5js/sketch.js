@@ -18,6 +18,18 @@ var introStartDysProd;
 var visitedHelp = false;
 var secondHelp = false;
 
+/* Menu Colors */
+var colorBackgroundPrimary = 0;
+var colorBackgroundAccent = 50;
+//
+var colorTextPrimary = 200;
+var colorTextSecondary = 175;
+//
+var colorTextHighlight = [75, 75, 255];
+//
+var colorButtonBackground = [100, 200, 300];
+var colorButtonText = [255, 255, 255];
+
 /* Simulator Elements */
 var D0;
 var submitButton;
@@ -128,15 +140,15 @@ function setup() {
     var bottom = height - top  / 6;
 
     introBoard = new TextBoard(25, 23, windowWidth - 50, windowHeight - 50);
-    introBoard.background = 0;
-    introBoard.accent = 200;
+    introBoard.background = colorBackgroundPrimary;
+    introBoard.accent = colorBackgroundAccent;
     introBoard.addTab();
     introBoard.addTab();
-    introBoard.addText("Secchi Reading Simulator", 255, 60, "Helvetica", BOLD);
+    introBoard.addText("Secchi Reading Simulator", colorTextPrimary, 60, "Helvetica", BOLD);
     introBoard.addParagraph();
     introBoard.addParagraph();
     introBoard.addParagraph();
-    introBoard.addText("  Volunteers need to take only one qualifying reading for re-certification. Please select a lake type that is most similar to the lake that you monitor.", 200, 16, "Helvetica");
+    introBoard.addText("  Volunteers need to take only one qualifying reading for re-certification. Please select a lake type that is most similar to the lake that you monitor.", colorTextSecondary, 16, "Helvetica");
     introBoard.addParagraph();
     introBoard.addParagraph();
     introBoard.addTab();
@@ -149,7 +161,7 @@ function setup() {
     introBoard.addParagraph();
     introBoard.addTab();
     introBoard.addTab();
-    introBoard.addText("Lake Type", 150, 16, "Helvetica");
+    introBoard.addText("Lake Type", colorTextPrimary, 16, "Helvetica");
     introBoard.addTab();
     introBoard.addText("Description");
     introBoard.addParagraph();
@@ -159,7 +171,7 @@ function setup() {
     introBoard.addTab();
     introBoard.addTab(1);
     introBoard.addTab();
-    introBoard.addText("Bluish color, with readings deeper than 4 meters", 150, 16, "Helvetica");
+    introBoard.addText("Bluish color, with readings deeper than 4 meters", colorTextSecondary, 16, "Helvetica");
       if (clearPass == 1) {
         introBoard.addText("     Complete");
       }
@@ -171,7 +183,7 @@ function setup() {
     introBoard.addTab();
     introBoard.addTab();
     introBoard.addTab(1);
-    introBoard.addText("Blue or green-brown, with readings between 4 and 7 meters", 150, 16, "Helvetica");
+    introBoard.addText("Blue or green-brown, with readings between 4 and 7 meters", colorTextSecondary, 16, "Helvetica");
       if (intermediatePass == 1) {
         introBoard.addText("     Complete");
       }
@@ -183,7 +195,7 @@ function setup() {
       introBoard.addTab();
       introBoard.addTab();
       introBoard.addTab(1);
-      introBoard.addText("Green Background, high algae content, readings shallower than 3 meters", 150, 16, "Helvetica");
+      introBoard.addText("Green Background, high algae content, readings shallower than 3 meters", colorTextSecondary, 16, "Helvetica");
       if (productivePass == 1) {
         introBoard.addText("     Complete");
       }
@@ -195,7 +207,7 @@ function setup() {
       introBoard.addTab();
       introBoard.addTab();
       introBoard.addTab();
-      introBoard.addText("Distinct tea or rootbeer color, readings shallower than 3 meters", 150, 16, "Helvetica");
+      introBoard.addText("Distinct tea or rootbeer color, readings shallower than 3 meters", colorTextSecondary, 16, "Helvetica");
       if (dystrophicPass == 1) {
         introBoard.addText("     Complete");
       }
@@ -207,7 +219,7 @@ function setup() {
       introBoard.addTab();
       introBoard.addTab();
       introBoard.addTab();
-      introBoard.addText("Green-brown and murky, readings shallower than 3 meters", 150, 16, "Helvetica");
+      introBoard.addText("Green-brown and murky, readings shallower than 3 meters", colorTextSecondary, 16, "Helvetica");
         if (dystrophicProductivePass == 1) {
           introBoard.addText("     Complete");
         }
@@ -230,7 +242,8 @@ function setup() {
       },
       function() {}
     );
-    introStartClear.fontColor = color(0);
+    introStartClear.color = colorButtonBackground;
+    introStartClear.fontColor = colorButtonText;
     introStartClear.fontSize = 16;
 
     introStartIntmdt = new Button(200, 335, 110, 30, "Intermediate",
@@ -251,7 +264,8 @@ function setup() {
       },
       function() {}
     );
-    introStartIntmdt.fontColor = color(0);
+    introStartIntmdt.color = colorButtonBackground;
+    introStartIntmdt.fontColor = colorButtonText;
     introStartIntmdt.fontSize = 16;
 
     introStartProd = new Button(200, 395, 110, 30, "Productive",
@@ -272,7 +286,8 @@ function setup() {
       },
       function() {}
     );
-    introStartProd.fontColor = color(0);
+    introStartProd.color = colorButtonBackground;
+    introStartProd.fontColor = colorButtonText;
     introStartProd.fontSize = 16;
 
     introStartDys = new Button(200, 455, 110, 30, "Dystrophic",
@@ -292,7 +307,8 @@ function setup() {
       },
       function() {}
     );
-    introStartDys.fontColor = color(0);
+    introStartDys.color = colorButtonBackground;
+    introStartDys.fontColor = colorButtonText;
     introStartDys.fontSize = 16;
 
     introStartDysProd = new Button(200, 515, 160, 30, "Dystrophic Productive",
@@ -312,7 +328,8 @@ function setup() {
       },
       function() {}
     );
-    introStartDysProd.fontColor = color(0);
+    introStartDysProd.color = colorButtonBackground;
+    introStartDysProd.fontColor = colorButtonText;
     introStartDysProd.fontSize = 14;
 
     homeButton = new Button(1000, 515, 110, 30, "Home",
@@ -330,14 +347,16 @@ function setup() {
           scenes.setup();
         }
       );
-    homeButton.fontColor = color(0);
-    helpButton.fontColor = color(0);
+    homeButton.color = colorButtonBackground;
+    helpButton.color = colorButtonBackground;
+    homeButton.fontColor = colorButtonText;
+    helpButton.fontColor = colorButtonText;
     homeButton.fontSize = 14;
     helpButton.fontSize = 14;
   },
   function() {
     // draw()
-    scenes.background(50);
+    scenes.background(colorBackgroundAccent);
     introBoard.draw();
     introStartClear.run();
     introStartIntmdt.run();
@@ -362,27 +381,28 @@ function setup() {
       var bottom = windowHeight - top;
 
       descBoard = new TextBoard(25, 23, windowWidth - 50, windowHeight - 50);
-      descBoard.background = 0;
+      descBoard.background = colorBackgroundPrimary;
+      descBoard.accent = colorBackgroundAccent;
       fill(255,0,0);
-      descBoard.addText("  How to Use the Secchi Disk Simulator", 255, 60, "Helvetica", BOLD);
+      descBoard.addText("  How to Use the Secchi Disk Simulator", colorTextPrimary, 60, "Helvetica", BOLD);
       descBoard.addParagraph(5);
       descBoard.addParagraph(5);
       descBoard.addParagraph(5);
       descBoard.addParagraph(5);
       descBoard.addTab();
       descBoard.addTab();
-      descBoard.addText("        The ", 240, 18, "Helvetica");
-      descBoard.addText("up and down arrows ", color(75, 75, 255), 18, "Helvetica");
-      descBoard.addText("on your keyboard control the movement of the secchi disk.", 200, 18, "Helvetica");
+      descBoard.addText("        The ", colorTextPrimary, 18, "Helvetica");
+      descBoard.addText("up and down arrows ", colorTextHighlight, 18, "Helvetica");
+      descBoard.addText("on your keyboard control the movement of the secchi disk.", colorTextPrimary, 18, "Helvetica");
       descBoard.addParagraph(5);
       descBoard.addParagraph(5);
       descBoard.addTab();
       descBoard.addTab();
       descBoard.addText("        The ");
-      descBoard.addText("down arrow ", color(75, 75, 255), 18, "Helvetica");
-      descBoard.addText("moves the disk further into the water, and the ", 200, 18, "Helvetica");
-      descBoard.addText("up arrow ", color(75, 75, 255), 18, "Helvetica");
-      descBoard.addText("retrieves it.", 200, 18, "Helvetica");
+      descBoard.addText("down arrow ", colorTextHighlight, 18, "Helvetica");
+      descBoard.addText("moves the disk further into the water, and the ", colorTextPrimary, 18, "Helvetica");
+      descBoard.addText("up arrow ", colorTextHighlight, 18, "Helvetica");
+      descBoard.addText("retrieves it.", colorTextPrimary, 18, "Helvetica");
       descUpArrow = new RoundedBox(150, 400, 80, 60);
       descDownArrow = new RoundedBox(150, 500, 80, 60);
       descLeftArrow = new RoundedBox(50, 500, 80, 60);
@@ -394,24 +414,24 @@ function setup() {
       descBoard.addTab();
 
       // descBoard.addTab(1);
-      descBoard.addText("Holding down ", color(75, 75, 255), 18, "Helvetica");
-      descBoard.addText("the arrow keys will ", 200, 18, "Helvetica");
-      descBoard.addText("build up momentum", color(75, 75, 255), 18, "Helvetica");
-      descBoard.addText(", if you want to move it with ", 200, 18, "Helvetica");
-      descBoard.addText("precision", color(75, 75, 255), 18, "Helvetica");
-      descBoard.addText(", only ", 200, 18, "Helvetica");
-      descBoard.addText("tap the arrow keys.", color(75, 75, 255), 18, "Helvetica");
+      descBoard.addText("Holding down ", colorTextHighlight, 18, "Helvetica");
+      descBoard.addText("the arrow keys will ", colorTextPrimary, 18, "Helvetica");
+      descBoard.addText("build up momentum", colorTextHighlight, 18, "Helvetica");
+      descBoard.addText(", if you want to move it with ", colorTextPrimary, 18, "Helvetica");
+      descBoard.addText("precision", colorTextHighlight, 18, "Helvetica");
+      descBoard.addText(", only ", colorTextPrimary, 18, "Helvetica");
+      descBoard.addText("tap the arrow keys.", colorTextHighlight, 18, "Helvetica");
 
       descBoard.addParagraph(5);
       descBoard.addParagraph(5);
       descBoard.addParagraph(5);
       descBoard.addParagraph(5);
       // descBoard.addTab(1);
-      descBoard.addText("          Measure the depth at which the disk has", 200, 18, "Helvetica");
-      descBoard.addText("just disappeared", color(75, 75, 255), 18, "Helvetica");
-      descBoard.addText(" out of view. Click ", 200, 18, "Helvetica");
-      descBoard.addText("submit", color(75, 75, 255), 18, "Helvetica");
-      descBoard.addText(" when you think the reading is accurate.", 200, 18, "Helvetica");
+      descBoard.addText("          Measure the depth at which the disk has ", colorTextPrimary, 18, "Helvetica");
+      descBoard.addText("just disappeared", colorTextHighlight, 18, "Helvetica");
+      descBoard.addText(" out of view. Click ", colorTextPrimary, 18, "Helvetica");
+      descBoard.addText("submit", colorTextHighlight, 18, "Helvetica");
+      descBoard.addText(" when you think the reading is accurate.", colorTextPrimary, 18, "Helvetica");
 
       descBoard.addParagraph(5);
       descBoard.addParagraph(5);
@@ -422,8 +442,8 @@ function setup() {
       descBoard.addTab();
       // descBoard.addTab(1);
       descBoard.addText("        You will have ");
-      descBoard.addText("three attempts", color(75, 75, 255), 18, "Helvetica");
-      descBoard.addText("to take a proper measurement", 200, 18, "Helvetica");
+      descBoard.addText("three attempts", colorTextHighlight, 18, "Helvetica");
+      descBoard.addText("to take a proper measurement", colorTextPrimary, 18, "Helvetica");
 
       descBoardClear = new Button(1050, 500, 100, 60, "Continue",
         function() {
@@ -442,10 +462,11 @@ function setup() {
         function() {}
       );
       descBoardClear.fontSize = 18;
-      descBoardClear.fontColor = color(0);
+      descBoardClear.fontColor = colorButtonText;
+      descBoardClear.color = colorButtonBackground;
     },
     function() {
-      scenes.background(50);
+      scenes.background(colorBackgroundAccent);
       descBoard.draw();
       descBoardClear.run();
       descUpArrow.run();
@@ -464,93 +485,94 @@ function setup() {
       attemptsLeft = 3;
 
       submitButton = new Button2(width - 300, height - 340, 110, 50, "Submit",
+        function() {
+        // Button Selected
+        // Analyze trial and give feedback
+        // NOTE: THESE SELECT AND DESELECT FUNCTIONS ARE THE SAME BECAUSE IT ALTERNATES PER PRESS
 
-      function() {
-       // Button Selected
-       // Analyze trial and give feedback
-       // NOTE: THESE SELECT AND DESELECT FUNCTIONS ARE THE SAME BECAUSE IT ALTERNATES PER PRESS
-
-      if (D0.currentDepth != -0.1) {
-        measuredDepth = D0.currentDepth;
-        if (analyzeTrial()) {                          // if correct move to next scene, otherwise the run section below
-          scenes.nextScene();                        // will deal with the case of no chances left
-          scenes.setup();
-          attemptsLeft--;
-          if (lakeType == "Clear") {
-            clearPass = 1;
-            var depthClear = createDiv().hide().id("depthValuesClear").value(
-              [
-                1,
-                floor(D0.currentDepth*100)/100,
-                floor(lakeTarget*100)/100,
-                3-attemptsLeft
-              ]
-              );
-          }
-          if (lakeType == "Intermediate") {
-            intermediatePass = 1;
-            var depthIntermediate = createDiv().hide().id("depthValuesIntermediate").value(
-              [
-                2,
-                floor(D0.currentDepth*100)/100,
-                floor(lakeTarget*100)/100,
-                3-attemptsLeft
-              ]
-              );
-          }
-          if (lakeType == "Productive"){
-            productivePass = 1;
-            var depthProductive = createDiv().hide().id("depthValuesProductive").value(
-              [
-                3,
-                floor(D0.currentDepth*100)/100,
-                floor(lakeTarget*100)/100,
-                3-attemptsLeft
-              ]
-              );
-          }
-          if (lakeType == "Dystrophic") {
-            dystrophicPass = 1;
-            var depthDystrophic = createDiv().hide().id("depthValuesDystrophic").value(
-              [
-                4,
-                floor(D0.currentDepth*100)/100,
-                floor(lakeTarget*100)/100,
-                3-attemptsLeft
-              ]
-              );
-          }
-          if (lakeType == "Dystrophic Productive") {
-            dystrophicProductivePass = 1;
-            var depthDystrophicProductive = createDiv().hide().id("depthValuesDProductive").value(
-              [
-                5,
-                floor(D0.currentDepth*100)/100,
-                floor(lakeTarget*100)/100,
-                3-attemptsLeft
-              ]
-              );
-          }
-          } else {
+        if (D0.currentDepth != -0.1) {
+          measuredDepth = D0.currentDepth;
+          if (analyzeTrial()) {                          // if correct move to next scene, otherwise the run section below
+            scenes.nextScene();                        // will deal with the case of no chances left
+            scenes.setup();
             attemptsLeft--;
+            if (lakeType == "Clear") {
+              clearPass = 1;
+              var depthClear = createDiv().hide().id("depthValuesClear").value(
+                [
+                  1,
+                  floor(D0.currentDepth*100)/100,
+                  floor(lakeTarget*100)/100,
+                  3-attemptsLeft
+                ]
+                );
+            }
+            if (lakeType == "Intermediate") {
+              intermediatePass = 1;
+              var depthIntermediate = createDiv().hide().id("depthValuesIntermediate").value(
+                [
+                  2,
+                  floor(D0.currentDepth*100)/100,
+                  floor(lakeTarget*100)/100,
+                  3-attemptsLeft
+                ]
+                );
+            }
+            if (lakeType == "Productive"){
+              productivePass = 1;
+              var depthProductive = createDiv().hide().id("depthValuesProductive").value(
+                [
+                  3,
+                  floor(D0.currentDepth*100)/100,
+                  floor(lakeTarget*100)/100,
+                  3-attemptsLeft
+                ]
+                );
+            }
+            if (lakeType == "Dystrophic") {
+              dystrophicPass = 1;
+              var depthDystrophic = createDiv().hide().id("depthValuesDystrophic").value(
+                [
+                  4,
+                  floor(D0.currentDepth*100)/100,
+                  floor(lakeTarget*100)/100,
+                  3-attemptsLeft
+                ]
+                );
+            }
+            if (lakeType == "Dystrophic Productive") {
+              dystrophicProductivePass = 1;
+              var depthDystrophicProductive = createDiv().hide().id("depthValuesDProductive").value(
+                [
+                  5,
+                  floor(D0.currentDepth*100)/100,
+                  floor(lakeTarget*100)/100,
+                  3-attemptsLeft
+                ]
+                );
+            }
+            } else {
+              attemptsLeft--;
+            }
           }
+        },
+        function() {
+          // Button Deselected
+          // if (D0.currentDepth != 0) {
+            // measuredDepth = D0.currentDepth;
+            // if (analyzeTrial()) {
+            // 	scenes.nextScene();
+            // 	scenes.setup();
+            // 	} else {
+            // 		// console.log(attemptsLeft);
+          //      message = "You're too far off. Try again!";
+            // 		attemptsLeft--;
+            // 	}
+          //  }
         }
-     },
-     function() {
-       // Button Deselected
-       // if (D0.currentDepth != 0) {
-        // measuredDepth = D0.currentDepth;
-        // if (analyzeTrial()) {
-        // 	scenes.nextScene();
-        // 	scenes.setup();
-        // 	} else {
-        // 		// console.log(attemptsLeft);
-       //      message = "You're too far off. Try again!";
-        // 		attemptsLeft--;
-        // 	}
-       //  }
-     }
-  );
+      );
+      submitButton.color = colorButtonBackground;
+      submitButton.fontColor = colorButtonText;
 
       goBack = new Button(width - 170, height - 340, 110, 50, "Switch Types",
         function() {
@@ -558,10 +580,12 @@ function setup() {
           scenes.setup();
         }
       );
+      goBack.color = colorButtonBackground;
+      goBack.fontColor = colorButtonText;
 
     },
     function() {                                    // THIS IS WHERE THE STUFF FOR THE SIM IS DRAWN
-      scenes.background(0);
+      scenes.background(colorBackgroundAccent);
 
         // fill(lakeColor);
         strokeWeight(5);
@@ -621,7 +645,7 @@ function setup() {
       push();
       fill(0, 0, 0, 0);
       strokeWeight(50);
-      stroke(50);
+      stroke(colorBackgroundAccent);
       rect(0, 0, 1200, 600);
       pop();
     })
@@ -636,13 +660,13 @@ function setup() {
 
       resultsBoard =  new TextBoard(25, 23, windowWidth - 50, windowHeight - 50);
 
-      resultsBoard.background = 0;
+      resultsBoard.background = colorBackgroundPrimary;
 
-      resultsBoard.accent = 50;
+      resultsBoard.accent = colorBackgroundAccent;
       resultsBoard.addParagraph(5);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
-      resultsBoard.addText("     Reading Results", 255, 60, "Helvetica", BOLD);
+      resultsBoard.addText("     Reading Results", colorTextPrimary, 60, "Helvetica", BOLD);
       resultsBoard.addParagraph(5);
       resultsBoard.addParagraph(5);
       resultsBoard.addParagraph(5);
@@ -652,59 +676,59 @@ function setup() {
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
      //("Words", color, size, font, type);
-      resultsBoard.addText("Lake Type", 200, 20, "Helvetica", BOLD);
+      resultsBoard.addText("Lake Type", colorTextPrimary, 20, "Helvetica", BOLD);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
-      resultsBoard.addText(lakeType, 255, 20, "Helvetica", BOLD);
+      resultsBoard.addText(lakeType, colorTextSecondary, 20, "Helvetica", BOLD);
       resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
-      resultsBoard.addText("Target Depth", 200, 20, "Helvetica", BOLD);
+      resultsBoard.addText("Target Depth", colorTextPrimary, 20, "Helvetica", BOLD);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
-      resultsBoard.addText(lakeTarget.toFixed(2) + " meters", 255, 20, "Helvetica", BOLD);
+      resultsBoard.addText(lakeTarget.toFixed(2) + " meters", colorTextSecondary, 20, "Helvetica", BOLD);
       resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
-      resultsBoard.addText("Measured Depth", 200, 20, "Helvetica", BOLD);
+      resultsBoard.addText("Measured Depth", colorTextPrimary, 20, "Helvetica", BOLD);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
-      resultsBoard.addText(measuredDepth.toFixed(2) + " meters", 255, 20, "Helvetica", BOLD);
+      resultsBoard.addText(measuredDepth.toFixed(2) + " meters", colorTextSecondary, 20, "Helvetica", BOLD);
       resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
-      resultsBoard.addText("Error (absolute)", 200, 20, "Helvetica", BOLD);
+      resultsBoard.addText("Error (absolute)", colorTextPrimary, 20, "Helvetica", BOLD);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
-      resultsBoard.addText(measuredError.toFixed(2) + " meters", 255, 20, "Helvetica", BOLD);
+      resultsBoard.addText(measuredError.toFixed(2) + " meters", colorTextSecondary, 20, "Helvetica", BOLD);
       resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
-      resultsBoard.addText("Error (relative)", 200, 20, "Helvetica", BOLD);
+      resultsBoard.addText("Error (relative)", colorTextPrimary, 20, "Helvetica", BOLD);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
-      resultsBoard.addText(measuredErrorRel.toFixed(2) + "%", 255, 20, "Helvetica", BOLD);
+      resultsBoard.addText(measuredErrorRel.toFixed(2) + "%", colorTextSecondary, 20, "Helvetica", BOLD);
       resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addParagraph(3);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
       resultsBoard.addTab(1);
-      resultsBoard.addText("Within Tolerance?", 200, 20, "Helvetica", BOLD);
+      resultsBoard.addText("Within Tolerance?", colorTextPrimary, 20, "Helvetica", BOLD);
       resultsBoard.addTab(1);
-      resultsBoard.addText(measuredTolerance, 255, 20, "Helvetica", BOLD);
+      resultsBoard.addText(measuredTolerance, colorTextSecondary, 20, "Helvetica", BOLD);
 
       introStartDysProd.fontSize = 14;
 
@@ -714,7 +738,8 @@ function setup() {
           scenes.setScene(2);
           scenes.setup();
         });
-      submitResults.fontColor = color(0);
+      submitResults.color = colorButtonBackground;
+      submitResults.fontColor = colorButtonText;
       submitResults.fontSize = 14;
     },
     function() {
@@ -738,7 +763,7 @@ function setup() {
       var lowerToleranceY = targetY + (animationWindowH * percentToleranceY);
       var greenZone = lowerToleranceY - upperToleranceY;
 
-      scenes.background(50);
+      scenes.background(colorBackgroundAccent);
       resultsBoard.draw();
       push();
 
@@ -785,7 +810,8 @@ function setup() {
         },
         function() {}
       );
-      resultsRestart.fontColor = color(0);
+      resultsRestart.color = colorButtonBackground;
+      resultsRestart.fontColor = colorButtonText;
       resultsRestart.fontSize = 18;
 
       //lines
