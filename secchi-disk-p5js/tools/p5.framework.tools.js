@@ -131,12 +131,23 @@ function SceneManager() {
     }
   }
 
-  this.background = function() {
+  // this.background = function() {
+  //   if (this.parent) {
+  //     background(Array.prototype.slice.call(arguments));
+  //   } else {
+  //     push();
+  //     fill(Array.prototype.slice.call(arguments));
+  //     rectMode(CORNERS);
+  //     rect(this.xzero, this.yzero, this.xmax, this.ymax);
+  //     pop();
+  //   }
+  // }
+  this.background = function(color) {
     if (this.parent) {
-      background(Array.prototype.slice.call(arguments));
+      background(color);
     } else {
       push();
-      fill(Array.prototype.slice.call(arguments));
+      fill(color);
       rectMode(CORNERS);
       rect(this.xzero, this.yzero, this.xmax, this.ymax);
       pop();
