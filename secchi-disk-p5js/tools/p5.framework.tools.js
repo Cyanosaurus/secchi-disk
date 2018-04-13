@@ -281,7 +281,7 @@ function infoBox(cornerX, cornerY, width, height)
    this.region = new MouseRegion(cornerX, cornerY, width, height);
 
    // Base background color
-   this.color = [100, 200, 300];
+   this.color = [47, 135, 66];
    // Accent bar adjustment
    this.accent = [-40, -40, -40];
    // Accent bar adjsutment for selected state
@@ -289,7 +289,8 @@ function infoBox(cornerX, cornerY, width, height)
    // Button adjustment for highlighted state
    this.highlightColor = [-20, -20, -20];
    // Color for text
-   this.fontColor = [255, 255, 255];
+   //this.fontColor = [255, 255, 255];
+   this.fontColor = 0;
 
    this.selected = false;
    this.highlght = false;
@@ -396,7 +397,7 @@ function Button2(cornerX, cornerY, width, height, label, callbackSelected, callb
   this.region = new MouseRegion(cornerX, cornerY, width, height);
 
   // Base background color
-  this.color = [100, 200, 300];
+  this.color = [47, 135, 66];
   // Accent bar adjustment
   this.accent = [-40, -40, -40];
   // Accent bar adjsutment for selected state
@@ -404,7 +405,8 @@ function Button2(cornerX, cornerY, width, height, label, callbackSelected, callb
   // Button adjustment for highlighted state
   this.highlightColor = [-20, -20, -20];
   // Color for text
-  this.fontColor = [255, 255, 255];
+ // this.fontColor = [255, 255, 255];
+  this.fontColor = 0;
 
   this.selected = false;
   this.highlght = false;
