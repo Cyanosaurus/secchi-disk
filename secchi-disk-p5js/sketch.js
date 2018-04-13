@@ -497,6 +497,7 @@ function setup() {
       D0 = new disk();
 
       attemptsLeft = 3;
+      message = "Please begin.";
 
       submitButton = new Button2(width - 300, height - 340, 110, 50, "Submit",
         function() {
@@ -631,7 +632,7 @@ function setup() {
         goBack.run();
 
 
-      
+
       titleBackground = new TextBoxBackground(width - 300, height - 540, 240, 110, "", function(){});
       titleBackground.run();
       measureDepth = new TextBox(width - 295, height - 535, 230, 100, "Secchi Disk\nSimulator", function(){});
@@ -661,9 +662,9 @@ function setup() {
       simBackground.run();
       messageDisplay = new TextBox(width - 295, height - 215, 230, 150, message, function(){});
       messageDisplay.run();
-      
 
-      
+
+
 
 
       // If chances are zero, move to results
