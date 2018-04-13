@@ -16,8 +16,8 @@ function mysql_get($query)
     	$server = "localhost";
 	$login  = "mainevlm_dbuser2";
 	$pass   = "wxqsLAxqRHzdbjxV7ncLmqZ8";
-	# $dbname = "mainevlm_recertify";
-	$dbname = "mainevlm_secchi2";
+  $dbname = "mainevlm_recertify";
+	// $dbname = "mainevlm_secchi2";
 
     //Connect and Select DB
 	mysql_connect($server,$login,$pass);
@@ -29,4 +29,3 @@ function mysql_get($query)
 	mysql_close();
 	return $results;
 }
-
