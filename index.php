@@ -5,7 +5,7 @@
    Created by: Jasper Turcotte
    Modifiers:
 		<name> on <date>
-   Purpose: Front log-in page.  
+   Purpose: Front log-in page.
 
    Incoming variables:
 	* Account username and password
@@ -18,7 +18,7 @@
 		-2.1 Login and retrieve password
 		-2.2 Go to secchi disk
 
-   Main Outgoing Variables 
+   Main Outgoing Variables
 	-> self
 		* Account username and password
 	-> show_tests.php
@@ -27,7 +27,7 @@
 
 
 	include_once("libraries.php");
-	
+
 //Process incoming actions ----------------------------------
 
 $alert_text = "";				//Message User, if Any
@@ -55,7 +55,7 @@ if ( $TB_action == "Update Text 1" && $TB_admin )
 	fwrite($fh,$TB_content);
 	fclose($fh);
 	$alert_text .= "Text field 1 updated.";
-} 
+}
 else if ( $TB_action == "Update Text 2" && $TB_admin )
 {
     $TB_content = $_POST["tbcontent"];
@@ -79,10 +79,10 @@ if ( isset($_POST['trig']) && $action == "Login")
 	else if ( $pass == "" ) { $alert_text .= "You must supply a password.<br />"; }
 	else {
 		//Check to see if they are valid
-		if ( !log_in($user,$pass) ) { $alert_text .= "Invalid username or password."; } 
+		if ( !log_in($user,$pass) ) { $alert_text .= "Invalid username or password."; }
 		else {
 			//1.1 REgular User
-			if ( $_SESSION['level'] == 1  && $TestID != "") { 
+			if ( $_SESSION['level'] == 1  && $TestID != "") {
 				//Start Exam
 				header("Location:show_tests.php?TestTID=$TestTID&TestID=$TestID"); exit;
 			}
@@ -94,7 +94,7 @@ if ( isset($_POST['trig']) && $action == "Login")
 				$query = "DELETE FROM `Account_answer` WHERE `TestTID` IN (SELECT `ID` FROM `Test_Taken` WHERE `Completed`='0' AND `AccountID` IN (SELECT `ID` FROM `Account` WHERE `Expire`<'".time()."'));";
 				$query .= "DELETE FROM `Test_taken` WHERE `AccountID` IN (SELECT `ID` FROM `Account` WHERE `Expire`<'".time()."') AND `Completed`='0'";
 				mysql_get($query);
-				
+
 
 				header("Location:view_volunteers.php"); exit;
 			}
@@ -109,18 +109,18 @@ if ( isset($_POST['trig']) && $action == "Login")
 	print_start_to_navbar("Secchi Recertification");
 
 	print_navbar_to_content();
-	
+
 		delimiter_start();
 
 				//Give a warning if no test is currently available
-				if ( $TestID == "" ) 
+				if ( $TestID == "" )
 				{
 					Alert("Notice","No tests are currently available to take.");
 				}
 				if ( $alert_text != "" ) { Alert("Notice",$alert_text); }
 
 			delimit(); //2.1 Login and retrieve password
-		
+
 				if ( $action != "Password/Email Help" )
 				{
 					//Send password email
@@ -135,7 +135,7 @@ if ( isset($_POST['trig']) && $action == "Login")
 							$subject = "Account Password";
 							$website = WEBSITE;
 							$body = "Dear ".$row['Name'].",\n\nYour login information:\nLogin name: ".$row['Username']."\nPassword:  ".$row['Password']."\n\nThis is an automated message.  Do not reply.\n-Volunteer Lake Monitoring Program";
-				
+
 							$from = "From: VLMP_admin";
 							if (!mail($email, $subject, $body,$from)) { $alert_text .= "Error sending email."; }
 							else { Alert("Notice","Password sent to your email address.  Please allow some time for it to arrive."); }
@@ -152,7 +152,7 @@ if ( isset($_POST['trig']) && $action == "Login")
 						$pass1 = get_post('pass1');
 						$pass2 = get_post('pass2');
 						$pass_clean = super_cleantext($pass1);
-						
+
 						//Verify input
 						$continue = true;
 						if ( $pass0 == "" ) { $alert_text .= "You must supply your old password.<br />"; $continue = false;}
@@ -171,20 +171,20 @@ if ( isset($_POST['trig']) && $action == "Login")
 							$query = "SELECT * FROM `Account` WHERE `Email`='$email' AND `Password`='$pass1'";
 							$result2 = mysql_get($query);
 							if ( $result2 == false ) { Alert("Uh oh!",$query); }
-							
+
 							if ( $row = mysql_fetch_array($result2) )
 							{
-	
+
 								$subject = "Account Update";
 								$website = WEBSITE;
 								$body = "Dear ".$row['Name'].",\n\nYour new login information:\nLogin name: ".$row['Username']."\nPassword:  ".$row['Password']."\n\nThis is an automated message.  Do not reply.\n-Volunteer Lake Monitoring Program";
-					
+
 								$from = "From: VLMP_admin";
 								if (!mail($email, $subject, $body,$from)) { $alert_text .= "Error sending email."; }
 								else { Alert("Notice","Email sent.  Please allow some time for it to arrive."); }
 
 
-	
+
 							} else { Alert("Notice","That email address does not exist in the user lists, or the password is wrong."); }
 						} else { Alert("Notice",$alert_text); }
 					}
@@ -195,7 +195,7 @@ if ( isset($_POST['trig']) && $action == "Login")
 						$email = get_post('email');
 						$email2 = get_post('email2');
 						$pass0 = get_post('pass0');
-						
+
 						//Verify input
 						$continue = true;
 						if ( $pass0 == "" ) { $alert_text .= "You must supply your old password.<br />"; $continue = false;}
@@ -205,7 +205,7 @@ if ( isset($_POST['trig']) && $action == "Login")
 						$query = "SELECT * FROM `Account` WHERE `Email`='$email2'";
 						$result = mysql_get($query);
 						if ( mysql_fetch_array($result) != false ) { $alert_text .= "That email address is already being used.<br />"; $continue = false; }
-		
+
 
 						if ( $continue )
 						{
@@ -215,18 +215,18 @@ if ( isset($_POST['trig']) && $action == "Login")
 							$query = "SELECT * FROM `Account` WHERE `Email`='$email2' AND `Password`='$pass0'";
 							$result2 = mysql_get($query);
 							if ( $result2 == false ) { Alert("Uh oh!",$query); }
-							
+
 							if ( $row = mysql_fetch_array($result2) )
 							{
-	
+
 								$subject = "Account Update";
 								$website = WEBSITE;
 								$body = "Dear ".$row['Name'].",\n\nYour new registered email address:".$row['Email']."\n\nThis is an automated message.  Do not reply.\n-Volunteer Lake Monitoring Program";
-					
+
 								$from = "From: VLMP_admin";
 								if (!mail($email2, $subject, $body,$from)) { $alert_text .= "Error sending email."; }
 								else { Alert("Notice","Email updated.  If the automated reply does not reach the new address soon, contact an administrator."); }
-	
+
 								//Warn about hotmail/yahoo spam filters
 								if ( preg_match("/(hotmail|yahoo)/i",$email2,$matches)) { Alert("Warning", "The email provider '".strtoupper($matches[1])."' has been detected. <br /><font color='red'>Make sure VLMP messages aren't redirected to your Junk or Spam folder.</font><br /><br />"); }
 
@@ -239,13 +239,13 @@ if ( isset($_POST['trig']) && $action == "Login")
 										$subject = "Volunteer Account Update";
 										$website = WEBSITE;
 										$body = "Dear ".$row2['Name'].",\n\n$account ($name) has modified his/her email address:\nNew Email: $email2\n\nThis is an automated message.  Do not reply.\n-Volunteer Lake Monitoring Program";
-							
+
 										$from = "From: VLMP_admin";
 										if (!mail($row2['Email'], $subject, $body,$from)) { $alert_text .= "Error sending email."; }
 								}
 
-							} else { 
-								$Alert("Notice","That email address does not exist in the user lists, or the password is wrong."); 
+							} else {
+								$Alert("Notice","That email address does not exist in the user lists, or the password is wrong.");
 							}
 						} else { Alert("Notice",$alert_text); }
 					}
@@ -258,7 +258,7 @@ if ( isset($_POST['trig']) && $action == "Login")
 							echo "<br /><center>".newlines($textblob1) . "</center><br /><center><form action='' method='POST'><textarea cols='70' rows='10' name='tbcontent'>$textblob1</textarea><br />\n";
 							echo form_submit_name("Update Text 1","tbaction")."</form></center>";
 						} else { echo "<br /><center>".newlines($textblob1) . "</center>"; }
-	
+
 					delimit();
 
 						//Log in
@@ -267,7 +267,7 @@ if ( isset($_POST['trig']) && $action == "Login")
 						echo "<th colspan='2'>Certified Monitor Login</th>\n";
 						echo "<tr><td align='left'>Username </td><td align='left'><input type='text' name='user' /></td></tr>\n";
 						echo "<tr><td align='left'>Password: </td><td align='left'><input type='password' name='pass' /></td></tr>\n";
-						echo "<tr><td><input type='submit' value='Login' name='action' /></td><td align='center'><input type='submit' value='Password/Email Help' name='action' /></td></tr>\n";	
+						echo "<tr><td><input type='submit' value='Login' name='action' /></td><td align='center'><input type='submit' value='Password/Email Help' name='action' /></td></tr>\n";
 						echo "</table></form>\n";
 
 					delimit();
@@ -280,9 +280,9 @@ if ( isset($_POST['trig']) && $action == "Login")
 						} else { echo "<br /><center>".newlines($textblob2) . "</center>"; }
 
 					delimit(); //2.2 Go to secchi disk
-		
+
 						//Secchi simulator lnk
-						echo "<form action='secchi-disk-p5js/index.html' method='POST'>\n";
+						echo "<form action='secchi-disk-p5js/index.html' method='GET'>\n";
 						echo "<table bgcolor='#336799' style='border: solid thick #000044;color: #ffffff;' align='center'>\n";
 						echo "<th colspan='1'>Secchi Disk Simulator</th>\n";
 						echo "<tr><td align='left'>".form_submit("Try It Out!")."</td></tr>\n";
@@ -295,7 +295,7 @@ if ( isset($_POST['trig']) && $action == "Login")
 						echo "<table bgcolor='#336799' style='border: solid thick #000044;color: #ffffff;' align='center' width='60%'>\n";
 						echo "<th colspan='2'><b>Request Your Password</b><br /><font style='font-size:11px;'>Supply the email address of your account in this system.</font></th>\n";
 						echo "<tr><td align='left'>Email: </td><td align='left'><input type='text' name='email' size='40' /></td></tr>\n";
-						echo "<tr><td></td><td><input type='submit' value='Request Password' name='action' />&nbsp;<input type='submit' value='Cancel' name='action' /></td></tr>\n";	
+						echo "<tr><td></td><td><input type='submit' value='Request Password' name='action' />&nbsp;<input type='submit' value='Cancel' name='action' /></td></tr>\n";
 						echo "</table></form>\n";
 
 						echo "<form action='' method='POST' >\n".form_hidden("trig","boo");
@@ -305,7 +305,7 @@ if ( isset($_POST['trig']) && $action == "Login")
 						echo "<tr><td align='left' width='100'>Old Password: </td><td align='left'><input type='password' name='pass0' size='20' /></td></tr>\n";
 						echo "<tr><td align='left' width='100'>New Password: </td><td align='left'><input type='password' name='pass1' size='20' /></td></tr>\n";
 						echo "<tr><td align='left' width='100'>Verify New Password: </td><td align='left'><input type='password' name='pass2' size='20' /></td></tr>\n";
-						echo "<tr><td width='100'></td><td><input type='submit' value='Change Password' name='action' />&nbsp;<input type='submit' value='Cancel' name='action' /></td></tr>\n";	
+						echo "<tr><td width='100'></td><td><input type='submit' value='Change Password' name='action' />&nbsp;<input type='submit' value='Cancel' name='action' /></td></tr>\n";
 						echo "</table></form>\n";
 
 						echo "<form action='' method='POST' >\n".form_hidden("trig","boo");
@@ -314,7 +314,7 @@ if ( isset($_POST['trig']) && $action == "Login")
 						echo "<tr><td align='left'>Email: </td><td align='left'><input type='text' name='email' size='40' /></td></tr>\n";
 						echo "<tr><td align='left'>New Email: </td><td align='left'><input type='text' name='email2' size='40' /></td></tr>\n";
 						echo "<tr><td align='left'>Password: </td><td align='left'><input type='password' name='pass0' size='20' /></td></tr>\n";
-						echo "<tr><td></td><td><input type='submit' value='Change Email' name='action' />&nbsp;<input type='submit' value='Cancel' name='action' /></td></tr>\n";	
+						echo "<tr><td></td><td><input type='submit' value='Change Email' name='action' />&nbsp;<input type='submit' value='Cancel' name='action' /></td></tr>\n";
 						echo "</table></form>\n";
 
 						echo "<table bgcolor='#336799' style='border: solid thick #000044;color: #ffffff;' align='center' width='60%'>\n";
@@ -322,8 +322,8 @@ if ( isset($_POST['trig']) && $action == "Login")
 						echo "</table>\n";
 				}
 
-		
+
 		delimiter_end();
-	
+
 	print_content_to_end();
 ?>
