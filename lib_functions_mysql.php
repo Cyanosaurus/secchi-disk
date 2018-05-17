@@ -13,11 +13,11 @@ session_start();
 function mysql_get($query)
 {
 	//Login/DB information
-    	$server = "localhost";
+    $server = "localhost";
 	$login  = "mainevlm_dbuser2";
 	$pass   = "wxqsLAxqRHzdbjxV7ncLmqZ8";
-  $dbname = "mainevlm_recertify";
-	// $dbname = "mainevlm_secchi2";
+  	$dbname = "mainevlm_secchi2";
+	// $dbname = "mainevlm_recertify";
 
     //Connect and Select DB
 	mysql_connect($server,$login,$pass);
